@@ -1,0 +1,5 @@
+node_modules
+*.zip
+allKanji.json
+kanjiData.json
+testData.json
