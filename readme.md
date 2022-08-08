@@ -11,7 +11,7 @@ Uses the [innocent corpus frequency list](https://web.archive.org/web/2019030907
 
 Data from https://jpdb.io
 
-`node getJpdbKanji.js scrape` -> scrapes jpdb data to `kanjiData.json`.
+`node getJpdbKanji.js scrape` -> scrapes jpdb data to `kanjiData.json`.  
 `node getJpdbKanji.js get <kanji>` -> scrapes single kanji data and outputs to terminal.
 
 `node makeDict.js` to create a kanji frequency list from an existing `kanjiData.json`.
