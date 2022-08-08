@@ -1,16 +1,30 @@
 [
   [
     "Shinjitai",
-    "",
-    1,
+    "frequent",
+    -10,
     "Simplified form",
     0
   ],
   [
     "Kyūjitai",
-    "",
-    1,
+    "frequent",
+    -10,
     "Traditional form",
+    0
+  ],
+  [
+    "Extended shinjitai",
+    "frequent",
+    -10,
+    "Unofficially simplified form",
+    0
+  ],
+  [
+    "Kyōiku",
+    "frequent",
+    -9,
+    "Kanji taught in schools",
     0
   ]
 ]

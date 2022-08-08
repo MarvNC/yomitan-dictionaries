@@ -20,3 +20,7 @@ Data from https://jpdb.io
 ## jitai
 
 Convert the data in [jitai](https://github.com/epistularum/jitai) to a Yomichan kanji dictionary.
+
+## The Kanji Map
+
+Convert the data from [The Kanji Map](https://github.com/gabor-kovacs/the-kanji-map/tree/main/data) into a Yomichan kanji dictionary.
