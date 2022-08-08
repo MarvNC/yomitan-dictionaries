@@ -10,11 +10,11 @@
   - [ ] limit to 10 vocab, show more link to jpdb -->
 
 
-- [ ] use innocent corpus occurence based to get precise kanji values
-  - [ ] also display count of occurences
-  - [ ] NVM it already has a kanji_meta_bank with kanji frequencies thx
-  - [ ] https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613
-    - [ ] 6430 kanji used, so more expansive than jpdb?
+- [x] use innocent corpus occurence based to get precise kanji values
+  - [x] also display count of occurences
+  - [x] NVM it already has a kanji_meta_bank with kanji frequencies thx
+  - [x] https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613
+    - [x] 6430 kanji used, so more expansive than jpdb?
 - [ ] get kanken https://github.com/bhffmnn/kanken-json
 - [ ] get shinjitai/kyuujitai/itaiji https://github.com/epistularum/jitai
   - [ ] also use jpdb data, some stuff not in jitai but keiyoujitai not in jpdb
@@ -24,4 +24,4 @@
 
 - [ ] convert the kanji dicts to proper kanji dicts
 
-- [ ] kotoba memes: use innocent list, scrape every single mono dict, get terms with a kanji with certain freq (>3000?), under 4 chars.
+- [ ] kotoba memes: use innocent list, aggregate every single mono dict, get terms with a kanji with certain freq (>3000?), under 4 chars.
