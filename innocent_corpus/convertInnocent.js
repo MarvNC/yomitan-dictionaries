@@ -3,7 +3,7 @@ const JSZip = require('jszip');
 
 const corpusFile = 'innocent_corpus.zip';
 const kanjiBank = 'kanji_meta_bank_1.json';
-const outputZipName = 'innocent_corpus_kanji.zip';
+const outputZipName = '[Kanji Frequency] Innocent Corpus Kanji';
 
 fs.readFile(corpusFile, function (err, data) {
   if (err) throw err;
