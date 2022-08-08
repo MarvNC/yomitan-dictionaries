@@ -7,9 +7,9 @@ Uses the [innocent corpus frequency list](https://web.archive.org/web/2019030907
 
 - The displayed frequency in Yomichan will contain the frequency rank followed by the occurence count, for example `4686 (57)` for 壟 indicating it's the 4686th most common kanji and appeared 57 times total in the 5000+ novels in Innocent Corpus.
 
-## Get JPDB Kanji Data
+## jpdb
 
-Gets data from https://jpdb.io
+Data from https://jpdb.io
 
 `node getJpdbKanji.js scrape` -> scrapes jpdb data to `kanjiData.json`.
 `node getJpdbKanji.js get <kanji>` -> scrapes single kanji data and outputs to terminal.
