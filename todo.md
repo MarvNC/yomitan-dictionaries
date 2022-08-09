@@ -16,11 +16,13 @@
   - [x] https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613
     - [x] 6430 kanji used, so more expansive than jpdb?
 - [ ] get kanken https://github.com/bhffmnn/kanken-json
-- [ ] get shinjitai/kyuujitai/itaiji https://github.com/epistularum/jitai
+- [x] get shinjitai/kyuujitai/itaiji https://github.com/epistularum/jitai
   - [ ] also use jpdb data, some stuff not in jitai but keiyoujitai not in jpdb
 - [ ] get components/used in thekanjimap https://github.com/gabor-kovacs/the-kanji-map/tree/main/data
   - [ ] also add radicals' entries from it hopefully, maybe separate dic for meaning/etc info
 
+- [ ] remove misc bloat from KANJIDIC
+  - read tag bank, remove elems from stats object corresponding to class/code/indices
 
 - [ ] convert the kanji dicts to proper kanji dicts
 
