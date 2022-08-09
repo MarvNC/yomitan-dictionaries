@@ -19,7 +19,7 @@ Data from https://jpdb.io
 
 ## jitai
 
-Convert the data in [jitai](https://github.com/epistularum/jitai) to a Yomichan kanji dictionary.
+A Yomichan kanji dictionary made using the data in [jitai](https://github.com/epistularum/jitai). This allows you to see information about 旧字体, 新字体, 拡張新字体, and 標準字体 variants from the kanji page in Yomichan.
 
 ## The Kanji Map
 
