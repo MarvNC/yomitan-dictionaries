@@ -1,8 +1,14 @@
 const fs = require('fs');
 const JSZip = require('jszip');
 
+const folderPath = './jpdb/';
+const allKanjiFilePath = 'allKanji.json';
+const kanjiDataFilePath = 'kanjiData.json';
+
+const outputFreqZipName = '[Kanji Frequency] JPDB Kanji.zip';
+
 const kanjiReadingUrl = (kanji, reading) => `${jpdbURL}kanji-reading/${kanji}/${reading}`;
-const kanjiData = require('./kanjiData.json');
+const kanjiData = require(`./${kanjiDataFilePath}`);
 
 const args = process.argv.slice(2);
 if (args.length > 0) {
@@ -46,8 +52,6 @@ function makeFreq() {
     frequencyMode: 'rank-based',
   };
 
-  const outputZipName = '[Kanji Frequency] JPDB Kanji.zip';
-
   outputZip.file('index.json', JSON.stringify(index));
   outputZip.file('kanji_meta_bank_1.json', JSON.stringify(outputData));
   outputZip
@@ -57,10 +61,10 @@ function makeFreq() {
       compressionOptions: { level: 9 },
     })
     .then((content) => {
-      fs.writeFileSync(outputZipName, content);
+      fs.writeFileSync(folderPath + outputFreqZipName, content);
     });
 
-  console.log(`Wrote ${outputZipName}`);
+  console.log(`Wrote ${outputFreqZipName}`);
 }
 
 function makeDict() {

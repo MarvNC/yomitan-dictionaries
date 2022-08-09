@@ -2,6 +2,10 @@ const axios = require('axios');
 const { JSDOM } = require('jsdom');
 const fs = require('fs').promises;
 
+const folderPath = './jpdb/';
+const allKanjiFilePath = 'allKanji.json';
+const kanjiDataFilePath = 'kanjiData.json';
+
 const jpdbURL = 'https://jpdb.io/';
 const kanjiDir = 'kanji-by-frequency';
 const kankenDir = 'kanken-kanji';
@@ -34,13 +38,13 @@ async function scrapeKanji() {
   let allKanji = {};
   // try reading allKanji.json
   try {
-    const allKanjiFile = await fs.readFile('./allKanji.json');
+    const allKanjiFile = await fs.readFile(folderPath + allKanjiFilePath);
     allKanji = JSON.parse(allKanjiFile);
-    console.log('Read existing kanji list from allKanji.json');
+    console.log(`Read existing kanji list from ${allKanjiFilePath}`);
   } catch (error) {
-    console.log('No saved allKanji.json');
+    console.log(`No saved ${allKanjiFilePath}`);
     allKanji = await getAllKanji();
-    writeJson(allKanji, 'allKanji.json');
+    writeJson(allKanji, folderPath + allKanjiFilePath);
   }
 
   let kanjiData = {};
@@ -48,10 +52,10 @@ async function scrapeKanji() {
 
   // get existing saved kanji
   try {
-    kanjiData = JSON.parse(await fs.readFile('kanjiData.json'));
-    console.log(`Loaded existing kanjiData.json with ${Object.keys(kanjiData).length} kanji`);
+    kanjiData = JSON.parse(await fs.readFile(folderPath + kanjiDataFilePath));
+    console.log(`Loaded existing ${kanjiDataFilePath} with ${Object.keys(kanjiData).length} kanji`);
   } catch (error) {
-    console.log('No saved kanjiData.json');
+    console.log(`No saved ${kanjiDataFilePath}`);
   }
 
   for (var i = 0; i < kanjiKeys.length; i++) {
@@ -77,16 +81,16 @@ async function scrapeKanji() {
         allKanji[newKanji] = {};
         console.log(`found new kanji: ${newKanji}`);
         kanjiKeys.push(newKanji);
-        writeJson(allKanji, 'allKanji.json');
+        writeJson(allKanji, folderPath + allKanjiFilePath);
       }
     }
 
     // save every 100 kanji
     if (i % 100 === 0) {
-      writeJson(kanjiData, 'kanjiData.json');
+      writeJson(kanjiData, folderPath + kanjiDataFilePath);
     }
   }
-  writeJson(kanjiData, `kanjiData.json`);
+  writeJson(kanjiData, folderPath + kanjiDataFilePath);
 }
 
 async function writeJson(object, filename) {

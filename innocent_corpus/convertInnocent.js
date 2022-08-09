@@ -1,11 +1,12 @@
 const fs = require('fs');
 const JSZip = require('jszip');
 
+const folderPath = 'innocent_corpus/';
 const corpusFile = 'innocent_corpus.zip';
 const kanjiBank = 'kanji_meta_bank_1.json';
-const outputZipName = '[Kanji Frequency] Innocent Corpus Kanji';
+const outputZipName = '[Kanji Frequency] Innocent Corpus Kanji.zip';
 
-fs.readFile(corpusFile, function (err, data) {
+fs.readFile(folderPath + corpusFile, function (err, data) {
   if (err) throw err;
   JSZip.loadAsync(data).then(async function (zip) {
     // read kanji_meta_bank_1.json
@@ -49,7 +50,7 @@ fs.readFile(corpusFile, function (err, data) {
             compressionOptions: { level: 9 },
           })
           .then((content) => {
-            fs.writeFileSync(outputZipName, content);
+            fs.writeFileSync(folderPath + outputZipName, content);
           });
 
         console.log(`Wrote ${outputZipName}`);
