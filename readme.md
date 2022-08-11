@@ -19,7 +19,7 @@ Using data from https://jpdb.io :
 
 - Kanji frequency list, that tells you roughly how common a kanji is.
 - Kanji dictionary containing:
-  - the 14 most common vocab applicable
+  - the 15 most common vocab applicable
   - the kanji decomposition according to jpdb (has inaccuracies because it's meant for memorizing keywords)
   - 漢字検定 level
   - 旧字体/新字体/拡張新字体 character form
