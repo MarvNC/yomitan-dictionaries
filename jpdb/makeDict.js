@@ -1,14 +1,23 @@
 const fs = require('fs');
 const JSZip = require('jszip');
+const wrap = require('word-wrap');
 
 const folderPath = './jpdb/';
 const allKanjiFilePath = 'allKanji.json';
 const kanjiDataFilePath = 'kanjiData.json';
 
 const outputFreqZipName = '[Kanji Frequency] JPDB Kanji.zip';
+const outputKanjiZipName = '[Kanji] JPDB Kanji.zip';
 
 const kanjiReadingUrl = (kanji, reading) => `${jpdbURL}kanji-reading/${kanji}/${reading}`;
 const kanjiData = require(`./${kanjiDataFilePath}`);
+
+const index = {
+  revision: `jpdb_kanji_${new Date().toISOString()}`,
+  format: 3,
+  url: 'https://jpdb.io',
+  attribution: 'jpdb, Marv',
+};
 
 const args = process.argv.slice(2);
 if (args.length > 0) {
@@ -41,32 +50,91 @@ function makeFreq() {
     outputData.push(outputArrElem);
   }
   const outputZip = new JSZip();
-  const index = {
-    title: 'JPDB Kanji Freq',
-    revision: `jpdb_kanji_${new Date().toISOString()}`,
-    format: 3,
-    url: 'https://jpdb.io',
-    description:
-      'Rank-based kanji frequency data from JPDB\nCreated with https://github.com/MarvNC/yomichan-kanji-dictionaries',
-    attribution: 'jpdb, Marv',
-    frequencyMode: 'rank-based',
-  };
 
-  outputZip.file('index.json', JSON.stringify(index));
+  let newIndex = structuredClone(index);
+  newIndex.title = 'JPDB Kanji Freq';
+  newIndex.description =
+    'Rank-based kanji frequency data from JPDB\nCreated with https://github.com/MarvNC/yomichan-kanji-dictionaries';
+  newIndex.frequencyMode = 'rank-based';
+
+  outputZip.file('index.json', JSON.stringify(newIndex));
   outputZip.file('kanji_meta_bank_1.json', JSON.stringify(outputData));
-  outputZip
+
+  writeOutputZip(outputZip, outputFreqZipName);
+}
+
+async function makeDict() {
+  const outputData = [];
+  for (const kanji of Object.keys(kanjiData)) {
+    const readingsString =
+      kanjiData[kanji].readings?.map((readingArr) => readingArr.join('')).join(' ') ?? '';
+
+    const types = kanjiData[kanji].types;
+    const usefulTypes = {
+      Shinjitai: '新字体',
+      Kyūjitai: '旧字体',
+      'Extended shinjitai': '拡張新字体',
+    };
+    const typeString =
+      types
+        ?.filter((type) => usefulTypes[type])
+        .map((type) => usefulTypes[type])
+        .join(' ') ?? '';
+
+    const meaningsArr = [];
+
+    // add up to 10 vocab in groups of 2
+    const vocab = kanjiData[kanji].vocab;
+    if (vocab) {
+      meaningsArr.push(...vocab.slice(0, 15));
+    }
+
+    if (kanjiData[kanji].composedOf) {
+      meaningsArr.push('', '漢字分解:');
+      meaningsArr.push(
+        ...wrap(kanjiData[kanji].composedOf.join(' '), { width: 8, indent: '', trim: true }).split(
+          '\n'
+        )
+      );
+    }
+
+    const stats = {};
+    if (kanjiData[kanji].kanken) {
+      stats.漢字検定 = kanjiData[kanji].kanken.split('Level ')[1];
+    }
+    if (kanjiData[kanji].oldForm) {
+      stats.旧字体 = kanjiData[kanji].oldForm;
+    }
+    if (kanjiData[kanji].newForm) {
+      stats.新字体 = kanjiData[kanji].newForm;
+    }
+
+    outputData.push([kanji, '', readingsString, typeString, meaningsArr, stats]);
+  }
+  let newIndex = structuredClone(index);
+
+  const outputZip = new JSZip();
+  newIndex.title = 'JPDB Kanji';
+  newIndex.description =
+    'Kanji data from JPDB\nCreated with https://github.com/MarvNC/yomichan-kanji-dictionaries';
+
+  outputZip.file('index.json', JSON.stringify(newIndex));
+  outputZip.file('kanji_bank_1.json', JSON.stringify(outputData));
+  outputZip.file('tag_bank_1.json', await fs.promises.readFile(folderPath + 'tag_bank_1.json'));
+
+  writeOutputZip(outputZip, outputKanjiZipName);
+}
+
+function writeOutputZip(zip, outputZipName) {
+  zip
     .generateAsync({
       type: 'nodebuffer',
       compression: 'DEFLATE',
       compressionOptions: { level: 9 },
     })
     .then((content) => {
-      fs.writeFileSync(folderPath + outputFreqZipName, content);
+      fs.writeFileSync(folderPath + outputZipName, content);
     });
 
-  console.log(`Wrote ${outputFreqZipName}`);
-}
-
-function makeDict() {
-  // todo
+  console.log(`Wrote ${outputZipName}`);
 }
