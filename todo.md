@@ -21,6 +21,8 @@
 - [ ] get components/used in thekanjimap https://github.com/gabor-kovacs/the-kanji-map/tree/main/data
   - [ ] also add radicals' entries from it hopefully, maybe separate dic for meaning/etc info
 
+- [ ] get from wiktionary JP 呉音 漢音 唐音 etc info in a new dict
+
 - [ ] remove misc bloat from KANJIDIC
   - read tag bank, remove elems from stats object corresponding to class/code/indices
 
