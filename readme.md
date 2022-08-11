@@ -22,7 +22,7 @@ Using data from https://jpdb.io :
   - the 14 most common vocab applicable
   - the kanji decomposition according to jpdb (has inaccuracies because it's meant for memorizing keywords)
   - 漢字検定 level
-  - character form similarly to jitai
+  - 旧字体/新字体/拡張新字体 character form
 
 ![](!images/chrome_%E4%B9%B1_-_Yomichan_Search_-_Google_Chrome_2022-08-10_19-29-01.png)
 
