@@ -105,8 +105,8 @@ async function makeDict() {
     if (kanjiData[kanji].oldForm) {
       stats.旧字体 = kanjiData[kanji].oldForm;
     }
-    if (kanjiData[kanji].newForm) {
-      stats.新字体 = kanjiData[kanji].newForm;
+    if (kanjiData[kanji].modernForm) {
+      stats.新字体 = kanjiData[kanji].modernForm;
     }
 
     outputData.push([kanji, '', readingsString, typeString, meaningsArr, stats]);
