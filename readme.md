@@ -17,12 +17,14 @@ Uses the [innocent corpus frequency list](https://web.archive.org/web/2019030907
 
 Using data from https://jpdb.io :
 
-- Kanji frequency list, that tells you roughly how common a kanji is. It's less exhaustive than Innocent Corpus though.
+- Kanji frequency list, that tells you roughly how common a kanji is.
 - Kanji dictionary containing:
   - the 14 most common vocab applicable
   - the kanji decomposition according to jpdb (has inaccuracies because it's meant for memorizing keywords)
   - 漢字検定 level
   - character form similarly to jitai
+
+![](!images/chrome_%E4%B9%B1_-_Yomichan_Search_-_Google_Chrome_2022-08-10_19-29-01.png)
 
 ## jitai
 
@@ -30,4 +32,6 @@ A Yomichan kanji dictionary made using the data from [jitai](https://github.com/
 
 ## The Kanji Map
 
-Convert the data from [The Kanji Map](https://github.com/gabor-kovacs/the-kanji-map/tree/main/data) into a Yomichan kanji dictionary.
+(WIP) A Yomichan kanji dictionary created using the data from [The Kanji Map](https://github.com/gabor-kovacs/the-kanji-map) providing radical information and kanji decompositions.
+
+![](!images/chrome_%E4%B9%B1_-_Yomichan_Search_-_Google_Chrome_2022-08-10_19-28-54.png)
