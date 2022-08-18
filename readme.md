@@ -40,3 +40,7 @@ A Yomichan kanji dictionary made using the data from [jitai](https://github.com/
 ## 複合語起源
 
 (WIP) Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|いる）. Information comes from anonymous forum posts, so it may not be 100% accurate.
+
+- [Wanikani](https://community.wanikani.com/t/special-kanji-words-derived-from-other-words/35655)
+- [shitaraba](https://jbbs.shitaraba.net/bbs/read.cgi/study/10958/1299762655/)
+- [5ch](https://academy6.5ch.net/test/read.cgi/gengo/1228873581/)
