@@ -17,15 +17,35 @@
     - [x] 6430 kanji used, so more expansive than jpdb?
 - [ ] get kanken https://github.com/bhffmnn/kanken-json
 - [x] get shinjitai/kyuujitai/itaiji https://github.com/epistularum/jitai
-  - [ ] also use jpdb data, some stuff not in jitai but keiyoujitai not in jpdb
+  - [x] also use jpdb data, some stuff not in jitai but keiyoujitai not in jpdb
 - [ ] get components/used in thekanjimap https://github.com/gabor-kovacs/the-kanji-map/tree/main/data
   - [ ] also add radicals' entries from it hopefully, maybe separate dic for meaning/etc info
 
+- [ ] check how to bold - 草津温泉 has example
+
 - [ ] get from wiktionary JP 呉音 漢音 唐音 etc info in a new dict
 
-- [ ] remove misc bloat from KANJIDIC
+- [ ] remove misc bloat from KANJIDIC (nvm maybe not)
   - read tag bank, remove elems from stats object corresponding to class/code/indices
 
 - [ ] convert the kanji dicts to proper kanji dicts
 
 - [ ] kotoba memes: use innocent list, aggregate every single mono dict, get terms with a kanji with certain freq (>3000?), under 4 chars.
+
+- [ ] jpdb separate onyomi using KANJIDIC also scrape 'used in' kanji
+  - [ ] also add count of total vocab for that word
+
+- [ ] itaiji (maybe dont need the one with all that chinese)
+  - [ ] https://www.tobunken.go.jp/archives/%E7%95%B0%E4%BD%93%E5%AD%97%E3%83%AA%E3%82%B9%E3%83%88/
+  - [ ] https://wwwap.hi.u-tokyo.ac.jp/ships/itaiji_list.jsp
+
+- [ ] pixiv/niconico parsing/link only dict (check grammar dicts for link example)
+
+- [ ] https://ankiweb.net/shared/info/1417078570 kanji def/成り立ち/etc (龗 included there, not KANJIDIC, check)
+
+- [ ] aozora bunko frequency http://vtrm.net/assets/aozora-kanji-frequency.txt
+- [ ] wikipedia kanji freq https://scriptin.github.io/kanji-frequency/
+
+- [ ] word origins
+
+- [ ] jmdict utils - get deinflectors, 

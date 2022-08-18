@@ -1,4 +1,4 @@
-# Yomichan Kanji Dictionaries <!-- omit in toc -->
+# Yomichan Dictionaries <!-- omit in toc -->
 
 **Downloads can be found in the [Releases](https://github.com/MarvNC/yomichan-kanji-dictionaries/releases) tab**
 
@@ -6,6 +6,7 @@
 - [jpdb](#jpdb)
 - [jitai](#jitai)
 - [The Kanji Map](#the-kanji-map)
+- [複合語起源](#複合語起源)
 
 ## Innocent Corpus Kanji Frequency
 
@@ -35,3 +36,7 @@ A Yomichan kanji dictionary made using the data from [jitai](https://github.com/
 ## The Kanji Map
 
 (WIP) A Yomichan kanji dictionary created using the data from [The Kanji Map](https://github.com/gabor-kovacs/the-kanji-map) providing radical information and kanji decompositions.
+
+## 複合語起源
+
+(WIP) Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|いる）. Information comes from anonymous forum posts, so it may not be 100% accurate.
