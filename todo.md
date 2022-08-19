@@ -40,6 +40,7 @@
   - [ ] https://wwwap.hi.u-tokyo.ac.jp/ships/itaiji_list.jsp
 
 - [ ] pixiv/niconico parsing/link only dict (check grammar dicts for link example)
+  - [ ] https://github.com/ncaq/dic-nico-intersection-pixiv
 
 - [ ] https://ankiweb.net/shared/info/1417078570 kanji def/成り立ち/etc (龗 included there, not KANJIDIC, check)
 
@@ -48,4 +49,6 @@
 
 - [ ] word origins
 
-- [ ] jmdict utils - get deinflectors, 
+- [ ] jmdict utils - get deinflectors, on/kun
+
+- [ ] kanjidamage/wanikani similar looking kanji
