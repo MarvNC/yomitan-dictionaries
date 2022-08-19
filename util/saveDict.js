@@ -8,7 +8,7 @@ const jszip = require('jszip');
  */
 function writeDict(data, outputZipName) {
   const outputZip = new jszip();
-  for (const fileName of data.keys()) {
+  for (const fileName of Object.keys(data)) {
     outputZip.file(fileName, JSON.stringify(data[fileName]));
   }
   outputZip
@@ -18,7 +18,7 @@ function writeDict(data, outputZipName) {
       compressionOptions: { level: 9 },
     })
     .then((content) => {
-      fs.writeFileSync(folderPath + outputZipName, content);
+      fs.writeFileSync(outputZipName, content);
     });
   console.log(`Wrote ${outputZipName}`);
 }
