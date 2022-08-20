@@ -70,11 +70,13 @@ const outputZipName = '[Kanji] jitai.zip';
     attribution: 'epistularum, Marv',
   };
 
+  const tagBank = await fs.promises.readFile(folderPath + 'tag_bank_1.json');
+  const tagBankJson = JSON.parse(tagBank);
   saveDict(
     {
       'index.json': index,
       'kanji_bank_1.json': outputData,
-      'tag_bank_1.json': await fs.promises.readFile(folderPath + 'tag_bank_1.json'),
+      'tag_bank_1.json': tagBankJson,
     },
     outputZipName
   );
