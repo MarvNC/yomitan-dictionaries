@@ -1,6 +1,7 @@
 const fs = require('fs');
-const JSZip = require('jszip');
 const wrap = require('word-wrap');
+
+const saveDict = require('../util/saveDict');
 
 const folderPath = './jpdb/';
 const allKanjiFilePath = 'allKanji.json';
@@ -49,7 +50,6 @@ function makeFreq() {
     }
     outputData.push(outputArrElem);
   }
-  const outputZip = new JSZip();
 
   let newIndex = structuredClone(index);
   newIndex.title = 'JPDB Kanji Freq';
@@ -57,10 +57,13 @@ function makeFreq() {
     'Rank-based kanji frequency data from JPDB\nCreated with https://github.com/MarvNC/yomichan-dictionaries';
   newIndex.frequencyMode = 'rank-based';
 
-  outputZip.file('index.json', JSON.stringify(newIndex));
-  outputZip.file('kanji_meta_bank_1.json', JSON.stringify(outputData));
-
-  writeOutputZip(outputZip, outputFreqZipName);
+  saveDict(
+    {
+      'index.json': newIndex,
+      'kanji_meta_bank_1.json': outputData,
+    },
+    outputFreqZipName
+  );
 }
 
 async function makeDict() {
@@ -113,28 +116,16 @@ async function makeDict() {
   }
   let newIndex = structuredClone(index);
 
-  const outputZip = new JSZip();
   newIndex.title = 'JPDB Kanji';
   newIndex.description =
     'Kanji data from JPDB\nCreated with https://github.com/MarvNC/yomichan-dictionaries';
 
-  outputZip.file('index.json', JSON.stringify(newIndex));
-  outputZip.file('kanji_bank_1.json', JSON.stringify(outputData));
-  outputZip.file('tag_bank_1.json', await fs.promises.readFile(folderPath + 'tag_bank_1.json'));
-
-  writeOutputZip(outputZip, outputKanjiZipName);
-}
-
-function writeOutputZip(zip, outputZipName) {
-  zip
-    .generateAsync({
-      type: 'nodebuffer',
-      compression: 'DEFLATE',
-      compressionOptions: { level: 9 },
-    })
-    .then((content) => {
-      fs.writeFileSync(folderPath + outputZipName, content);
-    });
-
-  console.log(`Wrote ${outputZipName}`);
+  saveDict(
+    {
+      'index.json': newIndex,
+      'kanji_bank_1.json': outputData,
+      'tag_bank_1.json': await fs.promises.readFile(folderPath + 'tag_bank_1.json'),
+    },
+    outputKanjiZipName
+  );
 }

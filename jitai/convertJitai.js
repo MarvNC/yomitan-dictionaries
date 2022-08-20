@@ -1,6 +1,7 @@
 const csv = require('csvtojson');
 const fs = require('fs');
-const jszip = require('jszip');
+
+const saveDict = require('../util/saveDict');
 
 const folderPath = 'jitai/';
 
@@ -59,7 +60,6 @@ const outputZipName = '[Kanji] jitai.zip';
     outputData.push([hyoujun, '', '', '標準字体', [`拡張新字体: ${kakuchou}`], {}]);
   }
 
-  const outputZip = new jszip();
   const index = {
     title: 'jitai',
     revision: `jitai_${new Date().toISOString()}`,
@@ -70,18 +70,12 @@ const outputZipName = '[Kanji] jitai.zip';
     attribution: 'epistularum, Marv',
   };
 
-  outputZip.file('index.json', JSON.stringify(index));
-  outputZip.file('kanji_bank_1.json', JSON.stringify(outputData));
-  outputZip.file('tag_bank_1.json', await fs.promises.readFile(folderPath + 'tag_bank_1.json'));
-  outputZip
-    .generateAsync({
-      type: 'nodebuffer',
-      compression: 'DEFLATE',
-      compressionOptions: { level: 9 },
-    })
-    .then((content) => {
-      fs.writeFileSync(folderPath + outputZipName, content);
-    });
-
-  console.log(`Wrote ${outputZipName}`);
+  saveDict(
+    {
+      'index.json': index,
+      'kanji_bank_1.json': outputData,
+      'tag_bank_1.json': await fs.promises.readFile(folderPath + 'tag_bank_1.json'),
+    },
+    outputZipName
+  );
 })();

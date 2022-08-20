@@ -1,5 +1,6 @@
-node_modules
 *.zip
+!dl/*.zip
+node_modules
 allKanji.json
 kanjiData.json
 testData.json

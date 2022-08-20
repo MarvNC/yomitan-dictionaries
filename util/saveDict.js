@@ -1,12 +1,13 @@
 const fs = require('fs');
 const jszip = require('jszip');
+const outputFolder = './dl/'
 
 /**
  * Writes an array of json objects to a zip for a Yomichan dictionary.
  * @param {object} data Data to write in an object with the filenames as keys and the file contents as the value.
  * @param {string} outputZipName 
  */
-function writeDict(data, outputZipName) {
+function saveDict(data, outputZipName) {
   const outputZip = new jszip();
   for (const fileName of Object.keys(data)) {
     outputZip.file(fileName, JSON.stringify(data[fileName]));
@@ -18,9 +19,9 @@ function writeDict(data, outputZipName) {
       compressionOptions: { level: 9 },
     })
     .then((content) => {
-      fs.writeFileSync(outputZipName, content);
+      fs.writeFileSync(outputFolder + outputZipName, content);
     });
   console.log(`Wrote ${outputZipName}`);
 }
 
-module.exports = writeDict;
+module.exports = saveDict;

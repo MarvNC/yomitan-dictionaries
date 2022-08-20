@@ -1,6 +1,6 @@
 const fs = require('fs');
 const folderPath = 'mozc/';
-const writeDict = require('../util/saveDict');
+const saveDict = require('../util/saveDict');
 
 const outputZipName = '[Kanji] mozc Kanji Variants.zip';
 
@@ -107,11 +107,11 @@ const index = {
   attribution: 'Google, Marv',
 };
 
-writeDict(
+saveDict(
   {
     'index.json': index,
     'kanji_bank_1.json': kanjiBankData,
     'tag_bank_1.json': tagBank,
   },
-  folderPath + outputZipName
+  outputZipName
 );

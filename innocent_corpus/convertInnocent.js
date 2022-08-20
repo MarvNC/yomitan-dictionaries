@@ -1,6 +1,8 @@
 const fs = require('fs');
 const JSZip = require('jszip');
 
+const saveDict = require('../util/saveDict');
+
 const folderPath = 'innocent_corpus/';
 const corpusFile = 'innocent_corpus.zip';
 const kanjiBank = 'kanji_meta_bank_1.json';
@@ -40,20 +42,13 @@ fs.readFile(folderPath + corpusFile, function (err, data) {
           frequencyMode: 'rank-based',
         };
 
-        const outputZip = new JSZip();
-        outputZip.file('index.json', JSON.stringify(index));
-        outputZip.file(kanjiBank, JSON.stringify(outputData));
-        outputZip
-          .generateAsync({
-            type: 'nodebuffer',
-            compression: 'DEFLATE',
-            compressionOptions: { level: 9 },
-          })
-          .then((content) => {
-            fs.writeFileSync(folderPath + outputZipName, content);
-          });
-
-        console.log(`Wrote ${outputZipName}`);
+        saveDict(
+          {
+            'index.json': index,
+            'kanji_meta_bank_1.json': outputData,
+          },
+          outputZipName
+        );
       });
   });
 });
