@@ -1,6 +1,6 @@
 # Yomichan Dictionaries <!-- omit in toc -->
 
-**Downloads can be found in the [Releases](https://github.com/MarvNC/yomichan-kanji-dictionaries/releases) tab**
+**Downloads can be found in the [Releases](https://github.com/MarvNC/yomichan-dictionaries/releases) tab**
 
 - [Term Dictionary](#term-dictionary)
 - [Term Frequency](#term-frequency)

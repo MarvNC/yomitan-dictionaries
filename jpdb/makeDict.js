@@ -54,7 +54,7 @@ function makeFreq() {
   let newIndex = structuredClone(index);
   newIndex.title = 'JPDB Kanji Freq';
   newIndex.description =
-    'Rank-based kanji frequency data from JPDB\nCreated with https://github.com/MarvNC/yomichan-kanji-dictionaries';
+    'Rank-based kanji frequency data from JPDB\nCreated with https://github.com/MarvNC/yomichan-dictionaries';
   newIndex.frequencyMode = 'rank-based';
 
   outputZip.file('index.json', JSON.stringify(newIndex));
@@ -116,7 +116,7 @@ async function makeDict() {
   const outputZip = new JSZip();
   newIndex.title = 'JPDB Kanji';
   newIndex.description =
-    'Kanji data from JPDB\nCreated with https://github.com/MarvNC/yomichan-kanji-dictionaries';
+    'Kanji data from JPDB\nCreated with https://github.com/MarvNC/yomichan-dictionaries';
 
   outputZip.file('index.json', JSON.stringify(newIndex));
   outputZip.file('kanji_bank_1.json', JSON.stringify(outputData));
