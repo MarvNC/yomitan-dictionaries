@@ -119,12 +119,15 @@ async function makeDict() {
   newIndex.title = 'JPDB Kanji';
   newIndex.description =
     'Kanji data from JPDB\nCreated with https://github.com/MarvNC/yomichan-dictionaries';
+  
+  const tagBank = await fs.promises.readFile(folderPath + 'tag_bank_1.json');
+  const tagBankJSON = JSON.parse(tagBank);
 
   saveDict(
     {
       'index.json': newIndex,
       'kanji_bank_1.json': outputData,
-      'tag_bank_1.json': await fs.promises.readFile(folderPath + 'tag_bank_1.json'),
+      'tag_bank_1.json': tagBankJSON,
     },
     outputKanjiZipName
   );
