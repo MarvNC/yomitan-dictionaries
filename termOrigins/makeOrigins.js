@@ -61,7 +61,7 @@ const outputZipName = `[Other] ${title}.zip`;
         return a.localeCompare(b);
       })
   );
-  fs.writeFileSync(folderPath + 'termOrigins.tsv', tsvOutput.join('\n'));
+  fs.writeFileSync(folderPath + `${title}.tsv`, tsvOutput.join('\n'));
 
   const outputData = [];
 
