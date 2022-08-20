@@ -40,7 +40,7 @@ A frequency dictionary based on information from https://jpdb.io (found [here](h
 
 ### jpdb Kanji
 
-**[Download](dl/%5BKanji%5D%20JPDB%20Kanji.zip)**
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20JPDB%20Kanji.zip)**
 
 Kanji information from https://jpdb.io:
 
@@ -59,7 +59,7 @@ A Yomichan kanji dictionary created using the data from [The Kanji Map](https://
 
 ### mozc
 
-**[Download](dl/%5BKanji%5D%20mozc%20Kanji%20Variants.zip)**
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20mozc%20Kanji%20Variants.zip)**
 
 A kanji dictionary made from the kanji variant information in Google's [mozc](https://github.com/google/mozc) Japanese IME. Includes information about:
 
@@ -75,7 +75,7 @@ A kanji dictionary made from the kanji variant information in Google's [mozc](ht
 
 ### jitai
 
-**[Download](dl/%5BKanji%5D%20jitai.zip)**
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20jitai.zip)**
 
 A Yomichan kanji dictionary made using the data from [jitai](https://github.com/epistularum/jitai). This allows you to see information about 旧字体, 新字体, 拡張新字体, and 標準字体 variants from the kanji page in Yomichan.
 
@@ -85,7 +85,7 @@ A Yomichan kanji dictionary made using the data from [jitai](https://github.com/
 
 ### Innocent Corpus Kanji Frequency
 
-**[Download](dl/%5BKanji%20Frequency%5D%20Innocent%20Corpus%20Kanji.zip)**
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20Innocent%20Corpus%20Kanji.zip)**
 
 Uses the [innocent corpus frequency list](https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613) that is distributed with [Yomichan](https://github.com/FooSoft/yomichan#dictionaries) to create a rank-based kanji frequency dictionary. This was created because the existing one is an occurence-based list and does not display ranks.
 
@@ -93,6 +93,6 @@ Uses the [innocent corpus frequency list](https://web.archive.org/web/2019030907
 
 ### jpdb Kanji Frequency
 
-**[Download](dl/%5BKanji%20Frequency%5D%20JPDB%20Kanji.zip)**
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20JPDB%20Kanji.zip)**
 
 Kanji frequency data from https://jpdb.io.
