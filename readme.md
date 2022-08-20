@@ -1,6 +1,7 @@
 # Yomichan Dictionaries <!-- omit in toc -->
 
 - [Term Dictionary](#term-dictionary)
+  - [複合語起源](#複合語起源)
 - [Term Frequency](#term-frequency)
   - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
 - [Kanji Info](#kanji-info)
@@ -18,13 +19,17 @@
 Using the information [gathered by ncaq](https://github.com/ncaq/dic-nico-intersection-pixiv), this is a dictionary that can 
 -->
 
-<!-- ### 複合語起源
+### 複合語起源
+
+(Yomichan dictionary soon)
+
+**[List of words](termOrigins/%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv)**
 
 Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|いる）. Information comes from anonymous forum posts, so it may not be 100% accurate.
 
-- [Wanikani](https://community.wanikani.com/t/special-kanji-words-derived-from-other-words/35655)
 - [shitaraba](https://jbbs.shitaraba.net/bbs/read.cgi/study/10958/1299762655/)
-- [5ch](https://academy6.5ch.net/test/read.cgi/gengo/1228873581/) -->
+- [5ch](https://academy6.5ch.net/test/read.cgi/gengo/1228873581/)
+- [Wanikani](https://community.wanikani.com/t/special-kanji-words-derived-from-other-words/35655)
 
 ## Term Frequency
 
