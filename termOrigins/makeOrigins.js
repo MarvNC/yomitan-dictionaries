@@ -8,7 +8,9 @@ const folderPath = 'termOrigins/';
 
 const csvPaths = ['shitaraba.tsv', '5ch.tsv', 'wanikani.tsv'];
 
-const outputZipName = '[Other] 複合語起源.zip';
+const title = '複合語起源'
+
+const outputZipName = `[Other] ${title}.zip`;
 
 (async function () {
   const tsvOptions = { delimiter: '\t' };
@@ -44,22 +46,31 @@ const outputZipName = '[Other] 複合語起源.zip';
         }
       }
     }
-
-    console.log(term, reading, origins);
   }
+
+  // output data to tsv
+  const tsvOutput = ['言葉	読み方	起源'];
+  tsvOutput.push(
+    ...Object.keys(data)
+      .map((termReadingPair) => {
+        const [term, reading] = termReadingPair.split(',');
+        const origins = Array.from(data[termReadingPair]);
+        return [term, reading, origins.join('、')].join('\t');
+      })
+      .sort((a, b) => {
+        return a.localeCompare(b);
+      })
+  );
+  fs.writeFileSync(folderPath + 'termOrigins.tsv', tsvOutput.join('\n'));
 
   const outputData = [];
 
-  const outputZip = new jszip();
   const index = {
-    title: '複合語起源',
-    revision: `${new Date().toISOString()}`,
+    title,
+    revision: `${title}_${new Date().toISOString()}`,
     format: 3,
     url: 'https://github.com/MarvNC/yomichan-dictionaries',
-    description:
-      'TODO',
+    description: 'TODO',
     attribution: '名無し, 名無し, seanblue, Marv',
   };
-
-
 })();
