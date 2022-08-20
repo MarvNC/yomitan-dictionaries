@@ -32,9 +32,11 @@ Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|い�
 aozora bunko kanji/jukugo
  -->
 
-### jpdb Frequency Dictionary
+### [jpdb Frequency Dictionary](https://github.com/MarvNC/jpdb-freq-list)
 
-A frequency dictionary based on information from https://jpdb.io (found [here](https://github.com/MarvNC/jpdb-freq-list)).
+[Download](https://github.com/MarvNC/jpdb-freq-list/releases)
+
+A frequency dictionary based on information from https://jpdb.io.
 
 ## Kanji Info
 
@@ -72,6 +74,8 @@ A kanji dictionary made from the kanji variant information in Google's [mozc](ht
 - 俗字
 - 別字
 - 本字
+
+![](!images/chrome_%E9%AB%94_-_Yomichan_Search_-_Google_Chrome_2022-08-19_20-22-19.png)
 
 ### jitai
 
