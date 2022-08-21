@@ -47,14 +47,6 @@ function isKatakana(str) {
   return /[ァ-ンヾ゛゜ー]/.test(str);
 }
 
-// test
-const testArr = [
-  'あいおぼえていますか	愛・おぼえていますか',
-  'アイカツオンパレード!',
-  'あいかえすぐらんちぇすた	藍華・S・グランチェスタ',
-  'あいえすあいえす	ISIS',
-];
-
 for (const test of testArr) {
   const [reading, term] = test.split('\t');
   console.log(normalizeReading(term, reading));
