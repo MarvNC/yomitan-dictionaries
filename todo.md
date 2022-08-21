@@ -52,3 +52,6 @@
 - [ ] jmdict utils - get deinflectors, on/kun
 
 - [ ] kanjidamage/wanikani similar looking kanji
+
+- [ ] yoji tags (combine the two yoji dicts)
+  - [ ] anki tagging
