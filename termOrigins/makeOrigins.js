@@ -2,13 +2,14 @@ const csv = require('csvtojson');
 const fs = require('fs');
 const jszip = require('jszip');
 
+const saveDict = require('../util/saveDict');
 const JMDict = require('../util/getJMDictInfo');
 
 const folderPath = 'termOrigins/';
 
 const csvPaths = ['shitaraba.tsv', '5ch.tsv', 'wanikani.tsv'];
 
-const title = '複合語起源'
+const title = '複合語起源';
 
 const outputZipName = `[Other] ${title}.zip`;
 
@@ -38,10 +39,26 @@ const outputZipName = `[Other] ${title}.zip`;
       for (let i = 0; i < origins.length; i++) {
         const origin = origins[i];
         if (!origin.match(/（|）/)) {
-          data[termReadingPair].delete(origin);
           // if it's present in other explanations, delete it
-          if (Array.from(data[termReadingPair]).join(' ').includes(origin)) {
-            origins.splice(i, 1);
+          if (Array.from(data[termReadingPair]).join(' ').replace(origin, '').includes(origin)) {
+            data[termReadingPair].delete(origin);
+          }
+        }
+        if (!origin.match(/\|/)) {
+          // if other explanations have it with separate readings, remove
+          if (
+            Array.from(data[termReadingPair])
+              .join(' ')
+              .replace(origin, '')
+              .replace(/\|/g, '')
+              .includes(origin)
+          ) {
+            data[termReadingPair].delete(origin);
+          }
+        }
+        if (!origin.includes('*')) {
+          if (Array.from(data[termReadingPair]).join(' ').replace(origin, '').includes(origin)) {
+            data[termReadingPair].delete(origin);
           }
         }
       }
@@ -65,12 +82,44 @@ const outputZipName = `[Other] ${title}.zip`;
 
   const outputData = [];
 
+  for (const termReadingPair of Object.keys(data)) {
+    const [term, reading] = termReadingPair.split(',');
+    const dividingChar = '｜';
+    // make
+    const origins = Array.from(data[termReadingPair]).map((origin) =>
+      origin.replace(/\|/g, dividingChar)
+    );
+
+    let deinflectors;
+    try {
+      deinflectors = await JMDict.getDeinflectors(term, reading);
+    } catch (error) {
+      console.log(error);
+      deinflectors = '';
+    }
+
+    outputData.push([term, reading, '', deinflectors, 0, origins, 0, title]);
+  }
+
   const index = {
     title,
     revision: `${title}_${new Date().toISOString()}`,
     format: 3,
     url: 'https://github.com/MarvNC/yomichan-dictionaries',
-    description: 'TODO',
+    description: `Sources:
+https://jbbs.shitaraba.net/bbs/read.cgi/study/10958/1299762655
+https://academy6.5ch.net/test/read.cgi/gengo/1228873581
+https://community.wanikani.com/t/special-kanji-words-derived-from-other-words/35655
+
+Created with https://github.com/MarvNC/yomichan-dictionaries`,
     attribution: '名無し, 名無し, seanblue, Marv',
   };
+
+  saveDict(
+    {
+      'term_bank_1.json': outputData,
+      'index.json': index,
+    },
+    outputZipName
+  );
 })();

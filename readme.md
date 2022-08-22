@@ -36,6 +36,8 @@ Using the information [gathered by ncaq](https://github.com/ncaq/dic-nico-inters
 
 Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|いる）. Information comes from anonymous forum posts, so it may not be 100% accurate.
 
+![](!images/chrome_yomichan-dictionaries%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv_at_master_%C2%B7_MarvNC_2022-08-22_12-37-52.png)
+
 **Sources:**
 
 - [shitaraba](https://jbbs.shitaraba.net/bbs/read.cgi/study/10958/1299762655/)
