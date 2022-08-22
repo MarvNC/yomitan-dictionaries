@@ -14,6 +14,12 @@
   - [Innocent Corpus Kanji Frequency](#innocent-corpus-kanji-frequency)
   - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
 
+#### Changelog
+
+- 2022-08-22
+  - Fixed swapped link labels in the [niconico-pixiv](#niconico-pixiv-slang) dictionary.
+  - Removed unnecessary entries from the [jitai](#jitai) kanji dictionary.
+
 ## Term Dictionary
 
 ### niconico-pixiv slang

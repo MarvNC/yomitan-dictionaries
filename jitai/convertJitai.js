@@ -25,12 +25,13 @@ const outputZipName = '[Kanji] jitai.zip';
 
   for (const row of kyuujitai) {
     const hasKyuujitai = row.旧unicode !== 'missing';
+    if (!hasKyuujitai) continue;
     // shinjitai form
     const shinjitaiRow = [];
     shinjitaiRow.push(row.新unicode, '', '', '新字体');
     const shinjitaiStats = [];
 
-    if (hasKyuujitai) shinjitaiStats.push('旧字体: ' + row.旧unicode);
+    shinjitaiStats.push('旧字体: ' + row.旧unicode);
     if (row.新note) shinjitaiStats.push('新note: ' + row.新note);
     if (row.旧note) shinjitaiStats.push('旧note: ' + row.旧note);
 
