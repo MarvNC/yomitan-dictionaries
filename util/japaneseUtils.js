@@ -88,6 +88,9 @@ function normalizeReading(term, reading) {
       } else if (!termChar) {
         katakanaArr.shift();
         outputReading.push(hiraganaArr.shift());
+      } else {
+        // for stuff like exclamation points at the end
+        outputReading.push(termChar);
       }
     }
 
