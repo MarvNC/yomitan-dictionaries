@@ -30,27 +30,33 @@ function isKanji(char) {
 }
 
 /**
- * Detects if a string contains hiragana.
- * @param {string} str
+ * Detects if a character contains hiragana.
+ * @param {string} char
  * @returns {boolean}
  */
-function isHiragana(str) {
-  return /[ぁ-ゔゞ゛゜ー]/.test(str);
+function isHiragana(char) {
+  return /[ぁ-ゔゞ゛゜ー]/.test(char);
 }
 
 /**
- * Detects if a string contains katakana.
- * @param {string} str
+ * Detects if a character contains katakana.
+ * @param {string} char
  * @returns {boolean}
  */
-function isKatakana(str) {
-  return /[ァ-ンヾ゛゜ー]/.test(str);
+function isKatakana(char) {
+  return /[ァ-ンヾ゛゜ー]/.test(char);
 }
 
-for (const test of testArr) {
-  const [reading, term] = test.split('\t');
-  console.log(normalizeReading(term, reading));
+/**
+ * Detects if a character is a kana.
+ * @param {string} char
+ * @returns {boolean}
+ */
+function isKana(char) {
+  return isHiragana(char) || isKatakana(char);
 }
+
+console.log(normalizeReading('IQサプリ', 'あいきゅーさぷり'));
 
 /**
  * Normalizes a reading to match for things with katakana in the string.
@@ -68,9 +74,9 @@ function normalizeReading(term, reading) {
     const termArr = term.split('');
     while (katakanaArr.length > 0) {
       const termChar = termArr.shift();
-      if (isKanji(termChar)) {
+      if (!isKana(termChar)) {
         // consume kanjis in succession
-        while (isKanji(termArr[0])) {
+        while (!isKana(termArr[0])) {
           termArr.shift();
         }
         // consume reading up till kanji is over
