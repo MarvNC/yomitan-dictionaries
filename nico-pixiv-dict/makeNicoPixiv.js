@@ -32,13 +32,13 @@ const dictURL = 'https://cdn.ncaq.net/dic-nico-intersection-pixiv.txt';
           content: [
             {
               tag: 'a',
-              href: `https://dic.nicovideo.jp/l/${term}`,
+              href: `https://dic.pixiv.net/a/${term}`,
               content: 'pixiv',
             },
             ' | ',
             {
               tag: 'a',
-              href: `https://dic.pixiv.net/a/${term}`,
+              href: `https://dic.nicovideo.jp/l/${term}`,
               content: 'niconico',
             },
           ],
