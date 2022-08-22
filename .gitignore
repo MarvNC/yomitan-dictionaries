@@ -4,10 +4,9 @@ node_modules
 allKanji.json
 kanjiData.json
 testData.json
-kanji_bank_1.json
 jitai/旧字体.txt
 jitai/標準字体.txt
 */input/*
-term_bank_1.json
 mozc/kanji.json
 mozc/variant_rule.txt
+test/*
