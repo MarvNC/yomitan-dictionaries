@@ -48,17 +48,6 @@ function isKatakana(char) {
 }
 
 /**
- * Detects if a character is a kana.
- * @param {string} char
- * @returns {boolean}
- */
-function isKana(char) {
-  return isHiragana(char) || isKatakana(char);
-}
-
-console.log(normalizeReading('IQサプリ', 'あいきゅーさぷり'));
-
-/**
  * Normalizes a reading to match for things with katakana in the string.
  * @param {string} term
  * @param {string} reading
@@ -74,9 +63,9 @@ function normalizeReading(term, reading) {
     const termArr = term.split('');
     while (katakanaArr.length > 0) {
       const termChar = termArr.shift();
-      if (!isKana(termChar)) {
+      if (isKanji(termChar)) {
         // consume kanjis in succession
-        while (!isKana(termArr[0])) {
+        while (isKanji(termArr[0])) {
           termArr.shift();
         }
         // consume reading up till kanji is over
