@@ -1,6 +1,7 @@
 # Yomichan Dictionaries <!-- omit in toc -->
 
 - [Term Dictionary](#term-dictionary)
+  - [niconico-pixiv slang](#niconico-pixiv-slang)
   - [複合語起源](#複合語起源)
 - [Term Frequency](#term-frequency)
   - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
@@ -15,9 +16,13 @@
 
 ## Term Dictionary
 
-<!-- ### [niconico-pixiv](https://github.com/ncaq/dic-nico-intersection-pixiv) slang
-Using the information [gathered by ncaq](https://github.com/ncaq/dic-nico-intersection-pixiv), this is a dictionary that can help parse cultural references and slang that are in either [niconico](https://dic.nicovideo.jp/) or [pixiv](https://dic.pixiv.net/)'s online dictionary.
--->
+### [niconico-pixiv](https://github.com/ncaq/dic-nico-intersection-pixiv) slang
+
+Using the information [gathered by ncaq](https://github.com/ncaq/dic-nico-intersection-pixiv) for use in an IME, this is a dictionary that can help parse cultural references and slang that are in either [niconico](https://dic.nicovideo.jp/) or [pixiv](https://dic.pixiv.net/)'s online dictionaries. According to the original source, entries were excluded based on some measure of usefulness so this does not contain every single thing in pixiv or niconico, which would have been too many.
+
+> ルールベースで IME 辞書の役に立たなそうな単語を除外しています。
+
+![](<!images/chrome_%E3%82%86%E3%81%9A%E3%82%BD%E3%83%95%E3%83%88_(%E3%82%86%E3%81%9A%E3%81%9D%E3%81%B5%E3%81%A8)%E3%81%A8%E3%81%AF%E3%80%90%E3%83%94%E3%82%AF%E3%82%B7%E3%83%96%E7%99%BE%E7%A7%91%E4%BA%8B%E5%85%B8%E3%80%91_-_httpsdic.pixiv.net_2022-08-21_17-22-10.png>)
 
 ### 複合語起源
 
