@@ -18,6 +18,8 @@
 
 ### [niconico-pixiv](https://github.com/ncaq/dic-nico-intersection-pixiv) slang
 
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20Nico-Pixiv.zip)**
+
 Using the information [gathered by ncaq](https://github.com/ncaq/dic-nico-intersection-pixiv) for use in an IME, this is a dictionary that can help parse cultural references and slang that are in either [niconico](https://dic.nicovideo.jp/) or [pixiv](https://dic.pixiv.net/)'s online dictionaries. According to the original source, entries were excluded based on some measure of usefulness so this does not contain every single thing in pixiv or niconico, which would have been too many.
 
 > ルールベースで IME 辞書の役に立たなそうな単語を除外しています。
