@@ -16,11 +16,11 @@
 
 ## Term Dictionary
 
-### [niconico-pixiv](https://github.com/ncaq/dic-nico-intersection-pixiv) slang
+### niconico-pixiv slang
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20Nico-Pixiv.zip)**
 
-Using the information [gathered by ncaq](https://github.com/ncaq/dic-nico-intersection-pixiv) for use in an IME, this is a dictionary that can help parse cultural references and slang that are in either [niconico](https://dic.nicovideo.jp/) or [pixiv](https://dic.pixiv.net/)'s online dictionaries. According to the original source, entries were excluded based on some measure of usefulness so this does not contain every single thing in pixiv or niconico, which would have been too many.
+Using the information [gathered by ncaq for use in an IME](https://github.com/ncaq/dic-nico-intersection-pixiv), this is a dictionary that can help parse cultural references and slang that are in either [niconico](https://dic.nicovideo.jp/) or [pixiv](https://dic.pixiv.net/)'s online dictionaries. According to the original source, entries were excluded based on some measure of usefulness so this does not contain every single thing in pixiv or niconico, which would have been too many.
 
 > ルールベースで IME 辞書の役に立たなそうな単語を除外しています。
 
@@ -42,11 +42,11 @@ Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|い�
 
 ## Term Frequency
 
-### [jpdb Frequency Dictionary](https://github.com/MarvNC/jpdb-freq-list)
+### jpdb Frequency Dictionary
 
 **[Download](https://github.com/MarvNC/jpdb-freq-list/releases)**
 
-A frequency dictionary based on information from https://jpdb.io.
+A frequency dictionary based on information from https://jpdb.io. More information can be found [here](https://github.com/MarvNC/jpdb-freq-list).
 
 <!--
 aozora bunko kanji/jukugo
@@ -54,7 +54,7 @@ aozora bunko kanji/jukugo
 
 ## Kanji Info
 
-### [jpdb](https://jpdb.io) Kanji
+### jpdb Kanji
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20JPDB%20Kanji.zip)**
 
@@ -69,15 +69,15 @@ Kanji information from https://jpdb.io:
 
 <!-- ### The Kanji Map
 
-A Yomichan kanji dictionary created using the data from [The Kanji Map](https://github.com/gabor-kovacs/the-kanji-map) providing radical information and kanji decompositions. -->
+A kanji dictionary created using the data from [The Kanji Map](https://github.com/gabor-kovacs/the-kanji-map) providing radical information and kanji decompositions. -->
 
 ## Kanji Variants
 
-### [mozc](https://github.com/google/mozc)
+### mozc
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20mozc%20Kanji%20Variants.zip)**
 
-A kanji dictionary made from the kanji variant information in Google's [mozc](https://github.com/google/mozc) Japanese IME. Includes information about:
+A kanji dictionary made from the kanji variant information in [Google's mozc Japanese IME](https://github.com/google/mozc). Includes information about:
 
 - 異体字
 - 印刷標準字体
@@ -91,11 +91,11 @@ A kanji dictionary made from the kanji variant information in Google's [mozc](ht
 
 ![](!images/chrome_%E9%AB%94_-_Yomichan_Search_-_Google_Chrome_2022-08-19_20-22-19.png)
 
-### [jitai](https://github.com/epistularum/jitai)
+### jitai
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20jitai.zip)**
 
-A Yomichan kanji dictionary made using the data from [jitai](https://github.com/epistularum/jitai). This allows you to see information about 旧字体, 新字体, 拡張新字体, and 標準字体 variants from the kanji page in Yomichan.
+A kanji dictionary made using the data from [jitai](https://github.com/epistularum/jitai). This allows you to see information about 旧字体, 新字体, 拡張新字体, and 標準字体 variants from the kanji page in Yomichan.
 
 ![](!images/chrome_%E4%B9%B1_-_Yomichan_Search_-_Google_Chrome_2022-08-10_19-28-54.png)
 
@@ -109,7 +109,7 @@ Uses the [innocent corpus frequency list](https://web.archive.org/web/2019030907
 
 - The displayed frequency in Yomichan will contain the frequency rank followed by the occurence count, for example `4686 (57)` for 壟 indicating it's the 4686th most common kanji and appeared 57 times total in the 5000+ novels in Innocent Corpus.
 
-### [jpdb](https://jpdb.io) Kanji Frequency
+### jpdb Kanji Frequency
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20JPDB%20Kanji.zip)**
 
