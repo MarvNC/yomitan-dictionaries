@@ -35,9 +35,10 @@
 - [ ] jpdb separate onyomi using KANJIDIC also scrape 'used in' kanji
   - [ ] also add count of total vocab for that word
 
-- [ ] itaiji (maybe dont need the one with all that chinese)
-  - [ ] https://www.tobunken.go.jp/archives/%E7%95%B0%E4%BD%93%E5%AD%97%E3%83%AA%E3%82%B9%E3%83%88/
-  - [ ] https://wwwap.hi.u-tokyo.ac.jp/ships/itaiji_list.jsp
+- [x] itaiji (maybe dont need the one with all that chinese)
+  - [x] https://www.tobunken.go.jp/archives/%E7%95%B0%E4%BD%93%E5%AD%97%E3%83%AA%E3%82%B9%E3%83%88/
+  - [x] https://wwwap.hi.u-tokyo.ac.jp/ships/itaiji_list.jsp
+  - [ ] NVM google mozc data probably better and less useless chinese
 
 - [ ] pixiv/niconico parsing/link only dict (check grammar dicts for link example)
   - [ ] https://github.com/ncaq/dic-nico-intersection-pixiv

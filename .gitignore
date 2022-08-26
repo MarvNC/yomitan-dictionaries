@@ -10,3 +10,6 @@ jitai/標準字体.txt
 mozc/kanji.json
 mozc/variant_rule.txt
 test/*
+*kanji-jukugo-frequency.7z
+*/kanji-jukugo-frequency/*
+aozoraBunko/aozora-kanji-frequency.txt
