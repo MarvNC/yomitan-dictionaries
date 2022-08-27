@@ -58,6 +58,8 @@ A frequency dictionary based on information from https://jpdb.io. More informati
 
 ### Aozora Bunko Jukugo Frequency
 
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BFreq%5D%20Aozora%20Bunko.zip)**
+
 A frequency dictionary created using data [collected by vrtm](https://vtrm.net/japanese/kanji-jukugo-frequency/en) based on the [Aozora Bunko](https://www.aozora.gr.jp/). Due to the [methodology used](https://vtrm.net/japanese/kanji-jukugo-frequency/en), this dictionary does not cover words with kana in them but it covers many rare 熟語 not covered by other frequency dictionaries, such as 睽乖.
 
 ## Kanji Info
@@ -110,6 +112,8 @@ A kanji dictionary made using the data from [jitai](https://github.com/epistular
 ## Kanji Frequency
 
 ### Aozora Bunko Kanji Frequency
+
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20Aozora%20Bunko.zip)**
 
 A kanji frequency dictionary created using data [collected by vrtm](https://vtrm.net/japanese/kanji-frequency/en) based on the [Aozora Bunko](https://www.aozora.gr.jp/).
 
