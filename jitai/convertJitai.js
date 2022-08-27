@@ -68,7 +68,7 @@ const outputZipName = '[Kanji] jitai.zip';
     url: 'https://github.com/epistularum/jitai',
     description:
       'Data about 新字体/旧字体 and 標準字体/許容字体 in comparison to each other.\nCreated with https://github.com/MarvNC/yomichan-dictionaries',
-    attribution: 'epistularum, Marv',
+    author: 'epistularum, Marv',
   };
 
   const tagBank = await fs.promises.readFile(folderPath + 'tag_bank_1.json');

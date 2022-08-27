@@ -104,7 +104,8 @@ const index = {
   format: 3,
   url: 'https://github.com/google/mozc',
   description: `Data about kanji variants from Google's Japanese IME, mozc.\nCreated with https://github.com/MarvNC/yomichan-dictionaries`,
-  attribution: 'Google, Marv',
+  author: 'Google, Marv',
+  attribution: 'Google',
 };
 
 saveDict(

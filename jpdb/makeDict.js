@@ -17,7 +17,8 @@ const index = {
   revision: `jpdb_kanji_${new Date().toISOString()}`,
   format: 3,
   url: 'https://jpdb.io',
-  attribution: 'jpdb, Marv',
+  author: 'jpdb, Marv',
+  attribution: 'jpdb',
 };
 
 const args = process.argv.slice(2);

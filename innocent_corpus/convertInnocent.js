@@ -38,7 +38,8 @@ fs.readFile(folderPath + corpusFile, function (err, data) {
           url: 'https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613',
           description:
             'Rank-based kanji frequency data from the innocent corpus\nModified by https://github.com/MarvNC/yomichan-dictionaries',
-          attribution: 'cb4960, Marv',
+          author: 'cb4960, Marv',
+          attribution: 'Innocent Corpus Novels',
           frequencyMode: 'rank-based',
         };
 

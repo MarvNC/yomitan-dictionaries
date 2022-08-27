@@ -112,7 +112,7 @@ https://academy6.5ch.net/test/read.cgi/gengo/1228873581
 https://community.wanikani.com/t/special-kanji-words-derived-from-other-words/35655
 
 Created with https://github.com/MarvNC/yomichan-dictionaries`,
-    attribution: '名無し, 名無し, seanblue, Marv',
+    author: '名無し, 名無し, seanblue, Marv',
   };
 
   saveDict(

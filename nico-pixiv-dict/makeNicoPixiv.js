@@ -55,7 +55,8 @@ const dictURL = 'https://cdn.ncaq.net/dic-nico-intersection-pixiv.txt';
     format: 3,
     url: 'https://github.com/ncaq/dic-nico-intersection-pixiv',
     description: `Parses words in niconico or pixiv's online dictionaries.\nCreated with https://github.com/MarvNC/yomichan-dictionaries`,
-    attribution: 'ncaq, Marv',
+    author: 'ncaq, Marv',
+    attribution: 'https://dic.pixiv.net/, https://dic.nicovideo.jp/',
   };
 
   saveDict(
