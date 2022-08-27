@@ -5,12 +5,14 @@
   - [複合語起源](#複合語起源)
 - [Term Frequency](#term-frequency)
   - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
+  - [Aozora Bunko Jukugo Frequency](#aozora-bunko-jukugo-frequency)
 - [Kanji Info](#kanji-info)
   - [jpdb Kanji](#jpdb-kanji)
 - [Kanji Variants](#kanji-variants)
   - [mozc](#mozc)
   - [jitai](#jitai)
 - [Kanji Frequency](#kanji-frequency)
+  - [Aozora Bunko Kanji Frequency](#aozora-bunko-kanji-frequency)
   - [Innocent Corpus Kanji Frequency](#innocent-corpus-kanji-frequency)
   - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
 
@@ -54,9 +56,9 @@ Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|い�
 
 A frequency dictionary based on information from https://jpdb.io. More information can be found [here](https://github.com/MarvNC/jpdb-freq-list).
 
-<!--
-aozora bunko kanji/jukugo
- -->
+### Aozora Bunko Jukugo Frequency
+
+A frequency dictionary created using data [collected by vrtm](https://vtrm.net/japanese/kanji-jukugo-frequency/en) based on the [Aozora Bunko](https://www.aozora.gr.jp/). Due to the [methodology used](https://vtrm.net/japanese/kanji-jukugo-frequency/en), this dictionary does not cover words with kana in them but it covers many rare 熟語 not covered by other frequency dictionaries, such as 睽乖.
 
 ## Kanji Info
 
@@ -106,6 +108,10 @@ A kanji dictionary made using the data from [jitai](https://github.com/epistular
 ![](!images/chrome_%E4%B9%B1_-_Yomichan_Search_-_Google_Chrome_2022-08-10_19-28-54.png)
 
 ## Kanji Frequency
+
+### Aozora Bunko Kanji Frequency
+
+A kanji frequency dictionary created using data [collected by vrtm](https://vtrm.net/japanese/kanji-frequency/en) based on the [Aozora Bunko](https://www.aozora.gr.jp/).
 
 ### Innocent Corpus Kanji Frequency
 

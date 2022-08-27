@@ -3,13 +3,47 @@ const fs = require('fs');
 const saveDict = require('../util/saveDict');
 
 const folderPath = 'aozoraBunko/kanji-jukugo-frequency/';
+const kanjiDataFilePath = 'aozoraBunko/aozora-kanji-frequency.txt';
 
 (async function () {
+  await makeKanjiFreq();
   await makeJukugoFreq();
 })();
 
 async function makeKanjiFreq() {
-  
+  const kanjiData = fs.readFileSync(kanjiDataFilePath, 'utf8');
+  const lines = kanjiData.split('\n').splice(10);
+
+  const outputData = [];
+
+  for (const line of lines) {
+    if (line) {
+      const [freqStr, kanji, occurencesStr, percent] = line.split('\t').map((str) => str.trim());
+      const [freq, occurences] = [parseInt(freqStr), parseInt(occurencesStr)];
+      outputData.push([kanji, 'freq', { value: freq, displayValue: `${freq} (${occurences})` }]);
+    }
+  }
+
+  const index = {
+    title: '青空文庫漢字',
+    revision: `aozoraBunko_${new Date().toISOString()}`,
+    format: 3,
+    url: 'https://www.aozora.gr.jp/',
+    description: `Rank-based kanji frequency data from the Aozora Bunko
+Data from https://vtrm.net/japanese/kanji-jukugo-frequency/en
+Created with https://github.com/MarvNC/yomichan-dictionaries`,
+    author: 'vtrm, Marv',
+    attribution: '青空文庫',
+    frequencyMode: 'rank-based',
+  };
+
+  saveDict(
+    {
+      'index.json': index,
+      'kanji_meta_bank_1.json': outputData,
+    },
+    '[Kanji Frequency] Aozora Bunko.zip'
+  );
 }
 
 async function makeJukugoFreq() {
@@ -42,13 +76,11 @@ async function makeJukugoFreq() {
   }
 
   const outputData = [];
-  let totalOccurences = 0;
 
   const allJukugoOrdered = Object.entries(allJukugo).sort((a, b) => b[1] - a[1]);
   for (let i = 0; i < allJukugoOrdered.length; i++) {
     const [jukugo, occurences] = allJukugoOrdered[i];
 
-    totalOccurences += parseInt(occurences);
     let rank = i + 1;
 
     if (i > 0 && allJukugoOrdered[i - 1][1] === occurences) {
@@ -66,10 +98,10 @@ async function makeJukugoFreq() {
     ]);
   }
 
-  console.log(`Wrote ${outputData.length} jukugo with ${totalOccurences} occurences`);
+  console.log(`Wrote ${outputData.length} jukugo`);
 
   const index = {
-    title: 'Aozora Bunko Jukugo Frequency',
+    title: '青空文庫熟語',
     revision: `aozoraBunko_${new Date().toISOString()}`,
     format: 3,
     url: 'https://www.aozora.gr.jp',
@@ -92,6 +124,6 @@ Due to the parsing method used and to the imperfect nature of Chinese characters
       'index.json': index,
       'term_meta_bank_1.json': outputData,
     },
-    '[Freq] aozoraBunko.zip'
+    '[Freq] Aozora Bunko.zip'
   );
 }
