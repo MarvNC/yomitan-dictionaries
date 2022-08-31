@@ -1,26 +1,31 @@
 # Yomichan Dictionaries <!-- omit in toc -->
 
-- [Term Dictionary](#term-dictionary)
-  - [niconico-pixiv slang](#niconico-pixiv-slang)
-  - [複合語起源](#複合語起源)
-- [Term Frequency](#term-frequency)
-  - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
-  - [Aozora Bunko Jukugo Frequency](#aozora-bunko-jukugo-frequency)
-- [Kanji Info](#kanji-info)
-  - [jpdb Kanji](#jpdb-kanji)
-- [Kanji Variants](#kanji-variants)
-  - [mozc](#mozc)
-  - [jitai](#jitai)
-- [Kanji Frequency](#kanji-frequency)
-  - [Aozora Bunko Kanji Frequency](#aozora-bunko-kanji-frequency)
-  - [Innocent Corpus Kanji Frequency](#innocent-corpus-kanji-frequency)
-  - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
+- [Terms](#terms)
+  - [Term Dictionary](#term-dictionary)
+    - [niconico-pixiv slang](#niconico-pixiv-slang)
+    - [複合語起源](#複合語起源)
+  - [Term Frequency](#term-frequency)
+    - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
+    - [Aozora Bunko Jukugo Frequency](#aozora-bunko-jukugo-frequency)
+- [Kanji](#kanji)
+  - [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries)
+  - [Kanji Info](#kanji-info)
+    - [jpdb Kanji](#jpdb-kanji)
+  - [Kanji Variants](#kanji-variants)
+    - [mozc](#mozc)
+    - [jitai](#jitai)
+  - [Kanji Frequency](#kanji-frequency)
+    - [Aozora Bunko Kanji Frequency](#aozora-bunko-kanji-frequency)
+    - [Innocent Corpus Kanji Frequency](#innocent-corpus-kanji-frequency)
+    - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
 
 #### Changelog
 
 - 2022-08-22
   - Fixed swapped link labels in the [niconico-pixiv](#niconico-pixiv-slang) dictionary.
   - Removed unnecessary entries from the [jitai](#jitai) kanji dictionary.
+
+# Terms
 
 ## Term Dictionary
 
@@ -61,6 +66,59 @@ A frequency dictionary based on information from https://jpdb.io. More informati
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BFreq%5D%20Aozora%20Bunko.zip)**
 
 A frequency dictionary created using data [collected by vrtm](https://vtrm.net/japanese/kanji-jukugo-frequency/en) based on the [Aozora Bunko](https://www.aozora.gr.jp/). Due to the [methodology used](https://vtrm.net/japanese/kanji-jukugo-frequency/en), this dictionary does not cover words with kana in them but it covers many rare 熟語 not covered by other frequency dictionaries, such as 睽乖.
+
+# Kanji
+
+## Yomichan CSS for Kanji Dictionaries
+
+Yomichan and KANJIDIC by default have a lot of bloat in the kanji dictionary viewer, like repeating the kanji stroke order image, frequency information, and unused table rows for every entry. For using multiple kanji dictionaries, you can use some CSS to make the kanji display more compact like it is for terms. 
+
+![](!images/kanjiCssImage.png)
+
+In `Settings -> Popup Appearance -> Configure custom CSS...` input the following CSS for more compact display of entries.
+
+```css
+/* remove misc dict classifications/codepoints/stats */
+.kanji-glyph-data > tbody > tr:nth-child(n+3) {
+    display: none;
+}
+
+/* remove stroke diagram, freq, header for next entries */
+div.entry[data-type="kanji"]:nth-child(n+2) .kanji-glyph-container, 
+div.entry[data-type="kanji"]:nth-child(n+2) [data-section-type=frequencies],
+div.entry[data-type="kanji"]:nth-child(n+2) table.kanji-glyph-data > tbody > tr:first-child
+{
+    display: none;
+}
+
+/* remove 'No data found' */
+.kanji-info-table-item-value-empty {
+    display: none;
+}
+
+/* reduce extra padding */
+.kanji-glyph-data,
+div.entry[data-type="kanji"],
+div.entry[data-type="kanji"]:nth-child(n+2) .kanji-glyph-data>tbody>tr>*,
+.kanji-glyph-data dl.kanji-readings-japanese,
+div.entry[data-type="kanji"]:nth-child(n+2) .kanji-glyph-data dl.kanji-readings-chinese[data-count="0"]
+{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0em;
+    margin-top: 0 !important;
+}
+/* remove horizontal lines */
+.entry+.entry[data-type="kanji"],
+div#dictionary-entries > div.entry:nth-child(n+2) .kanji-glyph-data>tbody>tr>*
+{
+    border-top: none !important;
+}
+/* change decimal list */
+.kanji-gloss-list {
+    list-style-type: circle;
+}
+```
 
 ## Kanji Info
 
