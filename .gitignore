@@ -13,3 +13,4 @@ test/*
 *kanji-jukugo-frequency.7z
 */kanji-jukugo-frequency/*
 aozoraBunko/aozora-kanji-frequency.txt
+wikipediaFreq/wikipedia.json

@@ -17,6 +17,7 @@
   - [Kanji Frequency](#kanji-frequency)
     - [Aozora Bunko Kanji Frequency](#aozora-bunko-kanji-frequency)
     - [Innocent Corpus Kanji Frequency](#innocent-corpus-kanji-frequency)
+    - [Wikipedia Kanji Frequency](#wikipedia-kanji-frequency)
     - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
 
 #### Changelog
@@ -182,6 +183,12 @@ A kanji frequency dictionary created using data [collected by vrtm](https://vtrm
 Uses the [innocent corpus frequency list](https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613) that is distributed with [Yomichan](https://github.com/FooSoft/yomichan#dictionaries) to create a rank-based kanji frequency dictionary. This was created because the existing one is an occurence-based list and does not display ranks.
 
 - The displayed frequency in Yomichan will contain the frequency rank followed by the occurence count, for example `4686 (57)` for 壟 indicating it's the 4686th most common kanji and appeared 57 times total in the 5000+ novels in Innocent Corpus.
+
+### Wikipedia Kanji Frequency
+
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20Wikipedia.zip)**
+
+Rank-based kanji frequency data from a May 2015 dump of Japanese Wikipedia, containing around 2万 kanji. Data [gathered by scriptin](https://github.com/scriptin/kanji-frequency).
 
 ### jpdb Kanji Frequency
 
