@@ -26,7 +26,7 @@ const WAIT_MS = 1000;
 /**
  * Gets a list of all the kanji in Wiktionary JP
  * @param {boolean} overwrite - whether to re fetch irregardless of an existing saved file
- * @returns 
+ * @returns
  */
 async function getAllKanji(overwrite = false) {
   // fetch from existing file
@@ -53,8 +53,8 @@ async function getAllKanji(overwrite = false) {
 
 /**
  * Gets the kanji on a page of kanji as well as the url of the next page in the list.
- * @param {string} url 
- * @returns 
+ * @param {string} url
+ * @returns
  */
 async function getKanjiPage(url) {
   const avoidCategories = ['!', '*'];
@@ -90,9 +90,52 @@ async function getKanjiPage(url) {
 
 /**
  * Gets kanji info from a page on Wiktionary
- * @param {string} kanji 
+ * @param {string} kanji
  */
 async function getKanji(kanji) {
   const document = await getURL(kanjiUrl(kanji), true);
   const kanjiData = {};
+
+  // const content = document.getElementsByClassName('mw-parser-output')[0];
+  const kanjiHeader = document.querySelector('#漢字')?.parentElement;
+  const kanjiElems = [];
+  let elem = kanjiHeader.nextElementSibling;
+  while (elem && elem.tagName !== 'H2') {
+    kanjiElems.push(elem);
+    elem = elem.nextElementSibling;
+  }
+
+  while (kanjiElems.length > 0) {
+    let elem = kanjiElems.shift();
+    if (elem.tagName === 'P') {
+      // skip the 350% large kanji
+      continue;
+    } else if (elem.tagName === 'UL') {
+      // kanji stats
+      for (const li of [...elem.querySelectorAll('li')]) {
+        let [key, value] = li.textContent.split(':');
+        key = key.trim();
+        value = value.trim();
+        if(key === '異体字'){
+          const itaiji = {};
+          // TODO: parse itaiji to object/array thing
+          for(const char of value.split('')){
+            
+          }
+        }
+        kanjiData[key] = value;
+      }
+    } else if (elem.tagName === 'H3') {
+      const header = elem;
+      const headerText = header.textContent.replace('[編集]', '').trim();
+      const content = kanjiElems.shift();
+      kanjiData[headerText] = content.textContent;
+    }
+  }
+
+  const readingsHeader = document.getElementById('発音(?)')?.parentElement;
+  if (readingsHeader) {
+    const readingsElem = readingsHeader.nextElementSibling;
+    kanjiData['発音'] = readingsElem.textContent;
+  }
 }
