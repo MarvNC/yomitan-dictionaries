@@ -7,7 +7,7 @@ const { JSDOM } = require('jsdom');
  * @returns DOM
  */
 async function getURL(url, encode = true) {
-  // url = encodeURI(url);
+  if (encode) url = encodeURI(url);
   try {
     const { data } = await axios.get(url, { validateStatus: null });
     const dom = new JSDOM(data, {});

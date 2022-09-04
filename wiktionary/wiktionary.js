@@ -10,7 +10,7 @@ const allKanjiFilePath = 'wikipediaKanji.json';
 const kanjiDataFilePath = 'kanjiData.json';
 
 const wiktionaryURL = 'https://ja.wiktionary.org';
-const kanjiDir = 'wiki%2F%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%3A%E6%BC%A2%E5%AD%97';
+const kanjiDir = 'wiki/カテゴリ:漢字';
 const startPage = wiktionaryURL + '/' + kanjiDir;
 
 const kanjiUrl = (kanji) => `${wiktionaryURL}/wiki/${kanji}`;
@@ -23,17 +23,24 @@ const WAIT_MS = 1000;
   writeJson(allKanji, folderPath + allKanjiFilePath);
 })();
 
-async function getAllKanji() {
-  // try reading allKanji.json
-  try {
-    const allKanjiFile = await fs.readFile(folderPath + allKanjiFilePath);
-    return JSON.parse(allKanjiFile);
-  } catch (error) {
-    console.log(`No saved ${allKanjiFilePath}`);
+/**
+ * Gets a list of all the kanji in Wiktionary JP
+ * @param {boolean} overwrite - whether to re fetch irregardless of an existing saved file
+ * @returns 
+ */
+async function getAllKanji(overwrite = false) {
+  // fetch from existing file
+  if (!overwrite) {
+    try {
+      const allKanjiFile = await fs.readFile(folderPath + allKanjiFilePath);
+      return JSON.parse(allKanjiFile);
+    } catch (error) {
+      console.log(`No saved ${allKanjiFilePath}`);
+    }
   }
 
   const allKanjiArr = [];
-  let nextURL = startPage;
+  let nextURL = encodeURI(startPage);
   while (nextURL) {
     const { kanji, next } = await getKanjiPage(nextURL);
     allKanjiArr.push(...kanji);
@@ -44,13 +51,18 @@ async function getAllKanji() {
   return allKanjiArr;
 }
 
+/**
+ * Gets the kanji on a page of kanji as well as the url of the next page in the list.
+ * @param {string} url 
+ * @returns 
+ */
 async function getKanjiPage(url) {
   const avoidCategories = ['!', '*'];
 
   console.log(`Getting ${url}`);
   const document = await getURL(url, false);
   const categoryHeader = [...document.querySelectorAll('p')].find((p) =>
-    p.textContent.includes('このカテゴリには 13,107 ページが含まれており、そのうち以下の')
+    p.textContent.includes('ページが含まれており、そのうち以下の')
   );
   const nextPageURL = [...document.querySelectorAll('a')].find((a) =>
     a.textContent.includes('次のページ')
@@ -76,9 +88,11 @@ async function getKanjiPage(url) {
   };
 }
 
+/**
+ * Gets kanji info from a page on Wiktionary
+ * @param {string} kanji 
+ */
 async function getKanji(kanji) {
   const document = await getURL(kanjiUrl(kanji), true);
-  const kanjiData = {}
-
-  
+  const kanjiData = {};
 }
