@@ -72,7 +72,7 @@ A frequency dictionary created using data [collected by vrtm](https://vtrm.net/j
 
 ## Yomichan CSS for Kanji Dictionaries
 
-Yomichan and KANJIDIC by default have a lot of bloat in the kanji dictionary viewer, like repeating the kanji stroke order image, frequency information, and unused table rows for every entry. For using multiple kanji dictionaries, you can use some CSS to make the kanji display more compact like it is for terms. 
+Yomichan and KANJIDIC by default have a lot of bloat in the kanji dictionary viewer, like repeating the kanji stroke order image, frequency information, and unused table rows for every entry. For using multiple kanji dictionaries, you can use some CSS to make the kanji display more compact like it is for terms.
 
 ![](!images/kanjiCssImage.png)
 
@@ -80,44 +80,43 @@ In `Settings -> Popup Appearance -> Configure custom CSS...` input the following
 
 ```css
 /* remove misc dict classifications/codepoints/stats */
-.kanji-glyph-data > tbody > tr:nth-child(n+3) {
-    display: none;
+.kanji-glyph-data > tbody > tr:nth-child(n + 3) {
+  display: none;
 }
 
 /* remove stroke diagram, freq, header for next entries */
-div.entry[data-type="kanji"]:nth-child(n+2) .kanji-glyph-container, 
-div.entry[data-type="kanji"]:nth-child(n+2) [data-section-type=frequencies],
-div.entry[data-type="kanji"]:nth-child(n+2) table.kanji-glyph-data > tbody > tr:first-child
-{
-    display: none;
+div.entry[data-type='kanji']:nth-child(n + 2) .kanji-glyph-container,
+div.entry[data-type='kanji']:nth-child(n + 2) [data-section-type='frequencies'],
+div.entry[data-type='kanji']:nth-child(n + 2) table.kanji-glyph-data > tbody > tr:first-child {
+  display: none;
 }
 
 /* remove 'No data found' */
 .kanji-info-table-item-value-empty {
-    display: none;
+  display: none;
 }
 
 /* reduce extra padding */
 .kanji-glyph-data,
-div.entry[data-type="kanji"],
-div.entry[data-type="kanji"]:nth-child(n+2) .kanji-glyph-data>tbody>tr>*,
+div.entry[data-type='kanji'],
+div.entry[data-type='kanji']:nth-child(n + 2) .kanji-glyph-data > tbody > tr > *,
 .kanji-glyph-data dl.kanji-readings-japanese,
-div.entry[data-type="kanji"]:nth-child(n+2) .kanji-glyph-data dl.kanji-readings-chinese[data-count="0"]
-{
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    margin-bottom: 0em;
-    margin-top: 0 !important;
+div.entry[data-type='kanji']:nth-child(n + 2)
+  .kanji-glyph-data
+  dl.kanji-readings-chinese[data-count='0'] {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0em;
+  margin-top: 0 !important;
 }
 /* remove horizontal lines */
-.entry+.entry[data-type="kanji"],
-div#dictionary-entries > div.entry:nth-child(n+2) .kanji-glyph-data>tbody>tr>*
-{
-    border-top: none !important;
+.entry + .entry[data-type='kanji'],
+div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > tr > * {
+  border-top: none !important;
 }
 /* change decimal list */
 .kanji-gloss-list {
-    list-style-type: circle;
+  list-style-type: circle;
 }
 ```
 
@@ -188,7 +187,7 @@ Uses the [innocent corpus frequency list](https://web.archive.org/web/2019030907
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20Wikipedia.zip)**
 
-Rank-based kanji frequency data from a May 2015 dump of Japanese Wikipedia, containing around 2万 kanji. Data [gathered by scriptin](https://github.com/scriptin/kanji-frequency).
+Rank-based kanji frequency data from a May 2015 dump of Japanese Wikipedia, containing around 2 万 kanji. Data [gathered by scriptin](https://github.com/scriptin/kanji-frequency).
 
 ### jpdb Kanji Frequency
 
