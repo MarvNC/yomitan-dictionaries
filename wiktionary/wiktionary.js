@@ -116,13 +116,6 @@ async function getKanji(kanji) {
         let [key, value] = li.textContent.split(':');
         key = key.trim();
         value = value.trim();
-        if(key === '異体字'){
-          const itaiji = {};
-          // TODO: parse itaiji to object/array thing
-          for(const char of value.split('')){
-            
-          }
-        }
         kanjiData[key] = value;
       }
     } else if (elem.tagName === 'H3') {
@@ -138,4 +131,41 @@ async function getKanji(kanji) {
     const readingsElem = readingsHeader.nextElementSibling;
     kanjiData['発音'] = readingsElem.textContent;
   }
+}
+
+/**
+ * Parses a string of itaiji info to an object
+ * @param {string} value
+ */
+function parseItaijiString(value) {
+  const itaiji = {};
+  const parenthesesStack = [];
+  const chars = value.split('');
+  // nested parentheses are a thing (article for 鬱) so we have to keep track of all parentheses
+  let currentChar = '';
+  let currentType = '';
+  while (chars.length > 0) {
+    const char = chars.shift();
+    if (char === '（') {
+      currentType += char;
+      parenthesesStack.push(char);
+    } else if (char === '）') {
+      currentType += char;
+      parenthesesStack.pop();
+      if (parenthesesStack.length === 0) {
+        // end of type
+        itaiji[currentChar] = currentType;
+        currentType = '';
+      }
+    } else if (char === '、') {
+      if (parenthesesStack.length > 0) currentType += char;
+    } else if (char === ' ') {
+    } else if (parenthesesStack.length === 0) {
+      currentChar = char;
+      itaiji[currentChar] = '';
+    } else {
+      currentType += char;
+    }
+  }
+  return itaiji;
 }
