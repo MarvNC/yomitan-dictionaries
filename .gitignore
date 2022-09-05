@@ -2,7 +2,7 @@
 !dl/*.zip
 node_modules
 allKanji.json
-kanjiData.json
+jpdb/kanjiData.json
 testData.json
 jitai/旧字体.txt
 jitai/標準字体.txt

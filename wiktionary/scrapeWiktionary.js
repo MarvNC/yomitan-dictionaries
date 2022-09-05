@@ -2,6 +2,7 @@
 // scrape wiktionary kanji pages
 const fs = require('fs').promises;
 
+const { write } = require('fs');
 const { getURL, wait } = require('../util/scrape.js');
 const writeJson = require('../util/writeJson.js');
 
@@ -14,13 +15,38 @@ const kanjiDir = 'wiki/カテゴリ:漢字';
 const startPage = wiktionaryURL + '/' + kanjiDir;
 
 const kanjiUrl = (kanji) => `${wiktionaryURL}/wiki/${kanji}`;
-const WAIT_MS = 1000;
+const WAIT_MS = 500;
+
+let kanjiData = {};
 
 (async function () {
   const allKanji = await getAllKanji();
   const kanjiSet = new Set(allKanji);
   console.log(`Total kanji: ${kanjiSet.size}`);
-  writeJson(allKanji, folderPath + allKanjiFilePath);
+  await writeJson(allKanji, folderPath + allKanjiFilePath);
+
+  // read existing kanji data
+  try {
+    const kanjiDataFile = await fs.readFile(folderPath + kanjiDataFilePath);
+    kanjiData = JSON.parse(kanjiDataFile);
+    console.log(`Loaded ${Object.keys(kanjiData).length} kanji`);
+  } catch (error) {
+    console.log(`No saved ${kanjiDataFilePath}`);
+  }
+
+  try {
+    for(let i = 0; i < allKanji.length; i++) {
+      const kanji = allKanji[i];
+      if (kanjiData[kanji]) continue;
+      console.log(`Getting ${kanji}: ${i + 1}/${allKanji.length}`);
+      const data = await getKanji(kanji);
+      kanjiData[kanji] = data;
+      await wait(WAIT_MS);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+  await writeJson(kanjiData, folderPath + kanjiDataFilePath);
 })();
 
 /**
@@ -91,18 +117,29 @@ async function getKanjiPage(url) {
 /**
  * Gets kanji info from a page on Wiktionary
  * @param {string} kanji
+ * @returns {object} - kanji data
  */
 async function getKanji(kanji) {
   const document = await getURL(kanjiUrl(kanji), true);
   const kanjiData = {};
 
-  // const content = document.getElementsByClassName('mw-parser-output')[0];
   const kanjiHeader = document.querySelector('#漢字')?.parentElement;
+  if (!kanjiHeader) throw new Error(`No kanji header for ${kanji}`);
   const kanjiElems = [];
-  let elem = kanjiHeader.nextElementSibling;
+  let elem = kanjiHeader?.nextElementSibling;
   while (elem && elem.tagName !== 'H2') {
     kanjiElems.push(elem);
     elem = elem.nextElementSibling;
+  }
+
+  // remove display:none radical
+  const radicalElem = document.getElementById('kanji-radical');
+  if (radicalElem) radicalElem.remove();
+
+  // remove references
+  const references = [...document.querySelectorAll('sup.reference')];
+  for(const reference of references) {
+    reference.remove();
   }
 
   while (kanjiElems.length > 0) {
@@ -113,9 +150,9 @@ async function getKanji(kanji) {
     } else if (elem.tagName === 'UL') {
       // kanji stats
       for (const li of [...elem.querySelectorAll('li')]) {
-        let [key, value] = li.textContent.split(':');
+        let [key, value] = li.textContent.split(/:|：/);
         key = key.trim();
-        value = value.trim();
+        value = value?.trim();
         kanjiData[key] = value;
       }
     } else if (elem.tagName === 'H3') {
@@ -131,6 +168,8 @@ async function getKanji(kanji) {
     const readingsElem = readingsHeader.nextElementSibling;
     kanjiData['発音'] = readingsElem.textContent;
   }
+
+  return kanjiData;
 }
 
 /**
@@ -169,3 +208,10 @@ function parseItaijiString(value) {
   }
   return itaiji;
 }
+
+// save on ctrl c
+process.on('SIGINT', async () => {
+  console.log('Saving...');
+  await writeJson(kanjiData, folderPath + kanjiDataFilePath);
+  process.exit(0);
+});
