@@ -6,7 +6,7 @@ const { getURL, wait } = require('../util/scrape.js');
 const writeJson = require('../util/writeJson.js');
 
 const folderPath = './wiktionary/';
-const allKanjiFilePath = 'wikipediaKanji.json';
+const allKanjiFilePath = 'wiktionaryKanji.json';
 const kanjiDataFilePath = 'kanjiData.json';
 
 const wiktionaryURL = 'https://ja.wiktionary.org';
