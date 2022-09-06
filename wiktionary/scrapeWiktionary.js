@@ -35,7 +35,7 @@ let kanjiData = {};
   }
 
   try {
-    for(let i = 0; i < allKanji.length; i++) {
+    for (let i = 0; i < allKanji.length; i++) {
       const kanji = allKanji[i];
       if (kanjiData[kanji]) continue;
       console.log(`Getting ${kanji}: ${i + 1}/${allKanji.length}`);
@@ -123,7 +123,9 @@ async function getKanji(kanji) {
   const document = await getURL(kanjiUrl(kanji), true);
   const kanjiData = {};
 
-  const kanjiHeader = document.querySelector('#漢字')?.parentElement;
+  // sometimes different ID for kokuji? or maybe just wiktionary editor mistake
+  const kanjiHeader = (document.getElementById('漢字') ?? document.getElementById('漢字(国字)'))
+    ?.parentElement;
   if (!kanjiHeader) throw new Error(`No kanji header for ${kanji}`);
   const kanjiElems = [];
   let elem = kanjiHeader?.nextElementSibling;
@@ -138,7 +140,7 @@ async function getKanji(kanji) {
 
   // remove references
   const references = [...document.querySelectorAll('sup.reference')];
-  for(const reference of references) {
+  for (const reference of references) {
     reference.remove();
   }
 
@@ -159,8 +161,13 @@ async function getKanji(kanji) {
       const header = elem;
       const headerText = header.textContent.replace('[編集]', '').trim();
       const content = kanjiElems.shift();
-      kanjiData[headerText] = content.textContent;
+      kanjiData[headerText] = content?.textContent;
     }
+  }
+
+  // add kokuji info in case not in def (彅)
+  if (document.getElementById('漢字(国字)')) {
+    kanjiData['意義'] = '国字。' + kanjiData['意義'];
   }
 
   const readingsHeader = document.getElementById('発音(?)')?.parentElement;
@@ -179,7 +186,7 @@ async function getKanji(kanji) {
 function parseItaijiString(value) {
   const itaiji = {};
   const parenthesesStack = [];
-  const chars = value.split('');
+  const chars = value.split('\n')[0].split('');
   // nested parentheses are a thing (article for 鬱) so we have to keep track of all parentheses
   let currentChar = '';
   let currentType = '';
@@ -196,7 +203,7 @@ function parseItaijiString(value) {
         itaiji[currentChar] = currentType;
         currentType = '';
       }
-    } else if (char === '、') {
+    } else if (char === '、' || char === ',') {
       if (parenthesesStack.length > 0) currentType += char;
     } else if (char === ' ') {
     } else if (parenthesesStack.length === 0) {
