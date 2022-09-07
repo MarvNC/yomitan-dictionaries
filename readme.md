@@ -2,7 +2,7 @@
 
 - [Terms](#terms)
   - [Term Dictionary](#term-dictionary)
-    - [niconico-pixiv slang](#niconico-pixiv-slang)
+    - [niconico-pixiv Terms](#niconico-pixiv-terms)
     - [複合語起源](#複合語起源)
   - [Term Frequency](#term-frequency)
     - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
@@ -30,11 +30,11 @@
 
 ## Term Dictionary
 
-### niconico-pixiv slang
+### niconico-pixiv Terms
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20Nico-Pixiv.zip)**
 
-Using the information [gathered by ncaq for use in an IME](https://github.com/ncaq/dic-nico-intersection-pixiv), this is a dictionary that can help parse cultural references and slang that are in either [niconico](https://dic.nicovideo.jp/) or [pixiv](https://dic.pixiv.net/)'s online dictionaries. According to the original source, entries were excluded based on some measure of usefulness so this does not contain every single thing in pixiv or niconico, which would have been too many.
+Using the information [gathered by ncaq for use in an IME](https://github.com/ncaq/dic-nico-intersection-pixiv), this is a dictionary that can help parse terms that are in either [niconico](https://dic.nicovideo.jp/) or [pixiv](https://dic.pixiv.net/)'s online dictionaries. These online dictionaries are sort of like encyclopedias of the internet, so many terms such as proper nouns not in traditional dictionaries will be found. According to the original source, entries were excluded based on some measure of usefulness so this does not contain every single thing in pixiv or niconico, which would have been too many.
 
 > ルールベースで IME 辞書の役に立たなそうな単語を除外しています。
 
