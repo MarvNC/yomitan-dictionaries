@@ -8,13 +8,19 @@ const { JSDOM } = require('jsdom');
  */
 async function getURL(url, encode = true) {
   if (encode) url = encodeURI(url);
-  try {
-    const { data } = await axios.get(url, { validateStatus: null });
-    const dom = new JSDOM(data, {});
-    const { document } = dom.window;
-    return document;
-  } catch (error) {
-    throw new Error(`Error getting ${url}: ${error}`);
+  let response;
+  let waitTime = 10000;
+  while (!response) {
+    try {
+      const { data } = await axios.get(url, { validateStatus: null });
+      const dom = new JSDOM(data, {});
+      const { document } = dom.window;
+      return document;
+    } catch (error) {
+      console.log(`Error getting ${url}: ${error}`);
+      await wait(waitTime);
+      waitTime *= 2;
+    }
   }
 }
 

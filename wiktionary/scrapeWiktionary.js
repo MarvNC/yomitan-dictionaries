@@ -17,21 +17,34 @@ const startPage = wiktionaryURL + '/' + kanjiDir;
 const kanjiUrl = (kanji) => `${wiktionaryURL}/wiki/${kanji}`;
 const WAIT_MS = 500;
 
-let kanjiData = {};
+let kanjiData;
 
 (async function () {
-  const allKanji = await getAllKanji();
+  let refetchList = false;
+  if (process.argv.includes('--refetchList')) {
+    refetchList = true;
+  }
+  let refetchKanji = false;
+  if (process.argv.includes('--refetchKanji')) {
+    refetchKanji = true;
+  }
+
+  const allKanji = await getAllKanji(refetchList);
   const kanjiSet = new Set(allKanji);
   console.log(`Total kanji: ${kanjiSet.size}`);
   await writeJson(allKanji, folderPath + allKanjiFilePath);
 
   // read existing kanji data
-  try {
-    const kanjiDataFile = await fs.readFile(folderPath + kanjiDataFilePath);
-    kanjiData = JSON.parse(kanjiDataFile);
-    console.log(`Loaded ${Object.keys(kanjiData).length} kanji`);
-  } catch (error) {
-    console.log(`No saved ${kanjiDataFilePath}`);
+  if (!refetchKanji) {
+    try {
+      const kanjiDataFile = await fs.readFile(folderPath + kanjiDataFilePath);
+      kanjiData = JSON.parse(kanjiDataFile);
+      console.log(`Loaded ${Object.keys(kanjiData).length} kanji`);
+    } catch (error) {
+      console.log(`No saved ${kanjiDataFilePath}`);
+    }
+  } else {
+    kanjiData = {};
   }
 
   try {
@@ -136,7 +149,11 @@ async function getKanji(kanji) {
 
   // remove display:none radical
   const radicalElem = document.getElementById('kanji-radical');
-  if (radicalElem) radicalElem.remove();
+  radicalElem?.remove();
+
+  // remove stroke count thing
+  const strokeCountElem = document.getElementById('total-storoke');
+  strokeCountElem?.remove();
 
   // remove references
   const references = [...document.querySelectorAll('sup.reference')];
@@ -161,7 +178,9 @@ async function getKanji(kanji) {
       const header = elem;
       const headerText = header.textContent.replace('[編集]', '').trim();
       const content = kanjiElems.shift();
-      kanjiData[headerText] = content?.textContent;
+      // remove excessive newlines
+      const contentText = content?.textContent?.trim()?.replace(/\n{2,}/g, '\n');
+      kanjiData[headerText] = content?.textContent?.trim();
     }
   }
 
@@ -219,6 +238,8 @@ function parseItaijiString(value) {
 // save on ctrl c
 process.on('SIGINT', async () => {
   console.log('Saving...');
-  await writeJson(kanjiData, folderPath + kanjiDataFilePath);
+  if (kanjiData) {
+    await writeJson(kanjiData, folderPath + kanjiDataFilePath);
+  }
   process.exit(0);
 });
