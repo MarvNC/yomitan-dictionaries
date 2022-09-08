@@ -1,5 +1,7 @@
 # Yomichan Dictionaries <!-- omit in toc -->
 
+### Check out my [JP Resources](https://github.com/MarvNC/JP-Resources)
+
 - [Terms](#terms)
   - [Term Dictionary](#term-dictionary)
     - [niconico-pixiv Terms](#niconico-pixiv-terms)
