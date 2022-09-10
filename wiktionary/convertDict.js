@@ -1,3 +1,5 @@
+const hasUTF16SurrogatePairAt = require( '@stdlib/assert-has-utf16-surrogate-pair-at' );
+
 const saveDict = require('../util/saveDict');
 const writeJson = require('../util/writeJson');
 
@@ -51,9 +53,6 @@ const outputZipName = '[Kanji] Wiktionary.zip';
                 if (readingMarkers[line]) {
                   return readingMarkers[line] + line + readingMarkers[line];
                 }
-                // if (line.startsWith(marker)) {
-                //   return line.replace(marker, readingMarkers[marker] + marker);
-                // }
               }
               return line;
             })
@@ -111,7 +110,12 @@ function parseItaijiString(value) {
   let currentChar = '';
   let currentType = '';
   while (chars.length > 0) {
-    const char = chars.shift();
+    let char = chars.shift();
+    const possibleSurrogatePair = char + chars[0];
+    if (hasUTF16SurrogatePairAt(possibleSurrogatePair, 0)) {
+      char = possibleSurrogatePair;
+      chars.shift();
+    }
     if (char === '（') {
       currentType += char;
       parenthesesStack.push(char);

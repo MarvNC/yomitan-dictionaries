@@ -15,7 +15,7 @@ const kanjiDir = 'wiki/カテゴリ:漢字';
 const startPage = wiktionaryURL + '/' + kanjiDir;
 
 const kanjiUrl = (kanji) => `${wiktionaryURL}/wiki/${kanji}`;
-const WAIT_MS = 100;
+const WAIT_MS = 0;
 
 let kanjiData;
 
@@ -34,6 +34,7 @@ let kanjiData;
   console.log(`Total kanji: ${kanjiSet.size}`);
   await writeJson(allKanji, folderPath + allKanjiFilePath);
 
+  kanjiData = {};
   // read existing kanji data
   if (!refetchKanji) {
     try {
@@ -43,17 +44,25 @@ let kanjiData;
     } catch (error) {
       console.log(`No saved ${kanjiDataFilePath}`);
     }
-  } else {
-    kanjiData = {};
   }
 
   try {
+    let firstGet = Date.now();
+    let gets = 0;
     for (let i = 0; i < allKanji.length; i++) {
       const kanji = allKanji[i];
       if (kanjiData[kanji]) continue;
-      console.log(`Getting ${kanji}: ${i + 1}/${allKanji.length}`);
       const data = await getKanji(kanji);
       kanjiData[kanji] = data;
+
+      gets++;
+      const timePerKanji = (Date.now() - firstGet) / gets;
+      const estimatedCompletion = new Date(Date.now() + timePerKanji * (allKanji.length - i));
+      console.log(
+        `Got ${kanji}: ${i + 1}/${
+          allKanji.length
+        } | Estimated ${estimatedCompletion.toLocaleString()} | ${timePerKanji.toFixed(2)}ms/kanji`
+      );
       await wait(WAIT_MS);
     }
   } catch (error) {
@@ -180,7 +189,7 @@ async function getKanji(kanji) {
       const content = kanjiElems.shift();
       // remove excessive newlines
       const contentText = content?.textContent?.trim()?.replace(/\n{2,}/g, '\n');
-      kanjiData[headerText] = content?.textContent?.trim();
+      kanjiData[headerText] = contentText;
     }
   }
 
