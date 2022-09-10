@@ -134,7 +134,7 @@ Kanji information of around 13,000 characters from [Wiktionary](https://ja.wikti
 - 字源 - information about how and why a kanji is composed the way it is, including the [type of composition it is](https://en.wikipedia.org/wiki/Kanji#Types_of_kanji_by_category)
 - The meaning of the kanji (in Japanese)
 - The various 異体字 of the kanji
-- 
+
 ![](!images/chrome_%E8%AA%AD_-_%E3%82%A6%E3%82%A3%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AA%E3%83%BC%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88_-_httpsja.wiktionary.org_-_Go_2022-09-09_20-13-53.png)
 
 ### jpdb Kanji
