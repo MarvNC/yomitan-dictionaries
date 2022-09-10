@@ -37,6 +37,8 @@ const outputZipName = '[Kanji] Wiktionary.zip';
     }
   }
 
+
+  console.log(`Got information for ${Object.keys(data).length} kanji`);
   const outputData = [];
   // map new itaiji and save to new json
   for (const kanji of Object.keys(data)) {

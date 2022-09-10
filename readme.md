@@ -129,7 +129,7 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20Wiktionary.zip)**
 
-Kanji information of around 13,000 characters from [Wiktionary](https://ja.wiktionary.org/), notably:
+Kanji information of around 18,000 characters from [Wiktionary](https://ja.wiktionary.org/), notably:
 - 呉音, 漢音, 唐音, 宋音, 慣用音 onyomi readings of kanji ([further reading](https://en.wikipedia.org/wiki/Kanji#On'yomi_(Sino-Japanese_reading)))
 - 字源 - information about how and why a kanji is composed the way it is, including the [type of composition it is](https://en.wikipedia.org/wiki/Kanji#Types_of_kanji_by_category)
 - The meaning of the kanji (in Japanese)
