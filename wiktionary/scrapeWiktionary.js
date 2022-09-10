@@ -15,7 +15,7 @@ const kanjiDir = 'wiki/カテゴリ:漢字';
 const startPage = wiktionaryURL + '/' + kanjiDir;
 
 const kanjiUrl = (kanji) => `${wiktionaryURL}/wiki/${kanji}`;
-const WAIT_MS = 500;
+const WAIT_MS = 100;
 
 let kanjiData;
 
@@ -196,43 +196,6 @@ async function getKanji(kanji) {
   }
 
   return kanjiData;
-}
-
-/**
- * Parses a string of itaiji info to an object
- * @param {string} value
- */
-function parseItaijiString(value) {
-  const itaiji = {};
-  const parenthesesStack = [];
-  const chars = value.split('\n')[0].split('');
-  // nested parentheses are a thing (article for 鬱) so we have to keep track of all parentheses
-  let currentChar = '';
-  let currentType = '';
-  while (chars.length > 0) {
-    const char = chars.shift();
-    if (char === '（') {
-      currentType += char;
-      parenthesesStack.push(char);
-    } else if (char === '）') {
-      currentType += char;
-      parenthesesStack.pop();
-      if (parenthesesStack.length === 0) {
-        // end of type
-        itaiji[currentChar] = currentType;
-        currentType = '';
-      }
-    } else if (char === '、' || char === ',') {
-      if (parenthesesStack.length > 0) currentType += char;
-    } else if (char === ' ') {
-    } else if (parenthesesStack.length === 0) {
-      currentChar = char;
-      itaiji[currentChar] = '';
-    } else {
-      currentType += char;
-    }
-  }
-  return itaiji;
 }
 
 // save on ctrl c
