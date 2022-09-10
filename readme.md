@@ -12,6 +12,7 @@
 - [Kanji](#kanji)
   - [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries)
   - [Kanji Info](#kanji-info)
+  - [Wiktionary Kanji](#wiktionary-kanji)
     - [jpdb Kanji](#jpdb-kanji)
   - [Kanji Variants](#kanji-variants)
     - [mozc](#mozc)
@@ -124,14 +125,26 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 
 ## Kanji Info
 
+## Wiktionary Kanji
+
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20Wiktionary.zip)**
+
+Kanji information of around 13,000 characters from [Wiktionary](https://ja.wiktionary.org/), notably:
+- 呉音, 漢音, 唐音, 宋音, 慣用音 onyomi readings of kanji ([further reading](https://en.wikipedia.org/wiki/Kanji#On'yomi_(Sino-Japanese_reading)))
+- 字源 - information about how and why a kanji is composed the way it is, including the [type of composition it is](https://en.wikipedia.org/wiki/Kanji#Types_of_kanji_by_category)
+- The meaning of the kanji (in Japanese)
+- The various 異体字 of the kanji
+- 
+![](!images/chrome_%E8%AA%AD_-_%E3%82%A6%E3%82%A3%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AA%E3%83%BC%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88_-_httpsja.wiktionary.org_-_Go_2022-09-09_20-13-53.png)
+
 ### jpdb Kanji
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20JPDB%20Kanji.zip)**
 
-Kanji information from https://jpdb.io:
+Kanji information of around 6,000 characters from https://jpdb.io:
 
-- the 15 most common vocab applicable
-- the kanji decomposition according to jpdb (has inaccuracies because it's meant for memorizing keywords)
+- The 15 most common vocab applicable
+- The kanji decomposition according to jpdb (has inaccuracies because it's meant for memorizing keywords)
 - 漢字検定 level
 - 旧字体/新字体/拡張新字体 character form
 

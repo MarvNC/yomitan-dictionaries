@@ -61,7 +61,7 @@ let kanjiData;
       console.log(
         `Got ${kanji}: ${i + 1}/${
           allKanji.length
-        } | Estimated ${estimatedCompletion.toLocaleString()} | ${timePerKanji.toFixed(2)}ms/kanji`
+        } | Estimated ${estimatedCompletion.toLocaleString()} | ${(1000/timePerKanji).toFixed(2)}kanji/s`
       );
       await wait(WAIT_MS);
     }
