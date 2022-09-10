@@ -12,7 +12,7 @@
 - [Kanji](#kanji)
   - [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries)
   - [Kanji Info](#kanji-info)
-  - [Wiktionary Kanji](#wiktionary-kanji)
+    - [Wiktionary Kanji](#wiktionary-kanji)
     - [jpdb Kanji](#jpdb-kanji)
   - [Kanji Variants](#kanji-variants)
     - [mozc](#mozc)
@@ -125,7 +125,7 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 
 ## Kanji Info
 
-## Wiktionary Kanji
+### Wiktionary Kanji
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20Wiktionary.zip)**
 
