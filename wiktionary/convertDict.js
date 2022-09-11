@@ -59,7 +59,11 @@ const outputZipName = '[Kanji] Wiktionary.zip';
             })
             .join('\n');
         }
-        allDefinitionString += `========${definitionType}========\n${definitionString}\n`;
+        const headerHalfLength = 10;
+        const headerSymbol = '＝';
+        let headerLine = headerSymbol.repeat(headerHalfLength) + definitionType;
+        headerLine = headerLine.padEnd((headerHalfLength + 1) * 2, headerSymbol);
+        allDefinitionString += `${headerLine}\n${definitionString}\n`;
       }
     }
     // trim last two newlines
