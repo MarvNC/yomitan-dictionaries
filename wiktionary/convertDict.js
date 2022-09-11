@@ -1,4 +1,4 @@
-const hasUTF16SurrogatePairAt = require( '@stdlib/assert-has-utf16-surrogate-pair-at' );
+const hasUTF16SurrogatePairAt = require('@stdlib/assert-has-utf16-surrogate-pair-at');
 
 const saveDict = require('../util/saveDict');
 const writeJson = require('../util/writeJson');
@@ -36,7 +36,6 @@ const outputZipName = '[Kanji] Wiktionary.zip';
       }
     }
   }
-
 
   console.log(`Got information for ${Object.keys(data).length} kanji`);
   const outputData = [];
@@ -118,10 +117,10 @@ function parseItaijiString(value) {
       char = possibleSurrogatePair;
       chars.shift();
     }
-    if (char === '（') {
+    if (char === '（' || char === '(') {
       currentType += char;
       parenthesesStack.push(char);
-    } else if (char === '）') {
+    } else if (char === '）' || char === ')') {
       currentType += char;
       parenthesesStack.pop();
       if (parenthesesStack.length === 0) {
