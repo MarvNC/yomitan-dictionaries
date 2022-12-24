@@ -38,7 +38,7 @@ const dictURL = 'https://cdn.ncaq.net/dic-nico-intersection-pixiv.txt';
             ' | ',
             {
               tag: 'a',
-              href: `https://dic.nicovideo.jp/l/${term}`,
+              href: `https://dic.nicovideo.jp/a/${term}`,
               content: 'niconico',
             },
           ],
