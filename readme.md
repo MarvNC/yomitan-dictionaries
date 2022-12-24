@@ -2,6 +2,8 @@
 
 ### Check out my [JP Resources](https://github.com/MarvNC/JP-Resources)
 
+### [Changelog](https://github.com/MarvNC/yomichan-dictionaries/commits/master/dl)
+
 - [Terms](#terms)
   - [Term Dictionary](#term-dictionary)
     - [niconico-pixiv Terms](#niconico-pixiv-terms)
@@ -22,12 +24,6 @@
     - [Innocent Corpus Kanji Frequency](#innocent-corpus-kanji-frequency)
     - [Wikipedia Kanji Frequency](#wikipedia-kanji-frequency)
     - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
-
-#### Changelog
-
-- 2022-08-22
-  - Fixed swapped link labels in the [niconico-pixiv](#niconico-pixiv-slang) dictionary.
-  - Removed unnecessary entries from the [jitai](#jitai) kanji dictionary.
 
 # Terms
 
