@@ -59,7 +59,7 @@ const outputZipName = '[Kanji] Wiktionary.zip';
             })
             .join('\n');
         }
-        const headerHalfLength = 10;
+        const headerHalfLength = 7;
         const headerSymbol = '＝';
         let headerLine = headerSymbol.repeat(headerHalfLength) + definitionType;
         headerLine = headerLine.padEnd((headerHalfLength + 1) * 2, headerSymbol);
@@ -132,7 +132,7 @@ function parseItaijiString(value) {
         itaiji[currentChar] = currentType;
         currentType = '';
       }
-    } else if (char === '、' || char === ',') {
+    } else if (char === '、' || char === ',' || char=== '，') {
       if (parenthesesStack.length > 0) currentType += char;
     } else if (char === ' ') {
     } else if (parenthesesStack.length === 0) {

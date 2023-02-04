@@ -21,30 +21,30 @@ function katakanaToHiragana(katakana) {
 }
 
 /**
- * Detects if a character is kanji.
- * @param {string} char
+ * Detects if a string contains kanji.
+ * @param {string} term
  * @returns {boolean}
  */
-function isKanji(char) {
-  return /[一-龯]/.test(char);
+function containsKanji(term) {
+  return /[一-龯]/.test(term);
 }
 
 /**
  * Detects if a character contains hiragana.
- * @param {string} char
+ * @param {string} term
  * @returns {boolean}
  */
-function isHiragana(char) {
-  return /[ぁ-ゔゞ゛゜ー]/.test(char);
+function isHiragana(term) {
+  return /[ぁ-ゔゞ゛゜ー]/.test(term);
 }
 
 /**
  * Detects if a character contains katakana.
- * @param {string} char
+ * @param {string} term
  * @returns {boolean}
  */
-function isKatakana(char) {
-  return /[ァ-ンヾ゛゜ー]/.test(char);
+function isKatakana(term) {
+  return /[ァ-ンヾ゛゜ー]/.test(term);
 }
 
 /**
@@ -63,9 +63,9 @@ function normalizeReading(term, reading) {
     const termArr = term.split('');
     while (katakanaArr.length > 0) {
       const termChar = termArr.shift();
-      if (isKanji(termChar)) {
+      if (containsKanji(termChar)) {
         // consume kanjis in succession
-        while (isKanji(termArr[0])) {
+        while (containsKanji(termArr[0])) {
           termArr.shift();
         }
         // consume reading up till kanji is over
@@ -103,8 +103,8 @@ function normalizeReading(term, reading) {
 module.exports = {
   hiraganaToKatakana,
   katakanaToHiragana,
-  isKanji,
-  containsHiragana: isHiragana,
-  containsKatakana: isKatakana,
+  containsKanji,
+  isHiragana,
+  isKatakana,
   normalizeReading,
 };
