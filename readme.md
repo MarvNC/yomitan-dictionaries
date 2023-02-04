@@ -16,6 +16,7 @@
   - [Kanji Info](#kanji-info)
     - [Wiktionary Kanji](#wiktionary-kanji)
     - [jpdb Kanji](#jpdb-kanji)
+    - [TheKanjiMap](#thekanjimap)
   - [Kanji Variants](#kanji-variants)
     - [mozc](#mozc)
     - [jitai](#jitai)
@@ -126,7 +127,8 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20Wiktionary.zip)**
 
 Kanji information of around 18,000 characters from [Wiktionary](https://ja.wiktionary.org/), notably:
-- 呉音, 漢音, 唐音, 宋音, 慣用音 onyomi readings of kanji ([further reading](https://en.wikipedia.org/wiki/Kanji#On'yomi_(Sino-Japanese_reading)))
+
+- 呉音, 漢音, 唐音, 宋音, 慣用音 onyomi readings of kanji ([further reading](<https://en.wikipedia.org/wiki/Kanji#On'yomi_(Sino-Japanese_reading)>))
 - 字源 - information about how and why a kanji is composed the way it is, including the [type of composition it is](https://en.wikipedia.org/wiki/Kanji#Types_of_kanji_by_category)
 - The meaning of the kanji (in Japanese)
 - The various 異体字 of the kanji
@@ -145,6 +147,19 @@ Kanji information of around 6,000 characters from https://jpdb.io:
 - 旧字体/新字体/拡張新字体 character form
 
 ![](!images/chrome_%E4%B9%B1_-_Yomichan_Search_-_Google_Chrome_2022-08-10_19-29-01.png)
+
+### TheKanjiMap
+
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20TheKanjiMap.zip)** | [List of possible phonetic components](thekanjimap/readingHints.tsv)
+
+Information from [TheKanjiMap](https://thekanjimap.com/):
+
+- Radical information for all radicals
+- Kanji decomposition (**more accurate than JPDB**)
+- List of all kanji that contain a kanji/component/radical
+- Reading hints based on possible phonetic components
+
+![高](!images/chrome_%E9%AB%98_-_Yomichan_Search_-_Google_Chrome_2023-02-03_19-46-15.png)![更](!images/chrome_%E6%9B%B4_-_Yomichan_Search_-_Google_Chrome_2023-02-03_19-51-17.png)
 
 <!-- ### The Kanji Map
 
