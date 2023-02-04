@@ -16,6 +16,8 @@ const index = {
   title: 'TheKanjiMap Kanji Radicals/Composition',
 };
 
+const tagBank = [['画数', 'misc', -10, '画数', 0]];
+
 (async () => {
   const radicalsJSON = await getRadicals();
   const kanjiJSON = await getKanji();
@@ -24,6 +26,7 @@ const index = {
       'index.json': index,
       'kanji_bank_1.json': radicalsJSON,
       'kanji_bank_2.json': kanjiJSON,
+      'tag_bank_1.json': tagBank,
     },
     '[Kanji] TheKanjiMap.zip'
   );
@@ -62,6 +65,8 @@ async function getRadicals() {
 
   const outputJSON = [];
   for (const currentRadical of Object.keys(radicalData)) {
+    // skip radicals that are empty strings
+    if (!currentRadical) continue;
     for (const definition of radicalData[currentRadical]) {
       const meaningArr = [];
       let radicalInfo = `部首：${definition.mainRadical}`;
@@ -76,7 +81,7 @@ async function getRadicals() {
         meaningArr.push(`読み：${definition.reading}`);
       }
       if (definition.examples !== '') {
-        meaningArr.push(`例：${definition.examples.split('').join('　')}`);
+        meaningArr.push(`例え：${definition.examples.split(' ').join('　')}`);
       }
 
       outputJSON.push([
@@ -103,20 +108,17 @@ async function getKanji() {
   const outputJSON = [];
   let readingHints = '';
   for (const kanji of Object.keys(kanjiData)) {
+    // if no input or output, skip
+    if (kanjiData[kanji].in.length === 0 && kanjiData[kanji].out.length === 0) {
+      continue;
+    }
     const meaningArr = [];
     if (kanjiData[kanji].in.length > 0) {
       meaningArr.push('＝＝＝＝＝分解＝＝＝＝＝');
       meaningArr.push(...wrap(kanjiData[kanji].in.join('　'), { width: 15 }).split('\n'));
     }
-    if (kanjiData[kanji].out.length > 0) {
-      meaningArr.push('＝＝＝＝組み合わせ＝＝＝');
-      meaningArr.push(...wrap(kanjiData[kanji].out.join('　'), { width: 15 }).split('\n'));
-    }
-    // if no input or output, skip
-    if (meaningArr.length === 0) {
-      continue;
-    }
 
+    // check for shared readings with included in kanji, and add to reading hints if over 50% usage
     const onyomi = yomichan.getKanjiInfo(kanji, KANJIDICPath)[0]?.onyomi.split(' ') || [];
 
     if (onyomi.length > 0 && kanjiData[kanji].out.length > 0) {
@@ -141,6 +143,14 @@ async function getKanji() {
             readingHints += `${kanji}\t${reading}\t${usedPercentage}%\r\n`;
           }
         }
+      }
+    }
+
+    if (kanjiData[kanji].out.length > 0) {
+      meaningArr.push('＝＝＝＝組み合わせ＝＝＝');
+      for (const outKanji of kanjiData[kanji].out) {
+        const onyomi = yomichan.getKanjiInfo(outKanji, KANJIDICPath)[0]?.onyomi;
+        meaningArr.push(`${outKanji}　${onyomi?.split(' ')?.join('　')}`);
       }
     }
 
