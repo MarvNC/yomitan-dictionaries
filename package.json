@@ -5,6 +5,7 @@
     "csvtojson": "^2.0.10",
     "jsdom": "^20.0.0",
     "jszip": "^3.10.1",
-    "word-wrap": "^1.2.3"
+    "word-wrap": "^1.2.3",
+    "yomichan-dict-reader": "^1.1.0"
   }
 }
