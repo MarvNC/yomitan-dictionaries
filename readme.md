@@ -4,32 +4,38 @@
 
 ### [Changelog](https://github.com/MarvNC/yomichan-dictionaries/commits/master/dl)
 
-- [Terms](#terms)
-  - [Term Dictionary](#term-dictionary)
-    - [niconico-pixiv Terms](#niconico-pixiv-terms)
-    - [複合語起源](#複合語起源)
-  - [Term Frequency](#term-frequency)
-    - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
-    - [Aozora Bunko Jukugo Frequency](#aozora-bunko-jukugo-frequency)
-- [Kanji](#kanji)
-  - [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries)
-  - [Kanji Info](#kanji-info)
-    - [Wiktionary Kanji](#wiktionary-kanji)
-    - [jpdb Kanji](#jpdb-kanji)
-  - [Kanji Variants](#kanji-variants)
-    - [mozc](#mozc)
-    - [jitai](#jitai)
-  - [Kanji Frequency](#kanji-frequency)
-    - [Aozora Bunko Kanji Frequency](#aozora-bunko-kanji-frequency)
-    - [Innocent Corpus Kanji Frequency](#innocent-corpus-kanji-frequency)
-    - [Wikipedia Kanji Frequency](#wikipedia-kanji-frequency)
-    - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
+- [Japanese](#japanese)
+  - [Terms](#terms)
+    - [Term Dictionary](#term-dictionary)
+      - [niconico-pixiv Terms](#niconico-pixiv-terms)
+      - [複合語起源](#複合語起源)
+    - [Term Frequency](#term-frequency)
+      - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
+      - [Aozora Bunko Jukugo Frequency](#aozora-bunko-jukugo-frequency)
+  - [Kanji](#kanji)
+    - [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries)
+    - [Kanji Info](#kanji-info)
+      - [Wiktionary Kanji](#wiktionary-kanji)
+      - [jpdb Kanji](#jpdb-kanji)
+    - [Kanji Variants](#kanji-variants)
+      - [mozc](#mozc)
+      - [jitai](#jitai)
+    - [Kanji Frequency](#kanji-frequency)
+      - [Aozora Bunko Kanji Frequency](#aozora-bunko-kanji-frequency)
+      - [Innocent Corpus Kanji Frequency](#innocent-corpus-kanji-frequency)
+      - [Wikipedia Kanji Frequency](#wikipedia-kanji-frequency)
+      - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
+- [Chinese](#chinese)
+  - [Hanzi](#hanzi)
+    - [Wiktionary Hanzi](#wiktionary-hanzi)
 
-# Terms
+# Japanese
 
-## Term Dictionary
+## Terms
 
-### niconico-pixiv Terms
+### Term Dictionary
+
+#### niconico-pixiv Terms
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20Nico-Pixiv.zip)**
 
@@ -39,7 +45,7 @@ Using the information [gathered by ncaq for use in an IME](https://github.com/nc
 
 ![](<!images/chrome_%E3%82%86%E3%81%9A%E3%82%BD%E3%83%95%E3%83%88_(%E3%82%86%E3%81%9A%E3%81%9D%E3%81%B5%E3%81%A8)%E3%81%A8%E3%81%AF%E3%80%90%E3%83%94%E3%82%AF%E3%82%B7%E3%83%96%E7%99%BE%E7%A7%91%E4%BA%8B%E5%85%B8%E3%80%91_-_httpsdic.pixiv.net_2022-08-21_17-22-10.png>)
 
-### 複合語起源
+#### 複合語起源
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.zip)** | **[List of words](termOrigins/%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv)**
 
@@ -53,23 +59,23 @@ Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|い�
 - [5ch](https://academy6.5ch.net/test/read.cgi/gengo/1228873581/)
 - [Wanikani](https://community.wanikani.com/t/special-kanji-words-derived-from-other-words/35655)
 
-## Term Frequency
+### Term Frequency
 
-### jpdb Frequency Dictionary
+#### jpdb Frequency Dictionary
 
 **[Download](https://github.com/MarvNC/jpdb-freq-list/releases)**
 
 A frequency dictionary based on information from https://jpdb.io. More information can be found [here](https://github.com/MarvNC/jpdb-freq-list).
 
-### Aozora Bunko Jukugo Frequency
+#### Aozora Bunko Jukugo Frequency
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BFreq%5D%20Aozora%20Bunko.zip)**
 
 A frequency dictionary created using data [collected by vrtm](https://vtrm.net/japanese/kanji-jukugo-frequency/en) based on the [Aozora Bunko](https://www.aozora.gr.jp/). Due to the [methodology used](https://vtrm.net/japanese/kanji-jukugo-frequency/en), this dictionary does not cover words with kana in them but it covers many rare 熟語 not covered by other frequency dictionaries, such as 睽乖.
 
-# Kanji
+## Kanji
 
-## Yomichan CSS for Kanji Dictionaries
+### Yomichan CSS for Kanji Dictionaries
 
 Yomichan and KANJIDIC by default have a lot of bloat in the kanji dictionary viewer, like repeating the kanji stroke order image, frequency information, and unused table rows for every entry. For using multiple kanji dictionaries, you can use some CSS to make the kanji display more compact like it is for terms.
 
@@ -119,21 +125,22 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 }
 ```
 
-## Kanji Info
+### Kanji Info
 
-### Wiktionary Kanji
+#### Wiktionary Kanji
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20Wiktionary.zip)**
 
 Kanji information of around 18,000 characters from [Wiktionary](https://ja.wiktionary.org/), notably:
-- 呉音, 漢音, 唐音, 宋音, 慣用音 onyomi readings of kanji ([further reading](https://en.wikipedia.org/wiki/Kanji#On'yomi_(Sino-Japanese_reading)))
+
+- 呉音, 漢音, 唐音, 宋音, 慣用音 onyomi readings of kanji ([further reading](<https://en.wikipedia.org/wiki/Kanji#On'yomi_(Sino-Japanese_reading)>))
 - 字源 - information about how and why a kanji is composed the way it is, including the [type of composition it is](https://en.wikipedia.org/wiki/Kanji#Types_of_kanji_by_category)
 - The meaning of the kanji (in Japanese)
 - The various 異体字 of the kanji
 
 ![](!images/chrome_%E8%AA%AD_-_%E3%82%A6%E3%82%A3%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%AA%E3%83%BC%E6%97%A5%E6%9C%AC%E8%AA%9E%E7%89%88_-_httpsja.wiktionary.org_-_Go_2022-09-09_20-13-53.png)
 
-### jpdb Kanji
+#### jpdb Kanji
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20JPDB%20Kanji.zip)**
 
@@ -150,9 +157,9 @@ Kanji information of around 6,000 characters from https://jpdb.io:
 
 A kanji dictionary created using the data from [The Kanji Map](https://github.com/gabor-kovacs/the-kanji-map) providing radical information and kanji decompositions. -->
 
-## Kanji Variants
+### Kanji Variants
 
-### mozc
+#### mozc
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20mozc%20Kanji%20Variants.zip)**
 
@@ -170,7 +177,7 @@ A kanji dictionary made from the kanji variant information in [Google's mozc Jap
 
 ![](!images/chrome_%E9%AB%94_-_Yomichan_Search_-_Google_Chrome_2022-08-19_20-22-19.png)
 
-### jitai
+#### jitai
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20jitai.zip)**
 
@@ -178,15 +185,15 @@ A kanji dictionary made using the data from [jitai](https://github.com/epistular
 
 ![](!images/chrome_%E4%B9%B1_-_Yomichan_Search_-_Google_Chrome_2022-08-10_19-28-54.png)
 
-## Kanji Frequency
+### Kanji Frequency
 
-### Aozora Bunko Kanji Frequency
+#### Aozora Bunko Kanji Frequency
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20Aozora%20Bunko.zip)**
 
 A kanji frequency dictionary created using data [collected by vrtm](https://vtrm.net/japanese/kanji-frequency/en) based on the [Aozora Bunko](https://www.aozora.gr.jp/).
 
-### Innocent Corpus Kanji Frequency
+#### Innocent Corpus Kanji Frequency
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20Innocent%20Corpus%20Kanji.zip)**
 
@@ -194,14 +201,20 @@ Uses the [innocent corpus frequency list](https://web.archive.org/web/2019030907
 
 - The displayed frequency in Yomichan will contain the frequency rank followed by the occurence count, for example `4686 (57)` for 壟 indicating it's the 4686th most common kanji and appeared 57 times total in the 5000+ novels in Innocent Corpus.
 
-### Wikipedia Kanji Frequency
+#### Wikipedia Kanji Frequency
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20Wikipedia.zip)**
 
 Rank-based kanji frequency data from a May 2015 dump of Japanese Wikipedia, containing around 2 万 kanji. Data [gathered by scriptin](https://github.com/scriptin/kanji-frequency).
 
-### jpdb Kanji Frequency
+#### jpdb Kanji Frequency
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20JPDB%20Kanji.zip)**
 
 Kanji frequency data from https://jpdb.io.
+
+# Chinese
+
+## Hanzi
+
+### Wiktionary Hanzi

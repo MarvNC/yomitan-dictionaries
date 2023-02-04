@@ -10,7 +10,8 @@ const folderPath = './wiktionary/';
 const allKanjiFilePath = 'wiktionaryKanji.json';
 const kanjiDataFilePath = 'kanjiData.json';
 
-const wiktionaryURL = 'https://ja.wiktionary.org';
+let lang = 'ja';
+let wiktionaryURL = 'https://ja.wiktionary.org';
 const kanjiDir = 'wiki/カテゴリ:漢字';
 const startPage = wiktionaryURL + '/' + kanjiDir;
 
