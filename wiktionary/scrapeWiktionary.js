@@ -1,3 +1,4 @@
+const hasUTF16SurrogatePairAt = require('@stdlib/assert-has-utf16-surrogate-pair-at');
 // gave up on parsing that confusing xml
 // scrape wiktionary kanji pages
 const fs = require('fs').promises;
@@ -25,10 +26,12 @@ let kanjiData;
   let refetchList = false;
   if (process.argv.includes('--refetchList')) {
     refetchList = true;
+    console.log('Refetching kanji list');
   }
   let refetchKanji = false;
   if (process.argv.includes('--refetchKanji')) {
     refetchKanji = true;
+    console.log('Refetching kanji data');
   }
   // check for zh language flag
   if (process.argv.includes('--zh')) {
@@ -133,7 +136,20 @@ async function getKanjiPage(url) {
   const kanjiColumnsElem = categoryHeader?.parentElement?.querySelector('div.mw-content-ltr');
   const kanji = [...kanjiColumnsElem.querySelectorAll('div.mw-category-group')].map((div) => ({
     category: div.firstElementChild.textContent,
-    kanjiList: [...div.querySelectorAll('a')].map((a) => a.textContent),
+    kanjiList: [...div.querySelectorAll('a')]
+      .map((a) => a.textContent)
+      .filter((kanji) => {
+        if (kanji.length > 1) {
+          // Is valid if it's a surrogate pair, otherwise probably not valid kanji
+          if (hasUTF16SurrogatePairAt(kanji, 0)) {
+            return true;
+          } else {
+            return false;
+          }
+        } else {
+          return true;
+        }
+      }),
   }));
 
   const kanjiArr = [];
