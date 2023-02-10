@@ -7,15 +7,16 @@ const { getURL, wait } = require('../util/scrape.js');
 const writeJson = require('../util/writeJson.js');
 
 const folderPath = './wiktionary/';
-const allKanjiFilePath = 'wiktionaryKanji.json';
-const kanjiDataFilePath = 'kanjiData.json';
+const allKanjiFilePath = () => lang + 'wiktionaryKanji.json';
+const kanjiDataFilePath = () => lang + 'kanjiData.json';
 
-let lang = 'ja';
-let wiktionaryURL = 'https://ja.wiktionary.org';
-const kanjiDir = 'wiki/カテゴリ:漢字';
-const startPage = wiktionaryURL + '/' + kanjiDir;
+let lang = 'ja'; // can be 'ja' or 'zh'
+const jaKanjiDir = 'wiki/カテゴリ:漢字';
+const zhKanjiDir = 'wiki/Category:漢字字元';
+const wiktionaryURL = () => `https://${lang}.wiktionary.org`;
+const startPage = () => wiktionaryURL() + '/' + (lang === 'ja' ? jaKanjiDir : zhKanjiDir);
 
-const kanjiUrl = (kanji) => `${wiktionaryURL}/wiki/${kanji}`;
+const kanjiUrl = (kanji) => `${wiktionaryURL()}/wiki/${kanji}`;
 const WAIT_MS = 0;
 
 let kanjiData;
@@ -29,47 +30,56 @@ let kanjiData;
   if (process.argv.includes('--refetchKanji')) {
     refetchKanji = true;
   }
+  // check for zh language flag
+  if (process.argv.includes('--zh')) {
+    lang = 'zh';
+  }
+  console.log(`Getting ${lang} kanji`);
 
   const allKanji = await getAllKanji(refetchList);
   const kanjiSet = new Set(allKanji);
   console.log(`Total kanji: ${kanjiSet.size}`);
-  await writeJson(allKanji, folderPath + allKanjiFilePath);
+  await writeJson(allKanji, folderPath + allKanjiFilePath());
 
-  kanjiData = {};
-  // read existing kanji data
-  if (!refetchKanji) {
+  if (lang === 'ja') {
+    kanjiData = {};
+    // read existing kanji data
+    if (!refetchKanji) {
+      try {
+        const kanjiDataFile = await fs.readFile(folderPath + kanjiDataFilePath());
+        kanjiData = JSON.parse(kanjiDataFile);
+        console.log(`Loaded ${Object.keys(kanjiData).length} kanji`);
+      } catch (error) {
+        console.log(`No saved ${kanjiDataFilePath()}`);
+      }
+    }
+
     try {
-      const kanjiDataFile = await fs.readFile(folderPath + kanjiDataFilePath);
-      kanjiData = JSON.parse(kanjiDataFile);
-      console.log(`Loaded ${Object.keys(kanjiData).length} kanji`);
+      let firstGet = Date.now();
+      let gets = 0;
+      for (let i = 0; i < allKanji.length; i++) {
+        const kanji = allKanji[i];
+        if (kanjiData[kanji]) continue;
+        const data = await getKanji(kanji);
+        kanjiData[kanji] = data;
+
+        gets++;
+        const timePerKanji = (Date.now() - firstGet) / gets;
+        const estimatedCompletion = new Date(Date.now() + timePerKanji * (allKanji.length - i));
+        console.log(
+          `Got ${kanji}: ${i + 1}/${
+            allKanji.length
+          } | Estimated ${estimatedCompletion.toLocaleString()} | ${(1000 / timePerKanji).toFixed(
+            2
+          )}kanji/s`
+        );
+        await wait(WAIT_MS);
+      }
     } catch (error) {
-      console.log(`No saved ${kanjiDataFilePath}`);
+      console.log(error);
     }
+    await writeJson(kanjiData, folderPath + kanjiDataFilePath());
   }
-
-  try {
-    let firstGet = Date.now();
-    let gets = 0;
-    for (let i = 0; i < allKanji.length; i++) {
-      const kanji = allKanji[i];
-      if (kanjiData[kanji]) continue;
-      const data = await getKanji(kanji);
-      kanjiData[kanji] = data;
-
-      gets++;
-      const timePerKanji = (Date.now() - firstGet) / gets;
-      const estimatedCompletion = new Date(Date.now() + timePerKanji * (allKanji.length - i));
-      console.log(
-        `Got ${kanji}: ${i + 1}/${
-          allKanji.length
-        } | Estimated ${estimatedCompletion.toLocaleString()} | ${(1000/timePerKanji).toFixed(2)}kanji/s`
-      );
-      await wait(WAIT_MS);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-  await writeJson(kanjiData, folderPath + kanjiDataFilePath);
 })();
 
 /**
@@ -81,15 +91,15 @@ async function getAllKanji(overwrite = false) {
   // fetch from existing file
   if (!overwrite) {
     try {
-      const allKanjiFile = await fs.readFile(folderPath + allKanjiFilePath);
+      const allKanjiFile = await fs.readFile(folderPath + allKanjiFilePath());
       return JSON.parse(allKanjiFile);
     } catch (error) {
-      console.log(`No saved ${allKanjiFilePath}`);
+      console.log(`No saved ${allKanjiFilePath()}`);
     }
   }
 
   const allKanjiArr = [];
-  let nextURL = encodeURI(startPage);
+  let nextURL = encodeURI(startPage());
   while (nextURL) {
     const { kanji, next } = await getKanjiPage(nextURL);
     allKanjiArr.push(...kanji);
@@ -106,15 +116,18 @@ async function getAllKanji(overwrite = false) {
  * @returns
  */
 async function getKanjiPage(url) {
-  const avoidCategories = ['!', '*'];
+  const avoidCategories = lang === 'ja' ? ['!', '*'] : [];
 
   console.log(`Getting ${url}`);
   const document = await getURL(url, false);
+  const categoryHeaderSearchText =
+    lang === 'ja' ? 'ページが含まれており、そのうち以下の' : '个页面属于本分类，共';
   const categoryHeader = [...document.querySelectorAll('p')].find((p) =>
-    p.textContent.includes('ページが含まれており、そのうち以下の')
+    p.textContent.includes(categoryHeaderSearchText)
   );
+  const nextPageURLText = lang === 'ja' ? '次のページ' : '下一页';
   const nextPageURL = [...document.querySelectorAll('a')].find((a) =>
-    a.textContent.includes('次のページ')
+    a.textContent.includes(nextPageURLText)
   );
 
   const kanjiColumnsElem = categoryHeader?.parentElement?.querySelector('div.mw-content-ltr');
@@ -133,7 +146,7 @@ async function getKanjiPage(url) {
 
   return {
     kanji: kanjiArr,
-    next: nextPageURL ? wiktionaryURL + nextPageURL : null,
+    next: nextPageURL ? wiktionaryURL() + nextPageURL : null,
   };
 }
 
@@ -212,7 +225,8 @@ async function getKanji(kanji) {
 process.on('SIGINT', async () => {
   console.log('Saving...');
   if (kanjiData) {
-    await writeJson(kanjiData, folderPath + kanjiDataFilePath);
+    console.log('Saving kanji data...');
+    await writeJson(kanjiData, folderPath + kanjiDataFilePath());
   }
   process.exit(0);
 });
