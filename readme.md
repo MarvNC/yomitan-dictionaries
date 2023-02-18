@@ -157,7 +157,7 @@ Information from [TheKanjiMap](https://thekanjimap.com/):
 - Radical information for all radicals
 - Kanji decomposition (**more accurate than JPDB**)
 - List of all kanji that contain a kanji/component/radical
-- Reading hints based on possible phonetic components
+- Reading hints based on possible phonetic components (computed based on information from KANJIDIC and the decomposition here)
 
 ![高](!images/chrome_%E9%AB%98_-_Yomichan_Search_-_Google_Chrome_2023-02-03_19-46-15.png)![更](!images/chrome_%E6%9B%B4_-_Yomichan_Search_-_Google_Chrome_2023-02-03_19-51-17.png)
 
