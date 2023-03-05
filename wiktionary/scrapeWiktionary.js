@@ -13,7 +13,7 @@ const kanjiDataFilePath = () => lang + 'kanjiData.json';
 
 let lang = 'ja'; // can be 'ja' or 'zh'
 const jaKanjiDir = 'wiki/カテゴリ:漢字';
-const zhKanjiDir = 'wiki/Category:漢字字元';
+const zhKanjiDir = 'zh/Category:汉字';
 const wiktionaryURL = () => `https://${lang}.wiktionary.org`;
 const startPage = () => wiktionaryURL() + '/' + (lang === 'ja' ? jaKanjiDir : zhKanjiDir);
 
@@ -91,14 +91,18 @@ let kanjiData;
  * @returns
  */
 async function getAllKanji(overwrite = false) {
+  let existingKanji;
   // fetch from existing file
-  if (!overwrite) {
-    try {
-      const allKanjiFile = await fs.readFile(folderPath + allKanjiFilePath());
-      return JSON.parse(allKanjiFile);
-    } catch (error) {
-      console.log(`No saved ${allKanjiFilePath()}`);
-    }
+  try {
+    const allKanjiFile = await fs.readFile(folderPath + allKanjiFilePath());
+    existingKanji = JSON.parse(allKanjiFile);
+  } catch (error) {
+    console.log(`No saved ${allKanjiFilePath()}`);
+    existingKanji = [];
+  }
+  // return existing kanji if it exists and we're not refetching
+  if (existingKanji && !overwrite) {
+    return existingKanji;
   }
 
   const allKanjiArr = [];
@@ -110,7 +114,9 @@ async function getAllKanji(overwrite = false) {
     nextURL = next;
     await wait(WAIT_MS);
   }
-  return allKanjiArr;
+  // combine new kanji with existing kanji
+  const allKanjiSet = new Set([...existingKanji, ...allKanjiArr]);
+  return [...allKanjiSet];
 }
 
 /**
@@ -137,19 +143,12 @@ async function getKanjiPage(url) {
   const kanji = [...kanjiColumnsElem.querySelectorAll('div.mw-category-group')].map((div) => ({
     category: div.firstElementChild.textContent,
     kanjiList: [...div.querySelectorAll('a')]
-      .map((a) => a.textContent)
-      .filter((kanji) => {
-        if (kanji.length > 1) {
-          // Is valid if it's a surrogate pair, otherwise probably not valid kanji
-          if (hasUTF16SurrogatePairAt(kanji, 0)) {
-            return true;
-          } else {
-            return false;
-          }
-        } else {
-          return true;
-        }
-      }),
+      .map((a) => {
+        const split = a.textContent.split('/Unihan/');
+        const kanji = split[split.length - 1];
+        return kanji;
+      })
+      .filter((kanji) => isValidKanji(kanji)),
   }));
 
   const kanjiArr = [];
@@ -164,6 +163,20 @@ async function getKanjiPage(url) {
     kanji: kanjiArr,
     next: nextPageURL ? wiktionaryURL() + nextPageURL : null,
   };
+}
+
+/**
+ * Detects if a string is a single character or a surrogate pair
+ * @param {string} kanji
+ * @returns {boolean}
+ */
+function isValidKanji(kanji) {
+  if (kanji.length > 1) {
+    // Is valid if it's a surrogate pair, otherwise probably not valid kanji
+    return hasUTF16SurrogatePairAt(kanji, 0);
+  } else {
+    return true;
+  }
 }
 
 /**
