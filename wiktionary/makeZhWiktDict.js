@@ -16,7 +16,10 @@ const index = {
 (async function () {
   const outputKanjiBank = [];
   for (const hanzi of Object.keys(data)) {
-    outputKanjiBank.push([hanzi, '', '', '', data[hanzi].split('\n'), {}]);
+    const lines = data[hanzi].split('\n');
+    // move wiktionary url to the end
+    lines.push(lines.shift());
+    outputKanjiBank.push([hanzi, '', '', '', lines, {}]);
   }
   saveDict(
     {
