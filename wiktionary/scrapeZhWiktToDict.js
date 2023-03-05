@@ -64,6 +64,7 @@ let hanziData;
   } catch (error) {
     console.log(error);
   }
+  console.log(`Completed! Fetched information for ${Object.keys(hanziData).length} hanzi`);
   await writeJson(hanziData, folderPath + hanziDataFilePath);
 })();
 
