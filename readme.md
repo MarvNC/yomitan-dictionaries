@@ -234,3 +234,5 @@ See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BHanzi%5D%20Wiktionary.zip)**
 
 Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.wiktionary.org/). Due to the complexity of the wiktionary pages, it will display most of the text on the page, excluding tables and such so the pinyin readings may not be included for many characters. In addition, do note that for some uncommonly used characters there is little information available as the wiki pages often consist of just unicode information and code points, which was stripped from the dictionary.
+
+![zh wiktionary hanzi](!images/zhWiktionaryHanzi.png)
