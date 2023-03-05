@@ -17,6 +17,7 @@
     - [Kanji Info](#kanji-info)
       - [Wiktionary Kanji](#wiktionary-kanji)
       - [jpdb Kanji](#jpdb-kanji)
+      - [TheKanjiMap](#thekanjimap)
     - [Kanji Variants](#kanji-variants)
       - [mozc](#mozc)
       - [jitai](#jitai)
@@ -153,9 +154,18 @@ Kanji information of around 6,000 characters from https://jpdb.io:
 
 ![](!images/chrome_%E4%B9%B1_-_Yomichan_Search_-_Google_Chrome_2022-08-10_19-29-01.png)
 
-<!-- ### The Kanji Map
+#### TheKanjiMap
 
-A kanji dictionary created using the data from [The Kanji Map](https://github.com/gabor-kovacs/the-kanji-map) providing radical information and kanji decompositions. -->
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20TheKanjiMap.zip)** | [List of possible phonetic components](thekanjimap/readingHints.tsv)
+
+Information from [TheKanjiMap](https://thekanjimap.com/):
+
+- Radical information for all radicals
+- Kanji decomposition (**more accurate than JPDB**)
+- List of all kanji that contain a kanji/component/radical
+- Reading hints based on possible phonetic components (computed based on information from KANJIDIC and the decomposition here)
+
+![高](!images/chrome_%E9%AB%98_-_Yomichan_Search_-_Google_Chrome_2023-02-03_19-46-15.png)![更](!images/chrome_%E6%9B%B4_-_Yomichan_Search_-_Google_Chrome_2023-02-03_19-51-17.png)
 
 ### Kanji Variants
 
