@@ -44,7 +44,9 @@ let hanziData;
         continue;
       }
       const dataText = await getHanziUrlData(kanji);
-      hanziData[kanji] = dataText;
+      if (dataText) {
+        hanziData[kanji] = dataText;
+      }
 
       fetches++;
       const timePerFetch = (Date.now() - firstFetch) / fetches;
@@ -81,6 +83,7 @@ async function getHanziUrlData(kanji) {
   const contentElem = document.querySelector('.mw-parser-output');
   if (!contentElem) {
     console.log(`No content for ${kanji}`);
+    return null;
   }
 
   // remove misc unneeded elements
