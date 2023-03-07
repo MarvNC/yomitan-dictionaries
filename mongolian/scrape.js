@@ -2,9 +2,22 @@ const axios = require('axios');
 const qs = require('qs');
 const { JSDOM } = require('jsdom');
 const Yomichan = require('yomichan-dict-reader');
+const writeJson = require('../util/writeJson');
+
 const JMDictPath = 'util/jmdict_english.zip';
 
-const allSearchTerms = ['あい'];
+// prettier-ignore
+const allSearchTerms = [
+  'あ', 'い', 'う', 'え', 'お', 'か', 'き', 'く',
+  'け', 'こ', 'さ', 'し', 'す', 'せ', 'そ', 'た',
+  'ち', 'つ', 'て', 'と', 'な', 'に', 'ぬ', 'ね',
+  'の', 'は', 'ひ', 'ふ', 'へ', 'ほ', 'ま', 'み',
+  'む', 'め', 'も', 'や', 'ゆ', 'よ', 'ら', 'り',
+  'る', 'れ', 'ろ', 'わ', 'を', 'ん', 'が', 'ぎ',
+  'ぐ', 'げ', 'ご', 'ざ', 'じ', 'ず', 'ぜ', 'ぞ',
+  'だ', 'ぢ', 'づ', 'で', 'ど', 'ば', 'び', 'ぶ',
+  'べ', 'ぼ', 'ぱ', 'ぴ', 'ぷ', 'ぺ', 'ぽ', 'っ'
+]
 
 const data = (pageNumber, searchTerm) =>
   qs.stringify({
@@ -42,7 +55,12 @@ const config = (data) => ({
   const yomichan = new Yomichan();
   // await yomichan.readDictionary(JMDictPath);
 
-  const allDefinitions = await getDefinitionsFromSearch('あい');
+  const allDefinitions = {};
+  for (const searchTerm of allSearchTerms) {
+    const definitions = await getDefinitionsFromSearch(searchTerm);
+    Object.assign(allDefinitions, definitions);
+  }
+  writeJson(allDefinitions, 'mongolian/definitions.json');
 })();
 
 /**
@@ -51,17 +69,25 @@ const config = (data) => ({
  * @returns TODO
  */
 async function getDefinitionsFromSearch(searchTerm) {
+  console.log(`Getting definitions for ${searchTerm}`);
   const allDefinitions = {};
   const { definitions, lastPageNum } = await getDataFromPage(1, searchTerm);
   for (const definition of definitions) {
     allDefinitions[[definition.headword, definition.reading]] = definition.definition;
   }
+  console.log(`Got page 1 of ${lastPageNum} for ${searchTerm}, ${definitions.length} definitions`);
   for (let i = 2; i <= lastPageNum; i++) {
     const { definitions } = await getDataFromPage(i, searchTerm);
     for (const definition of definitions) {
       allDefinitions[[definition.headword, definition.reading]] = definition.definition;
     }
+    console.log(
+      `Got page ${i} of ${lastPageNum} for ${searchTerm}, ${definitions.length} definitions`
+    );
   }
+  console.log(
+    `Scrape complete! Got ${Object.keys(allDefinitions).length} definitions for ${searchTerm}`
+  );
   return allDefinitions;
 }
 
@@ -93,7 +119,6 @@ async function getDataFromPage(pageNumber, searchTerm) {
 
       definitions.push({ headword, reading, definition });
     }
-
     return { definitions, lastPageNum };
   } catch (error) {
     console.log(error);
