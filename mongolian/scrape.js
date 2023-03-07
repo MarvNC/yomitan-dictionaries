@@ -3,6 +3,8 @@ const qs = require('qs');
 const { JSDOM } = require('jsdom');
 const Yomichan = require('yomichan-dict-reader');
 const writeJson = require('../util/writeJson');
+const saveDict = require('../util/saveDict');
+const { wait } = require('../util/scrape');
 
 const JMDictPath = 'util/jmdict_english.zip';
 const folderPath = 'mongolian/';
@@ -93,6 +95,23 @@ const config = (data) => ({
 
     finalOutputArray.push([headword, reading, '', deinflectors, 1, [definitionString], 1, '']);
   }
+  const index = {
+    title: 'Japanese-Mongolian/日・モ辞典',
+    revision: `JP_Mongolian_${new Date().toISOString()}`,
+    format: 3,
+    url: 'http://hkuri.cneas.tohoku.ac.jp/',
+    description:
+      'JP->Mongolian dictionary scraped from http://hkuri.cneas.tohoku.ac.jp/\nParsed/converted by https://github.com/MarvNC/yomichan-dictionaries',
+    author: '栗林均, Marv',
+    attribution: '栗林均',
+  };
+  saveDict(
+    {
+      'term_bank_1.json': finalOutputArray,
+      'index.json': index,
+    },
+    '[JP->Mongolian] Japanese-Mongolian/日・モ辞典.zip'
+  );
 })();
 
 /**
@@ -136,8 +155,14 @@ async function getDataFromPage(pageNumber, searchTerm) {
     const { document } = dom.window;
 
     const pageBar = document.querySelector('.pagination');
-    const lastPageJS = pageBar.lastElementChild.firstElementChild.href;
-    const lastPageNum = lastPageJS.match(/\((\d+)\)/)[1];
+    let lastPageJS;
+    let lastPageNum;
+    if (pageBar) {
+      lastPageJS = pageBar.lastElementChild.firstElementChild.href;
+      lastPageNum = lastPageJS.match(/\((\d+)\)/)[1];
+    } else {
+      lastPageNum = 1;
+    }
 
     const definitions = [];
 
