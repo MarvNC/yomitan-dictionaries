@@ -5,6 +5,8 @@ const Yomichan = require('yomichan-dict-reader');
 const writeJson = require('../util/writeJson');
 
 const JMDictPath = 'util/jmdict_english.zip';
+const folderPath = 'mongolian/';
+const outputJSONName = 'data.json';
 
 // prettier-ignore
 const allSearchTerms = [
@@ -52,21 +54,51 @@ const config = (data) => ({
 });
 
 (async function () {
-  const yomichan = new Yomichan();
-  // await yomichan.readDictionary(JMDictPath);
-
-  const allDefinitions = {};
-  for (const searchTerm of allSearchTerms) {
-    const definitions = await getDefinitionsFromSearch(searchTerm);
-    Object.assign(allDefinitions, definitions);
+  // check for --skip flag
+  const skip = process.argv.includes('--skip');
+  let allDefinitions = {};
+  if (skip) {
+    console.log('Skipping scrape');
+    // read existing json
+    try {
+      allDefinitions = require(`./${outputJSONName}`);
+    } catch (error) {
+      console.log('Error reading existing json');
+      console.log(error);
+    }
+  } else {
+    // scrape
+    for (const searchTerm of allSearchTerms) {
+      const definitions = await getDefinitionsFromSearch(searchTerm);
+      const currDefCount = Object.keys(allDefinitions).length;
+      Object.assign(allDefinitions, definitions);
+      console.log(
+        `Got ${Object.keys(definitions).length} definitions for ${searchTerm}, total: ${
+          Object.keys(allDefinitions).length
+        } with ${Object.keys(allDefinitions).length - currDefCount} new definitions`
+      );
+    }
+    writeJson(allDefinitions, `${folderPath}${outputJSONName}`);
   }
-  writeJson(allDefinitions, 'mongolian/definitions.json');
+
+  const yomichan = new Yomichan();
+  await yomichan.readDictionary(JMDictPath);
+  const finalOutputArray = [];
+  for (const [termReading, definition] of Object.entries(allDefinitions)) {
+    const [headword, reading] = termReading.split(',');
+    const deinflectors = yomichan.getDeinflectorsForTermReading(headword, reading);
+
+    let definitionString = definition.replace(/◇/g, '◇\n◇');
+    definitionString = definitionString.replace(/; /g, '\n');
+
+    finalOutputArray.push([headword, reading, '', deinflectors, 1, [definitionString], 1, '']);
+  }
 })();
 
 /**
  * Gets a search term and returns all the definitions for that term.
  * @param {string} searchTerm
- * @returns TODO
+ * @returns {object} allDefinitions
  */
 async function getDefinitionsFromSearch(searchTerm) {
   console.log(`Getting definitions for ${searchTerm}`);
