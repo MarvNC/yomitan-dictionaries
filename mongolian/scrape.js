@@ -64,6 +64,7 @@ const config = (data) => ({
     // read existing json
     try {
       allDefinitions = require(`./${outputJSONName}`);
+      console.log(`Read ${Object.keys(allDefinitions).length} definitions from existing json`);
     } catch (error) {
       console.log('Error reading existing json');
       console.log(error);
@@ -90,7 +91,7 @@ const config = (data) => ({
     const [headword, reading] = termReading.split(',');
     const deinflectors = yomichan.getDeinflectorsForTermReading(headword, reading);
 
-    let definitionString = definition.replace(/◇/g, '◇\n◇');
+    let definitionString = definition.replace(/◇/g, '\n◇\n');
     definitionString = definitionString.replace(/; /g, '\n');
 
     finalOutputArray.push([headword, reading, '', deinflectors, 1, [definitionString], 1, '']);
@@ -110,7 +111,7 @@ const config = (data) => ({
       'term_bank_1.json': finalOutputArray,
       'index.json': index,
     },
-    '[JP->Mongolian] Japanese-Mongolian/日・モ辞典.zip'
+    '[JP-Mongolian] Japanese-Mongolian 日・モ辞典.zip'
   );
 })();
 

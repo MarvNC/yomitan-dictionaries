@@ -7,6 +7,6 @@
     "jszip": "^3.10.1",
     "qs": "^6.11.1",
     "word-wrap": "^1.2.3",
-    "yomichan-dict-reader": "^1.2.1"
+    "yomichan-dict-reader": "^1.2.2"
   }
 }

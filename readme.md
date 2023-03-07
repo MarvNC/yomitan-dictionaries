@@ -29,6 +29,9 @@
 - [Chinese](#chinese)
   - [Hanzi](#hanzi)
     - [Wiktionary Hanzi](#wiktionary-hanzi)
+- [Other](#other)
+  - [Japanese-Mongolian](#japanese-mongolian)
+    - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
 
 # Japanese
 
@@ -236,3 +239,16 @@ See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) 
 Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.wiktionary.org/). Due to the complexity of the wiktionary pages, it will display most of the text on the page, excluding tables and such so the pinyin readings may not be included for many characters. In addition, do note that for some uncommonly used characters there is little information available as the wiki pages often consist of just unicode information and code points, which was stripped from the dictionary.
 
 ![zh wiktionary hanzi](!images/zhWiktionaryHanzi.png)
+
+# Other
+
+## Japanese-Mongolian
+
+### Japanese-Mongolian/日・モ辞典
+
+A Japanese to Mongolian dictionary scraped from [栗林均's site](http://hkuri.cneas.tohoku.ac.jp/). It contains about 19,000 entries.
+
+> 現代日・モ辞典
+> 橋本勝、エルデネ・プレブジャブ『現代日本語モンゴル語辞典』春風社、2001．
+
+![jp-mongolian](!images/jp-mongolian.png)
