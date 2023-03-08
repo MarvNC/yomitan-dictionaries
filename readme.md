@@ -232,6 +232,15 @@ Kanji frequency data from https://jpdb.io.
 
 See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) for CSS used to reduce the clutter included by default in Yomichan.
 
+> **Warning**
+> The default kanji stroke order font included with Yomichan is made for kanji stroke orders, and as thus will contain incorrect glyphs and stroke orders for Chinese that may be misleading. You can change this by using some CSS:
+
+```css
+.kanji-glyph {
+  font-family: sans-serif; /* or a whatever font you prefer for Chinese */
+}
+```
+
 ### Wiktionary Hanzi
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BHanzi%5D%20Wiktionary.zip)**
