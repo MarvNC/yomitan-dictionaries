@@ -58,6 +58,9 @@ const config = (data) => ({
 (async function () {
   // check for --skip flag
   const skip = process.argv.includes('--skip');
+  // --noSentences flag
+  const noSentences = process.argv.includes('--noSentences');
+
   let allDefinitions = {};
   if (skip) {
     console.log('Skipping scrape');
@@ -90,14 +93,20 @@ const config = (data) => ({
   for (const [termReading, definition] of Object.entries(allDefinitions)) {
     const [headword, reading] = termReading.split(',');
     const deinflectors = yomichan.getDeinflectorsForTermReading(headword, reading);
-
-    let definitionString = definition.replace(/◇/g, '\n◇\n');
+    let definitionString;
+    if (noSentences) {
+      definitionString = definition.split('◇')[0];
+    } else {
+      definitionString = definition.replace(/◇/g, '\n◇\n');
+    }
     definitionString = definitionString.replace(/; /g, '\n');
 
     finalOutputArray.push([headword, reading, '', deinflectors, 1, [definitionString], 1, '']);
   }
+
+  const title = `Japanese-Mongolian 日・モ辞典${noSentences ? ' (No Sentences)' : ''}`;
   const index = {
-    title: 'Japanese-Mongolian/日・モ辞典',
+    title: title,
     revision: `JP_Mongolian_${new Date().toISOString()}`,
     format: 3,
     url: 'http://hkuri.cneas.tohoku.ac.jp/',
@@ -111,7 +120,7 @@ const config = (data) => ({
       'term_bank_1.json': finalOutputArray,
       'index.json': index,
     },
-    '[JP-Mongolian] Japanese-Mongolian 日・モ辞典.zip'
+    `[JP-Mongolian] ${title}.zip`
   );
 })();
 
