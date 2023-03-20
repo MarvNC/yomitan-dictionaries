@@ -8,7 +8,7 @@
   - [Terms](#terms)
     - [Term Dictionary](#term-dictionary)
       - [niconico-pixiv Terms](#niconico-pixiv-terms)
-    - [surasura Onomatopoeia](#surasura-onomatopoeia)
+      - [surasura Onomatopoeia](#surasura-onomatopoeia)
       - [複合語起源](#複合語起源)
     - [Term Frequency](#term-frequency)
       - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
@@ -50,7 +50,7 @@ Using the information [gathered by ncaq for use in an IME](https://github.com/nc
 
 ![](<!images/chrome_%E3%82%86%E3%81%9A%E3%82%BD%E3%83%95%E3%83%88_(%E3%82%86%E3%81%9A%E3%81%9D%E3%81%B5%E3%81%A8)%E3%81%A8%E3%81%AF%E3%80%90%E3%83%94%E3%82%AF%E3%82%B7%E3%83%96%E7%99%BE%E7%A7%91%E4%BA%8B%E5%85%B8%E3%80%91_-_httpsdic.pixiv.net_2022-08-21_17-22-10.png>)
 
-### surasura Onomatopoeia
+#### surasura Onomatopoeia
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20surasura.zip)**
 
