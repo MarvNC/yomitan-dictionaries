@@ -1,5 +1,6 @@
 const fs = require('fs').promises;
 
+const exp = require('constants');
 const { write } = require('fs');
 const { getURL, wait } = require('../util/scrape.js');
 const writeJson = require('../util/writeJson.js');
@@ -13,31 +14,34 @@ const domain = 'http://sura-sura.com/';
 const jpSentenceExampleEmoji = '🇯🇵';
 const infoEmoji = 'ℹ️';
 
-let data = [];
+let data = {};
 (async function () {
   const onomatopoeia = await getListOfOnomatopoeia();
-  // check for existing data
 
+  // check for existing data
   try {
     const dataFile = await fs.readFile(saveDataJsonPath);
     data = JSON.parse(dataFile);
-    console.log(`Loaded ${data.length} entries`);
+    console.log(`Loaded ${Object.keys(data).length} entries from ${saveDataJsonPath}`);
   } catch (error) {
     console.log(`No saved ${saveDataJsonPath}, starting from scratch`);
-    const onomatopoeia = await getListOfOnomatopoeia();
-    for (let i = 0; i < onomatopoeia.length; i++) {
-      const onomatopoeiaInfo = onomatopoeia[i];
-      const { kana, url } = onomatopoeiaInfo;
-      console.log(`Getting ${kana} from ${url}: ${i + 1}/${onomatopoeia.length}`);
-      const onomatopoeiaData = await getOnomatopoeiaInfoFromLink(url);
-      data.push({
-        expression: kana,
-        ...onomatopoeiaData,
-      });
-      await wait(WAIT_MS);
-    }
-    await writeJson(data, saveDataJsonPath);
   }
+  for (let i = 0; i < onomatopoeia.length; i++) {
+    const onomatopoeiaInfo = onomatopoeia[i];
+    const { kana, url } = onomatopoeiaInfo;
+    if (data[url]) {
+      console.log(`Skipping ${kana} from ${url}: ${i + 1}/${onomatopoeia.length}`);
+      continue;
+    }
+    console.log(`Getting ${kana} from ${url}: ${i + 1}/${onomatopoeia.length}`);
+    const onomatopoeiaData = await getOnomatopoeiaInfoFromLink(url);
+    data[url] = { expression: kana, ...onomatopoeiaData };
+    await wait(WAIT_MS);
+  }
+  await writeJson(data, saveDataJsonPath);
+  console.log(`Got ${Object.keys(data).length} entries`);
+
+  // convert to yomichan format
 })();
 
 /**
@@ -93,6 +97,65 @@ async function getOnomatopoeiaInfoFromLink(url) {
     extendedDefinition,
     sentenceExamples,
   };
+}
+
+/**
+ * Takes an expression and its info and converts it to a yomichan array
+ * @param {string} expression
+ * @param {Object} info
+ */
+function convertToYomichanArray(expression, info) {
+  const definitionArray = [];
+  const definitionStructuredContent = {};
+  definitionStructuredContent.content = [];
+  definitionStructuredContent.type = 'structured-content';
+
+  const shortglossaryContent = {
+    content: info.shortDefinitions.map((definition) => ({ content: definition, tag: 'li' })),
+    data: {
+      content: 'glossary',
+    },
+    lang: 'ja',
+    style: {
+      listStyleType: 'circle',
+    },
+    tag: 'ul',
+  };
+  definitionStructuredContent.content.push(shortglossaryContent);
+
+  if (info.extendedDefinition) {
+    const extendedDefContent = {
+      content: {
+        content: info.extendedDefinition,
+        tag: 'li',
+      },
+      data: {
+        content: 'glossaryExtendedDefinition',
+      },
+      lang: 'ja',
+      style: {
+        listStyleType: "'ℹ️ '",
+      },
+      tag: 'ul',
+    };
+    definitionStructuredContent.content.push(extendedDefContent);
+  }
+  if (info.sentenceExamples.length) {
+    const sentenceExamplesContent = {
+      content: info.sentenceExamples.map((sentence) => ({ content: sentence, tag: 'li' })),
+      data: {
+        content: 'examples',
+      },
+      lang: 'ja',
+      style: {
+        listStyleType: "'🇯🇵 '",
+      },
+      tag: 'ul',
+    };
+  }
+
+  const returnArray = [expression, expression, '', '', 0, definitionArray, 0, ''];
+  return returnArray;
 }
 
 // save on ctrl c
