@@ -25,7 +25,7 @@ async function getListOfOnomatopoeia() {
     .map((a) => ({ kana: a.title, url: a.href }));
 }
 
-/** Get info for a single onomatopoeia given its url
+/** Get info for a single onomatopoeia given its url, return in yomichan entry array format compliant to schema
  * @param {string} url
  * TODO add @return
  */
