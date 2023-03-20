@@ -8,6 +8,7 @@
   - [Terms](#terms)
     - [Term Dictionary](#term-dictionary)
       - [niconico-pixiv Terms](#niconico-pixiv-terms)
+    - [surasura Onomatopoeia](#surasura-onomatopoeia)
       - [複合語起源](#複合語起源)
     - [Term Frequency](#term-frequency)
       - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
@@ -48,6 +49,20 @@ Using the information [gathered by ncaq for use in an IME](https://github.com/nc
 > ルールベースで IME 辞書の役に立たなそうな単語を除外しています。
 
 ![](<!images/chrome_%E3%82%86%E3%81%9A%E3%82%BD%E3%83%95%E3%83%88_(%E3%82%86%E3%81%9A%E3%81%9D%E3%81%B5%E3%81%A8)%E3%81%A8%E3%81%AF%E3%80%90%E3%83%94%E3%82%AF%E3%82%B7%E3%83%96%E7%99%BE%E7%A7%91%E4%BA%8B%E5%85%B8%E3%80%91_-_httpsdic.pixiv.net_2022-08-21_17-22-10.png>)
+
+### surasura Onomatopoeia
+
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20surasura.zip)**
+
+A dictionary of onomatopoeia from [surasura.com](http://sura-sura.com/). Contains some onomatopoeia that are not in any other dictionaries. Credit to [stephenmk](https://github.com/stephenmk) for the idea to mark information using those emojis with his [improved JMDict](https://github.com/FooSoft/yomichan-import/pull/40).
+
+For each entry, it contains:
+
+- A few definitions
+- An extended explanation if available, marked with the ℹ️ emoji
+- A few example sentences marked with the 🇯🇵 flag emoji
+
+![surasura](!images/surasura.png)
 
 #### 複合語起源
 
