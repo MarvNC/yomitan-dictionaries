@@ -1,9 +1,9 @@
 const fs = require('fs').promises;
 
 const exp = require('constants');
-const { write } = require('fs');
-const { getURL, wait } = require('../util/scrape.js');
-const writeJson = require('../util/writeJson.js');
+const { getURL, wait } = require('../util/scrape');
+const saveDict = require('../util/saveDict');
+const writeJson = require('../util/writeJson');
 
 const folderPath = './surasura/';
 const saveDataJsonPath = folderPath + 'data.json';
@@ -12,7 +12,7 @@ const WAIT_MS = 0;
 const domain = 'http://sura-sura.com/';
 
 const jpSentenceExampleEmoji = '🇯🇵';
-const infoEmoji = 'ℹ️';
+const jpExtendedInfoEmoji = 'ℹ️';
 
 let data = {};
 (async function () {
@@ -30,7 +30,6 @@ let data = {};
     const onomatopoeiaInfo = onomatopoeia[i];
     const { kana, url } = onomatopoeiaInfo;
     if (data[url]) {
-      console.log(`Skipping ${kana} from ${url}: ${i + 1}/${onomatopoeia.length}`);
       continue;
     }
     console.log(`Getting ${kana} from ${url}: ${i + 1}/${onomatopoeia.length}`);
@@ -42,6 +41,30 @@ let data = {};
   console.log(`Got ${Object.keys(data).length} entries`);
 
   // convert to yomichan format
+  const termBank = [];
+  for (const url in data) {
+    const { expression, ...info } = data[url];
+    const yomichanEntry = convertToYomichanArray(expression, info);
+    termBank.push(yomichanEntry);
+  }
+  const index = {
+    title: 'surasura 擬声語',
+    revision: `surasura_${new Date().toISOString()}`,
+    format: 3,
+    url: 'http://sura-sura.com/',
+    description:
+      'Onomatopoeia info from http://sura-sura.com/\nParsed/converted by https://github.com/MarvNC/yomichan-dictionaries',
+    author: 'surasura, Marv',
+    attribution: 'surasura',
+  };
+
+  saveDict(
+    {
+      'term_bank_1.json': termBank,
+      'index.json': index,
+    },
+    '[Monolingual] surasura.zip'
+  );
 })();
 
 /**
@@ -100,7 +123,7 @@ async function getOnomatopoeiaInfoFromLink(url) {
 }
 
 /**
- * Takes an expression and its info and converts it to a yomichan array
+ * Takes an expression and its info and converts it to a yomichan term bank entry array
  * @param {string} expression
  * @param {Object} info
  */
@@ -109,6 +132,7 @@ function convertToYomichanArray(expression, info) {
   const definitionStructuredContent = {};
   definitionStructuredContent.content = [];
   definitionStructuredContent.type = 'structured-content';
+  definitionArray.push(definitionStructuredContent);
 
   const shortglossaryContent = {
     content: info.shortDefinitions.map((definition) => ({ content: definition, tag: 'li' })),
@@ -134,7 +158,7 @@ function convertToYomichanArray(expression, info) {
       },
       lang: 'ja',
       style: {
-        listStyleType: "'ℹ️ '",
+        listStyleType: `"${jpExtendedInfoEmoji} "`,
       },
       tag: 'ul',
     };
@@ -148,10 +172,11 @@ function convertToYomichanArray(expression, info) {
       },
       lang: 'ja',
       style: {
-        listStyleType: "'🇯🇵 '",
+        listStyleType: `"${jpSentenceExampleEmoji} "`,
       },
       tag: 'ul',
     };
+    definitionStructuredContent.content.push(sentenceExamplesContent);
   }
 
   const returnArray = [expression, expression, '', '', 0, definitionArray, 0, ''];
