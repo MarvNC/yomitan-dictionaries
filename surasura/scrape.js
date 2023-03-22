@@ -137,7 +137,7 @@ function convertToYomichanArray(expression, info) {
   const shortglossaryContent = {
     content: info.shortDefinitions.map((definition) => ({ content: definition, tag: 'li' })),
     data: {
-      content: 'glossary',
+      content: 'glossaryShortDefinition',
     },
     lang: 'ja',
     style: {
