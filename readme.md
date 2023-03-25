@@ -8,6 +8,7 @@
   - [Terms](#terms)
     - [Term Dictionary](#term-dictionary)
       - [niconico-pixiv Terms](#niconico-pixiv-terms)
+      - [surasura Onomatopoeia](#surasura-onomatopoeia)
       - [複合語起源](#複合語起源)
     - [Term Frequency](#term-frequency)
       - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
@@ -48,6 +49,20 @@ Using the information [gathered by ncaq for use in an IME](https://github.com/nc
 > ルールベースで IME 辞書の役に立たなそうな単語を除外しています。
 
 ![](<!images/chrome_%E3%82%86%E3%81%9A%E3%82%BD%E3%83%95%E3%83%88_(%E3%82%86%E3%81%9A%E3%81%9D%E3%81%B5%E3%81%A8)%E3%81%A8%E3%81%AF%E3%80%90%E3%83%94%E3%82%AF%E3%82%B7%E3%83%96%E7%99%BE%E7%A7%91%E4%BA%8B%E5%85%B8%E3%80%91_-_httpsdic.pixiv.net_2022-08-21_17-22-10.png>)
+
+#### surasura Onomatopoeia
+
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20surasura.zip)**
+
+A dictionary of onomatopoeia from [surasura.com](http://sura-sura.com/). Contains some onomatopoeia that are not in any other dictionaries. Credit to [stephenmk](https://github.com/stephenmk) for the idea to mark information using those emojis with his [improved JMDict](https://github.com/FooSoft/yomichan-import/pull/40).
+
+For each entry, it contains:
+
+- A few definitions
+- An extended explanation if available, marked with the ℹ️ emoji
+- A few example sentences marked with the 🇯🇵 flag emoji
+
+![surasura](!images/surasura.png)
 
 #### 複合語起源
 
@@ -232,6 +247,15 @@ Kanji frequency data from https://jpdb.io.
 
 See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) for CSS used to reduce the clutter included by default in Yomichan.
 
+> **Warning**
+> The default kanji stroke order font included with Yomichan is made for kanji stroke orders, and as thus will contain incorrect glyphs and stroke orders for Chinese that may be misleading. You can change this by using some CSS:
+
+```css
+.kanji-glyph {
+  font-family: sans-serif; /* or a whatever font you prefer for Chinese */
+}
+```
+
 ### Wiktionary Hanzi
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BHanzi%5D%20Wiktionary.zip)**
@@ -246,7 +270,7 @@ Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.w
 
 ### Japanese-Mongolian/日・モ辞典
 
-**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BJP-Mongolian%5D%20Japanese-Mongolian%20%E6%97%A5%E3%83%BB%E3%83%A2%E8%BE%9E%E5%85%B8.zip)**
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BJP-Mongolian%5D%20Japanese-Mongolian%20%E6%97%A5%E3%83%BB%E3%83%A2%E8%BE%9E%E5%85%B8.zip)** | [No example sentences version](<https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BJP-Mongolian%5D%20Japanese-Mongolian%20%E6%97%A5%E3%83%BB%E3%83%A2%E8%BE%9E%E5%85%B8%20(No%20Sentences).zip>)
 
 A Japanese to Mongolian dictionary scraped from [栗林均's site](http://hkuri.cneas.tohoku.ac.jp/). It contains about 19,000 entries.
 
