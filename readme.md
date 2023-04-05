@@ -11,16 +11,28 @@ This repository contains dictionaries for [Yomichan](https://foosoft.net/project
     - [JP-EN Term Dictionaries](#jp-en-term-dictionaries)
       - [JMDict](#jmdict)
       - [JMnedict](#jmnedict)
-      - [Shoui Bilingual Dictionaries](#shoui-bilingual-dictionaries)
+      - [Shoui Bilingual Dictionaries Collection](#shoui-bilingual-dictionaries-collection)
     - [Japanese Monolingual Dictionaries](#japanese-monolingual-dictionaries)
-      - [Shoui Monolingual Dictionaries](#shoui-monolingual-dictionaries)
+      - [Shoui Monolingual Dictionaries Collection](#shoui-monolingual-dictionaries-collection)
+    - [Grammar Dictionaries](#grammar-dictionaries)
+      - [aiko-tanaka Grammar Dictionaries](#aiko-tanaka-grammar-dictionaries)
     - [Other Term Dictionaries](#other-term-dictionaries)
       - [niconico-pixiv Terms](#niconico-pixiv-terms)
       - [surasura Onomatopoeia](#surasura-onomatopoeia)
-      - [複合語起源](#複合語起源)
+      - [複合語起源 Term Origins](#複合語起源-term-origins)
+      - [Gogen Yurai](#gogen-yurai)
     - [Term Frequency](#term-frequency)
       - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
       - [Aozora Bunko Jukugo Frequency](#aozora-bunko-jukugo-frequency)
+      - [CC100](#cc100)
+      - [BCCWJ](#bccwj)
+      - [Innocent Ranked](#innocent-ranked)
+      - [jpDicts Frequencies](#jpdicts-frequencies)
+      - [Youtube Frequency Dictionaries](#youtube-frequency-dictionaries)
+      - [Corpus of Everyday Japanese Conversation](#corpus-of-everyday-japanese-conversation)
+      - [Shoui Dictionaries Collection Misc. Frequency Dictionaries](#shoui-dictionaries-collection-misc-frequency-dictionaries)
+      - [OhTalkWho オタク Frequency Dictionaries](#ohtalkwho-オタク-frequency-dictionaries)
+      - [Anacreon's Frequency Dictionaries](#anacreons-frequency-dictionaries)
   - [Kanji](#kanji)
     - [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries)
     - [Kanji Info](#kanji-info)
@@ -36,6 +48,9 @@ This repository contains dictionaries for [Yomichan](https://foosoft.net/project
       - [Wikipedia Kanji Frequency](#wikipedia-kanji-frequency)
       - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
 - [Chinese](#chinese)
+  - [Terms](#terms-1)
+    - [Shoui's Chinese Yomichan Setup](#shouis-chinese-yomichan-setup)
+    - [Other Chinese Dictionaries](#other-chinese-dictionaries)
   - [Hanzi](#hanzi)
     - [Wiktionary Hanzi](#wiktionary-hanzi)
 - [Other](#other)
@@ -45,6 +60,10 @@ This repository contains dictionaries for [Yomichan](https://foosoft.net/project
 # Japanese
 
 ## Terms
+
+Do check out [yomichan-dict-css](https://github.com/themoeway/yomichan-dict-css) for CSS that colors some term dictionaries to make them more immediately distinguishable.
+
+![example](https://raw.githubusercontent.com/themoeway/yomichan-dict-css/main/example2.png)
 
 ### JP-EN Term Dictionaries
 
@@ -60,9 +79,9 @@ The most extensive JP-EN dictionary using data from the [EDRDG Project](https://
 
 A dictionary of Japanese proper names. The linked version is advantageous over the one linked on the Yomichan homepage as it clutters the search page much less when searching kana, so it's highly recommended.
 
-#### Shoui Bilingual Dictionaries
+#### Shoui Bilingual Dictionaries Collection
 
-**[Download](https://drive.google.com/drive/folders/1tTdLppnqMfVC5otPlX_cs4ixlIgjv_lH)**
+**[Download](https://learnjapanese.moe/resources/#dictionaries)**
 
 There are various bilingual dictionaries in Shoui's bilingual folder. Check the readme in the folder for further information.
 
@@ -72,35 +91,55 @@ There are various bilingual dictionaries in Shoui's bilingual folder. Check the 
 
 ### Japanese Monolingual Dictionaries
 
-#### Shoui Monolingual Dictionaries
+#### Shoui Monolingual Dictionaries Collection
 
-**[Download](https://drive.google.com/drive/folders/1tTdLppnqMfVC5otPlX_cs4ixlIgjv_lH)**
+**[Download](https://learnjapanese.moe/resources/#dictionaries)**
 
-There are various monolingual dictionaries in Shoui's monolingual folder, authored by various people. Check the readme in the folder for further information. Currently contains:
+There are various monolingual dictionaries in Shoui's monolingual folder, authored by various people. Check the readme in the folder for further information, and check the explanation on [learniapanese.moe](https://learnjapanese.moe/monolingual/#recommended-dictionaries) on how to use them. Currently contains:
 
 - 広辞苑 第七版
-  - By Koujien, converted by [Thermosphere and shoui](https://github.com/Thermospore/koj72yomi).
+  - Converted by [Thermosphere and shoui](https://github.com/Thermospore/koj72yomi).
 - 三省堂国語辞典　第七版 (Recommended)
-  -
 - 実用日本語表現辞典 (Recommended)
 - 新明解国語辞典 第七版 (Recommended)
 - 明鏡国語辞典 第二版 (Recommended)
 - 旺文社国語辞典 第十一版 (Recommended)
   - Converted by irhello and shoui.
 - Weblio 古語辞典
+  - Scraped/converted by 昔男/mk68.
 - 精選版 日本国語大辞典
 - 明鏡国語辞典
 - 旺文社国語辞典 第十一版 画像無し
 - 新明解国語辞典 第五版
 - 故事ことわざの辞典
+  - Converted by Thermosphere with Yomichan Import
 - 広辞苑 第六版
 - 岩波国語辞典 第六版
 - 大辞林 第三版
 - ハイブリッド新辞林 v2
 - デジタル大辞泉
+  - Converted by ッツ.
 - 新明解四字熟語辞典
+  - Converted by ッツ.
 - 学研 四字熟語辞典
+  - Converted by ッツ.
 - 日本語俗語辞書
+  - Scraped/converted by Kartoffel.
+- 漢字源
+
+### Grammar Dictionaries
+
+#### aiko-tanaka Grammar Dictionaries
+
+**[Download](https://github.com/aiko-tanaka/Grammar-Dictionaries)**
+
+A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot of manual work was put in to creating them to make them parse well, I'd recommend you install all of them. Contains:
+
+- Nihongo no sensei 毎日のんびり日本語教師
+- E de wakaru 絵でわかる日本語
+- Nihongo Kyoshi JLPT 文法解説まとめ
+- Donna Toki どんなときどう使う 日本語表現文型辞典
+- DoJG 日本語文法辞典(全集)
 
 ### Other Term Dictionaries
 
@@ -128,7 +167,7 @@ For each entry, it contains:
 
 ![surasura](!images/surasura.png)
 
-#### 複合語起源
+#### 複合語起源 Term Origins
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.zip)** | **[List of words](termOrigins/%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv)**
 
@@ -142,19 +181,166 @@ Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|い�
 - [5ch](https://academy6.5ch.net/test/read.cgi/gengo/1228873581/)
 - [Wanikani](https://community.wanikani.com/t/special-kanji-words-derived-from-other-words/35655)
 
+#### Gogen Yurai
+
+**[Download](https://cdn.discordapp.com/attachments/778430038159655012/1025059429206466580/gogen.zip)**
+
+語源由来辞典 parsed from https://gogen-yurai.jp/ by Seikou. Contains a information about the origins of words.
+
 ### Term Frequency
 
 #### jpdb Frequency Dictionary
 
 **[Download](https://github.com/MarvNC/jpdb-freq-list/releases)**
 
-A frequency dictionary based on information from https://jpdb.io. More information can be found [here](https://github.com/MarvNC/jpdb-freq-list).
+A frequency dictionary based on information scraped from https://jpdb.io in May of 2022. More information can be found [here](https://github.com/MarvNC/jpdb-freq-list).
+
+Due to the way the data was scraped, some terms are missing frequencies and the jpdb dictionary itself is limited to terms in JMDict. For example, 経緯 only has an entry for the いきさつ reading so it should not be used as a dictionary for sorting (the more common/correct reading is けいい). However, the corpus of JPDB is quite good for immersion learners as it covers anime, dramas, light novels, visual novels, and web novels so the frequencies will be relatively accurate to what you're actually reading. This dictionary is notable for displaying the frequencies of kana readings separately, so you can often get a sense of how often a word is written with kanji or not.
 
 #### Aozora Bunko Jukugo Frequency
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BFreq%5D%20Aozora%20Bunko.zip)**
 
 A frequency dictionary created using data [collected by vrtm](https://vtrm.net/japanese/kanji-jukugo-frequency/en) based on the [Aozora Bunko](https://www.aozora.gr.jp/). Due to the [methodology used](https://vtrm.net/japanese/kanji-jukugo-frequency/en), this dictionary does not cover words with kana in them but it covers many rare 熟語 not covered by other frequency dictionaries, such as 睽乖.
+
+#### CC100
+
+**[Download](https://cdn.discordapp.com/attachments/778430038159655012/1025058653511893143/Freq_CC100.zip)**
+
+Made by the mind behind [arujisho](https://github.com/emc2314/arujisho), this uses the [CC100 dataset](https://data.statmt.org/cc-100/) which was made by crawling the web. Coverage is very wide, and there is reason behind the way readings are differentiated which is why I use this as my Yomichan sort dictionary.
+
+<details>
+<summary>Original message by Seikou</summary>
+
+> Hello everyone! Recently I tokenized the [CC-100](https://data.statmt.org/cc-100/) Japanese dataset (which is a high quality dataset filtered from Commoncrawl web crawl data, and is about 70GB large) as a corpus using mecab(fugashi) and sudachi, resulting a frequency rank list of about 900k words. After filtering it using several monolingual dictionaries, I got a freq rank list of roughly 160k words.
+
+</details>
+
+#### BCCWJ
+
+**[Download](https://github.com/toasted-nutbread/yomichan-bccwj-frequency-dictionary/releases)**
+
+From the [publication](https://link.springer.com/article/10.1007/s10579-013-9261-0):
+
+> The balanced corpus of contemporary written Japanese (BCCWJ) is Japan’s first 100 million words balanced corpus. It consists of three subcorpora (publication subcorpus, library subcorpus, and special-purpose subcorpus) and covers a wide range of text registers including books in general, magazines, newspapers, governmental white papers, best-selling books, an internet bulletin-board, a blog, school textbooks, minutes of the national diet, publicity newsletters of local governments, laws, and poetry verses.
+
+It has extremely wide coverage with most terms you'll encounter having an entry in this list even if other frequency lists don't. In addition, it differentiates between readings quite well. Make sure to install the LUW version as it has more terms.
+
+#### Innocent Ranked
+
+**[Download](https://learnjapanese.moe/resources/#dictionaries)**
+
+The Innocent Corpus from the [Yomichan page](https://github.com/FooSoft/yomichan#dictionaries) but reordered to be sorted by rank. It is based on data [from 5000+ novels](https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613). A weakness is that it does not differentiate based on reading, so all readings of a term will show the same value.
+
+#### jpDicts Frequencies
+
+**[Download](https://cdn.discordapp.com/attachments/778430038159655012/942796687401967616/Freq_Monodicts_206k.zip)**
+
+A frequency dictionary created using monolingual dictionary definitions as the corpus, so it might be useful for those who really like reading dictionaries.
+
+<details>
+<summary>Dictionaries used:</summary>
+
+- ハイブリッド新辞林 v2
+- 故事ことわざの辞典
+- 漢字源
+- 精選版 日本国語大辞典
+- 新明解四字熟語辞典
+- 学研 四字熟語辞典
+- 実用日本語表現辞典
+- 明鏡国語辞典
+- 旺文社国語辞典 第十一版
+- 新明解国語辞典 第五版
+- 大辞林 第三版
+- デジタル大辞泉
+- 岩波国語辞典 第六版
+- 広辞苑 第六版
+
+</details>
+
+#### Youtube Frequency Dictionaries
+
+**[Download the full Youtube Frequency List](https://cdn.discordapp.com/attachments/778430038159655012/933399848500228146/YoutubeFreqV3.zip)**
+
+**[Download all domain-specific dictionaries](https://cdn.discordapp.com/attachments/778430038159655012/933392359603986482/YouTubeFreqs.zip)**
+
+> Using data from 40k manually transcribed YouTube videos we have created 16 domain specific frequency lists for YomiChan.
+> Enjoy and feel free to share around. Created by @Zetta @Vexxed @Anonymous
+
+Domain-specific frequency lists from Youtube Videos:
+
+<details>
+<summary>Domains:</summary>
+
+- Vlogs
+- Vehicles
+- Travel
+- TEDx
+- Sports
+- SciTech
+- Pets/Animals
+- Nonprofits
+- News
+- Music
+- HowtoStyle
+- Gaming
+- Film/Anime
+- Entertainment
+- Education
+- Comedy
+
+</details>
+
+#### Corpus of Everyday Japanese Conversation
+
+**[Download](https://github.com/n-manas/Corpus-of-Everyday-Japanese-Conversation---Yomichan-Frequency-Dictionary)**
+
+Converted by n-manas, based on the [Corpus of Everyday Japanese Conversation](https://www.ninjal.ac.jp/english/research/cr-project/project-3/institute/spoken-language/).
+
+> The Corpus of Everyday Japanese Conversation (CEJC) is a vocabulary and word count table based on 200 hours of recorded data (approximately from April 2016 to 2020).
+
+> Our project will develop a large-scale corpus of Japanese everyday conversation in a balanced manner. Since informants record their conversations in everyday situations by themselves, naturally occurring conversations can be collected. To build an empirical foundation for the corpus design, we conducted a survey of ordinary conversational behavior of about 250 adults."
+
+> Since there were several ranks included in the file, the overall rank was chosen to generate this frequency dictionary.
+
+#### Shoui Dictionaries Collection Misc. Frequency Dictionaries
+
+Some other miscellaneous frequency dictionaries in the [Shoui Dictionaries Collection](https://learnjapanese.moe/resources/#dictionaries).
+
+- Anime & J-drama
+- [Narou](http://wiki.wareya.moe/Narou) Freq
+- Novels
+- VN Freq v2
+- Wikipedia v2
+- 国語辞典
+- Nier
+
+#### OhTalkWho オタク Frequency Dictionaries
+
+**[Download](https://docs.google.com/document/d/1IUWkvBxhoazBSTyRbdyRVk7hfKE51yorE86DCRNQVuw/edit)**
+
+Some frequency dictionaries made by this YouTuber [OhTalkWho オタク](https://www.youtube.com/watch?v=DwJWld8hW0M).
+
+- Netflix
+- Top 100 Shonen
+- Top 100 Slice of Life
+- JLPT Level Tags
+- Novel 5k
+  - This might just be innocent corpus with stars?
+- Visual Novels
+  - Might be based off [vnstats](http://wiki.wareya.moe/)? It's different than the VN Freq v2 in Shoui's Dictionaries Collection.
+
+#### Anacreon's Frequency Dictionaries
+
+**[Download](https://anacreondjt.gitlab.io/docs/freq/)**
+
+Some frequency dictionaries made by Anacreon that are not rank-based, but rather percentage-based where the displayed value is the percent of that corpus you would be able to read if you knew every word with that percentage or lower. They are somewhat redundant with other previously mentioned dictionaries, but some people may prefer the percentage-based approach.
+
+> Frequency is displayed as a number between MOST frequent 0 and LEAST frequent 100. Check out this graph, essentially the number in these dicts are the Y axis of [this graph](https://anacreondjt.gitlab.io/img/graph.png). So if you were aiming for understanding 95% of words you come across the most efficient way would be to mine all the words with a freq less than or equal 95.
+
+- Visual Novels (from [vnstats](http://wiki.wareya.moe/))
+- [Narou](http://wiki.wareya.moe/Narou)
+- BCCWJ2
 
 ## Kanji
 
@@ -306,6 +492,31 @@ Rank-based kanji frequency data from a May 2015 dump of Japanese Wikipedia, cont
 Kanji frequency data from https://jpdb.io.
 
 # Chinese
+
+## Terms
+
+### Shoui's Chinese Yomichan Setup
+
+**[Shoui's Chinese Yomichan Setup](https://gist.github.com/shoui520/25460fd2e9fb194d3e5152fa2ce42ca2#installing-dictionaries-and-basic-usage)**
+
+Shoui's guide to setting up Yomichan for Chinese, includes links for:
+
+- [ZH-EN] CEDICT
+- [ZH-JA] 中日大辞典　第二版
+- [ZH-ZH] 兩岸詞典
+- [ZH-ZH] 漢語大詞典
+- [ZH-ZH] 萌典国语辞典 (简体字)
+
+### Other Chinese Dictionaries
+
+Not sure who made these, but some dictionaries available on this [Google Drive](https://drive.google.com/drive/folders/14OiowSI28LcP_rtGVuis7Sy8Kt_yqsiI). Includes:
+
+- 萌典.pinyin
+- 萌典
+- 牛津英汉汉英词典
+- 现代汉语规范词典
+- 譯典通英漢雙向字典
+- 五南國語活用辭典
 
 ## Hanzi
 
