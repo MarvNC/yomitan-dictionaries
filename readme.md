@@ -1,12 +1,20 @@
 # Yomichan Dictionaries <!-- omit in toc -->
 
+This repository contains dictionaries for [Yomichan](https://foosoft.net/projects/yomichan/), a Japanese dictionary browser extension for Chrome, Firefox, and Edge. The repository was originally created to host the dictionaries I created, but I have since adapted this repository to serve as a hub for other dictionaries as well. If you have a dictionary you would like to share, please open an issue or pull request.
+
 ### Check out my [JP Resources](https://github.com/MarvNC/JP-Resources)
 
 ### [Changelog](https://github.com/MarvNC/yomichan-dictionaries/commits/master/dl)
 
 - [Japanese](#japanese)
   - [Terms](#terms)
-    - [Term Dictionary](#term-dictionary)
+    - [JP-EN Term Dictionaries](#jp-en-term-dictionaries)
+      - [JMDict](#jmdict)
+      - [JMnedict](#jmnedict)
+      - [Shoui Bilingual Dictionaries](#shoui-bilingual-dictionaries)
+    - [Japanese Monolingual Dictionaries](#japanese-monolingual-dictionaries)
+      - [Shoui Monolingual Dictionaries](#shoui-monolingual-dictionaries)
+    - [Other Term Dictionaries](#other-term-dictionaries)
       - [niconico-pixiv Terms](#niconico-pixiv-terms)
       - [surasura Onomatopoeia](#surasura-onomatopoeia)
       - [複合語起源](#複合語起源)
@@ -38,7 +46,63 @@
 
 ## Terms
 
-### Term Dictionary
+### JP-EN Term Dictionaries
+
+#### JMDict
+
+**[Download](https://github.com/Aquafina-water-bottle/jmdict-english-yomichan/)**
+
+The most extensive JP-EN dictionary using data from the [EDRDG Project](https://www.edrdg.org/jmdict/j_jmdict.html) created by Jim Breen. The linked version should be the most up to date, with changed by stephenmk to display crucial information that wasn't previously linked and to improve formatting greatly, adding in example sentences as well.
+
+#### JMnedict
+
+**[Download](https://github.com/FooSoft/yomichan/issues/2111#issuecomment-1192238540)**
+
+A dictionary of Japanese proper names. The linked version is advantageous over the one linked on the Yomichan homepage as it clutters the search page much less when searching kana, so it's highly recommended.
+
+#### Shoui Bilingual Dictionaries
+
+**[Download](https://drive.google.com/drive/folders/1tTdLppnqMfVC5otPlX_cs4ixlIgjv_lH)**
+
+There are various bilingual dictionaries in Shoui's bilingual folder. Check the readme in the folder for further information.
+
+- 新和英 (Recommended)
+  - Same as the 研究社　新和英大辞典　第５版 but with better deconjugation but lacking some additional sentences.
+- 研究社　新和英大辞典　第５版
+
+### Japanese Monolingual Dictionaries
+
+#### Shoui Monolingual Dictionaries
+
+**[Download](https://drive.google.com/drive/folders/1tTdLppnqMfVC5otPlX_cs4ixlIgjv_lH)**
+
+There are various monolingual dictionaries in Shoui's monolingual folder, authored by various people. Check the readme in the folder for further information. Currently contains:
+
+- 広辞苑 第七版
+  - By Koujien, converted by [Thermosphere and shoui](https://github.com/Thermospore/koj72yomi).
+- 三省堂国語辞典　第七版 (Recommended)
+  -
+- 実用日本語表現辞典 (Recommended)
+- 新明解国語辞典 第七版 (Recommended)
+- 明鏡国語辞典 第二版 (Recommended)
+- 旺文社国語辞典 第十一版 (Recommended)
+  - Converted by irhello and shoui.
+- Weblio 古語辞典
+- 精選版 日本国語大辞典
+- 明鏡国語辞典
+- 旺文社国語辞典 第十一版 画像無し
+- 新明解国語辞典 第五版
+- 故事ことわざの辞典
+- 広辞苑 第六版
+- 岩波国語辞典 第六版
+- 大辞林 第三版
+- ハイブリッド新辞林 v2
+- デジタル大辞泉
+- 新明解四字熟語辞典
+- 学研 四字熟語辞典
+- 日本語俗語辞書
+
+### Other Term Dictionaries
 
 #### niconico-pixiv Terms
 
