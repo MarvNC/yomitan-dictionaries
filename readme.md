@@ -14,6 +14,7 @@ Please note that this repository is not any kind of ranking or endorsement. I us
       - [JMDict](#jmdict)
       - [JMnedict](#jmnedict)
       - [Shoui Bilingual Dictionaries Collection](#shoui-bilingual-dictionaries-collection)
+      - [New Saitou Japanese-English Dictionary](#new-saitou-japanese-english-dictionary)
     - [Japanese Monolingual Dictionaries](#japanese-monolingual-dictionaries)
       - [Shoui Monolingual Dictionaries Collection](#shoui-monolingual-dictionaries-collection)
     - [Grammar Dictionaries](#grammar-dictionaries)
@@ -51,8 +52,11 @@ Please note that this repository is not any kind of ranking or endorsement. I us
       - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
 - [Chinese](#chinese)
   - [Terms](#terms-1)
-    - [Shoui's Chinese Yomichan Setup](#shouis-chinese-yomichan-setup)
-    - [Other Chinese Dictionaries](#other-chinese-dictionaries)
+    - [Term Dictionaries](#term-dictionaries)
+      - [Shoui's Chinese Yomichan Setup](#shouis-chinese-yomichan-setup)
+      - [Other Chinese Dictionaries](#other-chinese-dictionaries)
+    - [Chinese Frequency](#chinese-frequency)
+      - [General Global Chinese Frequency](#general-global-chinese-frequency)
   - [Hanzi](#hanzi)
     - [Wiktionary Hanzi](#wiktionary-hanzi)
 - [Other](#other)
@@ -90,6 +94,18 @@ There are various bilingual dictionaries in Shoui's bilingual folder. Check the 
 - 新和英 (Recommended)
   - Same as the 研究社　新和英大辞典　第５版 but with better deconjugation but lacking some additional sentences.
 - 研究社　新和英大辞典　第５版
+
+#### New Saitou Japanese-English Dictionary
+
+**[NEW 斎藤和英大辞典](https://cdn.discordapp.com/attachments/563409909627224095/1093381609501245520/Bilingual_NEW_2.zip)**
+
+A bilingual dictionary by an anon, with lots of example sentences. You may want to limit the amount of example sentences to avoid cluttering the search page with the following CSS, where the number 5 can be changed:
+
+```css
+[data-dictionary='NEW斎藤和英大辞典'] ul.gloss-sc-ul > li:nth-child(n + 5) {
+  display: none;
+}
+```
 
 ### Japanese Monolingual Dictionaries
 
@@ -497,7 +513,9 @@ Kanji frequency data from https://jpdb.io.
 
 ## Terms
 
-### Shoui's Chinese Yomichan Setup
+### Term Dictionaries
+
+#### Shoui's Chinese Yomichan Setup
 
 **[Shoui's Chinese Yomichan Setup](https://gist.github.com/shoui520/25460fd2e9fb194d3e5152fa2ce42ca2#installing-dictionaries-and-basic-usage)**
 
@@ -509,7 +527,7 @@ Shoui's guide to setting up Yomichan for Chinese, includes links for:
 - [ZH-ZH] 漢語大詞典
 - [ZH-ZH] 萌典国语辞典 (简体字)
 
-### Other Chinese Dictionaries
+#### Other Chinese Dictionaries
 
 Not sure who made these, but some dictionaries available on this [Google Drive](https://drive.google.com/drive/folders/14OiowSI28LcP_rtGVuis7Sy8Kt_yqsiI). Includes:
 
@@ -519,6 +537,14 @@ Not sure who made these, but some dictionaries available on this [Google Drive](
 - 现代汉语规范词典
 - 譯典通英漢雙向字典
 - 五南國語活用辭典
+
+### Chinese Frequency
+
+#### General Global Chinese Frequency
+
+**[Frequency](https://cdn.discordapp.com/attachments/1054623082867855420/1054827030312648824/global_freq.zip)**
+
+A general Chinese frequency dictionary that is likely based off of "the chinese internet, movies, books, etc as a whole" according to its author [Kamui](https://github.com/kamui-fin).
 
 ## Hanzi
 
