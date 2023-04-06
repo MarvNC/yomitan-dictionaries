@@ -97,7 +97,7 @@ There are various bilingual dictionaries in Shoui's bilingual folder. Check the 
 
 #### New Saitou Japanese-English Dictionary
 
-**[NEW 斎藤和英大辞典](https://cdn.discordapp.com/attachments/563409909627224095/1093381609501245520/Bilingual_NEW_2.zip)**
+**[NEW 斎藤和英大辞典](https://cdn.discordapp.com/attachments/563409909627224095/1093416116661010603/Bilingual_NEW__2.zip)**
 
 A bilingual dictionary by an anon, with lots of example sentences. You may want to limit the amount of example sentences to avoid cluttering the search page with the following CSS, where the number 5 can be changed:
 
