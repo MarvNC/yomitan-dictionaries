@@ -2,7 +2,7 @@
 
 This repository contains dictionaries for [Yomichan](https://foosoft.net/projects/yomichan/)/[Yomitan](https://github.com/themoeway/yomitan), a Japanese dictionary browser extension for Chrome, Firefox, and Edge. The repository was originally created to host the dictionaries I created, but I have since adapted this repository to serve as a hub for other dictionaries as well. If you have a dictionary you would like to share, please open an issue or pull request.
 
-Please note that this repository is not any kind of ranking or endorsement. I use some but not all of the dictionaries listed.
+Please note that this repository is not any kind of ranking or endorsement. I use some but not all of the dictionaries listed. Though in general, I recommend installing as many dictionaries as possible for maximum coverage.
 
 ### Check out my [JP Resources](https://github.com/MarvNC/JP-Resources)
 
@@ -92,7 +92,7 @@ A dictionary of Japanese proper names. The linked version is advantageous over t
 There are various bilingual dictionaries in Shoui's bilingual folder. Check the readme in the folder for further information.
 
 - 新和英 (Recommended)
-  - Same as the 研究社　新和英大辞典　第５版 but with better deconjugation but lacking some additional sentences.
+  - Same as the 研究社　新和英大辞典　第５版 with better deconjugation but lacking some additional sentences.
 - 研究社　新和英大辞典　第５版
 
 #### New Saitou Japanese-English Dictionary
