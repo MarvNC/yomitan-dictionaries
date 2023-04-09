@@ -2,7 +2,7 @@
 
 This repository contains dictionaries for [Yomichan](https://foosoft.net/projects/yomichan/)/[Yomitan](https://github.com/themoeway/yomitan), a Japanese dictionary browser extension for Chrome, Firefox, and Edge. The repository was originally created to host the dictionaries I created, but I have since adapted this repository to serve as a hub for other dictionaries as well. If you have a dictionary you would like to share, please open an issue or pull request.
 
-Please note that this repository is not any kind of ranking or endorsement. I use some but not all of the dictionaries listed. Though in general, I recommend installing as many dictionaries as possible for maximum coverage.
+Please note that this repository is not any kind of ranking or endorsement of the listed dictionaries. I use some but not all of the dictionaries listed. Though in general, I recommend installing as many dictionaries as possible for maximum coverage.
 
 ### Check out my [JP Resources](https://github.com/MarvNC/JP-Resources)
 
@@ -17,6 +17,7 @@ Please note that this repository is not any kind of ranking or endorsement. I us
       - [New Saitou Japanese-English Dictionary](#new-saitou-japanese-english-dictionary)
     - [Japanese Monolingual Dictionaries](#japanese-monolingual-dictionaries)
       - [Shoui Monolingual Dictionaries Collection](#shoui-monolingual-dictionaries-collection)
+      - [Iwanami Kokugo Jiten](#iwanami-kokugo-jiten)
     - [Grammar Dictionaries](#grammar-dictionaries)
       - [aiko-tanaka Grammar Dictionaries](#aiko-tanaka-grammar-dictionaries)
     - [Other Term Dictionaries](#other-term-dictionaries)
@@ -113,7 +114,7 @@ A bilingual dictionary by an anon, with lots of example sentences. You may want 
 
 **[Download](https://learnjapanese.moe/resources/#dictionaries)**
 
-There are various monolingual dictionaries in Shoui's monolingual folder, authored by various people. Check the readme in the folder for further information, and check the explanation on [learniapanese.moe](https://learnjapanese.moe/monolingual/#recommended-dictionaries) on how to use them. Currently contains:
+There are various monolingual dictionaries in Shoui's monolingual folder, authored by various people. Check the readme in the folder for further information, and check the explanation on [learnjapanese.moe](https://learnjapanese.moe/monolingual/#recommended-dictionaries) on how to use them. Currently contains:
 
 - 広辞苑 第七版
   - Converted by [Thermosphere and shoui](https://github.com/Thermospore/koj72yomi).
@@ -144,6 +145,21 @@ There are various monolingual dictionaries in Shoui's monolingual folder, author
 - 日本語俗語辞書
   - Scraped/converted by Kartoffel.
 - 漢字源
+
+#### Iwanami Kokugo Jiten
+
+**[岩波国語辞典　第八版](https://cdn.discordapp.com/attachments/563409909627224095/1094321820548734996/a.zip)**
+
+A monolingual dictionary made by an anon, with very nice formatting and links for related terms.
+
+<details>
+  <summary>Images</summary>
+
+![1](https://cdn.discordapp.com/attachments/778430038159655012/1094322605021990972/iwakoku2.png)
+![2](https://cdn.discordapp.com/attachments/778430038159655012/1094322605294633101/iwakoku3.png)
+![3](https://cdn.discordapp.com/attachments/778430038159655012/1094322605516922991/iwakoku4.png)
+
+</details>
 
 ### Grammar Dictionaries
 
