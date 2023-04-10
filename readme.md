@@ -270,7 +270,7 @@ The Innocent Corpus from the [Yomichan page](https://github.com/FooSoft/yomichan
 
 **[Download](https://cdn.discordapp.com/attachments/778430038159655012/942796687401967616/Freq_Monodicts_206k.zip)**
 
-A frequency dictionary created using monolingual dictionary definitions as the corpus, so it might be useful for those who really like reading dictionaries.
+A frequency dictionary created using monolingual dictionary definitions as the corpus, so it might be useful for those who really like reading dictionaries. Made by Avratzzz.
 
 <details>
 <summary>Dictionaries used:</summary>
@@ -294,7 +294,7 @@ A frequency dictionary created using monolingual dictionary definitions as the c
 
 #### Youtube Frequency Dictionaries
 
-**[Download the full Youtube Frequency List](https://cdn.discordapp.com/attachments/778430038159655012/933399848500228146/YoutubeFreqV3.zip)**
+**[Download the full Youtube Frequency Dictionary](https://cdn.discordapp.com/attachments/778430038159655012/933399848500228146/YoutubeFreqV3.zip)**
 
 **[Download all domain-specific dictionaries](https://cdn.discordapp.com/attachments/778430038159655012/933392359603986482/YouTubeFreqs.zip)**
 
