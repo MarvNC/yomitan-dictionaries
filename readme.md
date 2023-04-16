@@ -51,7 +51,7 @@ Please note that this repository is not any kind of ranking or endorsement of th
       - [Innocent Corpus Kanji Frequency](#innocent-corpus-kanji-frequency)
       - [Wikipedia Kanji Frequency](#wikipedia-kanji-frequency)
       - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
-- [Chinese](#chinese)
+- [Mandarin Chinese](#mandarin-chinese)
   - [Terms](#terms-1)
     - [Term Dictionaries](#term-dictionaries)
       - [Shoui's Chinese Yomichan Setup](#shouis-chinese-yomichan-setup)
@@ -60,6 +60,9 @@ Please note that this repository is not any kind of ranking or endorsement of th
       - [General Global Chinese Frequency](#general-global-chinese-frequency)
   - [Hanzi](#hanzi)
     - [Wiktionary Hanzi](#wiktionary-hanzi)
+- [Cantonese](#cantonese)
+  - [Terms](#terms-2)
+    - [Misc Dictionaries](#misc-dictionaries)
 - [Other](#other)
   - [Japanese-Mongolian](#japanese-mongolian)
     - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
@@ -525,7 +528,7 @@ Rank-based kanji frequency data from a May 2015 dump of Japanese Wikipedia, cont
 
 Kanji frequency data from https://jpdb.io.
 
-# Chinese
+# Mandarin Chinese
 
 ## Terms
 
@@ -582,6 +585,24 @@ See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) 
 Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.wiktionary.org/). Due to the complexity of the wiktionary pages, it will display most of the text on the page, excluding tables and such so the pinyin readings may not be included for many characters. In addition, do note that for some uncommonly used characters there is little information available as the wiki pages often consist of just unicode information and code points, which was stripped from the dictionary.
 
 ![zh wiktionary hanzi](!images/zhWiktionaryHanzi.png)
+
+# Cantonese
+
+## Terms
+
+### Misc Dictionaries
+
+**[Download](https://drive.google.com/drive/folders/1aybpEp9_-JlOpvnJ8-5c0qlfachb83nA?usp=share_link)**
+
+Thanks to richter_belmont on the Refold Cantonese Discord:
+
+> I converted all of the Migaku dictionaries from the "Learn Cantonese!" shared folder on Google Drive into Yomichan dictionaries. List of dictionaries available are:
+
+- Canto CEDICT
+- CC-Canto
+- CE Wiktionary
+- Words.hk C-C
+- Words.hk C-E
 
 # Other
 
