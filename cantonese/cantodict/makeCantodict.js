@@ -53,7 +53,16 @@ function createTermBank(cantodict) {
 }
 
 /**
- * Creates a term bank entry from a cantodict entry
+ * Creates a Yomichan term bank entry from a cantodict entry which can be either a term or a character.
+ * References the cantodict to get example sentences.
  * @param {Object} entry
+ * @param {Object} cantodict
  */
 function createTermBankEntry(entry, cantodict) {}
+
+/**
+ * Creates a yomichan kanji bank from a character entry.
+ * @param {Object} entry
+ * @param {Object} cantodict
+ */
+function createKanjiBankEntry(entry, cantodict) {}
