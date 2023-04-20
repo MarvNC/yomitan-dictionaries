@@ -331,7 +331,7 @@ Domain-specific frequency lists from Youtube Videos:
 
 #### Corpus of Everyday Japanese Conversation
 
-**[Download](https://github.com/n-manas/Corpus-of-Everyday-Japanese-Conversation---Yomichan-Frequency-Dictionary)**
+**[Download](https://github.com/MarvNC/Corpus-of-Everyday-Japanese-Conversation---Yomichan-Frequency-Dictionary/tree/add-download-table)**
 
 Converted by n-manas, based on the [Corpus of Everyday Japanese Conversation](https://www.ninjal.ac.jp/english/research/cr-project/project-3/institute/spoken-language/).
 
