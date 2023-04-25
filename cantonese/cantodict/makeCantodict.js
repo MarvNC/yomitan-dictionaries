@@ -245,7 +245,7 @@ function createTermBankEntries(entry, cantodict) {
             content: sentence.definition,
             lang: 'en',
             style: {
-              fontSize: '70%',
+              fontSize: '80%',
               listStyleType: 'none',
             },
             tag: 'li',
