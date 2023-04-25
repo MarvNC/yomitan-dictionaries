@@ -602,7 +602,7 @@ Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.w
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BCantonese%5D%20Cantodict.zip)**
 
-[Cantodict](http://www.cantonese.sheik.co.uk/dictionary/) was a Cantonese-English dictionary created and maintained by Adam SHheik and public contributors. It was abandoned, but the data was archived thanks to awong-dev at https://github.com/awong-dev/cantodict-archive. This dictionary is based off of the archived data.
+[Cantodict](http://www.cantonese.sheik.co.uk/dictionary/) was a Cantonese-English dictionary created and maintained by Adam Sheik and public contributors. It was abandoned, but the data was archived thanks to awong-dev at https://github.com/awong-dev/cantodict-archive. This dictionary is based off of the archived data.
 
 ![canto_please](!images/canto_please.png)
 ![canto_read](!images/canto_read.png)
