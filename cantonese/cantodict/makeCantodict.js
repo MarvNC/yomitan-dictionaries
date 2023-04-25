@@ -164,9 +164,27 @@ function createTermBankEntries(entry, cantodict) {
         },
         lang: 'zh-HK',
       },
+      // note if entry has note
+      entry.notes
+        ? {
+            tag: 'ul',
+            data: {
+              cantodict: 'notes',
+            },
+            content: [
+              {
+                tag: 'li',
+                content: entry.notes,
+              },
+            ],
+            style: {
+              listStyleType: '"📝 "',
+            },
+            lang: 'zh-HK',
+          }
+        : { tag: 'span' },
     ],
   };
-  // add other forms using 'forms' tag
 
   // add compounds
   if (entry.compound_cantodictids.length > 0) {
@@ -185,7 +203,7 @@ function createTermBankEntries(entry, cantodict) {
         compounds.push({
           tag: 'a',
           href: `?query=${compound.chinese}&wildcards=off`,
-          content: compound.chinese + ', ',
+          content: compound.chinese + '・',
         });
       }
     }
@@ -235,8 +253,8 @@ function createTermBankEntries(entry, cantodict) {
 
   // sequence number
   termBankEntry.push(0);
-  // tags
-  termBankEntry.push('');
+  // tags, add dialects
+  termBankEntry.push(entry.dialect ?? '');
 
   entries.push(termBankEntry);
 
