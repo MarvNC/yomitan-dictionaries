@@ -91,8 +91,96 @@ function createTermBankEntries(entry, cantodict) {
   termBankEntry.push(entry.pos.join(' '));
   termBankEntry.push('');
   termBankEntry.push(entry.google_frequency || 0);
-  // TODO: make definition better using structured content to add compounds and example sentences
-  termBankEntry.push([entry.definition]);
+  const definitionStructuredContent = {
+    type: 'structured-content',
+    content: [
+      // render headword in HK font
+      {
+        tag: 'span',
+        data: {
+          cantodict: 'headword',
+        },
+        content: `【${entry.chinese}】`,
+        style: {
+          fontSize: '150%',
+        },
+        lang: 'zh-HK',
+      },
+      {
+        tag: 'div',
+        data: {
+          cantodict: 'definition',
+        },
+        content: entry.definition,
+        lang: 'zh-HK',
+      },
+    ],
+  };
+  // add compounds
+  if (entry.compound_cantodictids.length > 0) {
+    const compounds = [];
+    const content = {
+      tag: 'div',
+      data: {
+        cantodict: 'compounds',
+      },
+      content: [],
+      lang: 'zh-HK',
+    };
+    for (const compoundId of entry.compound_cantodictids) {
+      const compound = cantodict['compound,' + compoundId];
+      if (compound) {
+        compounds.push({
+          tag: 'a',
+          href: `?query=${compound.chinese}&wildcards=off`,
+          content: compound.chinese + ', ',
+        });
+      }
+    }
+    content.content.push(...compounds);
+    definitionStructuredContent.content.push(content);
+  }
+
+  // add sentences
+  if (entry.sentence_cantodictids.length > 0) {
+    const sentences = [];
+    const content = {
+      tag: 'ul',
+      data: {
+        cantodict: 'sentences',
+      },
+      content: [],
+      style: {
+        listStyleType: 'square',
+      },
+      lang: 'zh-HK',
+    };
+    for (const sentenceId of entry.sentence_cantodictids) {
+      const sentence = cantodict['sentence,' + sentenceId];
+      if (sentence) {
+        sentences.push(
+          {
+            content: sentence.chinese,
+            tag: 'li',
+          },
+          {
+            content: sentence.definition,
+            lang: 'en',
+            style: {
+              fontSize: '70%',
+              listStyleType: 'none',
+            },
+            tag: 'li',
+          }
+        );
+      }
+    }
+    content.content.push(...sentences);
+    definitionStructuredContent.content.push(content);
+  }
+
+  termBankEntry.push([definitionStructuredContent]);
+
   // sequence number
   termBankEntry.push(0);
   // tags
