@@ -149,11 +149,19 @@ function createTermBankEntries(entry, cantodict) {
         lang: 'zh-HK',
       },
       {
-        tag: 'div',
+        tag: 'ul',
         data: {
           cantodict: 'definition',
         },
-        content: entry.definition,
+        content: [
+          ...entry.definition.split('\n').map((def) => ({
+            tag: 'li',
+            content: def,
+          })),
+        ],
+        style: {
+          listStyleType: 'circle',
+        },
         lang: 'zh-HK',
       },
     ],
