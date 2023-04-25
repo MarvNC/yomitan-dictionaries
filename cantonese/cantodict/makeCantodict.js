@@ -103,7 +103,14 @@ function createTermBankEntries(entry, cantodict) {
         content: [
           {
             tag: 'span',
-            content: `【${entry.chinese}】`,
+            content: '【',
+            style: {
+              fontSize: '150%',
+            },
+          },
+          {
+            tag: 'span',
+            content: entry.chinese,
             style: {
               fontSize: '150%',
             },
@@ -111,9 +118,29 @@ function createTermBankEntries(entry, cantodict) {
               cantodict: 'chinese',
             },
           },
+          // variants
+          entry.variants && entry.variants.length > 0
+            ? {
+                tag: 'span',
+                content: `・${entry.variants.join('・')}`,
+                style: {
+                  fontSize: '150%',
+                },
+                data: {
+                  cantodict: 'variants',
+                },
+              }
+            : { tag: 'span' },
           {
             tag: 'span',
-            content: `${entry.jyutping}, ${entry.yale}, ${entry.pinyin}`,
+            content: '】',
+            style: {
+              fontSize: '150%',
+            },
+          },
+          {
+            tag: 'span',
+            content: `${entry.jyutping}・${entry.yale}・${entry.pinyin}`,
             data: {
               cantodict: 'readings',
             },
@@ -132,7 +159,6 @@ function createTermBankEntries(entry, cantodict) {
     ],
   };
   // add other forms using 'forms' tag
-  
 
   // add compounds
   if (entry.compound_cantodictids.length > 0) {
