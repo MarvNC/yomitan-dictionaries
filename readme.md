@@ -40,6 +40,7 @@ Please note that this repository is not any kind of ranking or endorsement of th
   - [Kanji](#kanji)
     - [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries)
     - [Kanji Info](#kanji-info)
+      - [KANJIDIC](#kanjidic)
       - [Wiktionary Kanji](#wiktionary-kanji)
       - [jpdb Kanji](#jpdb-kanji)
       - [TheKanjiMap](#thekanjimap)
@@ -432,6 +433,12 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 ```
 
 ### Kanji Info
+
+#### KANJIDIC
+
+**[Download](https://github.com/themoeway/yomitan/raw/dictionaries/kanjidic_english.zip)**
+
+The [KANJIDIC Project](http://www.edrdg.org/wiki/index.php/KANJIDIC_Project)'s KANJIDIC is the primary English kanji dictionary used in Yomichan and contains information about most kanji, notably English definitions, readings, and some other statistics like stroke count, JLPT, grade level.
 
 #### Wiktionary Kanji
 
