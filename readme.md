@@ -101,9 +101,9 @@ There are various bilingual dictionaries in Shoui's bilingual folder. Check the 
 
 #### New Saitou Japanese-English Dictionary
 
-**[NEW 斎藤和英大辞典](https://cdn.discordapp.com/attachments/563409909627224095/1093416116661010603/Bilingual_NEW__2.zip)**
+**[Download NEW 斎藤和英大辞典](https://cdn.discordapp.com/attachments/563409909627224095/1093416116661010603/Bilingual_NEW__2.zip)**
 
-A bilingual dictionary by an anon, with lots of example sentences. You may want to limit the amount of example sentences to avoid cluttering the search page with the following CSS, where the number 5 can be changed:
+A bilingual dictionary by an anon, with lots of example sentences. You may want to limit the amount of example sentences to avoid cluttering the search page by using the following CSS, where the number 5 can be changed:
 
 ```css
 [data-dictionary='NEW斎藤和英大辞典'] ul.gloss-sc-ul > li:nth-child(n + 5) {
@@ -151,7 +151,7 @@ There are various monolingual dictionaries in Shoui's monolingual folder, author
 
 #### Iwanami Kokugo Jiten
 
-**[岩波国語辞典　第八版](https://cdn.discordapp.com/attachments/563409909627224095/1094321820548734996/a.zip)**
+**[Download 岩波国語辞典　第八版](https://cdn.discordapp.com/attachments/563409909627224095/1094321820548734996/a.zip)**
 
 A monolingual dictionary made by an anon, with very nice formatting and links for related terms.
 
