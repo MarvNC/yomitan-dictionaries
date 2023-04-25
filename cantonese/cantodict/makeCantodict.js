@@ -200,13 +200,21 @@ function createTermBankEntries(entry, cantodict) {
     for (const compoundId of entry.compound_cantodictids) {
       const compound = cantodict['compound,' + compoundId];
       if (compound) {
-        compounds.push({
-          tag: 'a',
-          href: `?query=${compound.chinese}&wildcards=off`,
-          content: compound.chinese + '・',
-        });
+        compounds.push(
+          {
+            tag: 'a',
+            href: `?query=${compound.chinese}&wildcards=off`,
+            content: compound.chinese,
+          },
+          {
+            tag: 'span',
+            content: '・',
+          }
+        );
       }
     }
+    // remove last separator from compounds array
+    compounds.pop();
     content.content.push(...compounds);
     definitionStructuredContent.content.push(content);
   }
