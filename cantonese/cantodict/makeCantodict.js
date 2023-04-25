@@ -100,10 +100,25 @@ function createTermBankEntries(entry, cantodict) {
         data: {
           cantodict: 'headword',
         },
-        content: `【${entry.chinese}】`,
-        style: {
-          fontSize: '150%',
-        },
+        content: [
+          {
+            tag: 'span',
+            content: `【${entry.chinese}】`,
+            style: {
+              fontSize: '150%',
+            },
+            data: {
+              cantodict: 'chinese',
+            },
+          },
+          {
+            tag: 'span',
+            content: `${entry.jyutping}, ${entry.yale}, ${entry.pinyin}`,
+            data: {
+              cantodict: 'readings',
+            },
+          },
+        ],
         lang: 'zh-HK',
       },
       {
@@ -116,6 +131,9 @@ function createTermBankEntries(entry, cantodict) {
       },
     ],
   };
+  // add other forms using 'forms' tag
+  
+
   // add compounds
   if (entry.compound_cantodictids.length > 0) {
     const compounds = [];
