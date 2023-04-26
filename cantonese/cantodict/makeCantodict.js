@@ -40,14 +40,14 @@ const READING_TYPE = 'jyutping';
   const termBank = createTermBank(cantodict);
 
   const index = {
-    title: 'Cantodict',
+    title: 'CantoDict',
     revision: `cantodict_${new Date().toISOString()}`,
     format: 3,
     url: 'http://www.cantonese.sheik.co.uk/',
-    description: `Cantodict was a Cantonese-English dictionary created and maintained by public contributors. It was abandoned, but the data was archived thanks to awong-dev at https://github.com/awong-dev/cantodict-archive.
+    description: `CantoDict was a Cantonese-English dictionary created and maintained by public contributors. It was abandoned, but the data was archived thanks to awong-dev at https://github.com/awong-dev/cantodict-archive.
 Created with https://github.com/MarvNC/yomichan-dictionaries`,
-    author: 'Cantodict contributors, Marv',
-    attribution: 'Cantodict contributors',
+    author: 'CantoDict contributors, Marv',
+    attribution: 'CantoDict contributors',
     frequencyMode: 'rank-based',
   };
 
@@ -56,7 +56,7 @@ Created with https://github.com/MarvNC/yomichan-dictionaries`,
       'index.json': index,
       'term_bank_1.json': termBank,
     },
-    '[Cantonese] Cantodict.zip'
+    '[Cantonese] CantoDict.zip'
   );
 })();
 

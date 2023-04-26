@@ -63,7 +63,7 @@ Please note that this repository is not any kind of ranking or endorsement of th
     - [Wiktionary Hanzi](#wiktionary-hanzi)
 - [Cantonese](#cantonese)
   - [Terms](#terms-2)
-    - [Cantodict](#cantodict)
+    - [CantoDict](#cantodict)
     - [Misc Dictionaries](#misc-dictionaries)
 - [Other](#other)
   - [Japanese-Mongolian](#japanese-mongolian)
@@ -598,11 +598,11 @@ Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.w
 
 ## Terms
 
-### Cantodict
+### CantoDict
 
-**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BCantonese%5D%20Cantodict.zip)**
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BCantonese%5D%20CantoDict.zip)**
 
-[Cantodict](http://www.cantonese.sheik.co.uk/dictionary/) was a Cantonese-English dictionary created and maintained by Adam Sheik and public contributors. It was abandoned, but the data was archived thanks to awong-dev at https://github.com/awong-dev/cantodict-archive. This dictionary is based off of the archived data.
+[CantoDict](http://www.cantonese.sheik.co.uk/dictionary/) was a Cantonese-English dictionary created and maintained by Adam Sheik and public contributors. It was abandoned, but the data was archived thanks to awong-dev at https://github.com/awong-dev/cantodict-archive. This dictionary is based off of the archived data.
 
 ![canto_please](!images/canto_please.png)
 ![canto_read](!images/canto_read.png)
