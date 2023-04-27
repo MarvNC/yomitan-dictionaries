@@ -124,7 +124,7 @@ async function getArticlesSummaries() {
     console.log(`Got ${listURL}, ${remaining} remaining, expected ${expectedEndTime}`);
     await wait(WAIT_MS);
   }
-  await writeJson(articlesListSummaries, folderPath + saveSummariesJsonPath);
+  await writeJson(articlesListSummaries, saveSummariesJsonPath);
 }
 
 /**
