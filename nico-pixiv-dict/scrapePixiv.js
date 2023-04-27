@@ -20,13 +20,82 @@ const COUNT_PER_PAGE = 12;
 let articlesListSummaries = {};
 let articleData = {};
 (async function () {
-  // const testJson = await getJSON(
-  //   'https://dic.pixiv.net/category/アニメ?json=1&page=9068'
-  // );
   const categoryURLs = await getListOfCategoryURLs();
-  const articlesList = await getListOfArticles(categoryURLs);
-  const articlesSummaries = await getArticlesSummaries(articlesList);
+  await getListOfArticles(categoryURLs);
+  await getArticlesSummaries();
+  await createYomichanDict();
 })();
+
+/**
+ * Creates a yomichan dict using the article summaries
+ */
+async function createYomichanDict() {
+  // Rearrange JSON so all terms are keys and important data as values
+  const articleSummaries = {};
+  for (const articlesList of Object.values(articlesListSummaries)) {
+    if (!articlesList) {
+      continue;
+    }
+    for (const article of articlesList) {
+      const { summary, related_tags, parent } = article;
+      articleSummaries[article.tag_name] = { summary, related_tags, parent };
+    }
+  }
+
+  // find parent tree for each and save
+  for (const article of Object.keys(articleSummaries)) {
+    if (articleSummaries[article].parent && !articleSummaries[article].parentTree) {
+      computeFamily(article, articleSummaries);
+    }
+  }
+  // temp write json for testing
+  await writeJson(articleSummaries, 'test.json');
+}
+
+// NEEDS TESTING!!!!
+/**
+ * Gets the parent tree for a given article, adds it as a child to its parent recursively
+ * @param {string} article
+ * @param {Object} articleSummaries
+ * @returns {string[]} parent tree
+ */
+function computeFamily(article, articleSummaries) {
+  // null
+  if (!articleSummaries[article]) {
+    return [];
+  }
+
+  // base case
+  if (!articleSummaries[article].parent) {
+    return [article];
+  }
+
+  // check parent has entry
+  if (!articleSummaries[articleSummaries[article].parent]) {
+    console.log(`Missing parent ${articleSummaries[article].parent} for ${article}`);
+    return [article];
+  }
+
+  // recursive case
+  // add self to parent's children
+  if (!articleSummaries[articleSummaries[article].parent].children) {
+    articleSummaries[articleSummaries[article].parent].children = [];
+  }
+  articleSummaries[articleSummaries[article].parent].children.push(article);
+  console.log(`Added ${article} to ${articleSummaries[article].parent}'s children`);
+
+  // build tree recursively
+  const parentTree = computeFamily(articleSummaries[article].parent, articleSummaries);
+  console.log(`Got parent tree for ${article}: ${parentTree}`)
+  // check for cycles
+  if (parentTree.includes(article)) {
+    console.log(`Cycle detected for ${article}`);
+    return [article];
+  }
+  parentTree.push(article);
+  articleSummaries[article].parentTree = parentTree;
+  return parentTree;
+}
 
 /**
  * Gets article summaries from the list of articles using the json api
@@ -34,10 +103,10 @@ let articleData = {};
  */
 async function getArticlesSummaries() {
   console.log('Getting article summaries');
-  const startTime = Date.now();
   const remainingArticlesKeys = Object.keys(articlesListSummaries).filter(
     (key) => !articlesListSummaries[key]
   );
+  const startTime = Date.now();
   for (let i = 0; i < remainingArticlesKeys.length; i++) {
     const listURL = remainingArticlesKeys[i];
     if (articlesListSummaries[listURL]) {
@@ -52,12 +121,10 @@ async function getArticlesSummaries() {
     const timeRemaining = remaining * timePerArticle;
     const expectedEndTime = new Date(Date.now() + timeRemaining).toLocaleString();
 
-    console.log(
-      `Got ${listURL}, ${remaining} remaining, expected ${expectedEndTime}`
-    );
+    console.log(`Got ${listURL}, ${remaining} remaining, expected ${expectedEndTime}`);
     await wait(WAIT_MS);
   }
-  await writeJson(articlesListSummaries, saveSummariesJsonPath);
+  await writeJson(articlesListSummaries, folderPath + saveSummariesJsonPath);
 }
 
 /**
