@@ -42,6 +42,8 @@ async function createYomichanDict() {
     }
   }
 
+  console.log(`Got ${Object.keys(articleSummaries).length} articles`);
+
   // find parent tree for each and save
   for (const article of Object.keys(articleSummaries)) {
     if (articleSummaries[article].parent && !articleSummaries[article].parentTree) {
@@ -86,7 +88,7 @@ function computeFamily(article, articleSummaries) {
 
   // build tree recursively
   const parentTree = computeFamily(articleSummaries[article].parent, articleSummaries);
-  console.log(`Got parent tree for ${article}: ${parentTree}`)
+  console.log(`Got parent tree for ${article}: ${parentTree}`);
   // check for cycles
   if (parentTree.includes(article)) {
     console.log(`Cycle detected for ${article}`);
