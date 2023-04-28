@@ -3,6 +3,7 @@ const fs = require('fs').promises;
 const { getURL, getJSON, wait } = require('../util/scrape');
 const saveDict = require('../util/saveDict');
 const writeJson = require('../util/writeJson');
+const { debug } = require('console');
 
 const folderPath = './nico-pixiv-dict/';
 const saveSummariesJsonPath = folderPath + 'pixivSummaries.json';
@@ -23,14 +24,166 @@ let articleData = {};
   const categoryURLs = await getListOfCategoryURLs();
   await getListOfArticles(categoryURLs);
   await getArticlesSummaries();
-  const processedData = await processData();
-  // then make dict
+  const processedData = processData();
+  makeDict(processedData);
 })();
+
+function makeDict(processedData) {
+  const termBank = [];
+  for (const article of Object.keys(processedData)) {
+    const articleEntry = processedData[article];
+    const termEntry = [];
+    termEntry.push(article);
+    // no reading (yet)
+    termEntry.push('');
+    // no tags
+    termEntry.push('');
+    // no deinflectors
+    termEntry.push('');
+    // popularity shouldnt be relevant, no overlapping entries
+    termEntry.push(0);
+    // definitions
+    const definitionStructuredContent = {
+      type: 'structured-content',
+      content: [],
+    };
+    // make navigation header thing
+    const navHeader = {
+      tag: 'span',
+      content: [],
+      data: {
+        pixiv: 'nav-header',
+      },
+    };
+    if (articleEntry.parentTree) {
+      let parentTree = [...articleEntry.parentTree];
+      if (parentTree.length > 5) {
+        // get last 5 entries of parent tree
+        parentTree = parentTree.slice(-5);
+        navHeader.content.push({
+          tag: 'span',
+          content: '...',
+        });
+      }
+      for (const parent of parentTree) {
+        navHeader.content.push({
+          tag: 'a',
+          href: `?query=${parent}&wildcards=off`,
+          content: parent,
+        });
+        navHeader.content.push({
+          tag: 'span',
+          content: ' ＞ ',
+        });
+      }
+      // remove last arrow
+      navHeader.content.pop();
+      definitionStructuredContent.content.push(navHeader);
+    }
+
+    // add summary
+    if (articleEntry.summary) {
+      definitionStructuredContent.content.push({
+        tag: 'div',
+        content: articleEntry.summary,
+        data: {
+          pixiv: 'summary',
+        },
+      });
+    }
+
+    // add related tags 関連記事
+    if (articleEntry.related_tags) {
+      const relatedTags = {
+        tag: 'div',
+        content: [
+          {
+            tag: 'div',
+            content: '関連記事',
+            data: {
+              pixiv: 'related-tags-header',
+            },
+          },
+          {
+            tag: 'div',
+            content: [],
+            data: {
+              pixiv: 'related-tags-content',
+            },
+          },
+        ],
+        data: {
+          pixiv: 'related-tags',
+        },
+      };
+      for (const tag of articleEntry.related_tags) {
+        relatedTags.content[1].content.push({
+          tag: 'a',
+          href: `?query=${tag}&wildcards=off`,
+          content: tag,
+        });
+        relatedTags.content[1].content.push({
+          tag: 'span',
+          content: '・',
+        });
+      }
+    }
+
+    // add link to article 続きを読む
+    definitionStructuredContent.content.push({
+      tag: 'ul',
+      content: [
+        {
+          tag: 'li',
+          content: [
+            {
+              tag: 'a',
+              href: `https://dic.pixiv.net/a/${article}`,
+              content: '続きを読む',
+            },
+          ],
+        },
+      ],
+      data: {
+        pixiv: 'continue-reading',
+      },
+      style: {
+        'listStyleType': '"⇒"',
+      },
+    });
+
+    // TODO: add children (maybe?)
+    termEntry.push([definitionStructuredContent]);
+    // sequence number
+    termEntry.push(0);
+    // term tags
+    termEntry.push('');
+    termBank.push(termEntry);
+  }
+  const index = {
+    title: 'PixivLite',
+    revision: `pixiv_${new Date().toISOString()}`,
+    format: 3,
+    url: 'https://dic.pixiv.net/',
+    description: `Article summaries scraped from pixiv, ${termBank.length} entries included.
+Created with https://github.com/MarvNC/yomichan-dictionaries`,
+    author: 'Pixiv&contributors, Marv',
+    attribution: 'Pixiv contributors',
+    frequencyMode: 'rank-based',
+  };
+  saveDict(
+    {
+      'term_bank_1.json': termBank,
+      'index.json': index,
+    },
+    '[Monolingual] PixivLite.zip'
+  );
+}
 
 /**
  * Creates a yomichan dict using the article summaries
  */
-async function processData() {
+function processData() {
   // Rearrange JSON so all terms are keys and important data as values
   const articleSummaries = {};
   for (const articlesList of Object.values(articlesListSummaries)) {
@@ -51,7 +204,7 @@ async function processData() {
       computeFamily(article, articleSummaries);
     }
   }
-  
+
   console.log(`Done processing data`);
   return articleSummaries;
 }
