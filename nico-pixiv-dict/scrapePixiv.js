@@ -22,14 +22,15 @@ let articleData = {};
 (async function () {
   const categoryURLs = await getListOfCategoryURLs();
   await getListOfArticles(categoryURLs);
-  // await getArticlesSummaries();
-  await createYomichanDict();
+  await getArticlesSummaries();
+  const processedData = await processData();
+  // then make dict
 })();
 
 /**
  * Creates a yomichan dict using the article summaries
  */
-async function createYomichanDict() {
+async function processData() {
   // Rearrange JSON so all terms are keys and important data as values
   const articleSummaries = {};
   for (const articlesList of Object.values(articlesListSummaries)) {
@@ -50,15 +51,16 @@ async function createYomichanDict() {
       computeFamily(article, articleSummaries);
     }
   }
-  // temp write json for testing
-  await writeJson(articleSummaries, 'test.json');
+  
+  console.log(`Done processing data`);
+  return articleSummaries;
 }
 
-// NEEDS TESTING!!!!
 /**
  * Gets the parent tree for a given article, adds it as a child to its parent recursively
  * @param {string} article
  * @param {Object} articleSummaries
+ * @param {Set} seen - set of articles currently traversed
  * @returns {string[]} parent tree
  */
 function computeFamily(article, articleSummaries, seen = new Set()) {
@@ -70,7 +72,7 @@ function computeFamily(article, articleSummaries, seen = new Set()) {
 
   // null
   if (!articleSummaries[article]) {
-    return [];
+    return [article];
   }
 
   // base case
@@ -78,15 +80,7 @@ function computeFamily(article, articleSummaries, seen = new Set()) {
     return [article];
   }
 
-  // check parent has entry
-  if (!articleSummaries[articleSummaries[article].parent]) {
-    return [article];
-  }
-
   // recursive case
-
-  // build tree recursively
-  // console.log(`Computing parent tree for ${article}`);
   const parentTree = computeFamily(articleSummaries[article].parent, articleSummaries, seen);
   // check for cycles
   if (parentTree.includes(article)) {
@@ -96,11 +90,15 @@ function computeFamily(article, articleSummaries, seen = new Set()) {
   parentTree.push(article);
   articleSummaries[article].parentTree = parentTree;
 
-  // add self to parent's children
-  if (!articleSummaries[articleSummaries[article].parent].children) {
-    articleSummaries[articleSummaries[article].parent].children = [];
+  // add self to parent's children if parent exists
+  if (articleSummaries[articleSummaries[article].parent]) {
+    if (!articleSummaries[articleSummaries[article].parent].children) {
+      articleSummaries[articleSummaries[article].parent].children = [];
+    }
+    if (!articleSummaries[articleSummaries[article].parent].children.includes(article)) {
+      articleSummaries[articleSummaries[article].parent].children.push(article);
+    }
   }
-  articleSummaries[articleSummaries[article].parent].children.push(article);
 
   return parentTree;
 }
