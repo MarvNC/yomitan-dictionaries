@@ -22,7 +22,7 @@ let articleData = {};
 (async function () {
   const categoryURLs = await getListOfCategoryURLs();
   await getListOfArticles(categoryURLs);
-  await getArticlesSummaries();
+  // await getArticlesSummaries();
   await createYomichanDict();
 })();
 
@@ -61,7 +61,13 @@ async function createYomichanDict() {
  * @param {Object} articleSummaries
  * @returns {string[]} parent tree
  */
-function computeFamily(article, articleSummaries) {
+function computeFamily(article, articleSummaries, seen = new Set()) {
+  // check if already computed
+  if (seen.has(article)) {
+    return articleSummaries[article].parentTree || [article];
+  }
+  seen.add(article);
+
   // null
   if (!articleSummaries[article]) {
     return [];
@@ -74,21 +80,14 @@ function computeFamily(article, articleSummaries) {
 
   // check parent has entry
   if (!articleSummaries[articleSummaries[article].parent]) {
-    console.log(`Missing parent ${articleSummaries[article].parent} for ${article}`);
     return [article];
   }
 
   // recursive case
-  // add self to parent's children
-  if (!articleSummaries[articleSummaries[article].parent].children) {
-    articleSummaries[articleSummaries[article].parent].children = [];
-  }
-  articleSummaries[articleSummaries[article].parent].children.push(article);
-  console.log(`Added ${article} to ${articleSummaries[article].parent}'s children`);
 
   // build tree recursively
-  const parentTree = computeFamily(articleSummaries[article].parent, articleSummaries);
-  console.log(`Got parent tree for ${article}: ${parentTree}`);
+  // console.log(`Computing parent tree for ${article}`);
+  const parentTree = computeFamily(articleSummaries[article].parent, articleSummaries, seen);
   // check for cycles
   if (parentTree.includes(article)) {
     console.log(`Cycle detected for ${article}`);
@@ -96,6 +95,13 @@ function computeFamily(article, articleSummaries) {
   }
   parentTree.push(article);
   articleSummaries[article].parentTree = parentTree;
+
+  // add self to parent's children
+  if (!articleSummaries[articleSummaries[article].parent].children) {
+    articleSummaries[articleSummaries[article].parent].children = [];
+  }
+  articleSummaries[articleSummaries[article].parent].children.push(article);
+
   return parentTree;
 }
 
