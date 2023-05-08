@@ -234,13 +234,15 @@ function computeFamily(article, articleSummaries, seen = new Set()) {
     return [article];
   }
 
+  const parent = articleSummaries[article].parent;
+
   // base case
-  if (!articleSummaries[article].parent) {
+  if (!parent) {
     return [article];
   }
 
   // recursive case
-  const parentTree = [...computeFamily(articleSummaries[article].parent, articleSummaries, seen)];
+  const parentTree = [...computeFamily(parent, articleSummaries, seen)];
   // check for cycles
   if (parentTree.includes(article)) {
     console.log(`Cycle detected for ${article}`);
@@ -250,12 +252,12 @@ function computeFamily(article, articleSummaries, seen = new Set()) {
   articleSummaries[article].parentTree = [...parentTree];
 
   // add self to parent's children if parent exists
-  if (articleSummaries[articleSummaries[article].parent]) {
-    if (!articleSummaries[articleSummaries[article].parent].children) {
-      articleSummaries[articleSummaries[article].parent].children = [];
+  if (articleSummaries[parent]) {
+    if (!articleSummaries[parent].children) {
+      articleSummaries[parent].children = [];
     }
-    if (!articleSummaries[articleSummaries[article].parent].children.includes(article)) {
-      articleSummaries[articleSummaries[article].parent].children.push(article);
+    if (!articleSummaries[parent].children.includes(article)) {
+      articleSummaries[parent].children.push(article);
     }
   }
 
