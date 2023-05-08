@@ -89,7 +89,7 @@ function makeDict(processedData) {
         parentTree = parentTree.slice(-5);
         navHeader.content.push({
           tag: 'span',
-          content: '...',
+          content: '⋯⋯',
         });
       }
       for (const parent of parentTree) {
