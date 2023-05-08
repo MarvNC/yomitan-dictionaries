@@ -16,6 +16,10 @@ const categryPath = 'category/';
 const articlePath = 'a/';
 const pageJsonPath = (page) => `?json=1&page=${page}`;
 
+const linkCharacter = '⧉';
+const relatedArticleCharacter = '📚';
+const childArticleCharacter = '➜';
+
 const COUNT_PER_PAGE = 12;
 
 let articlesListSummaries = {};
@@ -29,11 +33,11 @@ let articleData = {};
 })();
 
 function makeDict(processedData) {
-  const debug = false;
+  const debug = true;
   const termBank = [];
   for (const article of Object.keys(processedData)) {
-    if(debug){
-      if(termBank.length > 100){
+    if (debug) {
+      if (termBank.length > 1000) {
         break;
       }
     }
@@ -105,7 +109,18 @@ function makeDict(processedData) {
         content: [
           {
             tag: 'div',
-            content: '関連記事',
+            content: {
+              tag: 'ul',
+              content: [
+                {
+                  tag: 'li',
+                  content: '関連記事',
+                },
+              ],
+              style: {
+                listStyleType: `"${relatedArticleCharacter}"`,
+              },
+            },
             data: {
               pixiv: 'related-tags-header',
             },
@@ -133,6 +148,60 @@ function makeDict(processedData) {
           content: '・',
         });
       }
+      // remove last dot
+      relatedTags.content[1].content.pop();
+      definitionStructuredContent.content.push(relatedTags);
+    }
+
+    // add children
+    if (articleEntry.children) {
+      const children = {
+        tag: 'div',
+        content: [
+          {
+            tag: 'div',
+            content: {
+              tag: 'ul',
+              content: [
+                {
+                  tag: 'li',
+                  content: '子記事',
+                },
+              ],
+              style: {
+                listStyleType: `"${childArticleCharacter}"`,
+              },
+            },
+            data: {
+              pixiv: 'children-header',
+            },
+          },
+          {
+            tag: 'div',
+            content: [],
+            data: {
+              pixiv: 'children-content',
+            },
+          },
+        ],
+        data: {
+          pixiv: 'children',
+        },
+      };
+      for (const child of articleEntry.children) {
+        children.content[1].content.push({
+          tag: 'a',
+          href: `?query=${child}&wildcards=off`,
+          content: child,
+        });
+        children.content[1].content.push({
+          tag: 'span',
+          content: '・',
+        });
+      }
+      // remove last dot
+      children.content[1].content.pop();
+      definitionStructuredContent.content.push(children);
     }
 
     // add link to article 続きを読む
@@ -154,11 +223,10 @@ function makeDict(processedData) {
         pixiv: 'continue-reading',
       },
       style: {
-        listStyleType: '"⧉"',
+        listStyleType: `"${linkCharacter}"`,
       },
     });
 
-    // TODO: add children (maybe?)
     termEntry.push([definitionStructuredContent]);
     // sequence number
     termEntry.push(0);
