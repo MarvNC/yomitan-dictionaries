@@ -29,8 +29,14 @@ let articleData = {};
 })();
 
 function makeDict(processedData) {
+  const debug = false;
   const termBank = [];
   for (const article of Object.keys(processedData)) {
+    if(debug){
+      if(termBank.length > 100){
+        break;
+      }
+    }
     const articleEntry = processedData[article];
     const termEntry = [];
     termEntry.push(article);
@@ -85,7 +91,7 @@ function makeDict(processedData) {
     if (articleEntry.summary) {
       definitionStructuredContent.content.push({
         tag: 'div',
-        content: articleEntry.summary,
+        content: articleEntry.summary.trim(),
         data: {
           pixiv: 'summary',
         },
@@ -138,7 +144,7 @@ function makeDict(processedData) {
           content: [
             {
               tag: 'a',
-              href: `https://dic.pixiv.net/a/${article}`,
+              href: `${domain}${articlePath}${article}`,
               content: '続きを読む',
             },
           ],
@@ -148,7 +154,7 @@ function makeDict(processedData) {
         pixiv: 'continue-reading',
       },
       style: {
-        'listStyleType': '"⇒"',
+        listStyleType: '"⧉"',
       },
     });
 
@@ -234,14 +240,14 @@ function computeFamily(article, articleSummaries, seen = new Set()) {
   }
 
   // recursive case
-  const parentTree = computeFamily(articleSummaries[article].parent, articleSummaries, seen);
+  const parentTree = [...computeFamily(articleSummaries[article].parent, articleSummaries, seen)];
   // check for cycles
   if (parentTree.includes(article)) {
     console.log(`Cycle detected for ${article}`);
     return [article];
   }
   parentTree.push(article);
-  articleSummaries[article].parentTree = parentTree;
+  articleSummaries[article].parentTree = [...parentTree];
 
   // add self to parent's children if parent exists
   if (articleSummaries[articleSummaries[article].parent]) {
