@@ -1,9 +1,9 @@
 const fs = require('fs').promises;
+const jszip = require('jszip');
 
 const { getURL, getJSON, wait } = require('../util/scrape');
 const saveDict = require('../util/saveDict');
 const writeJson = require('../util/writeJson');
-const { debug } = require('console');
 
 const folderPath = './nico-pixiv-dict/';
 const saveSummariesJsonPath = folderPath + 'pixivSummaries.json';
@@ -21,6 +21,9 @@ const relatedArticleCharacter = '📚';
 const childArticleCharacter = '➜';
 
 const COUNT_PER_PAGE = 12;
+const TERMS_PER_JSON = 10000;
+
+const outputZipName = '[Monolingual] PixivLite.zip';
 
 let articlesListSummaries = {};
 let articleData = {};
@@ -33,14 +36,28 @@ let articleData = {};
 })();
 
 function makeDict(processedData) {
-  const debug = true;
-  const termBank = [];
+  const outputZip = new jszip();
+  let termBank = [];
+  let termBankCounter = 0;
+
+  /**
+   * Saves an object to the zip as a json file.
+   * @param {object} object
+   * @param {string} fileName
+   */
+  function saveToZip(object, fileName) {
+    outputZip.file(fileName, JSON.stringify(object));
+  }
+
   for (const article of Object.keys(processedData)) {
-    if (debug) {
-      if (termBank.length > 1000) {
-        break;
-      }
+    // Chunk the term bank into separate json term banks
+    if (termBank.length >= TERMS_PER_JSON) {
+      saveToZip(termBank, `term_bank_${termBankCounter}.json`);
+      console.log(`Wrote term_bank_${termBankCounter}.json`);
+      termBank = [];
+      termBankCounter++;
     }
+
     const articleEntry = processedData[article];
     const termEntry = [];
     termEntry.push(article);
@@ -234,24 +251,36 @@ function makeDict(processedData) {
     termEntry.push('');
     termBank.push(termEntry);
   }
+  // save last term bank
+  saveToZip(termBank, `term_bank_${termBankCounter}.json`);
+
   const index = {
     title: 'PixivLite',
     revision: `pixiv_${new Date().toISOString()}`,
     format: 3,
     url: 'https://dic.pixiv.net/',
-    description: `Article summaries scraped from pixiv, ${termBank.length} entries included.
+    description: `Article summaries scraped from pixiv, ${Object.keys(
+      processedData
+    )} entries included.
 Created with https://github.com/MarvNC/yomichan-dictionaries`,
     author: 'Pixiv&contributors, Marv',
     attribution: 'Pixiv contributors',
     frequencyMode: 'rank-based',
   };
-  saveDict(
-    {
-      'term_bank_1.json': termBank,
-      'index.json': index,
-    },
-    '[Monolingual] PixivLite.zip'
-  );
+  saveToZip(index, 'index.json');
+  
+  // save zip
+  outputZip
+    .generateAsync({
+      type: 'nodebuffer',
+      compression: 'DEFLATE',
+      compressionOptions: { level: 9 },
+    })
+    .then((content) => {
+      console.log('Saving zip...');
+      fs.writeFile('./dl/' + outputZipName, content);
+      console.log(`Wrote ${outputZipName}`);
+    });
 }
 
 /**
