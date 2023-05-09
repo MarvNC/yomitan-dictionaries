@@ -259,16 +259,16 @@ function makeDict(processedData) {
     revision: `pixiv_${new Date().toISOString()}`,
     format: 3,
     url: 'https://dic.pixiv.net/',
-    description: `Article summaries scraped from pixiv, ${Object.keys(
-      processedData
-    )} entries included.
+    description: `Article summaries scraped from pixiv, ${
+      Object.keys(processedData).length
+    } entries included.
 Created with https://github.com/MarvNC/yomichan-dictionaries`,
     author: 'Pixiv&contributors, Marv',
     attribution: 'Pixiv contributors',
     frequencyMode: 'rank-based',
   };
   saveToZip(index, 'index.json');
-  
+
   // save zip
   outputZip
     .generateAsync({
