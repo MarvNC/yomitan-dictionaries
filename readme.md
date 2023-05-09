@@ -21,6 +21,7 @@ Please note that this repository is not any kind of ranking or endorsement of th
     - [Grammar Dictionaries](#grammar-dictionaries)
       - [aiko-tanaka Grammar Dictionaries](#aiko-tanaka-grammar-dictionaries)
     - [Other Term Dictionaries](#other-term-dictionaries)
+      - [Pixiv](#pixiv)
       - [niconico-pixiv Terms](#niconico-pixiv-terms)
       - [surasura Onomatopoeia](#surasura-onomatopoeia)
       - [複合語起源 Term Origins](#複合語起源-term-origins)
@@ -182,7 +183,24 @@ A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot
 
 ### Other Term Dictionaries
 
+#### Pixiv
+
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20PixivLite.zip)**
+
+A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) of approximately 500,000 entries, containing a brief summary and links to related articles for each entry. This dictionary is quite extensive and contains entries for a vast amount of proper nouns that would not be in traditional dictionaries. For instance, 和泉妃愛 has an entry as does likely every notable voice actor, manga, mountain, and VTuber in Japan.
+
+> **Note**
+> This is the lite version without reading., a version with kana readings is in the works but it will require a lot of time to scrape.
+
+> **Warning**
+> This dictionary is quite large and may take a long time to import.
+
+![hiyori example](!images/pixivLiteHiyori.png)
+
 #### niconico-pixiv Terms
+
+<details>
+<summary>Click to expand (obsolete)</summary>
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20Nico-Pixiv.zip)**
 
@@ -191,6 +209,8 @@ Using the information [gathered by ncaq for use in an IME](https://github.com/nc
 > ルールベースで IME 辞書の役に立たなそうな単語を除外しています。
 
 ![](<!images/chrome_%E3%82%86%E3%81%9A%E3%82%BD%E3%83%95%E3%83%88_(%E3%82%86%E3%81%9A%E3%81%9D%E3%81%B5%E3%81%A8)%E3%81%A8%E3%81%AF%E3%80%90%E3%83%94%E3%82%AF%E3%82%B7%E3%83%96%E7%99%BE%E7%A7%91%E4%BA%8B%E5%85%B8%E3%80%91_-_httpsdic.pixiv.net_2022-08-21_17-22-10.png>)
+
+</details>
 
 #### surasura Onomatopoeia
 
