@@ -190,7 +190,7 @@ A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot
 A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) of approximately 500,000 entries, containing a brief summary and links to related articles for each entry. This dictionary is quite extensive and contains entries for a vast amount of proper nouns that would not be in traditional dictionaries. For instance, 和泉妃愛 has an entry as does likely every notable voice actor, manga, mountain, and VTuber in Japan.
 
 > **Note**
-> This is the lite version without reading., a version with kana readings is in the works but it will require a lot of time to scrape.
+> This is the lite version without readings, a version with kana readings is in the works but it will require a lot of time to scrape.
 
 > **Warning**
 > This dictionary is quite large and may take a long time to import.
