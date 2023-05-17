@@ -172,7 +172,7 @@ A monolingual dictionary made by an anon, with very nice formatting and links fo
 
 **[Download All (unzip first)](https://cdn.discordapp.com/attachments/563409909627224095/1108265551312211999/jitenbot.zip)**
 
-There are many dictionaries available at [辞典オンライン](https://jitenon.jp/) and [using stephenmk's jitenbot](https://github.com/stephenmk/jitenbot), some of these have been scraped for use as Yomichan dictionaries. There are quite a few kotowazas and yojikukugos that aren't in other dictionaries, so I'd recommend installing this.
+There are many dictionaries available at [辞典オンライン](https://jitenon.jp/) and [using stephenmk's jitenbot](https://github.com/stephenmk/jitenbot), some of these have been scraped for use as Yomichan dictionaries. There are quite a few entries that aren't in other dictionaries, so I'd recommend installing this.
 
 Includes the following dictionaries:
 
