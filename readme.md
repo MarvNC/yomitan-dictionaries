@@ -18,6 +18,7 @@ Please note that this repository is not any kind of ranking or endorsement of th
     - [Japanese Monolingual Dictionaries](#japanese-monolingual-dictionaries)
       - [Shoui Monolingual Dictionaries Collection](#shoui-monolingual-dictionaries-collection)
       - [Iwanami Kokugo Jiten](#iwanami-kokugo-jiten)
+      - [Jitenon Dictionaries](#jitenon-dictionaries)
     - [Grammar Dictionaries](#grammar-dictionaries)
       - [aiko-tanaka Grammar Dictionaries](#aiko-tanaka-grammar-dictionaries)
     - [Other Term Dictionaries](#other-term-dictionaries)
@@ -166,6 +167,16 @@ A monolingual dictionary made by an anon, with very nice formatting and links fo
 ![3](https://cdn.discordapp.com/attachments/778430038159655012/1094322605516922991/iwakoku4.png)
 
 </details>
+
+#### Jitenon Dictionaries
+
+**[Download All (unzip first)](https://cdn.discordapp.com/attachments/563409909627224095/1108265551312211999/jitenbot.zip)**
+
+There are many dictionaries available at [辞典オンライン](https://jitenon.jp/) and [using stephenmk's jitenbot](https://github.com/stephenmk/jitenbot), some of these have been scraped for use as Yomichan dictionaries. There are quite a few kotowazas and yojikukugos that aren't in other dictionaries, so I'd recommend installing this.
+
+- [四字熟語辞典オンライン](https://yoji.jitenon.jp/)
+- [故事・ことわざ・慣用句オンライン](https://kotowaza.jitenon.jp/)
+- [国語辞典オンライン](https://kokugo.jitenon.jp/)
 
 ### Grammar Dictionaries
 
