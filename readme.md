@@ -174,6 +174,8 @@ A monolingual dictionary made by an anon, with very nice formatting and links fo
 
 There are many dictionaries available at [辞典オンライン](https://jitenon.jp/) and [using stephenmk's jitenbot](https://github.com/stephenmk/jitenbot), some of these have been scraped for use as Yomichan dictionaries. There are quite a few kotowazas and yojikukugos that aren't in other dictionaries, so I'd recommend installing this.
 
+Includes the following dictionaries:
+
 - [四字熟語辞典オンライン](https://yoji.jitenon.jp/)
 - [故事・ことわざ・慣用句オンライン](https://kotowaza.jitenon.jp/)
 - [国語辞典オンライン](https://kokugo.jitenon.jp/)
