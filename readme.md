@@ -180,6 +180,14 @@ Includes the following dictionaries:
 - [故事・ことわざ・慣用句オンライン](https://kotowaza.jitenon.jp/)
 - [国語辞典オンライン](https://kokugo.jitenon.jp/)
 
+<details>
+  <summary>Images (click to expand)</summary>
+
+![chrome_四字熟語辞典オンライン_-_Google_Chrome_2023-05-16_22-42-30](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/cdc9699a-84bd-415e-bf23-7a4c33eb5e1c)
+![chrome_故事・ことわざ・慣用句辞典オンライン_-_Google_Chrome_2023-05-16_22-42-52](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/b7701023-d3f2-4929-9af4-9643239e6789)
+
+</details>
+
 ### Grammar Dictionaries
 
 #### aiko-tanaka Grammar Dictionaries
