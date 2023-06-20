@@ -60,8 +60,8 @@ Please note that this repository is not any kind of ranking or endorsement of th
       - [Shoui's Chinese Yomichan Setup](#shouis-chinese-yomichan-setup)
       - [Other Chinese Dictionaries](#other-chinese-dictionaries)
     - [Chinese Frequency](#chinese-frequency)
-      - [SUBTLEX-CH Subtitle Corpus](#subtlex-ch-subtitle-corpus)
       - [BLCU BCC Corpus](#blcu-bcc-corpus)
+      - [SUBTLEX-CH Subtitle Corpus](#subtlex-ch-subtitle-corpus)
       - [General Global Chinese Frequency](#general-global-chinese-frequency)
   - [Hanzi](#hanzi)
     - [Wiktionary Hanzi](#wiktionary-hanzi)
@@ -610,23 +610,23 @@ Not sure who made these, but some dictionaries available on this [Google Drive](
 
 ### Chinese Frequency
 
+#### BLCU BCC Corpus
+
+| Title       | Corpus                                                 | Download                                                                                                |
+| ----------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| `BLCUmixed` | A Balanced Mix from Magazines, Literature, Weibo, Tech | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840722141171712/zhfreq_mixed.zip) |
+| `BLCUlit`   | Literature (Foreign and Domestic)                      | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840721851760741/zhfreq_lit.zip)   |
+| `BLCUnews`  | Newspapers《厦门日报》、《厦门商报》、《厦门晚报》等   | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840722405396520/zhfreq_news.zip)  |
+| `BLCUsci`   | Scientific and Technological Academic Journals         | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840722816450630/zhfreq_sci.zip)   |
+| `BLCUcoll`  | Dialogue (Weibo and Movie/TV Subtitles)                | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840721541369926/zhfreq_coll.zip)  |
+
+A Yomichan frequency list made from the comprehensive [Beijing Language and Culture University Corpus Center (BLCU BCC)'s corpus](http://bcc.blcu.edu.cn/help#intro) containing over 9 billion characters. Thanks to nadavspi and Michel who converted it for Yomichan.
+
 #### SUBTLEX-CH Subtitle Corpus
 
 **[Download](https://cdn.discordapp.com/attachments/1054623082867855420/1120840723110055996/zhfreq_subs.zip)**
 
 This is a subtitles frequency list based on over 6,000 simplified Chinese movies and TV shows from the [SUBTLEX](http://crr.ugent.be/programs-data/subtitle-frequencies/subtlex-ch) frequency list, which was compiled by Ghent University. Thanks to nadavspi and Michel who converted it for Yomichan.
-
-#### BLCU BCC Corpus
-
-| Title       | Corpus                                         | Download                                                                                                |
-| ----------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `BLCUmixed` | Mixed (Magazines, Literature, Weibo, Tech)     | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840722141171712/zhfreq_mixed.zip) |
-| `BLCUlit`   | Literature                                     | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840721851760741/zhfreq_lit.zip)   |
-| `BLCUnews`  | Newspapers                                     | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840722405396520/zhfreq_news.zip)  |
-| `BLCUsci`   | Scientific and Technological Academic Journals | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840722816450630/zhfreq_sci.zip)   |
-| `BLCUcoll`  | Dialogue (Weibo and Movie/TV Subtitles)        | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840721541369926/zhfreq_coll.zip)  |
-
-A Yomichan frequency list made from the Beijing Language and Culture University (BLCU)'s [BLCU Corpus Center (BCC)'s corpus](http://bcc.blcu.edu.cn/help#intro). Thanks to nadavspi and Michel who converted it for Yomichan.
 
 #### General Global Chinese Frequency
 
