@@ -641,7 +641,7 @@ Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.w
 
 ### CantoDict
 
-**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BCantonese%5D%20CantoDict.zip)**
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BCantonese%5D%20Cantodict.zip)**
 
 [CantoDict](http://www.cantonese.sheik.co.uk/dictionary/) was a Cantonese-English dictionary created and maintained by Adam Sheik and public contributors. It was abandoned, but the data was archived thanks to awong-dev at https://github.com/awong-dev/cantodict-archive. This dictionary is based off of the archived data.
 
