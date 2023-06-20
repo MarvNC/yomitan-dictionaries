@@ -60,9 +60,9 @@ Please note that this repository is not any kind of ranking or endorsement of th
       - [Shoui's Chinese Yomichan Setup](#shouis-chinese-yomichan-setup)
       - [Other Chinese Dictionaries](#other-chinese-dictionaries)
     - [Chinese Frequency](#chinese-frequency)
-      - [General Global Chinese Frequency](#general-global-chinese-frequency)
       - [SUBTLEX-CH Subtitle Corpus](#subtlex-ch-subtitle-corpus)
       - [BLCU BCC Corpus](#blcu-bcc-corpus)
+      - [General Global Chinese Frequency](#general-global-chinese-frequency)
   - [Hanzi](#hanzi)
     - [Wiktionary Hanzi](#wiktionary-hanzi)
 - [Cantonese](#cantonese)
@@ -610,12 +610,6 @@ Not sure who made these, but some dictionaries available on this [Google Drive](
 
 ### Chinese Frequency
 
-#### General Global Chinese Frequency
-
-**[Frequency](https://cdn.discordapp.com/attachments/1054623082867855420/1054827030312648824/global_freq.zip)**
-
-A general Chinese frequency dictionary that is likely based off of "the chinese internet, movies, books, etc as a whole" according to its author [Kamui](https://github.com/kamui-fin).
-
 #### SUBTLEX-CH Subtitle Corpus
 
 **[Download](https://cdn.discordapp.com/attachments/1054623082867855420/1120840723110055996/zhfreq_subs.zip)**
@@ -633,6 +627,12 @@ This is a subtitles frequency list based on over 6,000 simplified Chinese movies
 | `BLCUcoll`  | Dialogue (Weibo and Movie/TV Subtitles)        | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840721541369926/zhfreq_coll.zip)  |
 
 A Yomichan frequency list made from the Beijing Language and Culture University (BLCU)'s [BLCU Corpus Center (BCC)'s corpus](http://bcc.blcu.edu.cn/help#intro). Thanks to nadavspi and Michel who converted it for Yomichan.
+
+#### General Global Chinese Frequency
+
+**[Frequency](https://cdn.discordapp.com/attachments/1054623082867855420/1054827030312648824/global_freq.zip)**
+
+A general Chinese frequency dictionary that is likely based off of "the chinese internet, movies, books, etc as a whole" according to its author [Kamui](https://github.com/kamui-fin).
 
 ## Hanzi
 
