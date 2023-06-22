@@ -62,6 +62,7 @@ Please note that this repository is not any kind of ranking or endorsement of th
     - [Chinese Frequency](#chinese-frequency)
       - [BLCU BCC Corpus](#blcu-bcc-corpus)
       - [SUBTLEX-CH Subtitle Corpus](#subtlex-ch-subtitle-corpus)
+      - [HSK Levels List](#hsk-levels-list)
       - [General Global Chinese Frequency](#general-global-chinese-frequency)
   - [Hanzi](#hanzi)
     - [Wiktionary Hanzi](#wiktionary-hanzi)
@@ -577,7 +578,7 @@ Rank-based kanji frequency data from a May 2015 dump of Japanese Wikipedia, cont
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20JPDB%20Kanji.zip)**
 
-Kanji frequency data from https://jpdb.io.
+Kanji frequency data from https://jpdb.io as a Yomichan frequency dictionary.
 
 # Mandarin Chinese
 
@@ -589,7 +590,7 @@ Kanji frequency data from https://jpdb.io.
 
 **[Shoui's Chinese Yomichan Setup](https://gist.github.com/shoui520/25460fd2e9fb194d3e5152fa2ce42ca2#installing-dictionaries-and-basic-usage)**
 
-Shoui's guide to setting up Yomichan for Chinese, includes links for:
+Shoui's guide to setting up Yomichan for Chinese, includes links for these Chinese Yomichan dictionaries:
 
 - [ZH-EN] CEDICT
 - [ZH-JA] 中日大辞典　第二版
@@ -599,7 +600,7 @@ Shoui's guide to setting up Yomichan for Chinese, includes links for:
 
 #### Other Chinese Dictionaries
 
-Not sure who made these, but some dictionaries available on this [Google Drive](https://drive.google.com/drive/folders/14OiowSI28LcP_rtGVuis7Sy8Kt_yqsiI). Includes:
+Not sure who made these, but some miscellaneous Chinese Yomichan dictionaries available on this [Google Drive](https://drive.google.com/drive/folders/14OiowSI28LcP_rtGVuis7Sy8Kt_yqsiI). Includes:
 
 - 萌典.pinyin
 - 萌典
@@ -627,6 +628,12 @@ A Yomichan frequency list made from the comprehensive [Beijing Language and Cult
 **[Download](https://cdn.discordapp.com/attachments/1054623082867855420/1120840723110055996/zhfreq_subs.zip)**
 
 This is a subtitles frequency list based on over 6,000 simplified Chinese movies and TV shows from the [SUBTLEX](http://crr.ugent.be/programs-data/subtitle-frequencies/subtlex-ch) frequency list, which was compiled by Ghent University. Thanks to nadavspi and Michel who converted it for Yomichan.
+
+#### HSK Levels List
+
+**[Download](https://cdn.discordapp.com/attachments/1102744354222776471/1121205118797361306/HSK.zip)**
+
+This Yomichan HSK Levels frequency list is based on the [official HSK word list from the Chinese Ministry of Education](http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202103/t20210329_523304.html) released in 2021, which was then OCRed and neatly formatted thanks to [Andy Burke ](https://github.com/andycburke). Thanks to Michel who converted it for Yomichan.
 
 #### General Global Chinese Frequency
 
