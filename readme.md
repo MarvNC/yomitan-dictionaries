@@ -588,17 +588,28 @@ Kanji frequency data from https://jpdb.io as a Yomichan frequency dictionary.
 
 **[Shoui's Chinese Yomichan Setup](https://gist.github.com/shoui520/25460fd2e9fb194d3e5152fa2ce42ca2#installing-dictionaries-and-basic-usage)**
 
-Shoui's guide to setting up Yomichan for Chinese, includes links for these Chinese Yomichan dictionaries:
+These Chinese Yomichan dictionaries are hosted in Shoui's guide to setting up Yomichan for Chinese, includes:
 
-- [ZH-EN] CEDICT
-- [ZH-JA] 中日大辞典　第二版
-- [ZH-ZH] 兩岸詞典
-- [ZH-ZH] 漢語大詞典
-- [ZH-ZH] 萌典国语辞典 (简体字)
+- `[ZH-EN] CEDICT` (converted by an anon)
+- `[ZH-JA] 中日大辞典　第二版` (converted by an anon)
+- `[ZH-ZH] 兩岸詞典` (converted by Chrono07 on the Refold ZH Discord server)
+- `[ZH-ZH] 漢語大詞典` (converted by Chrono07 on the Refold ZH Discord server)
+- `[ZH-ZH] 萌典国语辞典 (简体字)` (converted by Chrono07 on the Refold ZH Discord server)
+
+**Simplified Chinese Versions**
+
+Michel converted some of the above dictionaries to simplified Chinese.
+
+- **[汉语大词典](https://cdn.discordapp.com/attachments/1102744354222776471/1121946449245114408/hanyudacidian.zip)**
+  - The Hanyu Da Cidian is the most comprehensive Chinese dictionary, comparable to the Oxford English Dictionary.
+- **[两岸词典](https://cdn.discordapp.com/attachments/1102744354222776471/1121946449555497010/cross-straits.zip)**
+  - The Cross-Straits dictionary is a small mainland dictionary focusing on contemporary usage and the differences between Taiwan and Mainland Chinese.
 
 #### Other Chinese Dictionaries
 
-Not sure who made these, but some miscellaneous Chinese Yomichan dictionaries available on this [Google Drive](https://drive.google.com/drive/folders/14OiowSI28LcP_rtGVuis7Sy8Kt_yqsiI). Includes:
+**[Download](https://drive.google.com/drive/folders/14OiowSI28LcP_rtGVuis7Sy8Kt_yqsiI)**
+
+These miscellaneous Chinese Yomichan dictionaries were made by lix on the Refold ZH Discord server. Includes:
 
 - 萌典.pinyin
 - 萌典
