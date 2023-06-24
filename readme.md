@@ -592,17 +592,17 @@ These Chinese Yomichan dictionaries are hosted in Shoui's guide to setting up Yo
 
 - `[ZH-EN] CEDICT` (converted by an anon)
 - `[ZH-JA] 中日大辞典　第二版` (converted by an anon)
-- `[ZH-ZH] 兩岸詞典` (converted by Chrono07 on the Refold ZH Discord server)
-- `[ZH-ZH] 漢語大詞典` (converted by Chrono07 on the Refold ZH Discord server)
-- `[ZH-ZH] 萌典国语辞典 (简体字)` (converted by Chrono07 on the Refold ZH Discord server)
+- `[ZH-ZH] 兩岸詞典` (converted by Chrono7 on the Refold ZH Discord server)
+- `[ZH-ZH] 漢語大詞典` (converted by Chrono7 on the Refold ZH Discord server)
+- `[ZH-ZH] 萌典国语辞典 (简体字)` (converted by Chrono7 on the Refold ZH Discord server)
 
 **Simplified Chinese Versions**
 
 Michel converted some of the above dictionaries to simplified Chinese.
 
-- **[汉语大词典](https://cdn.discordapp.com/attachments/1102744354222776471/1121946449245114408/hanyudacidian.zip)**
+- **[Download `汉语大词典`](https://cdn.discordapp.com/attachments/1102744354222776471/1122247530286166187/hanyudacidian.zip)**
   - The Hanyu Da Cidian is the most comprehensive Chinese dictionary, comparable to the Oxford English Dictionary.
-- **[两岸词典](https://cdn.discordapp.com/attachments/1102744354222776471/1121946449555497010/cross-straits.zip)**
+- **[Download `两岸词典`](https://cdn.discordapp.com/attachments/1102744354222776471/1122247339965419610/cross-straits.zip)**
   - The Cross-Straits dictionary is a small mainland dictionary focusing on contemporary usage and the differences between Taiwan and Mainland Chinese.
 
 #### Other Chinese Dictionaries
