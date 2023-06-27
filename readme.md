@@ -268,7 +268,7 @@ Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|い�
 
 **[Download](https://cdn.discordapp.com/attachments/778430038159655012/1025059429206466580/gogen.zip)**
 
-語源由来辞典 parsed from https://gogen-yurai.jp/ by Seikou. Contains a information about the origins of words.
+語源由来辞典 parsed from https://gogen-yurai.jp/ by Seikou. Contains information about the origins of words.
 
 ### Term Frequency
 
