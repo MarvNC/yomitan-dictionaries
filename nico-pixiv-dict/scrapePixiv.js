@@ -1,5 +1,6 @@
 const fs = require('fs').promises;
 const jszip = require('jszip');
+const cliProgress = require('cli-progress');
 
 const { getURL, getJSON, wait } = require('../util/scrape');
 const saveDict = require('../util/saveDict');
@@ -7,9 +8,9 @@ const writeJson = require('../util/writeJson');
 
 const folderPath = './nico-pixiv-dict/';
 const saveSummariesJsonPath = folderPath + 'pixivSummaries.json';
-const saveArticlesJsonPath = folderPath + 'pixivArticles.json';
+const saveReadingsJsonPath = folderPath + 'pixivReadings.json';
 
-const WAIT_MS = 000;
+const WAIT_MS = 0;
 
 const domain = 'https://dic.pixiv.net/';
 const categryPath = 'category/';
@@ -23,22 +24,24 @@ const childArticleCharacter = '➜';
 const COUNT_PER_PAGE = 12;
 const TERMS_PER_JSON = 10000;
 
-const outputZipName = '[Monolingual] PixivLite.zip';
+const outputZipName = '[Monolingual] Pixiv.zip';
 
-let articlesListSummaries = {};
-let articleData = {};
+let articlesListSummaries;
+let termReadings;
 (async function () {
   const categoryURLs = await getListOfCategoryURLs();
   await getListOfArticles(categoryURLs);
   await getArticlesSummaries();
   const processedData = processData();
+  await getTermReadings(processedData);
+  debugger;
   makeDict(processedData);
 })();
 
 function makeDict(processedData) {
   const outputZip = new jszip();
   let termBank = [];
-  let termBankCounter = 0;
+  let termBankCounter = 1;
 
   /**
    * Saves an object to the zip as a json file.
@@ -255,13 +258,13 @@ function makeDict(processedData) {
   saveToZip(termBank, `term_bank_${termBankCounter}.json`);
 
   const index = {
-    title: 'PixivLite',
+    title: 'Pixiv',
     revision: `pixiv_${new Date().toISOString()}`,
     format: 3,
     url: 'https://dic.pixiv.net/',
     description: `Article summaries scraped from pixiv, ${
       Object.keys(processedData).length
-    } entries included.
+    } entries included. The non-lite version contains readings for each term.
 Created with https://github.com/MarvNC/yomichan-dictionaries`,
     author: 'Pixiv&contributors, Marv',
     attribution: 'Pixiv contributors',
@@ -392,6 +395,66 @@ async function getArticlesSummaries() {
 }
 
 /**
+ * Gets the readings for every single article on pixiv and writes it to a json
+ * @returns void
+ */
+async function getTermReadings(processedData) {
+  console.log('Getting term readings');
+  // check saved json, if not populate json with all json paths
+  try {
+    const termReadingsFile = await fs.readFile(saveReadingsJsonPath);
+    termReadings = JSON.parse(termReadingsFile);
+    console.log(`Loaded ${termReadings.length} terms from ${saveReadingsJsonPath}`);
+  } catch (error) {
+    console.log(`No saved ${saveReadingsJsonPath}, starting from scratch`);
+
+    termReadings = {};
+  }
+  const totalCount = Object.keys(processedData).length;
+  let totalProcessed = 0;
+  console.log(`Fetching readings for ${totalCount} terms`);
+  const progressBar = new cliProgress.SingleBar(
+    {
+      format: 'progress [{bar}] {percentage}% | ETA: {eta_formatted} | {value}/{total}',
+    },
+    cliProgress.Presets.shades_classic
+  );
+  progressBar.start(totalCount, 0);
+  for (const term of Object.keys(processedData)) {
+    if (termReadings[term]) {
+      progressBar.increment();
+      continue;
+    } else {
+      const reading = await getReadingForTerm(term);
+      termReadings[term] = reading;
+      totalProcessed++;
+      progressBar.increment();
+      await wait(WAIT_MS);
+    }
+  }
+  await writeJson(termReadings, saveReadingsJsonPath);
+
+  debugger;
+}
+
+/**
+ * Gets the reading for a single term
+ * @param {string} term
+ * @returns {Promise<Object>} reading
+ */
+async function getReadingForTerm(term) {
+  const url = domain + articlePath + encodeURIComponent(term);
+  const document = await getURL(url, false);
+  const subscriptParagraph = document.querySelectorAll('p.subscript');
+  if (subscriptParagraph.length === 0) {
+    console.log(`No reading for ${term}`);
+    return null;
+  }
+  const reading = subscriptParagraph[0].textContent;
+  return reading;
+}
+
+/**
  * Gets a list of all articles on pixiv
  * @param {string} categoryURLs - list of category urls to get articles from
  */
@@ -444,6 +507,10 @@ process.on('SIGINT', async () => {
   if (articlesListSummaries) {
     console.log('Saving data...');
     await writeJson(articlesListSummaries, saveSummariesJsonPath);
+  }
+  if (termReadings) {
+    console.log('Saving term readings...');
+    await writeJson(termReadings, saveReadingsJsonPath);
   }
   process.exit(0);
 });
