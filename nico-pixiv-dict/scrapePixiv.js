@@ -41,6 +41,7 @@ let termReadings;
 function makeDict(processedData) {
   const outputZip = new jszip();
   let termBank = [];
+  // Term banks start at 1
   let termBankCounter = 1;
 
   /**
@@ -64,8 +65,8 @@ function makeDict(processedData) {
     const articleEntry = processedData[article];
     const termEntry = [];
     termEntry.push(article);
-    // no reading (yet)
-    termEntry.push('');
+    // reading
+    termEntry.push(termReadings[article] || '');
     // no tags
     termEntry.push('');
     // no deinflectors
@@ -264,10 +265,10 @@ function makeDict(processedData) {
     url: 'https://dic.pixiv.net/',
     description: `Article summaries scraped from pixiv, ${
       Object.keys(processedData).length
-    } entries included. The non-lite version contains readings for each term.
+    } entries included.
 Created with https://github.com/MarvNC/yomichan-dictionaries`,
-    author: 'Pixiv&contributors, Marv',
-    attribution: 'Pixiv contributors',
+    author: 'Pixiv contributors, Marv',
+    attribution: 'Pixiv',
     frequencyMode: 'rank-based',
   };
   saveToZip(index, 'index.json');
