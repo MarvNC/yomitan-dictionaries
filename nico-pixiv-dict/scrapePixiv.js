@@ -34,7 +34,6 @@ let termReadings;
   await getArticlesSummaries();
   const processedData = processData();
   await getTermReadings(processedData);
-  debugger;
   makeDict(processedData);
 })();
 
