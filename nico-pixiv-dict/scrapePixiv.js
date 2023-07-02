@@ -5,6 +5,7 @@ const cliProgress = require('cli-progress');
 const { getURL, getJSON, wait } = require('../util/scrape');
 const saveDict = require('../util/saveDict');
 const writeJson = require('../util/writeJson');
+const japaneseUtils = require('../util/japaneseUtils');
 
 const folderPath = './nico-pixiv-dict/';
 const saveSummariesJsonPath = folderPath + 'pixivSummaries.json';
@@ -65,7 +66,8 @@ function makeDict(processedData) {
     const termEntry = [];
     termEntry.push(article);
     // reading
-    termEntry.push(termReadings[article] || '');
+    const reading = japaneseUtils.normalizeReading(article, termReadings[article] ?? '') ?? '';
+    termEntry.push(reading);
     // no tags
     termEntry.push('');
     // no deinflectors
@@ -373,22 +375,23 @@ async function getArticlesSummaries() {
   const remainingArticlesKeys = Object.keys(articlesListSummaries).filter(
     (key) => !articlesListSummaries[key]
   );
-  const startTime = Date.now();
+  const progressBar = new cliProgress.SingleBar(
+    {
+      format: 'progress [{bar}] {percentage}% | ETA: {eta_formatted} | {value}/{total}',
+    },
+    cliProgress.Presets.shades_classic
+  );
+  progressBar.start(remainingArticlesKeys.length, 0);
+  // const startTime = Date.now();
   for (let i = 0; i < remainingArticlesKeys.length; i++) {
     const listURL = remainingArticlesKeys[i];
+    progressBar.increment();
     if (articlesListSummaries[listURL]) {
       continue;
     }
     const { articles } = await getJSON(listURL);
     articlesListSummaries[listURL] = articles;
 
-    const remaining = remainingArticlesKeys.length - i;
-    const timeElapsed = Date.now() - startTime;
-    const timePerArticle = timeElapsed / (i + 1);
-    const timeRemaining = remaining * timePerArticle;
-    const expectedEndTime = new Date(Date.now() + timeRemaining).toLocaleString();
-
-    console.log(`Got ${listURL}, ${remaining} remaining, expected ${expectedEndTime}`);
     await wait(WAIT_MS);
   }
   await writeJson(articlesListSummaries, saveSummariesJsonPath);
@@ -404,7 +407,9 @@ async function getTermReadings(processedData) {
   try {
     const termReadingsFile = await fs.readFile(saveReadingsJsonPath);
     termReadings = JSON.parse(termReadingsFile);
-    console.log(`Loaded ${termReadings.length} terms from ${saveReadingsJsonPath}`);
+    console.log(
+      `Loaded ${Object.keys(termReadings).length} term readings from ${saveReadingsJsonPath}`
+    );
   } catch (error) {
     console.log(`No saved ${saveReadingsJsonPath}, starting from scratch`);
 
@@ -469,6 +474,8 @@ async function getListOfArticles(categoryURLs) {
     );
   } catch (error) {
     console.log(`No saved ${saveSummariesJsonPath}, starting from scratch`);
+
+    articlesListSummaries = {};
 
     let totalCount = 0;
     for (const categoryURL of categoryURLs) {
