@@ -218,7 +218,7 @@ A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) of over 
 > **Warning**
 > This dictionary is quite large and may take a long time to import.
 
-![hiyori example](!images/pixivLiteHiyori.png)
+![hiyori example](!images/pixivHiyori.png)
 ![news events example](!images/pixivWagnerCoup.png)
 
 #### niconico-pixiv Terms
