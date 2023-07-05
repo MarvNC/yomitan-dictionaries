@@ -13,68 +13,29 @@ Please note that this repository is not any kind of ranking or endorsement of th
 - [Japanese](#japanese)
   - [Terms](#terms)
     - [JP-EN Term Dictionaries](#jp-en-term-dictionaries)
-      - [JMDict](#jmdict)
-      - [JMnedict](#jmnedict)
-      - [Shoui Bilingual Dictionaries Collection](#shoui-bilingual-dictionaries-collection)
-      - [New Saitou Japanese-English Dictionary](#new-saitou-japanese-english-dictionary)
     - [Japanese Monolingual Dictionaries](#japanese-monolingual-dictionaries)
-      - [Shoui Monolingual Dictionaries Collection](#shoui-monolingual-dictionaries-collection)
-      - [Iwanami Kokugo Jiten](#iwanami-kokugo-jiten)
-      - [Jitenon Dictionaries](#jitenon-dictionaries)
     - [Grammar Dictionaries](#grammar-dictionaries)
-      - [aiko-tanaka Grammar Dictionaries](#aiko-tanaka-grammar-dictionaries)
     - [Other Term Dictionaries](#other-term-dictionaries)
-      - [Pixiv](#pixiv)
-      - [niconico-pixiv Terms](#niconico-pixiv-terms)
-      - [surasura Onomatopoeia](#surasura-onomatopoeia)
-      - [複合語起源 Term Origins](#複合語起源-term-origins)
-      - [Gogen Yurai](#gogen-yurai)
     - [Term Frequency](#term-frequency)
-      - [jpdb Frequency Dictionary](#jpdb-frequency-dictionary)
-      - [Aozora Bunko Jukugo Frequency](#aozora-bunko-jukugo-frequency)
-      - [CC100](#cc100)
-      - [BCCWJ](#bccwj)
-      - [Innocent Ranked](#innocent-ranked)
-      - [jpDicts Frequencies](#jpdicts-frequencies)
-      - [Youtube Frequency Dictionaries](#youtube-frequency-dictionaries)
-      - [Corpus of Everyday Japanese Conversation](#corpus-of-everyday-japanese-conversation)
-      - [Shoui Dictionaries Collection Misc. Frequency Dictionaries](#shoui-dictionaries-collection-misc-frequency-dictionaries)
-      - [OhTalkWho オタク Frequency Dictionaries](#ohtalkwho-オタク-frequency-dictionaries)
-      - [Anacreon's Frequency Dictionaries](#anacreons-frequency-dictionaries)
   - [Kanji](#kanji)
     - [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries)
     - [Kanji Info](#kanji-info)
-      - [KANJIDIC](#kanjidic)
-      - [Wiktionary Kanji](#wiktionary-kanji)
-      - [jpdb Kanji](#jpdb-kanji)
-      - [TheKanjiMap](#thekanjimap)
     - [Kanji Variants](#kanji-variants)
-      - [mozc](#mozc)
-      - [jitai](#jitai)
     - [Kanji Frequency](#kanji-frequency)
-      - [Aozora Bunko Kanji Frequency](#aozora-bunko-kanji-frequency)
-      - [Innocent Corpus Kanji Frequency](#innocent-corpus-kanji-frequency)
-      - [Wikipedia Kanji Frequency](#wikipedia-kanji-frequency)
-      - [jpdb Kanji Frequency](#jpdb-kanji-frequency)
 - [Mandarin Chinese](#mandarin-chinese)
   - [Terms](#terms-1)
     - [Term Dictionaries](#term-dictionaries)
-      - [Shoui's Chinese Yomichan Setup](#shouis-chinese-yomichan-setup)
-      - [Other Chinese Dictionaries](#other-chinese-dictionaries)
     - [Chinese Frequency](#chinese-frequency)
-      - [BLCU BCC Corpus](#blcu-bcc-corpus)
-      - [SUBTLEX-CH Subtitle Corpus](#subtlex-ch-subtitle-corpus)
-      - [HSK Levels List](#hsk-levels-list)
-      - [General Global Chinese Frequency](#general-global-chinese-frequency)
   - [Hanzi](#hanzi)
     - [Wiktionary Hanzi](#wiktionary-hanzi)
 - [Cantonese](#cantonese)
   - [Terms](#terms-2)
     - [CantoDict](#cantodict)
     - [Misc Dictionaries](#misc-dictionaries)
-- [Other](#other)
-  - [Japanese-Mongolian](#japanese-mongolian)
-    - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
+- [Japanese-German](#japanese-german)
+- [Indonesian-English](#indonesian-english)
+- [Japanese-Mongolian](#japanese-mongolian)
+  - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
 
 # Japanese
 
@@ -708,11 +669,19 @@ Thanks to richter_belmont on the Refold Cantonese Discord:
 - Words.hk C-C
 - Words.hk C-E
 
-# Other
+# Japanese-German
 
-## Japanese-Mongolian
+**[Download](https://mega.nz/file/XV5iDYBK#bzfCYOyrPS_c0BgvyFA2ISKpuYg5Iv9ACfKg6pfZCaU)**
 
-### Japanese-Mongolian/日・モ辞典
+Converted by Julian, 和独辞典 is a Japanese-German Yomichan dictionary based on the [Wadoku](https://www.wadoku.de/) dictionary.
+
+# Indonesian-English
+
+[Kamata created a Indonesian Yomichan dictionary](https://github.com/Kamata954/indonesian-yomichan-dictionary) that shows the English definition of Indonesian words. The data is from Wiktionary.
+
+# Japanese-Mongolian
+
+## Japanese-Mongolian/日・モ辞典
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BJP-Mongolian%5D%20Japanese-Mongolian%20%E6%97%A5%E3%83%BB%E3%83%A2%E8%BE%9E%E5%85%B8.zip)** | [No example sentences version](<https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BJP-Mongolian%5D%20Japanese-Mongolian%20%E6%97%A5%E3%83%BB%E3%83%A2%E8%BE%9E%E5%85%B8%20(No%20Sentences).zip>)
 
