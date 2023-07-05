@@ -25,20 +25,27 @@ const childArticleCharacter = '➜';
 const COUNT_PER_PAGE = 12;
 const TERMS_PER_JSON = 10000;
 
-const outputZipName = '[Monolingual] Pixiv.zip';
+const outputZipName = (lightweight) => `[Monolingual] Pixiv${lightweight ? 'Light' : ''}.zip`;
 
 let articlesListSummaries;
 let termReadings;
 (async function () {
+  const flags = process.argv.slice(2);
+  const lightweightDict = flags.includes('--light');
   const categoryURLs = await getListOfCategoryURLs();
   await getListOfArticles(categoryURLs);
   await getArticlesSummaries();
   const processedData = processData();
   await getTermReadings(processedData);
-  makeDict(processedData);
+  makeDict(processedData, lightweightDict);
 })();
 
-function makeDict(processedData) {
+/**
+ * Creates a yomichan dict using the article summaries
+ * @param {Object} processedData
+ * @param {boolean} lightweightDict
+ */
+function makeDict(processedData, lightweightDict = false) {
   const outputZip = new jszip();
   let termBank = [];
   // Term banks start at 1
@@ -75,181 +82,253 @@ function makeDict(processedData) {
     // popularity shouldnt be relevant, no overlapping entries
     termEntry.push(0);
     // definitions
-    const definitionStructuredContent = {
-      type: 'structured-content',
-      content: [],
-    };
-    // make navigation header thing
-    const navHeader = {
-      tag: 'span',
-      content: [],
-      data: {
-        pixiv: 'nav-header',
-      },
-    };
-    if (articleEntry.parentTree) {
-      let parentTree = [...articleEntry.parentTree];
-      if (parentTree.length > 5) {
-        // get last 5 entries of parent tree
-        parentTree = parentTree.slice(-5);
-        navHeader.content.push({
-          tag: 'span',
-          content: '⋯⋯',
-        });
-      }
-      for (const parent of parentTree) {
-        navHeader.content.push({
-          tag: 'a',
-          href: `?query=${parent}&wildcards=off`,
-          content: parent,
-        });
-        navHeader.content.push({
-          tag: 'span',
-          content: ' ＞ ',
-        });
-      }
-      // remove last arrow
-      navHeader.content.pop();
-      definitionStructuredContent.content.push(navHeader);
-    }
-
-    // add summary
-    if (articleEntry.summary) {
-      definitionStructuredContent.content.push({
-        tag: 'div',
-        content: articleEntry.summary.trim(),
+    if (!lightweightDict) {
+      const definitionStructuredContent = {
+        type: 'structured-content',
+        content: [],
+      };
+      // make navigation header thing
+      const navHeader = {
+        tag: 'span',
+        content: [],
         data: {
-          pixiv: 'summary',
-        },
-      });
-    }
-
-    // add related tags 関連記事
-    if (articleEntry.related_tags) {
-      const relatedTags = {
-        tag: 'div',
-        content: [
-          {
-            tag: 'div',
-            content: {
-              tag: 'ul',
-              content: [
-                {
-                  tag: 'li',
-                  content: '関連記事',
-                },
-              ],
-              style: {
-                listStyleType: `"${relatedArticleCharacter}"`,
-              },
-            },
-            data: {
-              pixiv: 'related-tags-header',
-            },
-          },
-          {
-            tag: 'div',
-            content: [],
-            data: {
-              pixiv: 'related-tags-content',
-            },
-          },
-        ],
-        data: {
-          pixiv: 'related-tags',
+          pixiv: 'nav-header',
         },
       };
-      for (const tag of articleEntry.related_tags) {
-        relatedTags.content[1].content.push({
-          tag: 'a',
-          href: `?query=${tag}&wildcards=off`,
-          content: tag,
-        });
-        relatedTags.content[1].content.push({
-          tag: 'span',
-          content: '・',
+      if (articleEntry.parentTree) {
+        let parentTree = [...articleEntry.parentTree];
+        if (parentTree.length > 5) {
+          // get last 5 entries of parent tree
+          parentTree = parentTree.slice(-5);
+          navHeader.content.push({
+            tag: 'span',
+            content: '⋯⋯',
+          });
+        }
+        for (const parent of parentTree) {
+          navHeader.content.push({
+            tag: 'a',
+            href: `?query=${parent}&wildcards=off`,
+            content: parent,
+          });
+          navHeader.content.push({
+            tag: 'span',
+            content: ' ＞ ',
+          });
+        }
+        // remove last arrow
+        navHeader.content.pop();
+        definitionStructuredContent.content.push(navHeader);
+      }
+
+      // add summary
+      if (articleEntry.summary) {
+        definitionStructuredContent.content.push({
+          tag: 'div',
+          content: articleEntry.summary.trim(),
+          data: {
+            pixiv: 'summary',
+          },
         });
       }
-      // remove last dot
-      relatedTags.content[1].content.pop();
-      definitionStructuredContent.content.push(relatedTags);
-    }
 
-    // add children
-    if (articleEntry.children) {
-      const children = {
-        tag: 'div',
-        content: [
-          {
-            tag: 'div',
-            content: {
-              tag: 'ul',
-              content: [
-                {
-                  tag: 'li',
-                  content: '子記事',
-                },
-              ],
-              style: {
-                listStyleType: `"${childArticleCharacter}"`,
-              },
-            },
-            data: {
-              pixiv: 'children-header',
-            },
-          },
-          {
-            tag: 'div',
-            content: [],
-            data: {
-              pixiv: 'children-content',
-            },
-          },
-        ],
-        data: {
-          pixiv: 'children',
-        },
-      };
-      for (const child of articleEntry.children) {
-        children.content[1].content.push({
-          tag: 'a',
-          href: `?query=${child}&wildcards=off`,
-          content: child,
-        });
-        children.content[1].content.push({
-          tag: 'span',
-          content: '・',
-        });
-      }
-      // remove last dot
-      children.content[1].content.pop();
-      definitionStructuredContent.content.push(children);
-    }
-
-    // add link to article 続きを読む
-    definitionStructuredContent.content.push({
-      tag: 'ul',
-      content: [
-        {
-          tag: 'li',
+      // add related tags 関連記事
+      if (articleEntry.related_tags) {
+        const relatedTags = {
+          tag: 'div',
           content: [
             {
-              tag: 'a',
-              href: `${domain}${articlePath}${article}`,
-              content: '続きを読む',
+              tag: 'div',
+              content: {
+                tag: 'ul',
+                content: [
+                  {
+                    tag: 'li',
+                    content: '関連記事',
+                  },
+                ],
+                style: {
+                  listStyleType: `"${relatedArticleCharacter}"`,
+                },
+              },
+              data: {
+                pixiv: 'related-tags-header',
+              },
+            },
+            {
+              tag: 'div',
+              content: [],
+              data: {
+                pixiv: 'related-tags-content',
+              },
             },
           ],
-        },
-      ],
-      data: {
-        pixiv: 'continue-reading',
-      },
-      style: {
-        listStyleType: `"${linkCharacter}"`,
-      },
-    });
+          data: {
+            pixiv: 'related-tags',
+          },
+        };
+        for (const tag of articleEntry.related_tags) {
+          relatedTags.content[1].content.push({
+            tag: 'a',
+            href: `?query=${tag}&wildcards=off`,
+            content: tag,
+          });
+          relatedTags.content[1].content.push({
+            tag: 'span',
+            content: '・',
+          });
+        }
+        // remove last dot
+        relatedTags.content[1].content.pop();
+        definitionStructuredContent.content.push(relatedTags);
+      }
 
-    termEntry.push([definitionStructuredContent]);
+      // add children
+      if (articleEntry.children) {
+        const children = {
+          tag: 'div',
+          content: [
+            {
+              tag: 'div',
+              content: {
+                tag: 'ul',
+                content: [
+                  {
+                    tag: 'li',
+                    content: '子記事',
+                  },
+                ],
+                style: {
+                  listStyleType: `"${childArticleCharacter}"`,
+                },
+              },
+              data: {
+                pixiv: 'children-header',
+              },
+            },
+            {
+              tag: 'div',
+              content: [],
+              data: {
+                pixiv: 'children-content',
+              },
+            },
+          ],
+          data: {
+            pixiv: 'children',
+          },
+        };
+        for (const child of articleEntry.children) {
+          children.content[1].content.push({
+            tag: 'a',
+            href: `?query=${child}&wildcards=off`,
+            content: child,
+          });
+          children.content[1].content.push({
+            tag: 'span',
+            content: '・',
+          });
+        }
+        // remove last dot
+        children.content[1].content.pop();
+        definitionStructuredContent.content.push(children);
+      }
+
+      // add link to article 続きを読む
+      definitionStructuredContent.content.push({
+        tag: 'ul',
+        content: [
+          {
+            tag: 'li',
+            content: [
+              {
+                tag: 'a',
+                href: `${domain}${articlePath}${article}`,
+                content: '続きを読む',
+              },
+            ],
+          },
+        ],
+        data: {
+          pixiv: 'continue-reading',
+        },
+        style: {
+          listStyleType: `"${linkCharacter}"`,
+        },
+      });
+      termEntry.push([definitionStructuredContent]);
+    } else {
+      let textDefinition = '';
+      // // navigation header
+      // if (articleEntry.parentTree) {
+      //   let parentTree = [...articleEntry.parentTree];
+      //   if (parentTree.length > 5) {
+      //     // get last 5 entries of parent tree
+      //     parentTree = parentTree.slice(-5);
+      //     textDefinition += '⋯⋯';
+      //   }
+      //   for (const parent of parentTree) {
+      //     textDefinition += `${parent} ＞ `;
+      //   }
+      //   // remove last arrow
+      //   textDefinition = textDefinition.slice(0, -3);
+      // }
+
+      // // add summary
+      if (articleEntry.summary) {
+        textDefinition += `${articleEntry.summary.trim()}`;
+      }
+
+      // // add related tags 関連記事
+      // if (articleEntry.related_tags) {
+      //   textDefinition += '\n📚関連記事';
+      //   for (const tag of articleEntry.related_tags) {
+      //     textDefinition += ` ${tag}・`;
+      //   }
+      //   // remove last dot
+      //   textDefinition = textDefinition.slice(0, -1);
+      // }
+
+      // // add children
+      // if (articleEntry.children) {
+      //   textDefinition += '\n➜子記事';
+      //   for (const child of articleEntry.children) {
+      //     textDefinition += ` ${child}・`;
+      //   }
+      //   // remove last dot
+      //   textDefinition = textDefinition.slice(0, -1);
+      // }
+
+      // add link to article 続きを読む with structured content
+      const structuredContent = {
+        type: 'structured-content',
+        content: [
+          {
+            tag: 'ul',
+            content: [
+              {
+                tag: 'li',
+                content: [
+                  {
+                    tag: 'a',
+                    href: `${domain}${articlePath}${article}`,
+                    content: '続きを読む',
+                  },
+                ],
+              },
+            ],
+            data: {
+              pixiv: 'continue-reading',
+            },
+            style: {
+              listStyleType: `"${linkCharacter}"`,
+            },
+          },
+        ],
+      };
+      termEntry.push([textDefinition, structuredContent]);
+    }
+
     // sequence number
     termEntry.push(0);
     // term tags
@@ -260,13 +339,13 @@ function makeDict(processedData) {
   saveToZip(termBank, `term_bank_${termBankCounter}.json`);
 
   const index = {
-    title: 'Pixiv',
+    title: `Pixiv${lightweightDict ? 'Light' : ''}`,
     revision: `pixiv_${new Date().toISOString()}`,
     format: 3,
     url: 'https://dic.pixiv.net/',
     description: `Article summaries scraped from pixiv, ${
       Object.keys(processedData).length
-    } entries included.
+    } entries included.${lightweightDict ? ' Lightweight version with less formatting.' : ''}
 Created with https://github.com/MarvNC/yomichan-dictionaries`,
     author: 'Pixiv contributors, Marv',
     attribution: 'Pixiv',
@@ -283,8 +362,8 @@ Created with https://github.com/MarvNC/yomichan-dictionaries`,
     })
     .then((content) => {
       console.log('Saving zip...');
-      fs.writeFile('./dl/' + outputZipName, content);
-      console.log(`Wrote ${outputZipName}`);
+      fs.writeFile('./dl/' + outputZipName(lightweightDict), content);
+      console.log(`Wrote ${outputZipName(lightweightDict)}`);
     });
 }
 
@@ -438,8 +517,6 @@ async function getTermReadings(processedData) {
     }
   }
   await writeJson(termReadings, saveReadingsJsonPath);
-
-  debugger;
 }
 
 /**

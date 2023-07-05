@@ -191,6 +191,12 @@ Includes the following dictionaries:
 
 </details>
 
+#### Daijisen without images <!-- omit in toc -->
+
+**[Download](https://cdn.discordapp.com/attachments/778430038159655012/1125999832411164824/Monolingual_.zip)**
+
+Converted by supermariofan67, this is the same Daijisen dictionary found in Shoui's collection but without images for reduced file size and to avoid importing images into Anki.
+
 ### Grammar Dictionaries
 
 #### aiko-tanaka Grammar Dictionaries
@@ -211,12 +217,14 @@ A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot
 
 **Update 2023-07-02: This is now the non-lite version with readings for every entry!**
 
-**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20Pixiv.zip)**
+**[Download Pixiv](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20Pixiv.zip)** | **[Download PixivLight](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20PixivLight.zip)**
 
 A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) of over 500,000 entries, containing a brief summary and links to related articles for each entry. This dictionary is quite extensive and contains entries for a vast amount of terms that would not be in traditional dictionaries as it similar to Wikipedia, where most notable things and events have articles. For instance, 和泉妃愛 has an entry as does likely every notable VTuber, media franchise, and mountain in Japan.
 
 > **Warning**
 > This dictionary is quite large and may take a long time to import.
+
+- If performance of your device is an issue and you are unable to import the full Pixiv dictionary, you can use the PixivLight version which has most of the extra information like categorization and related articles stripped out, leaving behind only the short summary and a link to the main Pixiv article. This version is much smaller and should import without crashing Yomichan on mobile phones and ereaders.
 
 ![hiyori example](!images/pixivHiyori.png)
 ![news events example](!images/pixivWagnerCoup.png)
