@@ -41,6 +41,7 @@ Please note that this repository is not any kind of ranking or endorsement of th
   - [How a Dictionary is Packaged](#how-a-dictionary-is-packaged)
   - [Examples](#examples)
   - [Schema Validation](#schema-validation)
+  - [Conjugation](#conjugation)
 
 # Japanese
 
@@ -159,11 +160,23 @@ Includes the following dictionaries:
 
 </details>
 
-#### Daijisen without images <!-- omit in toc -->
+#### Daijisen without images
 
 **[Download](https://cdn.discordapp.com/attachments/778430038159655012/1125999832411164824/Monolingual_.zip)**
 
 Converted by supermariofan67, this is the same Daijisen dictionary found in Shoui's collection but without images for reduced file size and to avoid importing images into Anki.
+
+#### Daijirin Fourth Edition
+
+**[大辞林第四版](https://www.mediafire.com/file/opc4m5hmycljkcb/%25E5%25A4%25A7%25E8%25BE%259E%25E6%259E%2597%25E3%2580%2580%25E7%25AC%25AC%25E5%259B%259B%25E7%2589%2588.zip/file) | [大辞林第四版　画像無し](https://www.mediafire.com/file/a94y4d0xefg2ilf/%25E5%25A4%25A7%25E8%25BE%259E%25E6%259E%2597%25E3%2580%2580%25E7%25AC%25AC%25E5%259B%259B%25E7%2589%2588%25E3%2580%2580%25E7%2594%25BB%25E5%2583%258F%25E7%2584%25A1%25E3%2581%2597.zip/file)**
+
+Converted by Malte using [stephenmk's jitenbot](https://github.com/stephenmk/jitenbot).
+
+#### Shinmeikai Eighth Edition
+
+**[新明解第八版](https://www.mediafire.com/file/pgzai40a38hpflc/%25E6%2596%25B0%25E6%2598%258E%25E8%25A7%25A3%25E5%259B%25BD%25E8%25AA%259E%25E8%25BE%259E%25E5%2585%25B8%25E3%2580%2580%25E7%25AC%25AC%25E5%2585%25AB%25E7%2589%2588.zip/file)**
+
+Converted by Malte using [stephenmk's jitenbot](https://github.com/stephenmk/jitenbot).
 
 ### Grammar Dictionaries
 
@@ -722,8 +735,16 @@ A dictionary is not restricted to being a kanji dictionary, term dictionary, fre
 
 ## Examples
 
-For an extremely simple example of a term dictionary, you could look at the [term origins dictionary](#複合語起源-term-origins) which is quite small. Past that, the [official test dictionary](https://github.com/themoeway/yomitan/tree/master/test/data/dictionaries/valid-dictionary1) is a great resource to see an example of a dictionary that utilizes the full range of features currently defined in the schema. In addition, I recommend looking at the [latest JMDict](https://github.com/MarvNC/yomichan-dictionaries#jmdict) and the dictionaries made by the dictionary anon like 岩波国語辞典　第八版 as they have great formatting to learn from.
+- The [term origins dictionary](#複合語起源-term-origins) is a small example of a simple dictionary without any bells or whistles.
+- The [official test dictionary](https://github.com/themoeway/yomitan/tree/master/test/data/dictionaries/valid-dictionary1) is a great resource to see an example of a dictionary that utilizes the full range of features currently defined in the schema.
+- The [latest JMDict](https://github.com/MarvNC/yomichan-dictionaries#jmdict) has complex formatting.
+- Dictionaries made by [stephenmk's jitenbot](https://github.com/stephenmk/jitenbot) like the [jitenon-dictionaries](#jitenon-dictionaries), 大辞林第四版, and 新明解第八版 have very nice formatting.
+- Dictionaries made by the dictionary anon like 岩波, 三省堂, 広辞苑 have nice formatting.
 
 ## Schema Validation
 
 For schema validation, I recommend configuring [VSCode to validate schemas](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings) or you could also use a website like [jsonschemavalidator](https://www.jsonschemavalidator.net/) to test.
+
+## Conjugation
+
+For Japanese terms to be conjugated by Yomichan, they need to have an appropriate part of speech tag (as can be seen in the term bank schema). The part of speech labels are documented on the [official JMDict page here](http://www.edrdg.org/jmdictdb/cgi-bin/edhelp.py?svc=jmdict&sid=#kw_pos). If you're making a Japanese dictionary without too many terms, you might be able to simply copy the parts of speech from JMDict as long as the terms mostly overlap. I have developed a
