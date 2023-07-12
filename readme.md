@@ -38,7 +38,7 @@ Please note that this repository is not any kind of ranking or endorsement of th
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
 - [How Do I Make My Own Yomichan Dictionary?](#how-do-i-make-my-own-yomichan-dictionary)
   - [Read the Schemas](#read-the-schemas)
-  - [How a Dictionary is Packaged](#how-a-dictionary-is-packaged)
+  - [Packaging A Dictionary](#packaging-a-dictionary)
   - [Examples](#examples)
   - [Schema Validation](#schema-validation)
   - [Conjugation](#conjugation)
@@ -729,9 +729,9 @@ Below is a list of the Yomichan dictionary schemas and what they're used for, as
 | `dictionary-term-bank-v3-schema.json`       | `term_bank_${number}.json`       | V3 term bank, recommended.                                                                                                                                                                                                                                                            |
 | `dictionary-term-meta-bank-v3-schema.json`  | `term_meta_bank_${number}.json`  | Where meta information about terms is stored. This includes frequency data and pitch accent data.                                                                                                                                                                                     |
 
-## How a Dictionary is Packaged
+## Packaging A Dictionary
 
-A dictionary is not restricted to being a kanji dictionary, term dictionary, frequency dictionary, accent dictionary, or etc. It can have multiple types of kanji/term/tag information within the zip file. Once you have an `index.json` and the relevant data files for your dictionary, you simply zip them up with all the data in the root directory of the zip.
+A dictionary is not restricted to being a kanji dictionary, term dictionary, frequency dictionary, accent dictionary, or etc. It can have multiple types of kanji/term/tag information within the zip file. Once you have an `index.json` and the relevant data files for your dictionary, you simply zip them up with all the data in the root directory of the zip. I recommend zipping them at the highest compression level possible - generally the json data files can be compressed to a fraction of their original size.
 
 ## Examples
 
