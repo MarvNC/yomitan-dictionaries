@@ -36,6 +36,7 @@ Please note that this repository is not any kind of ranking or endorsement of th
 - [Indonesian-English](#indonesian-english)
 - [Japanese-Mongolian](#japanese-mongolian)
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
+- [How Do I Make My Own Yomichan Dictionary?](#how-do-i-make-my-own-yomichan-dictionary)
 
 # Japanese
 
@@ -51,7 +52,7 @@ Do check out [yomichan-dict-css](https://github.com/themoeway/yomichan-dict-css)
 
 **[Download](https://github.com/Aquafina-water-bottle/jmdict-english-yomichan/)**
 
-The most extensive JP-EN dictionary using data from the [EDRDG Project](https://www.edrdg.org/jmdict/j_jmdict.html) created by Jim Breen. The linked version should be the most up to date, with changed by stephenmk to display crucial information that wasn't previously linked and to improve formatting greatly, adding in example sentences as well.
+The most extensive JP-EN dictionary using data from the [EDRDG Project](https://www.edrdg.org/jmdict/j_jmdict.html) created by Jim Breen. The linked version should be the most up to date, with changes by stephenmk to display crucial information that wasn't previously linked and to improve formatting greatly, adding in example sentences as well.
 
 #### JMnedict
 
@@ -691,3 +692,24 @@ A Japanese to Mongolian dictionary scraped from [栗林均's site](http://hkuri.
 > 橋本勝、エルデネ・プレブジャブ『現代日本語モンゴル語辞典』春風社、2001．
 
 ![jp-mongolian](!images/jp-mongolian.png)
+
+# How Do I Make My Own Yomichan Dictionary?
+
+I get this question a lot, so here are some basic resources. You'll want to get very familiar with the [Yomichan/Yomitan schemas](https://github.com/themoeway/yomitan/tree/master/ext/data/schemas) for dictionaries - these is what's used to validate that a dictionary is correct. I recommend trying [json-schema-viewer](https://json-schema-viewer.vercel.app/) and [jsonhero](https://jsonhero.io/) for help, but ultimately you'll want to be able to read the json schemas directly - though [codebeautify](https://codebeautify.org/jsonviewer/) gives a nice compact experience. I use [json-viewer](https://github.com/tulios/json-viewer) for better json viewing experience in the browser.
+
+Below is a list of the Yomichan dictionary schemas and what they're used for.
+
+- `dictionary-index-schema.json` - The schema for the `index.json` file that contains metadata about the dictionary. **PLEASE ALWAYS PUT AS MUCH DETAIL IN THIS AS POSSIBLE.** Note that this information can be displayed in Yomichan in the dictionaries overview page and clicking the three dots, then `Details...`.
+- `dictionary-kanji-bank-v1-schema.json` - The V1 of the schema for the kanji bank file for kanji dictionaries.
+- `dictionary-kanji-bank-v3-schema.json` - V3 of the same schema. It's recommended to use V3.
+- `dictionary-kanji-meta-bank-v3-schema.json` - The meta bank for kanji information. Right now, this is only used to store kanji frequency data.
+- `dictionary-tag-bank-v3-schema.json` - The tag bank for term information. This is where you'll define tags for kanji and term dictionaries, like for example specifying parts of speech or kanken level. These are generally displayed in Yomichan as grey tags next to the dictionary name.
+- `dictionary-term-bank-v1-schema.json` - The term bank for term information. This is where dictionary readings, definitions, and etc are stored.
+- `dictionary-term-bank-v3-schema.json` - V3 term bank, recommended.
+- `dictionary-term-meta-bank-v3-schema.json` - Where meta information about terms is stored. This includes frequency data and pitch accent data.
+
+Note that a dictionary is not restricted to being a kanji dictionary, term dictionary, frequency dictionary, accent dictionary, or etc. It can have multiple types of kanji/term/tag information within the zip file. Also note that the filenames used by Yomichan are like the names of the schema jsons, but without the `dictionary-` or `-schema` parts, and no `v1` or `v3` either. In addition, they start from the integer 1 and can optionally enumerate upwards if you split up your data, so for example `dictionary-term-bank-v3-schema.json` defines the schema for `term_bank_1.json` and `term_bank_2.json` upwards.
+
+For an extremely simple example of a term dictionary, you could look at the [term origins dictionary](#複合語起源-term-origins) which is quite small. Past that, the [official test dictionary](https://github.com/themoeway/yomitan/tree/master/test/data/dictionaries/valid-dictionary1) is a great resource to see an example of a dictionary that utilizes the full range of features currently defined in the schema. In addition, I recommend looking at the [latest JMDict](https://github.com/MarvNC/yomichan-dictionaries#jmdict) and the dictionaries made by the dictionary anon like 岩波国語辞典　第八版 as they have great formatting to demonstrate the uses of structured-content.
+
+For schema validation, I recommend configuring [VSCode to validate schemas](https://code.visualstudio.com/docs/languages/json#_json-schemas-and-settings) or you could also use a website like [jsonschemavalidator](https://www.jsonschemavalidator.net/) to test.
