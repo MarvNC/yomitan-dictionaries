@@ -1,4 +1,4 @@
-# How Do I Make My Own Yomichan Dictionary?
+# How Do I Make A Yomichan Dictionary?
 
 I get this question a lot, so here's an overview of how to make your own Yomichan dictionary.
 
