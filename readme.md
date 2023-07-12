@@ -695,7 +695,7 @@ A Japanese to Mongolian dictionary scraped from [栗林均's site](http://hkuri.
 
 # How Do I Make My Own Yomichan Dictionary?
 
-I get this question a lot, so here are some basic resources. You'll want to get very familiar with the [Yomichan/Yomitan schemas](https://github.com/themoeway/yomitan/tree/master/ext/data/schemas) for dictionaries - these is what's used to validate that a dictionary is correct. I recommend trying [json-schema-viewer](https://json-schema-viewer.vercel.app/) and [jsonhero](https://jsonhero.io/) for help, but ultimately you'll want to be able to read the json schemas directly - though [codebeautify](https://codebeautify.org/jsonviewer/) gives a nice compact experience. I use [json-viewer](https://github.com/tulios/json-viewer) for better json viewing experience in the browser.
+I get this question a lot, so here are some basic resources. You'll want to get very familiar with the [Yomichan/Yomitan schemas](https://github.com/themoeway/yomitan/tree/master/ext/data/schemas) for dictionaries - these schemas define how Yomichan dictionaries are structured. I recommend trying [json-schema-viewer](https://json-schema-viewer.vercel.app/) and [jsonhero](https://jsonhero.io/) for help breaking down the schemas, but ultimately you'll want to be able to read the json schemas directly - though [codebeautify](https://codebeautify.org/jsonviewer/) gives a nice compact experience. I use [json-viewer](https://github.com/tulios/json-viewer) for better json viewing experience in the browser.
 
 Below is a list of the Yomichan dictionary schemas and what they're used for.
 
