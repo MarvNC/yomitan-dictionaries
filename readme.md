@@ -6,7 +6,7 @@ This repository contains dictionaries for [Yomichan](https://foosoft.net/project
 
 Please note that this repository is not any kind of ranking or endorsement of the listed dictionaries. I use some but not all of the dictionaries listed. Though in general, I recommend installing as many dictionaries as possible for maximum coverage.
 
-Also, if you're interested in creating your own Yomichan dictionary I have [listed some resources here](how-to-make-yomichan-dictionaries.md).
+Also, if you're interested in creating your own Yomichan dictionary I have listed some resources here: [**How Do I Make A Yomichan Dictionary?**](how-to-make-yomichan-dictionaries.md)
 
 ### Check out my [JP Resources](https://github.com/MarvNC/JP-Resources)
 
