@@ -604,6 +604,12 @@ These miscellaneous Chinese Yomichan dictionaries were made by lix on the Refold
 - 譯典通英漢雙向字典
 - 五南國語活用辭典
 
+#### Wenlin ABC Chinese-English Comprehensive Dictionary
+
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/files/12074644/ZH.Wenlin.ABC.zip)**
+
+Published in July 2003 and revised through 2005, the Wenlin ABC Chinese-English Comprehensive Dictionary was produced by the Wenlin Institude in cooperation with the ABC Chinese Dictionary Series Project at the University of Hawaii. It contains over 196,000 entries. This file was [converted by rduwjjnh](https://github.com/MarvNC/yomichan-dictionaries/issues/28).
+
 ### Chinese Frequency
 
 #### BLCU BCC Corpus
