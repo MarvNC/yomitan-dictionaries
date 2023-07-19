@@ -4,7 +4,7 @@ I get this question a lot, so here's an overview of how to make your own Yomicha
 
 ## Read the Schemas
 
-You'll want to get very familiar with the [Yomichan/Yomitan schemas](https://github.com/themoeway/yomitan/tree/master/ext/data/schemas) for dictionaries - these schemas define how Yomichan dictionaries are structured. I recommend trying [codebeautify](https://codebeautify.org/jsonviewer/), [json-schema-viewer](https://json-schema-viewer.vercel.app/), and [jsonhero](https://jsonhero.io/) for help breaking down the schemas. For looking at raw json files in the browser, I use [json-viewer](https://github.com/tulios/json-viewer) for a better json viewing experience.
+You'll want to get very familiar with the [Yomichan/Yomitan schemas](https://github.com/themoeway/yomitan/tree/master/ext/data/schemas) for dictionaries - these schemas define how Yomichan dictionaries are structured. You can read about [how JSON Schemas work here](https://json-schema.org/). I recommend trying [codebeautify](https://codebeautify.org/jsonviewer/), [json-schema-viewer](https://json-schema-viewer.vercel.app/), and [jsonhero](https://jsonhero.io/) for help breaking down the schemas. For looking at raw json files in the browser, I use [json-viewer](https://github.com/tulios/json-viewer) for a better json viewing experience.
 
 Below is a list of the Yomichan dictionary schemas and what they're used for, as well as the expected filename. Note that for data files with numbers in them, the number starts at 1 and enumerates upwards.
 
