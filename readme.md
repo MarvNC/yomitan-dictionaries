@@ -197,7 +197,7 @@ A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot
 
 **[Download Pixiv](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20Pixiv.zip)** | **[Download PixivLight](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20PixivLight.zip)**
 
-A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) of over 500,000 entries, containing a brief summary and links to related articles for each entry. This dictionary is quite extensive and contains entries for a vast amount of terms that would not be in traditional dictionaries as it similar to Wikipedia, where most notable things and events have articles. For instance, 和泉妃愛 has an entry as does likely every notable VTuber, media franchise, and mountain in Japan.
+A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) encyclopedia of over 500,000 entries, containing a brief summary and links to related articles for each entry. This dictionary is quite extensive and contains entries for a vast amount of terms that would not be in traditional dictionaries as it similar to Wikipedia, where most notable things and events have articles. For instance, 和泉妃愛 has an entry as does likely every notable VTuber, media franchise, and mountain in Japan.
 
 > **Warning**
 > This dictionary is quite large and may take a long time to import.
