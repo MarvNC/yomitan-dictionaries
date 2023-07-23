@@ -175,6 +175,22 @@ Converted by Malte using [stephenmk's jitenbot](https://github.com/stephenmk/jit
 
 Converted by Malte using [stephenmk's jitenbot](https://github.com/stephenmk/jitenbot).
 
+#### Meikyou Second Edition
+
+**[明鏡国語辞典　第二版](https://cdn.discordapp.com/attachments/797748730807320588/1132453483908436088/meikyo2_2023_07_22.zip)**
+
+Converted by dictionary anon, this dictionary has nice modern formatting.
+
+<details>
+  <summary>Images (click to expand)</summary>
+
+![](https://cdn.discordapp.com/attachments/797748730807320588/1132453484403372153/usobuku.png)
+![](https://cdn.discordapp.com/attachments/797748730807320588/1132453484625662083/hen.png)
+![](https://cdn.discordapp.com/attachments/797748730807320588/1132453484806033458/mau.png)
+![](https://cdn.discordapp.com/attachments/797748730807320588/1132453485015740456/kakeru.png)
+
+</details>
+
 ### Grammar Dictionaries
 
 #### aiko-tanaka Grammar Dictionaries
