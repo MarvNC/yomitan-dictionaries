@@ -191,6 +191,22 @@ Converted by dictionary anon, this dictionary has nice modern formatting.
 
 </details>
 
+#### Shinsenkoku Tenth Edition
+
+**[新選国語辞典 第十版](https://cdn.discordapp.com/attachments/797748730807320588/1138245579667939429/f63461489ba2a312.zip)**
+
+Converted by dictionary anon, this dictionary has nice modern formatting.
+
+<details>
+  <summary>Images (click to expand)</summary>
+
+![](https://cdn.discordapp.com/attachments/797748730807320588/1138245578711634021/jikkan.png)
+![](https://cdn.discordapp.com/attachments/797748730807320588/1138245578946519231/baka.png)
+![](https://cdn.discordapp.com/attachments/797748730807320588/1138245579181391912/root.png)
+![](https://cdn.discordapp.com/attachments/797748730807320588/1138245579416277042/jion.png)
+
+</details>
+
 ### Grammar Dictionaries
 
 #### aiko-tanaka Grammar Dictionaries
