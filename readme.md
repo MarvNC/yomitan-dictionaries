@@ -157,11 +157,11 @@ Includes the following dictionaries:
 
 </details>
 
-#### Daijisen without images
+#### Sankoku Eighth Edition
 
-**[Download](https://cdn.discordapp.com/attachments/778430038159655012/1125999832411164824/Monolingual_.zip)**
+**[三省堂国語辞典　第八版](https://www.mediafire.com/file/1quamrofz1ldbp1/%25E4%25B8%2589%25E7%259C%2581%25E5%25A0%2582%25E5%259B%25BD%25E8%25AA%259E%25E8%25BE%259E%25E5%2585%25B8%25E3%2580%2580%25E7%25AC%25AC%25E5%2585%25AB%25E7%2589%2588.zip/file)**
 
-Converted by supermariofan67, this is the same Daijisen dictionary found in Shoui's collection but without images for reduced file size and to avoid importing images into Anki.
+Converted by Malte using [stephenmk's jitenbot](https://github.com/stephenmk/jitenbot).
 
 #### Daijirin Fourth Edition
 
