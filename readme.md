@@ -207,6 +207,19 @@ Converted by dictionary anon, this dictionary has nice modern formatting.
 
 </details>
 
+#### Goo Thesaurus
+
+**[使い方の分かる 類語例解辞典](https://www.mediafire.com/file/4ra1g5hf2bx54ix/%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2581%25AE%25E5%2588%2586%25E3%2581%258B%25E3%2582%258B_%25E9%25A1%259E%25E8%25AA%259E%25E4%25BE%258B%25E8%25A7%25A3%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
+
+Scraped by Malte from the online [goo.ne thesaurus](https://dictionary.goo.ne.jp/thsrs/).
+
+<details>
+  <summary>Images (click to expand)</summary>
+
+![](https://cdn.discordapp.com/attachments/778430038159655012/1139670857791316158/image.png)
+
+</details>
+
 ### Grammar Dictionaries
 
 #### aiko-tanaka Grammar Dictionaries
