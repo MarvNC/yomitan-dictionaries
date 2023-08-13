@@ -220,6 +220,15 @@ Scraped by Malte from the online [goo.ne thesaurus](https://dictionary.goo.ne.jp
 
 </details>
 
+#### Goo Dialect Dictionary
+
+**[全国方言辞典](https://www.mediafire.com/file/28yrk9kdefh6buw/%25E5%2585%25A8%25E5%259B%25BD%25E6%2596%25B9%25E8%25A8%2580%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
+
+Scraped by Malte from the online [goo.ne dialect dictionary](https://dictionary.goo.ne.jp/dialect/).
+
+> [!NOTE]
+> Note: This version has some (~650) entries formatted like そーだ instead of そうだ which can be annoying.
+
 ### Grammar Dictionaries
 
 #### aiko-tanaka Grammar Dictionaries
