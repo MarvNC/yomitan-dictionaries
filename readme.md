@@ -624,13 +624,19 @@ Kanji frequency data from https://jpdb.io as a Yomichan frequency dictionary.
 
 ### Term Dictionaries
 
+#### CEDICT
+
+**[CC-CEDICT dictionary for Yomichan](https://github.com/anttipham/cc-cedict-for-yomichan)**
+
+The most up-to-date conversion of CC-CEDICT for Yomichan.
+
 #### Shoui's Chinese Yomichan Setup
 
 **[Shoui's Chinese Yomichan Setup](https://gist.github.com/shoui520/25460fd2e9fb194d3e5152fa2ce42ca2#installing-dictionaries-and-basic-usage)**
 
 These Chinese Yomichan dictionaries are hosted in Shoui's guide to setting up Yomichan for Chinese, includes:
 
-- `[ZH-EN] CEDICT` (converted by an anon)
+- `[ZH-EN] CEDICT` (Outdated) (converted by an anon)
 - `[ZH-JA] 中日大辞典　第二版` (converted by an anon)
 - `[ZH-ZH] 兩岸詞典` (converted by Chrono7 on the Refold ZH Discord server)
 - `[ZH-ZH] 漢語大詞典` (converted by Chrono7 on the Refold ZH Discord server)
