@@ -38,6 +38,7 @@ Also, if you're interested in creating your own Yomichan dictionary I have liste
 - [Indonesian-English](#indonesian-english)
 - [Japanese-Mongolian](#japanese-mongolian)
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
+- [Korean](#korean)
 - [How Do I Make My Own Yomichan Dictionary?](#how-do-i-make-my-own-yomichan-dictionary)
 
 # Japanese
@@ -772,6 +773,17 @@ A Japanese to Mongolian dictionary scraped from [栗林均's site](http://hkuri.
 > 橋本勝、エルデネ・プレブジャブ『現代日本語モンゴル語辞典』春風社、2001．
 
 ![jp-mongolian](!images/jp-mongolian.png)
+
+# Korean
+
+See [Yomichan For Korean](https://github.com/Lyroxide/yomichan-korean) for a fork of Yomichan that supports Korean.
+
+On that repository the following dictionaries are listed:
+
+- KRDICT (KR-EN / KR-JP / Monolingual)
+- Naver (KR-JP)
+
+Note that there is an alternative [krdict-yomichan](https://github.com/Samuihasu/krdict-yomichan) but this dictionary is no longer necessary due to the conjugation support added in Lyroxide's fork of Yomichan.
 
 # How Do I Make My Own Yomichan Dictionary?
 
