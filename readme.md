@@ -295,7 +295,7 @@ For each entry, it contains:
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.zip)** | **[List of words](termOrigins/%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv)**
 
-Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|いる）. Information comes from anonymous forum posts, so it may not be 100% accurate.
+Compound kunyomi word origins/etymology, for example 陥る -> 落ち入る（おち|いる）. Information comes from anonymous forum posts, so it may not be 100% accurate.
 
 ![](!images/chrome_yomichan-dictionaries%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv_at_master_%C2%B7_MarvNC_2022-08-22_12-37-52.png)
 
@@ -309,7 +309,7 @@ Compound kunyomi word origins, for example 陥る -> 落ち入る（おち|い�
 
 **[Download](https://cdn.discordapp.com/attachments/778430038159655012/1025059429206466580/gogen.zip)**
 
-語源由来辞典 parsed from https://gogen-yurai.jp/ by Seikou. Contains information about the origins of words.
+語源由来辞典 etymology information parsed from https://gogen-yurai.jp/ by Seikou. Contains information about the origins of words.
 
 ### Term Frequency
 
