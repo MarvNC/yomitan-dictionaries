@@ -51,7 +51,7 @@ If you want to use VSCode to validate schemas, here's the relevant settings JSON
     },
     {
       "fileMatch": ["term_bank_*.json"],
-      "url": "https://github.com/themoeway/yomichan/raw/master/ext/data/schemas/dictionary-term-bank-v3-schema.json"
+      "url": "https://github.com/themoeway/yomitan/raw/master/ext/data/schemas/dictionary-term-bank-v3-schema.json"
     },
     {
       "fileMatch": ["term_meta_bank_*.json"],
