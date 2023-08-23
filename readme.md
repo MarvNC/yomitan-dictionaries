@@ -210,7 +210,7 @@ Converted by dictionary anon, this dictionary has nice modern formatting.
 
 #### Goo Thesaurus
 
-**[使い方の分かる 類語例解辞典](https://www.mediafire.com/file/4ra1g5hf2bx54ix/%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2581%25AE%25E5%2588%2586%25E3%2581%258B%25E3%2582%258B_%25E9%25A1%259E%25E8%25AA%259E%25E4%25BE%258B%25E8%25A7%25A3%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
+**[使い方の分かる 類語例解辞典](https://www.mediafire.com/file/lrmhwmwfim5ul6u/%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2581%25AE%25E5%2588%2586%25E3%2581%258B%25E3%2582%258B_%25E9%25A1%259E%25E8%25AA%259E%25E4%25BE%258B%25E8%25A7%25A3%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
 
 Scraped by Malte from the online [goo.ne thesaurus](https://dictionary.goo.ne.jp/thsrs/).
 
@@ -223,12 +223,26 @@ Scraped by Malte from the online [goo.ne thesaurus](https://dictionary.goo.ne.jp
 
 #### Goo Dialect Dictionary
 
-**[全国方言辞典](https://www.mediafire.com/file/28yrk9kdefh6buw/%25E5%2585%25A8%25E5%259B%25BD%25E6%2596%25B9%25E8%25A8%2580%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
+**[全国方言辞典](https://www.mediafire.com/file/at8jg58kwjiilw9/%25E5%2585%25A8%25E5%259B%25BD%25E6%2596%25B9%25E8%25A8%2580%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
 
 Scraped by Malte from the online [goo.ne dialect dictionary](https://dictionary.goo.ne.jp/dialect/).
 
 > [!NOTE]
 > Note: This version has some (~650) entries formatted like そーだ instead of そうだ which can be annoying.
+
+#### 新語時事用語辞典
+
+**[新語時事用語辞典](https://www.mediafire.com/file/a89vdraxh2albod/%25E6%2596%25B0%25E8%25AA%259E%25E6%2599%2582%25E4%25BA%258B%25E7%2594%25A8%25E8%25AA%259E%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
+
+Scraped from http://www.breaking-news-words.com/ by Malte.
+
+> 「新語時事用語辞典」は、ニュースで今最も話題になっている最新のキーワードを時流に即して紹介する、速報・辞書サイトです。新聞で、テレビで、ネットで話題になっているキーワードや流行語をいち早く紹介します。
+
+#### 実用日本語表現辞典
+
+**[実用日本語表現辞典](https://www.mediafire.com/file/hw2gkzfyddtdzje/%25E5%25AE%259F%25E7%2594%25A8%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E8%25A1%25A8%25E7%258F%25BE%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
+
+Scraped from http://www.practical-japanese.com/ by Malte. Updated version of the old yomichan dictionary.
 
 ### Grammar Dictionaries
 
