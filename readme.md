@@ -35,10 +35,13 @@ Also, if you're interested in creating your own Yomichan dictionary I have liste
     - [CantoDict](#cantodict)
     - [Misc Dictionaries](#misc-dictionaries)
 - [Japanese-German](#japanese-german)
+  - [Wadoku Jiten](#wadoku-jiten)
+  - [Wadoku Daijiten](#wadoku-daijiten)
 - [Indonesian-English](#indonesian-english)
 - [Japanese-Mongolian](#japanese-mongolian)
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
 - [Korean](#korean)
+- [Vietnamese-English](#vietnamese-english)
 - [How Do I Make My Own Yomichan Dictionary?](#how-do-i-make-my-own-yomichan-dictionary)
 
 # Japanese
@@ -243,6 +246,12 @@ Scraped from http://www.breaking-news-words.com/ by Malte.
 **[実用日本語表現辞典](https://www.mediafire.com/file/hw2gkzfyddtdzje/%25E5%25AE%259F%25E7%2594%25A8%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E8%25A1%25A8%25E7%258F%25BE%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
 
 Scraped from http://www.practical-japanese.com/ by Malte. Updated version of the old yomichan dictionary.
+
+#### Kanjipedia 同訓異義
+
+Scraped by Julian and converted by Malte, sourced from [Kanjipedia](https://www.kanjipedia.jp/sakuin/doukunigi/).
+
+This dictionary differentiates the usages of words with the same meaning but different kanji, for example 越える・超える・逾える・踰える.
 
 ### Grammar Dictionaries
 
@@ -581,6 +590,19 @@ Information from [TheKanjiMap](https://thekanjimap.com/):
 
 ![高](!images/chrome_%E9%AB%98_-_Yomichan_Search_-_Google_Chrome_2023-02-03_19-46-15.png)![更](!images/chrome_%E6%9B%B4_-_Yomichan_Search_-_Google_Chrome_2023-02-03_19-51-17.png)
 
+#### Kanji Jitenon Online
+
+**[Download](https://drive.google.com/file/d/1TZmvC6WcUOpvjCLt-NkdhCvEXVcvyF4I/view)**
+
+The online [漢字辞典オンライン](https://kanji.jitenon.jp/) kanji dictionary is an extensive Japanese kanji dictionary. It was converted into a Yomichan kanji dictionary by eurusdagr.
+
+<details>
+<summary>(Click to expand) Example image</summary>
+
+![](https://cdn.discordapp.com/attachments/778430038159655012/1147629627804758056/image.png)
+
+</details>
+
 ### Kanji Variants
 
 #### mozc
@@ -771,9 +793,32 @@ Thanks to richter_belmont on the Refold Cantonese Discord:
 
 # Japanese-German
 
-**[Download](https://mega.nz/file/XV5iDYBK#bzfCYOyrPS_c0BgvyFA2ISKpuYg5Iv9ACfKg6pfZCaU)**
+## Wadoku Jiten
+
+**[和独辞典](https://mega.nz/file/XV5iDYBK#bzfCYOyrPS_c0BgvyFA2ISKpuYg5Iv9ACfKg6pfZCaU)**
 
 Converted by Julian, 和独辞典 is a Japanese-German Yomichan dictionary based on the [Wadoku](https://www.wadoku.de/) dictionary.
+
+## Wadoku Daijiten
+
+**[和独大辞典](https://drive.google.com/file/d/1DIFD5bd_ZGURvmq5ZfVluJH6U6gUahOx/view)**
+
+Converted by Julian from the [和独大辞典](https://www.wadokudaijiten.de/).
+
+- Über 130.000 Stichwörter der modernen japanischen Sprache (frühe Meiji-Zeit bis Gegenwart) mit zahllosen Zusammensetzungen und Anwendungsbeispielen
+- Lateinumschrift aller Stichwörter und der Zusammensetzungen mit Kanji
+- ca. 70.000 Satzbelege aus Zeitungen, Zeitschriften, Werbung, Wissenschaft und Literatur mit Quellenangaben
+- Markierter Grund- und Aufbauwortschatz
+- Historische und fachsprachliche Erläuterungen
+- Herkunftsangaben und gesicherte Etymologien
+- Sprichwörter und idiomatische Wendungen
+- Fach- und Sondersprachen (Kinder- und Jugendsprache, Gaunersprache, Dialektismen)
+- Auflösungen von Abkürzungen
+- Fachvokabular u. a. aus den Bereichen Architektur · Astronomie · Biologie und Biochemie · Chemie · Computertechnologie · Elektrotechnik · Flora und Fauna (mit Angabe der wissenschaftlichen Nomenklatur) · Geowissenschaften · Linguistik · Mathematik · Medizin · Musik · Physik · Recht · Sport · Technik · Wirtschaft und Finanzen
+
+> ![NOTE]
+> Relatively rough conversion, more or less the entries as you'd find them on the website ^^ - might get updated in the future (converting the "tags" to actual tags etc.) .
+> It ups the coverage that you'd get from only using Jmdict German and can be a great tool to use alongside other dicts - may it be as a source for example sentences etc.
 
 # Indonesian-English
 
@@ -802,6 +847,12 @@ On that repository the following dictionaries are listed:
 - Naver (KR-JP)
 
 Note that there is an alternative [krdict-yomichan](https://github.com/Samuihasu/krdict-yomichan) but this dictionary is no longer necessary due to the conjugation support added in Lyroxide's fork of Yomichan.
+
+# Vietnamese-English
+
+**[VNEDICT](https://www.mediafire.com/folder/9ss2pn046fcjo/Vi%E1%BB%87t_-_Anh)**
+
+[VNEDICT](http://www.denisowski.org/Vietnamese/Vietnamese.html) by Paul Denisowski converted by Marsh Nguyễn for Yomichan.
 
 # How Do I Make My Own Yomichan Dictionary?
 
