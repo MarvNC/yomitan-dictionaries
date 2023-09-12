@@ -444,7 +444,7 @@ Domain-specific frequency lists from Youtube Videos:
 **[Download](https://github.com/forsakeninfinity/CEJC_yomichan_freq_dict)**
 
 > [!IMPORTANT]
-> This frequency list only goes up to around 20,000 frequency. This is due to the limited nature of the original data set. It is still useful to know the relative frequency of words in conversation, but the frequency values should not be compared to those from other more expansive frequency dictionaries. For a more complete list that is somewhat conversational, I recommend trying the Youtube frequency list.
+> Due to the limited nature of the original data set, this frequency list only goes up to around 20,000 in frequency. It is still useful to know the relative frequency of words in conversation, but the frequency values should not be compared to those from other more expansive frequency dictionaries. For a more complete list that is somewhat conversational, I recommend trying the Youtube frequency list.
 
 This Yomichan frequency dictionary based on the [Corpus of Everyday Japanese Conversation](https://www.ninjal.ac.jp/english/research/cr-project/project-3/institute/spoken-language/) was converted by forsakeninfinity.
 
