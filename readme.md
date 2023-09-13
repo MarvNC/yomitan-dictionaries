@@ -854,6 +854,10 @@ Note that there is an alternative [krdict-yomichan](https://github.com/Samuihasu
 
 [VNEDICT](http://www.denisowski.org/Vietnamese/Vietnamese.html) by Paul Denisowski converted by Marsh Nguyễn for Yomichan.
 
+**[stardict-vi](https://www.mediafire.com/folder/9ss2pn046fcjo/Vi%E1%BB%87t_-_Anh)**
+
+From [OVDP (Open Vietnamese Dictionary Project)](https://github.com/dynamotn/stardict-vi).
+
 # How Do I Make My Own Yomichan Dictionary?
 
 The resources for making your own Yomichan Dictionary [have been moved here](how-to-make-yomichan-dictionaries.md).
