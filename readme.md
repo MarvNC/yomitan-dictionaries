@@ -13,6 +13,7 @@ Also, if you're interested in creating your own Yomichan dictionary I have liste
 ### [Changelog](https://github.com/MarvNC/yomichan-dictionaries/commits/master/dl)
 
 - [Japanese](#japanese)
+  - [What Dictionaries Should I Install?](#what-dictionaries-should-i-install)
   - [Terms](#terms)
     - [JP-EN Term Dictionaries](#jp-en-term-dictionaries)
     - [Japanese Monolingual Dictionaries](#japanese-monolingual-dictionaries)
@@ -46,11 +47,21 @@ Also, if you're interested in creating your own Yomichan dictionary I have liste
 
 # Japanese
 
-## Terms
-
 Do check out [yomichan-dict-css](https://github.com/themoeway/yomichan-dict-css) for CSS that colors some term dictionaries to make them more immediately distinguishable.
 
 ![example](https://raw.githubusercontent.com/themoeway/yomichan-dict-css/main/example2.png)
+
+## What Dictionaries Should I Install?
+
+If you're a beginner, I recommend following [Shoui's Yomichan Setup](https://learnjapanese.moe/yomichan/) for the bare minumum of dictionaries to install.
+
+After you're a bit more familiar with the language, I highly recommend following [Kuri's Yomichan Setup](https://donkuri.github.io/learn-japanese/setup/#adding-dictionaries) which goes more in depth with the setup process and recommends you install a lot more dictionaries with quite a lot of thought having gone into the selections.
+
+My personal recommendation is to install everything. With every dictionary installed, you know that any word that exists in the Japanese language will almost certainly be in your Yomitan installation, and that you will have a good selection of definitions for almost any word. Most dictionaries on their own do not that high of a breadth of coverage so having less dictionaries installed means more lookups that may lead to confusion when the correct word is not parsed. Some of the dictionaries cover quite different subject areas as well - hover a cultural reference and you will be more likely to find it in the Pixiv dictionary than any other.
+
+TBA: I will upload the dictionaries that I use for easy import into [Yomibaba](https://github.com/forsakeninfinity/yomibaba) soon so that they can all be easily installed at once.
+
+## Terms
 
 ### JP-EN Term Dictionaries
 
