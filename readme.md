@@ -67,15 +67,15 @@ TBA: I will upload the dictionaries that I use for easy import into [Yomibaba](h
 
 #### JMDict
 
-**[Download](https://github.com/Aquafina-water-bottle/jmdict-english-yomichan/)**
+**[Download](https://github.com/MarvNC/jmdict-yomitan)**
 
-The most extensive JP-EN dictionary using data from the [EDRDG Project](https://www.edrdg.org/jmdict/j_jmdict.html) created by Jim Breen. The linked version should be the most up to date, with changes by stephenmk to display crucial information that wasn't previously linked and to improve formatting greatly, adding in example sentences as well.
+The most extensive JP-EN dictionary using data from the [EDRDG Project](https://www.edrdg.org/jmdict/j_jmdict.html) created by Jim Breen. The linked repository has automatic builds every month, so it should always be the most up to date version.
 
 #### JMnedict
 
-**[Download](https://github.com/FooSoft/yomichan/issues/2111#issuecomment-1192238540)**
+**[Download](https://github.com/MarvNC/jmdict-yomitan)**
 
-A dictionary of Japanese proper names. The linked version is advantageous over the one linked on the Yomichan homepage as it clutters the search page much less when searching kana, so it's highly recommended.
+A dictionary of Japanese proper names. The linked version is advantageous over the one linked on the Yomichan homepage as it clutters the search page much less when searching, so it's highly recommended.
 
 #### Shoui Bilingual Dictionaries Collection
 
@@ -264,7 +264,7 @@ Scraped from http://www.practical-japanese.com/ by Malte. Updated version of the
 
 Scraped by Julian and converted by Malte, sourced from [Kanjipedia](https://www.kanjipedia.jp/sakuin/doukunigi/).
 
-This dictionary differentiates the usages of words with the same meaning but different kanji, for example 越える・超える・逾える・踰える.
+This dictionary differentiates the usages of words with the same reading but different kanji, for example 越える・超える・逾える・踰える.
 
 ### Grammar Dictionaries
 
@@ -560,7 +560,7 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 
 #### KANJIDIC
 
-**[Download](https://github.com/themoeway/yomitan/raw/dictionaries/kanjidic_english.zip)**
+**[Download](https://github.com/MarvNC/jmdict-yomitan)**
 
 The [KANJIDIC Project](http://www.edrdg.org/wiki/index.php/KANJIDIC_Project)'s KANJIDIC is the primary English kanji dictionary used in Yomichan and contains information about most kanji, notably English definitions, readings, and some other statistics like stroke count, JLPT, grade level.
 
