@@ -260,6 +260,8 @@ Scraped from http://www.practical-japanese.com/ by Malte. Updated version of the
 
 #### Kanjipedia 同訓異義
 
+[Kanjipedia 同訓異義](https://www.mediafire.com/file/ltnvo3f5ipmr289/%E6%BC%A2%E5%AD%97%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E5%90%8C%E8%A8%93%E7%95%B0%E7%BE%A9.zip/file)
+
 Scraped by Julian and converted by Malte, sourced from [Kanjipedia](https://www.kanjipedia.jp/sakuin/doukunigi/).
 
 This dictionary differentiates the usages of words with the same meaning but different kanji, for example 越える・超える・逾える・踰える.
