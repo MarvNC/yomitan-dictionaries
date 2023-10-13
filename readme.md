@@ -65,11 +65,17 @@ TBA: I will upload the dictionaries that I use for easy import into [Yomibaba](h
 
 ### JP-EN Term Dictionaries
 
+#### Jitendex
+
+**[Jitendex](https://github.com/stephenmk/Jitendex)**
+
+Jitendex is a free and openly licensed Japanese-to-English dictionary built upon data from JMdict and other projects. It is the successor to JMdict for Yomichan.
+
 #### JMDict
 
 **[Download](https://github.com/MarvNC/jmdict-yomitan)**
 
-The most extensive JP-EN dictionary using data from the [EDRDG Project](https://www.edrdg.org/jmdict/j_jmdict.html) created by Jim Breen. The linked repository has automatic builds every month, so it should always be the most up to date version.
+The most extensive JP-EN dictionary using data from the [EDRDG Project](https://www.edrdg.org/jmdict/j_jmdict.html) created by Jim Breen. It is recommended you use Jitendex unless you need a legacy version of the dictionary for technical reasons.
 
 #### JMnedict
 
