@@ -259,45 +259,11 @@ function makeDict(processedData, lightweightDict = false) {
       termEntry.push([definitionStructuredContent]);
     } else {
       let textDefinition = '';
-      // // navigation header
-      // if (articleEntry.parentTree) {
-      //   let parentTree = [...articleEntry.parentTree];
-      //   if (parentTree.length > 5) {
-      //     // get last 5 entries of parent tree
-      //     parentTree = parentTree.slice(-5);
-      //     textDefinition += '⋯⋯';
-      //   }
-      //   for (const parent of parentTree) {
-      //     textDefinition += `${parent} ＞ `;
-      //   }
-      //   // remove last arrow
-      //   textDefinition = textDefinition.slice(0, -3);
-      // }
 
       // // add summary
       if (articleEntry.summary) {
         textDefinition += `${articleEntry.summary.trim()}`;
       }
-
-      // // add related tags 関連記事
-      // if (articleEntry.related_tags) {
-      //   textDefinition += '\n📚関連記事';
-      //   for (const tag of articleEntry.related_tags) {
-      //     textDefinition += ` ${tag}・`;
-      //   }
-      //   // remove last dot
-      //   textDefinition = textDefinition.slice(0, -1);
-      // }
-
-      // // add children
-      // if (articleEntry.children) {
-      //   textDefinition += '\n➜子記事';
-      //   for (const child of articleEntry.children) {
-      //     textDefinition += ` ${child}・`;
-      //   }
-      //   // remove last dot
-      //   textDefinition = textDefinition.slice(0, -1);
-      // }
 
       // add link to article 続きを読む with structured content
       const structuredContent = {
