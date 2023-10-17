@@ -18,6 +18,7 @@ const categryPath = 'category/';
 const articlePath = 'a/';
 const pageJsonPath = (page) => `?json=1&page=${page}`;
 
+const trollCategory = '荒らし記事';
 const linkCharacter = '⧉';
 const relatedArticleCharacter = '📚';
 const childArticleCharacter = '➜';
@@ -70,6 +71,13 @@ function makeDict(processedData, lightweightDict = false) {
     }
 
     const articleEntry = processedData[article];
+
+    // Skip troll entries
+    if (articleEntry.parentTree?.includes(trollCategory)) {
+      console.log('Skipping troll entry', article);
+      continue;
+    }
+
     const termEntry = [];
     termEntry.push(article);
     // reading
@@ -305,7 +313,7 @@ function makeDict(processedData, lightweightDict = false) {
   saveToZip(termBank, `term_bank_${termBankCounter}.json`);
 
   const index = {
-    title: `Pixiv${lightweightDict ? 'Light' : ''}`,
+    title: `Pixiv${lightweightDict ? 'Light' : ''} [${new Date().toISOString().substring(0, 10)}]`,
     revision: `pixiv_${new Date().toISOString()}`,
     format: 3,
     url: 'https://dic.pixiv.net/',
