@@ -33,6 +33,7 @@ let termReadings;
 (async function () {
   const flags = process.argv.slice(2);
   const lightweightDict = flags.includes('--light');
+  console.log('--light flag detected, creating lightweight dict')
   const categoryURLs = await getListOfCategoryURLs();
   await getListOfArticles(categoryURLs);
   await getArticlesSummaries();
