@@ -81,7 +81,11 @@ function makeDict(processedData, lightweightDict = false) {
     const termEntry = [];
     termEntry.push(article);
     // reading
-    const reading = japaneseUtils.normalizeReading(article, termReadings[article] ?? '') ?? '';
+    let reading = japaneseUtils.normalizeReading(article, termReadings[article] ?? '') ?? '';
+    // remove reading for ー readings
+    if (reading === 'ー') {
+      reading = '';
+    }
     termEntry.push(reading);
     // no tags
     termEntry.push('');
