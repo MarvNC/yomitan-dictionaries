@@ -290,7 +290,7 @@ A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot
 
 #### Pixiv
 
-**Update 2023-07-02: This is now the non-lite version with readings for every entry!**
+**Last Updated: 2023-11-24**
 
 **[Download Pixiv](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20Pixiv.zip)** | **[Download PixivLight](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20PixivLight.zip)**
 
