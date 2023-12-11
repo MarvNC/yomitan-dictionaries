@@ -10,8 +10,6 @@ If you're interested in creating your own Yomichan dictionary I have listed some
 
 Visit this repository for some stats/metadata on the dictionaries: [**Yomitan Dictionary Stats**](https://github.com/MarvNC/yomitan-dict-stats)
 
-### [Changelog](https://github.com/MarvNC/yomichan-dictionaries/commits/master/dl)
-
 - [Japanese](#japanese)
   - [Terms](#terms)
     - [JP-EN Term Dictionaries](#jp-en-term-dictionaries)
