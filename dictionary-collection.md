@@ -17,6 +17,7 @@ If you're a beginner, I recommend following [Shoui's Yomichan Setup](https://lea
 - Bilingual:
   - [Bilingual] jitendex-yomichan
   - [Bilingual] NEW 斎藤和英大辞典
+  - [Bilingual] 新和英
 - Grammar:
   - [Grammar] dojg-consolidated-v1_01
 - Frequency:
