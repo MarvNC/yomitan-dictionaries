@@ -4,16 +4,15 @@ A comprehensive collection of Japanese and Chinese dictionaries for Yomichan, in
 
 This repository contains dictionaries for [Yomichan](https://foosoft.net/projects/yomichan/)/[Yomitan](https://github.com/themoeway/yomitan), a Japanese dictionary browser extension for Chrome, Firefox, and Edge. The repository was originally created to host the dictionaries I created, but I have since adapted this repository to serve as a hub for other dictionaries as well. If you have a dictionary you would like to share, please open an issue or pull request.
 
-Please note that this repository is not any kind of ranking or endorsement of the listed dictionaries. I use some but not all of the dictionaries listed. Though in general, I recommend installing as many dictionaries as possible for maximum coverage.
+**[Please check here for information on what dictionaries to install.](./dictionary-collection.md)**
 
-Also, if you're interested in creating your own Yomichan dictionary I have listed some resources here: [**How Do I Make A Yomichan Dictionary?**](how-to-make-yomichan-dictionaries.md)
+If you're interested in creating your own Yomichan dictionary I have listed some resources here: [**How Do I Make A Yomichan Dictionary?**](how-to-make-yomichan-dictionaries.md)
 
-### Check out my [JP Resources](https://github.com/MarvNC/JP-Resources)
+Visit this repository for some stats/info on the dictionaries: [**Yomitan Dictionary Stats**](https://github.com/MarvNC/yomitan-dict-stats)
 
 ### [Changelog](https://github.com/MarvNC/yomichan-dictionaries/commits/master/dl)
 
 - [Japanese](#japanese)
-  - [What Dictionaries Should I Install?](#what-dictionaries-should-i-install)
   - [Terms](#terms)
     - [JP-EN Term Dictionaries](#jp-en-term-dictionaries)
     - [Japanese Monolingual Dictionaries](#japanese-monolingual-dictionaries)
@@ -43,23 +42,12 @@ Also, if you're interested in creating your own Yomichan dictionary I have liste
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
 - [Korean](#korean)
 - [Vietnamese-English](#vietnamese-english)
-- [How Do I Make My Own Yomichan Dictionary?](#how-do-i-make-my-own-yomichan-dictionary)
 
 # Japanese
 
 Do check out [yomichan-dict-css](https://github.com/themoeway/yomichan-dict-css) for CSS that colors some term dictionaries to make them more immediately distinguishable.
 
 ![example](https://raw.githubusercontent.com/themoeway/yomichan-dict-css/main/example2.png)
-
-## What Dictionaries Should I Install?
-
-If you're a beginner, I recommend following [Shoui's Yomichan Setup](https://learnjapanese.moe/yomichan/) for the bare minumum of dictionaries to install.
-
-After you're a bit more familiar with the language, I highly recommend following [Kuri's Yomichan Setup](https://donkuri.github.io/learn-japanese/setup/#adding-dictionaries) which goes more in depth with the setup process and recommends you install a lot more dictionaries with quite a lot of thought having gone into the selections.
-
-My personal recommendation is to install everything. With every dictionary installed, you know that any word that exists in the Japanese language will almost certainly be in your Yomitan installation, and that you will have a good selection of definitions for almost any word. Most dictionaries on their own do not that high of a breadth of coverage so having less dictionaries installed means more lookups that may lead to confusion when the correct word is not parsed. Some of the dictionaries cover quite different subject areas as well - hover a cultural reference and you will be more likely to find it in the Pixiv dictionary than any other.
-
-TBA: I will upload the dictionaries that I use for easy import into [Yomibaba](https://github.com/forsakeninfinity/yomibaba) soon so that they can all be easily installed at once.
 
 ## Terms
 
@@ -876,7 +864,3 @@ Note that there is an alternative [krdict-yomichan](https://github.com/Samuihasu
 **[stardict-vi](https://www.mediafire.com/folder/9ss2pn046fcjo/Vi%E1%BB%87t_-_Anh)**
 
 From [OVDP (Open Vietnamese Dictionary Project)](https://github.com/dynamotn/stardict-vi).
-
-# How Do I Make My Own Yomichan Dictionary?
-
-The resources for making your own Yomichan Dictionary [have been moved here](how-to-make-yomichan-dictionaries.md).
