@@ -12,7 +12,7 @@ Visit this repository for some stats/metadata on the listed dictionaries: [**Yom
 
 ## What Dictionaries Should I Install?
 
-If you're a beginner, I recommend following [Shoui's Yomichan Setup](https://learnjapanese.moe/yomichan/). I would say the bare minimum is:
+If you're a beginner, I recommend following [Shoui's Yomichan Setup](https://learnjapanese.moe/yomichan/). I would say the _bare minimum_ is:
 
 - Bilingual:
   - [Bilingual] jitendex-yomichan
