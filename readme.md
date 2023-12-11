@@ -8,7 +8,7 @@ This repository contains dictionaries for [Yomichan](https://foosoft.net/project
 
 If you're interested in creating your own Yomichan dictionary I have listed some resources here: [**How Do I Make A Yomichan Dictionary?**](how-to-make-yomichan-dictionaries.md)
 
-Visit this repository for some stats/info on the dictionaries: [**Yomitan Dictionary Stats**](https://github.com/MarvNC/yomitan-dict-stats)
+Visit this repository for some stats/metadata on the dictionaries: [**Yomitan Dictionary Stats**](https://github.com/MarvNC/yomitan-dict-stats)
 
 ### [Changelog](https://github.com/MarvNC/yomichan-dictionaries/commits/master/dl)
 

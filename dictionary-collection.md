@@ -8,6 +8,8 @@
 
 Here is a folder containing all the dictionaries that I personally use and would recommend. I usually keep up to date with the latest versions of the dictionaries, and the folder is configured to automatically download and import the regularly updating dictionaries such as Jitendex, JMnedict, and KANJIDIC. If there is a dictionary in the folder that is outdated, please let me know!
 
+Visit this repository for some stats/metadata on the listed dictionaries: [**Yomitan Dictionary Stats**](https://github.com/MarvNC/yomitan-dict-stats)
+
 ## What Dictionaries Should I Install?
 
 If you're a beginner, I recommend following [Shoui's Yomichan Setup](https://learnjapanese.moe/yomichan/), although the site is somewhat outdated with the new dictionaries that have been released since then. I would say the bare minimum is:
