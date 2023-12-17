@@ -85,7 +85,7 @@ My personal recommendation is to install everything. With every dictionary insta
 
 ## Dictionaries Sort Script
 
-If you install a lot of dictionaries, it can be quite the ordeal to change the sort order with the way Yomitan's UI is set up. I have written a script that will automatically sort your dictionaries for you. You can find it here: [**Yomitan Dictionaries Sort Script**](https://raw.githubusercontent.com/MarvNC/yomichan-dictionaries/master/sort-dictionaries.js).
+If you install a lot of dictionaries and/or sync your dictionary collection across multiple devices, it can be quite the ordeal to change the sort order with the way Yomitan's UI is set up. I have written a script that will automatically sort your dictionaries for you. You can find it here: [**Yomitan Dictionaries Sort Script**](https://raw.githubusercontent.com/MarvNC/yomichan-dictionaries/master/sort-dictionaries.js).
 
 To use it, simply copy the script, open the Yomitan options page, open the console, paste the script, and press enter. It will automatically sort your dictionaries for you.
 
