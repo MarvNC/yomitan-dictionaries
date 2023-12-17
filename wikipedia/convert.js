@@ -104,20 +104,28 @@ function parseLineToDefinition(line) {
   let term = resource.split('.dbpedia.org/resource/').pop();
   term = decodeURIComponent(term);
 
+  const reading = getReadingFromDefinition(definition);
+
   /**
    * @type {import('../types').DetailedDefinition}
    */
   const definitionArray = definition.split('\\n').map((line) => line.trim());
 
+  return [term, reading, '', '', 0, definitionArray, 0, ''];
+}
+
+/**
+ * @param {string} definition
+ * @returns {string}
+ */
+function getReadingFromDefinition(definition) {
   const bracketRegex = /[(（]([^)）]*)/g;
   const bracketMatches = bracketRegex.exec(definition);
-  let reading = '';
   if (bracketMatches?.length >= 1) {
     const bracketContent = bracketMatches[1];
-    reading = parseReadingFromBrackets(bracketContent);
+    return parseReadingFromBrackets(bracketContent);
   }
-
-  return [term, reading, '', '', 0, definitionArray, 0, ''];
+  return '';
 }
 
 /**
@@ -131,8 +139,7 @@ function parseReadingFromBrackets(bracketContent) {
 
   const reading = bracketContent.split(commaRegex)[0];
 
-  if (reading.includes('語')) {
-    // console.log(`No reading found in brackets for ${reading}`);
+  if (reading && /[一-龯]/.test(reading)) {
     return '';
   }
 
