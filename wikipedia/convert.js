@@ -67,7 +67,7 @@ async function makeDict(readLineInterface, version) {
   saveToZip(termBank, `term_bank_${termBankCounter}.json`);
 
   const index = {
-    title: `Wikipedia [${version}]`,
+    title: `JA Wikipedia [${version}]`,
     revision: `wikipedia_${new Date().toISOString()}`,
     format: 3,
     url: 'https://ja.wikipedia.org/',
@@ -101,17 +101,30 @@ function parseLineToDefinition(line) {
   // remove last 6 characters
   line = line.slice(0, -6);
   const [resource, definition] = line.split('> <http://www.w3.org/2000/01/rdf-schema#comment> "');
-  let term = resource.split('.dbpedia.org/resource/').pop();
-  term = decodeURIComponent(term);
+  let termSlug = resource.split('.dbpedia.org/resource/').pop();
+  termSlug = decodeURIComponent(termSlug);
+  let termSpecifier = '';
+  let term;
+  if (termSlug.includes('_(')) {
+    termSpecifier = termSlug.split('_(')[1].split(')')[0];
+    term = termSlug.split('_(')[0];
+  } else {
+    term = termSlug;
+  }
 
   const reading = getReadingFromDefinition(definition);
 
   /**
    * @type {import('../types').DetailedDefinition}
    */
-  const definitionArray = definition.split('\\n').map((line) => line.trim());
+  const definitionArray = [];
 
-  return [term, reading, '', '', 0, definitionArray, 0, ''];
+  if (termSpecifier) {
+  }
+
+  const definitionStrings = definition.split('\\n').map((line) => line.trim());
+
+  return [termSlug, reading, '', '', 0, definitionArray, 0, ''];
 }
 
 /**
