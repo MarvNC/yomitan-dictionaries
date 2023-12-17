@@ -338,7 +338,10 @@ div.gloss-sc-div[data-sc-jawiki='red'] {
 }
 ```
 
-> [!WARNING]
+> [!CAUTION]
+> Likely due to the amount of entries in the dictionary, there are issues with the dictionary not deleting properly when you try to delete it from Yomitan. Until this is fixed in Yomitan, you may have to delete it by clicking the 'Delete All' button and reimporting.
+
+> [!IMPORTANT]
 > This dictionary is quite large and will take up ~700MB of storage space after being imported.
 
 ![chrome_First_Love_初恋_-_Wikiwand_-_Google_Chrome_2023-12-17_14-49-34](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/dd99c5c3-d26a-4a9b-9f47-ed1c114c693e)
