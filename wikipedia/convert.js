@@ -238,7 +238,9 @@ function parseReadingFromBrackets(bracketContent) {
   const noKanji = readings.filter((reading) => !kanjiRegex.test(reading));
 
   if (noKanji.length > 0) {
-    return noKanji[0];
+    let reading = noKanji[0];
+    reading = reading.replace(/ /g, '');
+    return reading;
   }
 
   return '';
