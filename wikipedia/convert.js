@@ -105,13 +105,16 @@ Created with https://github.com/MarvNC/yomichan-dictionaries`,
 /**
  *
  * @param {string} line
- * @returns {import('../types').TermInformation/}
+ * @returns {import('../types').TermInformation}
  */
 function parseLineToDefinition(line) {
   // remove last 6 characters
   line = line.slice(0, -6);
   const [resource, definition] = line.split('> <http://www.w3.org/2000/01/rdf-schema#comment> "');
   let termSlug = resource.split('.dbpedia.org/resource/').pop();
+  if (!termSlug) {
+    throw new Error(`Could not parse term slug from ${resource}`);
+  }
   termSlug = decodeURIComponent(termSlug);
   let termSpecifier = '';
   let term;
@@ -125,64 +128,68 @@ function parseLineToDefinition(line) {
   const reading = getReadingFromDefinition(definition);
 
   /**
-   * @type {import('../types').DetailedDefinition}
+   * @type {import('../types').DetailedDefinition[]}
    */
   const definitionArray = [];
+
+  /**
+   * @type {import('../types').StructuredContent}
+   */
+  const sc = [];
 
   if (termSpecifier) {
     /**
      * @type {import('../types').StructuredContent}
      */
-    const sc = {
-      type: 'structured-content',
-      content: {
-        tag: 'span',
-        content: `«${termSpecifier}»`,
-        data: {
-          jawiki: 'red',
-        },
-        style: {
-          fontSize: '1.5em',
-        },
+    const specifierSCNode = {
+      tag: 'span',
+      content: `«${termSpecifier}»`,
+      data: {
+        jawiki: 'red',
+      },
+      style: {
+        fontSize: '1.5em',
       },
     };
 
-    definitionArray.push(sc);
+    sc.push(specifierSCNode);
   }
 
   const definitionStrings = definition.split('\\n').map((line) => line.trim());
-  definitionArray.push(...definitionStrings);
+  sc.push(...definitionStrings);
 
   // add continue reading link to article
   /**
-   * @type {import('../types').StructuredContent}
+   * @type {import('../types').StructuredContentNode}
    */
   const linkSC = {
-    type: 'structured-content',
-    content: {
-      tag: 'ul',
-      content: [
-        {
-          tag: 'li',
-          content: [
-            {
-              tag: 'a',
-              href: `https://ja.wikipedia.org/wiki/${termSlug}`,
-              content: '続きを読む',
-            },
-          ],
-        },
-      ],
-      data: {
-        jawiki: 'continue-reading',
+    tag: 'ul',
+    content: [
+      {
+        tag: 'li',
+        content: [
+          {
+            tag: 'a',
+            href: `https://ja.wikipedia.org/wiki/${termSlug}`,
+            content: '続きを読む',
+          },
+        ],
       },
-      style: {
-        listStyleType: `"${linkCharacter}"`,
-      },
+    ],
+    data: {
+      jawiki: 'continue-reading',
+    },
+    style: {
+      listStyleType: `"${linkCharacter}"`,
     },
   };
 
-  definitionArray.push(linkSC);
+  sc.push(linkSC);
+
+  definitionArray.push({
+    type: 'structured-content',
+    content: sc,
+  });
 
   return [term, reading, '', '', 0, definitionArray, 0, ''];
 }
@@ -194,7 +201,9 @@ function parseLineToDefinition(line) {
 function getReadingFromDefinition(definition) {
   const bracketRegex = /[(（]([^)）]*)/g;
   const bracketMatches = bracketRegex.exec(definition);
+  // @ts-ignore
   if (bracketMatches?.length >= 1) {
+    // @ts-ignore
     const bracketContent = bracketMatches[1];
     return parseReadingFromBrackets(bracketContent);
   }
