@@ -32,6 +32,7 @@ const order = {
   // JA Differentiation
   '使い方の分かる 類語例解辞典': '',
   '漢字ペディア同訓異義': '',
+
   // Other JA-JA
   'デジタル大辞泉': '',
   '旺文社国語辞典 第十一版': '',
@@ -39,7 +40,6 @@ const order = {
   '明鏡国語辞典　第二版': '',
   '大辞林　第四版': '',
   '新選国語辞典　第十版': '',
-  'ハイブリッド新辞林': '',
   '精選版　日本国語大辞典': '',
   
   // Misc JA-JA
@@ -164,7 +164,6 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
       }
 
       if (matched) {
-        console.log(`Matched dictionary: ${name}`);
         newDictionaries.push(dict);
         foundCount++;
         const index = dictionaries.indexOf(dict);
@@ -175,14 +174,14 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
       console.warn(`Found more than one dictionaries for ${key}`);
     }
     if (foundCount === 0) {
-      console.log(`Did not find ${key}`);
+      console.log(`Did not find dictionary: ${key}`);
     }
   }
 
   // Get the remaining dictionaries
   for (const dict of dictionaries) {
     if (dict) {
-      console.warn(`Found ${dict.name} not in order!`);
+      console.warn(`Found dictionary not in sort order: ${dict.name}}`);
       newDictionaries.push(dict);
     }
   }
