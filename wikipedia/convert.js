@@ -1,3 +1,5 @@
+// TODO: Fix the definition array to be all structured content to avoid random lists in yomitan
+
 const fs = require('fs');
 const JSZip = require('jszip');
 const path = require('path');
@@ -207,12 +209,15 @@ function parseReadingFromBrackets(bracketContent) {
   if (!bracketContent) return '';
 
   const commaRegex = /,|、/g;
+  const kanjiRegex = /[一-龯]/g;
 
-  const reading = bracketContent.split(commaRegex)[0];
+  const readings = bracketContent.split(commaRegex);
 
-  if (reading && /[一-龯]/.test(reading)) {
-    return '';
+  const noKanji = readings.filter((reading) => !kanjiRegex.test(reading));
+
+  if (noKanji.length > 0) {
+    return noKanji[0];
   }
 
-  return reading;
+  return '';
 }
