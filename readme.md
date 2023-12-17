@@ -91,9 +91,6 @@ To use it, simply copy the script, open the Yomitan options page, open the conso
 
 By default, the sort order used is the one that I use and it supports all the dictionaries in the folder. If you want to use a different sort order, you can edit the script to change the `order` variable at the top.
 
-> [!CAUTION]
-> Pasting random scripts into your browser console is a security risk. You can scroll through this script as it's relatively short and see that it's safe, but in general you should be cautious about what you paste into your console.
-
 # Japanese
 
 Do check out [yomichan-dict-css](https://github.com/themoeway/yomichan-dict-css) for CSS that colors some term dictionaries to make them more immediately distinguishable.
