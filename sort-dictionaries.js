@@ -2,6 +2,11 @@
 By Marv for Yomitan
 From https://github.com/MarvNC/yomichan-dictionaries
 Last Updated 2023-12-16
+
+Instructions:
+Paste this into the browser console of the Yomitan options page and hit enter.
+To match a dictionary by a prefix, set the value of the dictionary to 'prefix' in the order object.
+The order object is in order of priority, so the higher up the dictionary is, the higher the priority.
 */
 
 // prettier-ignore
