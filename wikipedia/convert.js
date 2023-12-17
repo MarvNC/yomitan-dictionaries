@@ -8,7 +8,7 @@ const readline = require('readline');
 const TERMS_PER_JSON = 10000;
 const linkCharacter = '⧉';
 
-const outputZipName = '[Mono Encyclopedia] Wikipedia.zip';
+const outputZipName = '[Mono Encyclopedia] JA Wikipedia.zip';
 
 (async () => {
   // Read argument for file path
