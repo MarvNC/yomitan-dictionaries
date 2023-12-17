@@ -124,6 +124,7 @@ function parseLineToDefinition(line) {
   } else {
     term = termSlug;
   }
+  term = term.replace(/_/g, ' ');
 
   const reading = getReadingFromDefinition(definition);
 
