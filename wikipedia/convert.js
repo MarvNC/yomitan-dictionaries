@@ -2,7 +2,9 @@ const fs = require('fs');
 const JSZip = require('jszip');
 const path = require('path');
 const readline = require('readline');
+
 const TERMS_PER_JSON = 10000;
+const linkCharacter = '⧉';
 
 const outputZipName = '[Mono Encyclopedia] Wikipedia.zip';
 
@@ -120,11 +122,61 @@ function parseLineToDefinition(line) {
   const definitionArray = [];
 
   if (termSpecifier) {
+    /**
+     * @type {import('../types').StructuredContent}
+     */
+    const sc = {
+      type: 'structured-content',
+      content: {
+        tag: 'span',
+        content: `«${termSpecifier}»`,
+        data: {
+          jawiki: 'red',
+        },
+        style: {
+          fontSize: '1.5em',
+        },
+      },
+    };
+
+    definitionArray.push(sc);
   }
 
   const definitionStrings = definition.split('\\n').map((line) => line.trim());
+  definitionArray.push(...definitionStrings);
 
-  return [termSlug, reading, '', '', 0, definitionArray, 0, ''];
+  // add continue reading link to article
+  /**
+   * @type {import('../types').StructuredContent}
+   */
+  const linkSC = {
+    type: 'structured-content',
+    content: {
+      tag: 'ul',
+      content: [
+        {
+          tag: 'li',
+          content: [
+            {
+              tag: 'a',
+              href: `https://ja.wikipedia.org/wiki/${termSlug}`,
+              content: '続きを読む',
+            },
+          ],
+        },
+      ],
+      data: {
+        jawiki: 'continue-reading',
+      },
+      style: {
+        listStyleType: `"${linkCharacter}"`,
+      },
+    },
+  };
+
+  definitionArray.push(linkSC);
+
+  return [term, reading, '', '', 0, definitionArray, 0, ''];
 }
 
 /**
