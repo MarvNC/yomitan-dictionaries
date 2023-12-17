@@ -10,16 +10,18 @@ const order = {
   'JPDB': '',
   'Innocent Ranked': '',
   'Novels': '',
+  'Youtube': '',
   'BCCWJ-LUW': '',
   'CC100': '',
   '青空文庫熟語': '',
-  'Youtube': '',
   'Wikipedia': '',
   
   // JA Pitch
   'NHK': '',
-  '大辞林第四版': '',
   '大辞泉': '',
+  '新明解第八版': '',
+  '大辞林第四版': '',
+  '三省堂国語辞典第八番': '',
   
   // Primary JA-JA
   '三省堂国語辞典　第八版': '',
