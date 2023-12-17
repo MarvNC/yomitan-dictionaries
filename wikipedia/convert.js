@@ -74,6 +74,12 @@ async function makeDict(readLineInterface, version) {
     format: 3,
     url: 'https://ja.wikipedia.org/',
     description: `Wikipedia short abstracts from the DBPedia dataset available at https://databus.dbpedia.org/dbpedia/text/short-abstracts.
+
+Recommended custom CSS:
+span.gloss-sc-span[data-sc-jawiki=red] {
+  color: #e5007f;
+}
+
 Created with https://github.com/MarvNC/yomichan-dictionaries`,
     author: 'Wikipedians, DBPedia, Marv',
     attribution: 'Wikipedia',
