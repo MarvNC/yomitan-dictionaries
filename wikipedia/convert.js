@@ -78,7 +78,7 @@ async function makeDict(readLineInterface, version) {
     description: `Wikipedia short abstracts from the DBPedia dataset available at https://databus.dbpedia.org/dbpedia/text/short-abstracts.
 
 Recommended custom CSS:
-span.gloss-sc-span[data-sc-jawiki=red] {
+div.gloss-sc-span[data-sc-jawiki=red] {
   color: #e5007f;
 }
 
@@ -142,7 +142,7 @@ function parseLineToDefinition(line) {
      * @type {import('../types').StructuredContent}
      */
     const specifierSCNode = {
-      tag: 'span',
+      tag: 'div',
       content: `«${termSpecifier}»`,
       data: {
         jawiki: 'red',
@@ -156,7 +156,20 @@ function parseLineToDefinition(line) {
   }
 
   const definitionStrings = definition.split('\\n').map((line) => line.trim());
-  sc.push(...definitionStrings);
+  /**
+   * @type {import('../types').StructuredContentNode}
+   */
+  const definitionUList = {
+    tag: 'ul',
+    content: definitionStrings.map((definitionString) => ({
+      tag: 'li',
+      content: definitionString,
+    })),
+    data: {
+      jawiki: 'abstract',
+    },
+  };
+  sc.push(definitionUList);
 
   // add continue reading link to article
   /**
