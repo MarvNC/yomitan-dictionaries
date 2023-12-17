@@ -1,5 +1,14 @@
 I will be keeping track of the changes made to the dictionaries in the folder here. Keep in mind that Jitendex, JMnedict, and KANJIDIC are updated automatically daily now, so while in the past I would make changelog entries for those dictionaries, that is no longer necessary.
 
+## 2023-12-16
+- Update dictionary order
+- Add
+  - [Freq] Wikipedia v2
+  - [Pitch] 三省堂第八版
+  - [Pitch] 新明解第八版
+- Remove
+  - ハイブリッド新辞林
+
 ## 2023-11-25
 
 - Update
