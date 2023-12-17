@@ -330,6 +330,10 @@ div.gloss-sc-div[data-sc-jawiki='red'] {
 > [!WARNING]
 > This dictionary is quite large and will take up ~700MB of storage space after being imported.
 
+![chrome_First_Love_初恋_-_Wikiwand_-_Google_Chrome_2023-12-17_14-49-34](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/dd99c5c3-d26a-4a9b-9f47-ed1c114c693e)
+![chrome_First_Love_初恋_-_Wikiwand_-_Google_Chrome_2023-12-17_14-49-50](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/743d05d2-705b-4af1-aa89-173862e5900d)
+
+
 #### Pixiv
 
 **Last Updated: 2023-11-24**
