@@ -78,7 +78,7 @@ async function makeDict(readLineInterface, version) {
     description: `Wikipedia short abstracts from the DBPedia dataset available at https://databus.dbpedia.org/dbpedia/text/short-abstracts.
 
 Recommended custom CSS:
-div.gloss-sc-span[data-sc-jawiki=red] {
+div.gloss-sc-div[data-sc-jawiki=red] {
   color: #e5007f;
 }
 
