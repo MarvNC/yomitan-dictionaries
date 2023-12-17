@@ -326,7 +326,7 @@ A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot
 
 #### JA Wikipedia
 
-**[Download JA Wikipedia](https://drive.google.com/open?id=12_LR6gYZ9kVKtJsqGimNHUDJTaYGomd6&usp=drive_fs)**
+**[Download JA Wikipedia](https://drive.google.com/open?id=12cNjVi6jl7t-7YR3Prleg9jqqBSlZ1e6&usp=drive_fs)**
 
 A conversion of the [DBPedia](https://dbpedia.org/) short-abstract dumps of [JA Wikipedia](https://ja.wikipedia.org/) for Yomitan. Includes 1.2 million entries with a short abstract for each article. As it is Wikipedia you know that just about any proper noun will be covered in this dictionary. Unfortunately there are no new dumps of DBPedia after December 2022, so regular updates will not be possible until DBPedia starts updating again.
 
