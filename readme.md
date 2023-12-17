@@ -315,6 +315,21 @@ A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot
 
 ### Other Term Dictionaries
 
+#### JA Wikipedia
+
+A conversion of the [DBPedia](https://dbpedia.org/) short-abstract dumps of [JA Wikipedia](https://ja.wikipedia.org/) for Yomitan. Includes 1.2 million entries with a short abstract for each article. As it is Wikipedia you know that just about any proper noun will be covered in this dictionary. Unfortunately there are no new dumps of DBPedia after December 2022, so regular updates will not be possible until DBPedia starts updating again.
+
+Recommended custom CSS:
+
+```css
+div.gloss-sc-div[data-sc-jawiki='red'] {
+  color: #e5007f;
+}
+```
+
+> [!WARNING]
+> This dictionary is quite large and will take up ~700MB of storage space after being imported.
+
 #### Pixiv
 
 **Last Updated: 2023-11-24**
