@@ -1,6 +1,6 @@
 # Yomichan Dictionaries <!-- omit in toc -->
 
-A comprehensive collection of Japanese and Chinese dictionaries for Yomichan, including terms, kanji/hanzi info, frequency, and variants with both monolingual and bilingual dictionaries available.
+A comprehensive collection of Japanese and Chinese dictionaries for Yomichan/Yomitan, including terms, kanji/hanzi info, frequency, and variants with both monolingual and bilingual dictionaries available.
 
 This repository contains dictionaries for [Yomichan](https://foosoft.net/projects/yomichan/)/[Yomitan](https://github.com/themoeway/yomitan), a Japanese dictionary browser extension for Chrome, Firefox, and Edge. The repository was originally created to host the dictionaries I created, but I have since adapted this repository to serve as a hub for other dictionaries as well. If you have a dictionary you would like to share, please open an issue or pull request.
 
@@ -12,6 +12,7 @@ Visit this repository for some stats/metadata on the dictionaries: [**Yomitan Di
 
 - [Dictionary Collection](#dictionary-collection)
   - [What Dictionaries Should I Install?](#what-dictionaries-should-i-install)
+  - [Dictionaries Sort Script](#dictionaries-sort-script)
 - [Japanese](#japanese)
   - [Terms](#terms)
     - [JP-EN Term Dictionaries](#jp-en-term-dictionaries)
@@ -81,6 +82,14 @@ If you're a beginner, I recommend following [Shoui's Yomichan Setup](https://lea
 If you're a bit more familiar with the language, I highly recommend following [Kuri's Yomichan Setup](https://donkuri.github.io/learn-japanese/setup/#adding-dictionaries) which goes in depth with the technical setup process and recommends you install around thirty dictionaries, with a lot of thought having been put into the selections.
 
 My personal recommendation is to install everything. With every dictionary installed, you know that any (actual) word you come across will almost certainly be in your Yomitan installation, and that you will have a good selection of definitions for almost any word. Most dictionaries on their own do not that high of a breadth of coverage so having less dictionaries installed means you may run into confusion when you fail to look up a word. Some of the dictionaries cover quite different subject areas as well - hover a cultural reference and you will be more likely to find it in the Pixiv dictionary than any other.
+
+## Dictionaries Sort Script
+
+If you install a lot of dictionaries and/or sync your dictionary collection across multiple devices, it can be quite the ordeal to change the sort order with the way Yomitan's UI is set up. I have written a script that will automatically sort your dictionaries for you. You can find it here: [**Yomitan Dictionaries Sort Script**](https://raw.githubusercontent.com/MarvNC/yomichan-dictionaries/master/sort-dictionaries.js).
+
+To use it, simply copy the script, open the Yomitan options page, open the console, paste the script, and press enter. It will automatically sort your dictionaries for you.
+
+By default, the sort order used is the one that I use and it supports all the dictionaries in the folder. If you want to use a different sort order, you can edit the script to change the `order` variable at the top.
 
 # Japanese
 
