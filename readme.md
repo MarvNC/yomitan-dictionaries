@@ -356,7 +356,7 @@ div.gloss-sc-div[data-sc-jawiki='red'] {
 
 A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) encyclopedia of over 500,000 entries, containing a brief summary and links to related articles for each entry. This dictionary is quite extensive and contains entries for a vast amount of terms that would not be in traditional dictionaries. For instance, 和泉妃愛 has an entry as does likely every notable VTuber, media franchise, and mountain in Japan.
 
-> **Warning**
+> [!IMPORTANT]
 > This dictionary is quite large and may take a long time to import.
 
 - If performance of your device is an issue and you are unable to import the full Pixiv dictionary, you can use the PixivLight version which has most of the extra information like categorization and related articles stripped out, leaving behind only the short summary and a link to the main Pixiv article. This version is much smaller and should import without crashing Yomichan on mobile phones and ereaders.
@@ -826,7 +826,7 @@ A general Chinese frequency dictionary that is likely based off of "the chinese 
 
 See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) for CSS used to reduce the clutter included by default in Yomichan.
 
-> **Warning**
+> [!NOTE]
 > The default kanji stroke order font included with Yomichan is made for kanji stroke orders, and as thus will contain incorrect glyphs and stroke orders for Chinese that may be misleading. You can change this by using some CSS:
 
 ```css
