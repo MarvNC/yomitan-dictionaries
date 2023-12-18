@@ -328,21 +328,22 @@ A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot
 
 **[Download JA Wikipedia](https://drive.google.com/open?id=12cNjVi6jl7t-7YR3Prleg9jqqBSlZ1e6&usp=drive_fs)**
 
-A conversion of the [DBPedia](https://dbpedia.org/) short-abstract dumps of [JA Wikipedia](https://ja.wikipedia.org/) for Yomitan. Includes 1.2 million entries with a short abstract for each article. As it is Wikipedia you know that just about any proper noun will be covered in this dictionary. Unfortunately there are no new dumps of DBPedia after December 2022, so regular updates will not be possible until DBPedia starts updating again.
+A conversion of the [DBPedia](https://dbpedia.org/) short-abstract dumps of [JA Wikipedia](https://ja.wikipedia.org/) for Yomitan. This dictionary features over 1.2 million entries with each entry containing the abstract and a link to the Wikipedia article. Unfortunately there are no dumps of DBPedia after December 2022, so regular updates will not be possible until DBPedia starts updating again.
 
-Recommended custom CSS:
+Recommended custom CSS to add to the `Configure custom CSS…` section of the options page:
 
 ```css
+/* JA Wikipedia */
 div.gloss-sc-div[data-sc-jawiki='red'] {
   color: #e5007f;
 }
 ```
 
 > [!CAUTION]
-> Likely due to the amount of entries in the dictionary, there are issues with the dictionary not deleting properly when you try to delete it from Yomitan. Until this is fixed in Yomitan, you may have to delete it by clicking the 'Delete All' button and reimporting.
+> Due to the size of the dictionary, there are issues with being unable to delete the dictionary from Yomitan. This may be fixed soon, but in the meantime you may have to delete it by clicking the 'Delete All' button and reimporting.
 
 > [!IMPORTANT]
-> This dictionary is quite large and will take up ~700MB of storage space after being imported.
+> This dictionary is quite large and may use up to 1GB of storage space after being imported.
 
 ![chrome_First_Love_初恋_-_Wikiwand_-_Google_Chrome_2023-12-17_14-49-34](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/dd99c5c3-d26a-4a9b-9f47-ed1c114c693e)
 ![chrome_First_Love_初恋_-_Wikiwand_-_Google_Chrome_2023-12-17_14-49-50](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/743d05d2-705b-4af1-aa89-173862e5900d)
