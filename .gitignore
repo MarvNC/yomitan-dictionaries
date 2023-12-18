@@ -14,3 +14,4 @@ aozoraBunko/aozora-kanji-frequency.txt
 wikipediaFreq/wikipedia.json
 nico-pixiv-dict/pixivReadings.json
 nico-pixiv-dict/pixivSummaries.json
+*.ttl
