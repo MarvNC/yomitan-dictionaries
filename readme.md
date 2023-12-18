@@ -351,7 +351,7 @@ div.gloss-sc-div[data-sc-jawiki='red'] {
 ```
 
 > [!CAUTION]
-> Due to the size of the dictionary, there are issues with being unable to delete the dictionary from Yomitan. This may be fixed soon, but in the meantime you may have to delete it by clicking the 'Delete All' button and reimporting.
+> Due to the size of the dictionary, there are currently issues with being unable to delete the dictionary from Yomitan. This may be fixed soon, but in the meantime you will have to delete it by clicking the 'Delete All' button.
 
 > [!IMPORTANT]
 > This dictionary is quite large and may use up to 1GB of storage space after being imported.
