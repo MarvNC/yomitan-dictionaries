@@ -63,3 +63,7 @@ If you want to use VSCode to validate schemas, here's the relevant settings JSON
 ## Conjugation
 
 For Japanese terms to be conjugated by Yomichan, they need to have an appropriate part of speech tag (as can be seen in the term bank schema). The part of speech labels are documented on the [official JMDict page here](http://www.edrdg.org/jmdictdb/cgi-bin/edhelp.py?svc=jmdict&sid=#kw_pos). If you're making a Japanese dictionary without too many terms, you might be able to simply copy the parts of speech from JMDict as long as the terms mostly overlap. I have developed an [npm package](https://www.npmjs.com/package/yomichan-dict-reader) that can help with stealing conjugations from JMDict - you can see an example of `getDeinflectorsForTermReading` in the [logic used to create the JP-Mongolian dictionary](https://github.com/MarvNC/yomichan-dictionaries/blob/master/mongolian/scrape.js).
+
+## Types
+
+For dealing with term dictionary structured content in JS/TS, you may find [types.d.ts](./types.d.ts) useful for type checking.
