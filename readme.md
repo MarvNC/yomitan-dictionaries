@@ -254,6 +254,17 @@ Converted by dictionary anon, this dictionary has nice modern formatting.
 
 Converted by dictionary anon, this dictionary has nice modern formatting.
 
+Recommended custom CSS:
+```css
+li[data-dictionary^='新選国語辞典'] th,
+span[data-sc-shinsenkoku10='warichu'] {
+  white-space: nowrap;
+}
+span[data-sc-shinsenkoku10='red'] {
+  color: #e5007f;
+}
+```
+
 <details>
   <summary>Images (click to expand)</summary>
 
