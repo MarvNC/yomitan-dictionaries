@@ -1,5 +1,16 @@
 I will be keeping track of the changes made to the dictionaries in the folder here. Keep in mind that Jitendex, JMnedict, and KANJIDIC are updated automatically daily now, so while in the past I would make changelog entries for those dictionaries, that is no longer necessary.
 
+## 2023-12-18
+- Add
+  - [JA-JA] 漢検 漢字辞典
+  - [JA-JA Kanji] 漢字林
+  - [JA-JA] 福日木健二字熟語
+  - [JA-JA Kanji] 漢字ペディア
+  - [JA-JA] 全訳漢辞海
+  - [JA-JA] KO字源
+  - [JA-JA Yoji] YOJI-JUKUGO
+  - [ZH-ZH Hanzi] 康熙字典
+  - [ZH-ZH] 辭源
 
 ## 2023-12-17
 - Add

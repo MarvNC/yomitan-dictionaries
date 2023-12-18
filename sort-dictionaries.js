@@ -9,6 +9,11 @@ To match a dictionary by a prefix, set the value of the dictionary to 'prefix' i
 The order object is in order of priority, so the higher up the dictionary is, the higher the priority.
 */
 
+/**
+ * Set this to the number of the profile to edit.
+ */
+const profileToEdit = 0;
+
 // prettier-ignore
 const order = {
   // JA Frequency
@@ -64,6 +69,14 @@ const order = {
   'weblio古語辞典': '',
   '全国方言辞典': '',
   '新語時事用語辞典': '',
+  // JA (Rare)
+  '漢検 漢字辞典': '',
+  '漢字林': '',
+  '福日木健二字熟語': '',
+  '漢字ペディア': '',
+  '全訳漢辞海': '',
+  'KO字源': '',
+  'YOJI-JUKUGO': '',
   
   // JA-EN
   'Jitendex': 'prefix',
@@ -95,6 +108,14 @@ const order = {
   'TheKanjiMap Kanji Radicals/Composition': '',
   'Wiktionary漢字': '',
   
+  // ZH-HK-EN
+  'CantoDict': '',
+  'Canto CEDICT': '',
+  'Words.hk C-E FS': '',
+  'Words.hk C-C FS': '',
+  'CE Wiktionary': '',
+  'CC-Canto': '',
+
   // ZH Hanzi Info
   'ZH Wiktionary Hanzi': '',
   
@@ -123,21 +144,18 @@ const order = {
   '萌典': '',
   '譯典通英漢雙向字典': '',
   '现代汉语规范词典': '',
-  
-  // ZH-HK-EN
-  'CantoDict': '',
-  'Canto CEDICT': '',
-  'Words.hk C-E FS': '',
-  'Words.hk C-C FS': '',
-  'CE Wiktionary': '',
-  'CC-Canto': '',
-  };
+  '康熙字典': '',
+  '辭源': '',
+};
 
 import('./js/pages/settings/settings-controller.js').then(async (SettingsController) => {
   /**
    * @type {import('./ext/js/pages/settings/settings-controller.js').SettingsController} SettingsController
    */
   const settingsController = new SettingsController.SettingsController();
+
+  settingsController.profileIndex = profileToEdit;
+
   /**
    * @type {import('./types/ext/settings').ProfileOptions} ProfileOptions
    */
