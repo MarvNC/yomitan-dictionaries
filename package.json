@@ -9,5 +9,8 @@
     "qs": "^6.11.1",
     "word-wrap": "^1.2.3",
     "yomichan-dict-reader": "^1.2.2"
+  },
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.78"
   }
 }
