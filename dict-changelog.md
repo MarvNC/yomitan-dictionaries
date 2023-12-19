@@ -1,5 +1,13 @@
 I will be keeping track of the changes made to the dictionaries in the folder here. Keep in mind that Jitendex, JMnedict, and KANJIDIC are updated automatically daily now, so while in the past I would make changelog entries for those dictionaries, that is no longer necessary.
 
+## 2023-12-19
+- Add
+  - [ZH-EN] CC-CEDICT
+  - [Hanzi] CC-CEDICT.Hanzi
+- Remove
+  - [ZH-EN] CEDICT
+    - Outdated
+
 ## 2023-12-18
 - Add
   - [JA-JA] 漢検 漢字辞典
