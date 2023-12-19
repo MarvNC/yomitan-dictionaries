@@ -1,16 +1,26 @@
 # Yomichan Dictionaries <!-- omit in toc -->
 
-A comprehensive collection of Japanese and Chinese dictionaries for Yomichan/Yomitan, including terms, kanji/hanzi info, frequency, and variants with both monolingual and bilingual dictionaries available.
+A comprehensive collection of Japanese and Chinese dictionaries for Yomichan/Yomitan, including
+terms, kanji/hanzi info, frequency, and variants with both monolingual and bilingual dictionaries
+available.
 
-This repository contains dictionaries for [Yomichan](https://foosoft.net/projects/yomichan/)/[Yomitan](https://github.com/themoeway/yomitan), a Japanese dictionary browser extension for Chrome, Firefox, and Edge. The repository was originally created to host the dictionaries I created, but I have since adapted this repository to serve as a hub for other dictionaries as well. If you have a dictionary you would like to share, please open an issue or pull request.
+This repository contains dictionaries for
+[Yomichan](https://foosoft.net/projects/yomichan/)/[Yomitan](https://github.com/themoeway/yomitan),
+a Japanese dictionary browser extension for Chrome, Firefox, and Edge. The repository was originally
+created to host the dictionaries I created, but I have since adapted this repository to serve as a
+hub for other dictionaries as well. If you have a dictionary you would like to share, please open an
+issue or pull request.
 
 **[Please check here for information on what dictionaries to install.](#dictionary-collection)**
 
 My related dictionary resources:
 
 - [**How Do I Make A Yomichan Dictionary?**](how-to-make-yomichan-dictionaries.md)
-- [**Yomitan Dictionary Stats**](https://github.com/MarvNC/yomitan-dict-stats) - Information such as metadata and entry counts for many Yomichan dictionaries.
-- [**Yomichan Dictionary Builder**](https://github.com/MarvNC/yomichan-dict-builder/) - A node package I built to help with making dictionaries. It greatly simplifies the process of making dictionaries, please try it out if you use TypeScript or JavaScript.
+- [**Yomitan Dictionary Stats**](https://github.com/MarvNC/yomitan-dict-stats) - Information such as
+  metadata and entry counts for many Yomichan dictionaries.
+- [**Yomichan Dictionary Builder**](https://github.com/MarvNC/yomichan-dict-builder/) - A node
+  package I built to help with making dictionaries. It greatly simplifies the process of making
+  dictionaries, please try it out if you use TypeScript or JavaScript.
 
 ### Table of Contents <!-- omit in toc -->
 
@@ -54,14 +64,22 @@ My related dictionary resources:
 
 **[Changelog](dict-changelog.md)**
 
-Here is a folder containing all the Japanese, Mandarin, and Cantonese dictionaries that I personally use and would recommend. I usually keep up to date with the latest versions of the dictionaries, and the folder is configured to automatically download and import the regularly updating dictionaries such as Jitendex, JMnedict, and KANJIDIC. If there is a dictionary in the folder that is outdated, please let me know!
+Here is a folder containing all the Japanese, Mandarin, and Cantonese dictionaries that I personally
+use and would recommend. I usually keep up to date with the latest versions of the dictionaries, and
+the folder is configured to automatically download and import the regularly updating dictionaries
+such as Jitendex, JMnedict, and KANJIDIC. If there is a dictionary in the folder that is outdated,
+please let me know!
 
-> [!IMPORTANT]
-> The collection is not complete as there are some dictionaries I have chosen not to install. For these as well as older and alternate versions of dictionaries, I recommend checking out [Shoui's Dictionary Collection](https://learnjapanese.moe/resources/#dictionaries).
+<!-- prettier-ignore -->
+> [!IMPORTANT] 
+> The collection is not complete as there are some dictionaries I have chosen not to
+> install. For these as well as older and alternate versions of dictionaries, I recommend checking
+> out [Shoui's Dictionary Collection](https://learnjapanese.moe/resources/#dictionaries).
 
 ## What Dictionaries Should I Install?
 
-If you're a beginner, I recommend following [Shoui's Yomichan Setup](https://learnjapanese.moe/yomichan/). I would say the _bare minimum_ is:
+If you're a beginner, I recommend following
+[Shoui's Yomichan Setup](https://learnjapanese.moe/yomichan/). I would say the _bare minimum_ is:
 
 - Bilingual:
   - [Bilingual] jitendex-yomichan
@@ -73,7 +91,9 @@ If you're a beginner, I recommend following [Shoui's Yomichan Setup](https://lea
   - [Freq] JPDB_2022-05-10T03_27_02.930Z
   - [Freq] Freq_CC100
   - [Freq] BCCWJ-LUW
-- Monolingual but still useful for coverage to a beginner! If a word shows up in one of these dictionaries but not an English one, you can just web search/translate to find out more information.
+- Monolingual but still useful for coverage to a beginner! If a word shows up in one of these
+  dictionaries but not an English one, you can just web search/translate to find out more
+  information.
   - [Mono] 実用日本語表現辞典
   - [Mono] デジタル大辞泉
   - [Mono Encyclopedia] Pixiv
@@ -83,21 +103,37 @@ If you're a beginner, I recommend following [Shoui's Yomichan Setup](https://lea
 - Pitch accent
   - [Pitch] 大辞泉
 
-If you're a bit more familiar with the language, I highly recommend following [Kuri's Yomichan Setup](https://donkuri.github.io/learn-japanese/setup/#adding-dictionaries) which goes in depth with the technical setup process and recommends you install around thirty dictionaries, with a lot of thought having been put into the selections.
+If you're a bit more familiar with the language, I highly recommend following
+[Kuri's Yomichan Setup](https://donkuri.github.io/learn-japanese/setup/#adding-dictionaries) which
+goes in depth with the technical setup process and recommends you install around thirty
+dictionaries, with a lot of thought having been put into the selections.
 
-My personal recommendation is to install everything. With every dictionary installed, you know that any (actual) word you come across will almost certainly be in your Yomitan installation, and that you will have a good selection of definitions for almost any word. Most dictionaries on their own do not that high of a breadth of coverage so having less dictionaries installed means you may run into confusion when you fail to look up a word. Some of the dictionaries cover quite different subject areas as well - hover a cultural reference and you will be more likely to find it in the Pixiv dictionary than any other.
+My personal recommendation is to install everything. With every dictionary installed, you know that
+any (actual) word you come across will almost certainly be in your Yomitan installation, and that
+you will have a good selection of definitions for almost any word. Most dictionaries on their own do
+not that high of a breadth of coverage so having less dictionaries installed means you may run into
+confusion when you fail to look up a word. Some of the dictionaries cover quite different subject
+areas as well - hover a cultural reference and you will be more likely to find it in the Pixiv
+dictionary than any other.
 
 ## Dictionaries Sort Script
 
-If you install a lot of dictionaries and/or sync your dictionary collection across multiple devices, it can be quite the ordeal to change the sort order with the way Yomitan's UI is set up. I have written a script that will automatically sort your dictionaries for you. You can find it here: [**Yomitan Dictionaries Sort Script**](https://raw.githubusercontent.com/MarvNC/yomichan-dictionaries/master/sort-dictionaries.js).
+If you install a lot of dictionaries and/or sync your dictionary collection across multiple devices,
+it can be quite the ordeal to change the sort order with the way Yomitan's UI is set up. I have
+written a script that will automatically sort your dictionaries for you. You can find it here:
+[**Yomitan Dictionaries Sort Script**](https://raw.githubusercontent.com/MarvNC/yomichan-dictionaries/master/sort-dictionaries.js).
 
-To use it, simply copy the script, open the Yomitan options page, open the console, paste the script, and press enter. It will automatically sort your dictionaries for you.
+To use it, simply copy the script, open the Yomitan options page, open the console, paste the
+script, and press enter. It will automatically sort your dictionaries for you.
 
-By default, the sort order used is the one that I use and it supports all the dictionaries in the folder. If you want to use a different sort order, you can edit the script to change the `order` variable at the top.
+By default, the sort order used is the one that I use and it supports all the dictionaries in the
+folder. If you want to use a different sort order, you can edit the script to change the `order`
+variable at the top.
 
 # Japanese
 
-Do check out [yomichan-dict-css](https://github.com/themoeway/yomichan-dict-css) for CSS that colors some term dictionaries to make them more immediately distinguishable.
+Do check out [yomichan-dict-css](https://github.com/themoeway/yomichan-dict-css) for CSS that colors
+some term dictionaries to make them more immediately distinguishable.
 
 ![example](https://raw.githubusercontent.com/themoeway/yomichan-dict-css/main/example2.png)
 
@@ -109,35 +145,44 @@ Do check out [yomichan-dict-css](https://github.com/themoeway/yomichan-dict-css)
 
 **[Jitendex](https://github.com/stephenmk/Jitendex)**
 
-Jitendex is a free and openly licensed Japanese-to-English dictionary built upon data from JMdict and other projects. It is the successor to JMdict for Yomichan.
+Jitendex is a free and openly licensed Japanese-to-English dictionary built upon data from JMdict
+and other projects. It is the successor to JMdict for Yomichan.
 
 #### JMDict
 
 **[Download](https://github.com/MarvNC/jmdict-yomitan)**
 
-The most extensive JP-EN dictionary using data from the [EDRDG Project](https://www.edrdg.org/jmdict/j_jmdict.html) created by Jim Breen. It is recommended you use Jitendex unless you need a legacy version of the dictionary for technical reasons.
+The most extensive JP-EN dictionary using data from the
+[EDRDG Project](https://www.edrdg.org/jmdict/j_jmdict.html) created by Jim Breen. It is recommended
+you use Jitendex unless you need a legacy version of the dictionary for technical reasons.
 
 #### JMnedict
 
 **[Download](https://github.com/MarvNC/jmdict-yomitan)**
 
-A dictionary of Japanese proper names. The linked version is advantageous over the one linked on the Yomichan homepage as it clutters the search page much less when searching, so it's highly recommended.
+A dictionary of Japanese proper names. The linked version is advantageous over the one linked on the
+Yomichan homepage as it clutters the search page much less when searching, so it's highly
+recommended.
 
 #### Shoui Bilingual Dictionaries Collection
 
 **[Download](https://learnjapanese.moe/resources/#dictionaries)**
 
-There are various bilingual dictionaries in Shoui's bilingual folder. Check the readme in the folder for further information.
+There are various bilingual dictionaries in Shoui's bilingual folder. Check the readme in the folder
+for further information.
 
 - 新和英 (Recommended)
-  - Same as the 研究社　新和英大辞典　第５版 with better deconjugation but lacking some additional sentences.
+  - Same as the 研究社　新和英大辞典　第５版 with better deconjugation but lacking some additional
+    sentences.
 - 研究社　新和英大辞典　第５版
 
 #### New Saitou Japanese-English Dictionary
 
 **[Download NEW 斎藤和英大辞典](https://cdn.discordapp.com/attachments/563409909627224095/1093416116661010603/Bilingual_NEW__2.zip)**
 
-A bilingual dictionary by an anon, with lots of example sentences. You may want to limit the amount of example sentences to avoid cluttering the search page by using the following CSS, where the number 5 can be changed:
+A bilingual dictionary by an anon, with lots of example sentences. You may want to limit the amount
+of example sentences to avoid cluttering the search page by using the following CSS, where the
+number 5 can be changed:
 
 ```css
 [data-dictionary='NEW斎藤和英大辞典'] ul.gloss-sc-ul > li:nth-child(n + 5) {
@@ -151,7 +196,10 @@ A bilingual dictionary by an anon, with lots of example sentences. You may want 
 
 **[Download](https://learnjapanese.moe/resources/#dictionaries)**
 
-There are various monolingual dictionaries in Shoui's monolingual folder, authored by various people. Check the readme in the folder for further information, and check the explanation on [learnjapanese.moe](https://learnjapanese.moe/monolingual/#recommended-dictionaries) on how to use them. Currently contains:
+There are various monolingual dictionaries in Shoui's monolingual folder, authored by various
+people. Check the readme in the folder for further information, and check the explanation on
+[learnjapanese.moe](https://learnjapanese.moe/monolingual/#recommended-dictionaries) on how to use
+them. Currently contains:
 
 - 広辞苑 第七版
   - Converted by [Thermosphere and shoui](https://github.com/Thermospore/koj72yomi).
@@ -202,7 +250,10 @@ A monolingual dictionary made by an anon, with very nice formatting and links fo
 
 **[Download All (unzip first)](https://cdn.discordapp.com/attachments/563409909627224095/1108265551312211999/jitenbot.zip)**
 
-There are many dictionaries available at [辞典オンライン](https://jitenon.jp/) and [using stephenmk's jitenbot](https://github.com/stephenmk/jitenbot), some of these have been scraped for use as Yomichan dictionaries. There are quite a few entries that aren't in other dictionaries, so I'd recommend installing this.
+There are many dictionaries available at [辞典オンライン](https://jitenon.jp/) and
+[using stephenmk's jitenbot](https://github.com/stephenmk/jitenbot), some of these have been scraped
+for use as Yomichan dictionaries. There are quite a few entries that aren't in other dictionaries,
+so I'd recommend installing this.
 
 Includes the following dictionaries:
 
@@ -226,7 +277,9 @@ Converted by Malte using [stephenmk's jitenbot](https://github.com/stephenmk/jit
 
 #### Daijirin Fourth Edition
 
-**[大辞林第四版](https://www.mediafire.com/file/opc4m5hmycljkcb/%25E5%25A4%25A7%25E8%25BE%259E%25E6%259E%2597%25E3%2580%2580%25E7%25AC%25AC%25E5%259B%259B%25E7%2589%2588.zip/file) | [大辞林第四版　画像無し](https://www.mediafire.com/file/a94y4d0xefg2ilf/%25E5%25A4%25A7%25E8%25BE%259E%25E6%259E%2597%25E3%2580%2580%25E7%25AC%25AC%25E5%259B%259B%25E7%2589%2588%25E3%2580%2580%25E7%2594%25BB%25E5%2583%258F%25E7%2584%25A1%25E3%2581%2597.zip/file)**
+**[大辞林第四版](https://www.mediafire.com/file/opc4m5hmycljkcb/%25E5%25A4%25A7%25E8%25BE%259E%25E6%259E%2597%25E3%2580%2580%25E7%25AC%25AC%25E5%259B%259B%25E7%2589%2588.zip/file)
+|
+[大辞林第四版　画像無し](https://www.mediafire.com/file/a94y4d0xefg2ilf/%25E5%25A4%25A7%25E8%25BE%259E%25E6%259E%2597%25E3%2580%2580%25E7%25AC%25AC%25E5%259B%259B%25E7%2589%2588%25E3%2580%2580%25E7%2594%25BB%25E5%2583%258F%25E7%2584%25A1%25E3%2581%2597.zip/file)**
 
 Converted by Malte using [stephenmk's jitenbot](https://github.com/stephenmk/jitenbot).
 
@@ -299,8 +352,10 @@ Scraped by Malte from the online [goo.ne thesaurus](https://dictionary.goo.ne.jp
 
 Scraped by Malte from the online [goo.ne dialect dictionary](https://dictionary.goo.ne.jp/dialect/).
 
-> [!NOTE]
-> Note: This version has some (~650) entries formatted like そーだ instead of そうだ which can be annoying.
+<!-- prettier-ignore -->
+> [!NOTE] 
+> Note: This version has some (~650) entries formatted like そーだ instead of そうだ which
+> can be annoying.
 
 #### 新語時事用語辞典
 
@@ -308,21 +363,26 @@ Scraped by Malte from the online [goo.ne dialect dictionary](https://dictionary.
 
 Scraped from http://www.breaking-news-words.com/ by Malte.
 
-> 「新語時事用語辞典」は、ニュースで今最も話題になっている最新のキーワードを時流に即して紹介する、速報・辞書サイトです。新聞で、テレビで、ネットで話題になっているキーワードや流行語をいち早く紹介します。
+> 「新語時事用語辞典」は、ニュースで今最も話題になっている最新のキーワードを時流に即して紹介する、速
+> 報・辞書サイトです。新聞で、テレビで、ネットで話題になっているキーワードや流行語をいち早く紹介しま
+> す。
 
 #### 実用日本語表現辞典
 
 **[実用日本語表現辞典](https://www.mediafire.com/file/hw2gkzfyddtdzje/%25E5%25AE%259F%25E7%2594%25A8%25E6%2597%25A5%25E6%259C%25AC%25E8%25AA%259E%25E8%25A1%25A8%25E7%258F%25BE%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
 
-Scraped from http://www.practical-japanese.com/ by Malte. Updated version of the old yomichan dictionary.
+Scraped from http://www.practical-japanese.com/ by Malte. Updated version of the old yomichan
+dictionary.
 
 #### Kanjipedia 同訓異義
 
 [Kanjipedia 同訓異義](https://www.mediafire.com/file/ltnvo3f5ipmr289/%E6%BC%A2%E5%AD%97%E3%83%9A%E3%83%87%E3%82%A3%E3%82%A2%E5%90%8C%E8%A8%93%E7%95%B0%E7%BE%A9.zip/file)
 
-Scraped by Julian and converted by Malte, sourced from [Kanjipedia](https://www.kanjipedia.jp/sakuin/doukunigi/).
+Scraped by Julian and converted by Malte, sourced from
+[Kanjipedia](https://www.kanjipedia.jp/sakuin/doukunigi/).
 
-This dictionary differentiates the usages of words with the same reading but different kanji, for example 越える・超える・逾える・踰える.
+This dictionary differentiates the usages of words with the same reading but different kanji, for
+example 越える・超える・逾える・踰える.
 
 ### Grammar Dictionaries
 
@@ -330,7 +390,8 @@ This dictionary differentiates the usages of words with the same reading but dif
 
 **[Download](https://github.com/aiko-tanaka/Grammar-Dictionaries)**
 
-A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot of manual work was put in to creating them to make them parse well, I'd recommend you install all of them. Contains:
+A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot of manual work was
+put in to creating them to make them parse well, I'd recommend you install all of them. Contains:
 
 - Nihongo no sensei 毎日のんびり日本語教師
 - E de wakaru 絵でわかる日本語
@@ -344,7 +405,11 @@ A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot
 
 **[Download JA Wikipedia](https://drive.google.com/open?id=12cNjVi6jl7t-7YR3Prleg9jqqBSlZ1e6&usp=drive_fs)**
 
-A conversion of the [DBPedia](https://dbpedia.org/) short-abstract dumps of [JA Wikipedia](https://ja.wikipedia.org/) for Yomitan. This dictionary features over 1.2 million entries with each entry containing the abstract and a link to the Wikipedia article. Unfortunately there are no dumps of DBPedia after December 2022, so regular updates will not be possible until DBPedia starts updating again.
+A conversion of the [DBPedia](https://dbpedia.org/) short-abstract dumps of
+[JA Wikipedia](https://ja.wikipedia.org/) for Yomitan. This dictionary features over 1.2 million
+entries with each entry containing the abstract and a link to the Wikipedia article. Unfortunately
+there are no dumps of DBPedia after December 2022, so regular updates will not be possible until
+DBPedia starts updating again.
 
 Recommended custom CSS to add to the `Configure custom CSS…` section of the options page:
 
@@ -355,11 +420,16 @@ div.gloss-sc-div[data-sc-jawiki='red'] {
 }
 ```
 
-> [!CAUTION]
-> Due to the size of the dictionary, there are currently issues with being unable to delete the dictionary from Yomitan. This may be fixed soon, but in the meantime you will have to delete it by clicking the 'Delete All' button.
+<!-- prettier-ignore -->
+> [!CAUTION] 
+> Due to the size of the dictionary, there are currently issues with being unable to
+> delete the dictionary from Yomitan. This may be fixed soon, but in the meantime you will have to
+> delete it by clicking the 'Delete All' button.
 
-> [!IMPORTANT]
-> This dictionary is quite large and may use up to 1GB of storage space after being imported.
+<!-- prettier-ignore -->
+> [!IMPORTANT] 
+> This dictionary is quite large and may use up to 1GB of storage space after being
+> imported.
 
 ![chrome_First_Love_初恋_-_Wikiwand_-_Google_Chrome_2023-12-17_14-49-34](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/dd99c5c3-d26a-4a9b-9f47-ed1c114c693e)
 ![chrome_First_Love_初恋_-_Wikiwand_-_Google_Chrome_2023-12-17_14-49-50](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/743d05d2-705b-4af1-aa89-173862e5900d)
@@ -368,18 +438,29 @@ div.gloss-sc-div[data-sc-jawiki='red'] {
 
 **Last Updated: 2023-11-24**
 
-**[Download Pixiv](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20Pixiv.zip)** | **[Download PixivLight](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20PixivLight.zip)**
+**[Download Pixiv](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20Pixiv.zip)**
+|
+**[Download PixivLight](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20PixivLight.zip)**
 
-A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) encyclopedia of over 500,000 entries, containing a brief summary and links to related articles for each entry. This dictionary is quite extensive and contains entries for a vast amount of terms that would not be in traditional dictionaries. For instance, 和泉妃愛 has an entry as does likely every notable VTuber, media franchise, and mountain in Japan.
+A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) encyclopedia of over 500,000
+entries, containing a brief summary and links to related articles for each entry. This dictionary is
+quite extensive and contains entries for a vast amount of terms that would not be in traditional
+dictionaries. For instance, 和泉妃愛 has an entry as does likely every notable VTuber, media
+franchise, and mountain in Japan.
 
-> [!IMPORTANT]
+<!-- prettier-ignore -->
+> [!IMPORTANT] 
 > This dictionary is quite large and may take a long time to import.
 
-- If performance of your device is an issue and you are unable to import the full Pixiv dictionary, you can use the PixivLight version which has most of the extra information like categorization and related articles stripped out, leaving behind only the short summary and a link to the main Pixiv article. This version is much smaller and should import without crashing Yomichan on mobile phones and ereaders.
-- For CSS to convert the links to plaintext in Anki see https://github.com/MarvNC/yomichan-dictionaries/issues/31.
+- If performance of your device is an issue and you are unable to import the full Pixiv dictionary,
+  you can use the PixivLight version which has most of the extra information like categorization and
+  related articles stripped out, leaving behind only the short summary and a link to the main Pixiv
+  article. This version is much smaller and should import without crashing Yomichan on mobile phones
+  and ereaders.
+- For CSS to convert the links to plaintext in Anki see
+  https://github.com/MarvNC/yomichan-dictionaries/issues/31.
 
-![hiyori example](!images/pixivHiyori.png)
-![news events example](!images/pixivWagnerCoup.png)
+![hiyori example](!images/pixivHiyori.png) ![news events example](!images/pixivWagnerCoup.png)
 
 #### niconico-pixiv Terms
 
@@ -388,7 +469,12 @@ A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) encyclop
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20Nico-Pixiv.zip)**
 
-Using the information [gathered by ncaq for use in an IME](https://github.com/ncaq/dic-nico-intersection-pixiv), this is a dictionary that can help parse terms that are in **both** [niconico](https://dic.nicovideo.jp/) and [pixiv](https://dic.pixiv.net/)'s online dictionaries. These online dictionaries are sort of like encyclopedias of the internet, so many terms such as proper nouns not in traditional dictionaries will be found.
+Using the information
+[gathered by ncaq for use in an IME](https://github.com/ncaq/dic-nico-intersection-pixiv), this is a
+dictionary that can help parse terms that are in **both** [niconico](https://dic.nicovideo.jp/) and
+[pixiv](https://dic.pixiv.net/)'s online dictionaries. These online dictionaries are sort of like
+encyclopedias of the internet, so many terms such as proper nouns not in traditional dictionaries
+will be found.
 
 > ルールベースで IME 辞書の役に立たなそうな単語を除外しています。
 
@@ -400,7 +486,10 @@ Using the information [gathered by ncaq for use in an IME](https://github.com/nc
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20surasura.zip)**
 
-A dictionary of onomatopoeia from [surasura.com](http://sura-sura.com/). Contains some onomatopoeia that are not in any other dictionaries. Credit to [stephenmk](https://github.com/stephenmk) for the idea to mark information using those emojis with his [improved JMDict](https://github.com/FooSoft/yomichan-import/pull/40).
+A dictionary of onomatopoeia from [surasura.com](http://sura-sura.com/). Contains some onomatopoeia
+that are not in any other dictionaries. Credit to [stephenmk](https://github.com/stephenmk) for the
+idea to mark information using those emojis with his
+[improved JMDict](https://github.com/FooSoft/yomichan-import/pull/40).
 
 For each entry, it contains:
 
@@ -412,9 +501,11 @@ For each entry, it contains:
 
 #### 複合語起源 Term Origins
 
-**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.zip)** | **[List of words](termOrigins/%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv)**
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.zip)**
+| **[List of words](termOrigins/%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv)**
 
-Compound kunyomi word origins/etymology, for example 陥る -> 落ち入る（おち|いる）. Information comes from anonymous forum posts, so it may not be 100% accurate.
+Compound kunyomi word origins/etymology, for example 陥る -> 落ち入る（おち|いる）. Information
+comes from anonymous forum posts, so it may not be 100% accurate.
 
 ![](!images/chrome_yomichan-dictionaries%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv_at_master_%C2%B7_MarvNC_2022-08-22_12-37-52.png)
 
@@ -428,7 +519,8 @@ Compound kunyomi word origins/etymology, for example 陥る -> 落ち入る（�
 
 **[Download](https://cdn.discordapp.com/attachments/778430038159655012/1025059429206466580/gogen.zip)**
 
-語源由来辞典 etymology information parsed from https://gogen-yurai.jp/ by Seikou. Contains information about the origins of words.
+語源由来辞典 etymology information parsed from https://gogen-yurai.jp/ by Seikou. Contains
+information about the origins of words.
 
 ### Term Frequency
 
@@ -436,26 +528,46 @@ Compound kunyomi word origins/etymology, for example 陥る -> 落ち入る（�
 
 **[Download](https://github.com/MarvNC/jpdb-freq-list/releases)**
 
-A frequency dictionary based on information scraped from https://jpdb.io in May of 2022. More information can be found [here](https://github.com/MarvNC/jpdb-freq-list).
+A frequency dictionary based on information scraped from https://jpdb.io in May of 2022. More
+information can be found [here](https://github.com/MarvNC/jpdb-freq-list).
 
-Due to the way the data was scraped, some terms are missing frequencies and the jpdb dictionary itself is limited to terms in JMDict. For example, 経緯 only has an entry for the いきさつ reading so it should not be used as a dictionary for sorting (the more common/correct reading is けいい). However, the corpus of JPDB is quite good for immersion learners as it covers anime, dramas, light novels, visual novels, and web novels so the frequencies will be relatively accurate to what you're actually reading. This dictionary is notable for displaying the frequencies of kana readings separately, so you can often get a sense of how often a word is written with kanji or not.
+Due to the way the data was scraped, some terms are missing frequencies and the jpdb dictionary
+itself is limited to terms in JMDict. For example, 経緯 only has an entry for the いきさつ reading
+so it should not be used as a dictionary for sorting (the more common/correct reading is けいい).
+However, the corpus of JPDB is quite good for immersion learners as it covers anime, dramas, light
+novels, visual novels, and web novels so the frequencies will be relatively accurate to what you're
+actually reading. This dictionary is notable for displaying the frequencies of kana readings
+separately, so you can often get a sense of how often a word is written with kanji or not.
 
 #### Aozora Bunko Jukugo Frequency
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BFreq%5D%20Aozora%20Bunko.zip)**
 
-A frequency dictionary created using data [collected by vrtm](https://vtrm.net/japanese/kanji-jukugo-frequency/en) based on the [Aozora Bunko](https://www.aozora.gr.jp/). Due to the [methodology used](https://vtrm.net/japanese/kanji-jukugo-frequency/en), this dictionary does not cover words with kana in them but it covers many rare 熟語 not covered by other frequency dictionaries, such as 睽乖. The number in parentheses is the number of times the word appears in the corpus.
+A frequency dictionary created using data
+[collected by vrtm](https://vtrm.net/japanese/kanji-jukugo-frequency/en) based on the
+[Aozora Bunko](https://www.aozora.gr.jp/). Due to the
+[methodology used](https://vtrm.net/japanese/kanji-jukugo-frequency/en), this dictionary does not
+cover words with kana in them but it covers many rare 熟語 not covered by other frequency
+dictionaries, such as 睽乖. The number in parentheses is the number of times the word appears in the
+corpus.
 
 #### CC100
 
 **[Download](https://cdn.discordapp.com/attachments/778430038159655012/1025058653511893143/Freq_CC100.zip)**
 
-Made by the mind behind [arujisho](https://github.com/emc2314/arujisho), this uses the [CC100 dataset](https://data.statmt.org/cc-100/) which was made by crawling the web. Coverage is very wide, and there is reason behind the way readings are differentiated which is why I use this as my Yomichan sort dictionary.
+Made by the mind behind [arujisho](https://github.com/emc2314/arujisho), this uses the
+[CC100 dataset](https://data.statmt.org/cc-100/) which was made by crawling the web. Coverage is
+very wide, and there is reason behind the way readings are differentiated which is why I use this as
+my Yomichan sort dictionary.
 
 <details>
 <summary>Original message by Seikou</summary>
 
-> Hello everyone! Recently I tokenized the [CC-100](https://data.statmt.org/cc-100/) Japanese dataset (which is a high quality dataset filtered from Commoncrawl web crawl data, and is about 70GB large) as a corpus using mecab(fugashi) and sudachi, resulting a frequency rank list of about 900k words. After filtering it using several monolingual dictionaries, I got a freq rank list of roughly 160k words.
+> Hello everyone! Recently I tokenized the [CC-100](https://data.statmt.org/cc-100/) Japanese
+> dataset (which is a high quality dataset filtered from Commoncrawl web crawl data, and is about
+> 70GB large) as a corpus using mecab(fugashi) and sudachi, resulting a frequency rank list of about
+> 900k words. After filtering it using several monolingual dictionaries, I got a freq rank list of
+> roughly 160k words.
 
 </details>
 
@@ -465,21 +577,33 @@ Made by the mind behind [arujisho](https://github.com/emc2314/arujisho), this us
 
 From the [publication](https://link.springer.com/article/10.1007/s10579-013-9261-0):
 
-> The balanced corpus of contemporary written Japanese (BCCWJ) is Japan’s first 100 million words balanced corpus. It consists of three subcorpora (publication subcorpus, library subcorpus, and special-purpose subcorpus) and covers a wide range of text registers including books in general, magazines, newspapers, governmental white papers, best-selling books, an internet bulletin-board, a blog, school textbooks, minutes of the national diet, publicity newsletters of local governments, laws, and poetry verses.
+> The balanced corpus of contemporary written Japanese (BCCWJ) is Japan’s first 100 million words
+> balanced corpus. It consists of three subcorpora (publication subcorpus, library subcorpus, and
+> special-purpose subcorpus) and covers a wide range of text registers including books in general,
+> magazines, newspapers, governmental white papers, best-selling books, an internet bulletin-board,
+> a blog, school textbooks, minutes of the national diet, publicity newsletters of local
+> governments, laws, and poetry verses.
 
-It has extremely wide coverage with most terms you'll encounter having an entry in this list even if other frequency lists don't. In addition, it differentiates between readings quite well. Make sure to install the LUW version as it has more terms.
+It has extremely wide coverage with most terms you'll encounter having an entry in this list even if
+other frequency lists don't. In addition, it differentiates between readings quite well. Make sure
+to install the LUW version as it has more terms.
 
 #### Innocent Ranked
 
 **[Download](https://learnjapanese.moe/resources/#dictionaries)**
 
-The Innocent Corpus from the [Yomichan page](https://github.com/themoeway/yomitan/#dictionaries) but reordered to be sorted by rank. It is based on data [from 5000+ novels](https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613). A weakness is that it does not differentiate based on reading, so all readings of a term will show the same value.
+The Innocent Corpus from the [Yomichan page](https://github.com/themoeway/yomitan/#dictionaries) but
+reordered to be sorted by rank. It is based on data
+[from 5000+ novels](https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613).
+A weakness is that it does not differentiate based on reading, so all readings of a term will show
+the same value.
 
 #### jpDicts Frequencies
 
 **[Download](https://cdn.discordapp.com/attachments/778430038159655012/942796687401967616/Freq_Monodicts_206k.zip)**
 
-A frequency dictionary created using monolingual dictionary definitions as the corpus, so it might be useful for those who really like reading dictionaries. Made by Avratzzz.
+A frequency dictionary created using monolingual dictionary definitions as the corpus, so it might
+be useful for those who really like reading dictionaries. Made by Avratzzz.
 
 <details>
 <summary>Dictionaries used:</summary>
@@ -507,8 +631,9 @@ A frequency dictionary created using monolingual dictionary definitions as the c
 
 **[Download all domain-specific dictionaries](https://cdn.discordapp.com/attachments/778430038159655012/933392359603986482/YouTubeFreqs.zip)**
 
-> Using data from 40k manually transcribed YouTube videos we have created 16 domain specific frequency lists for YomiChan.
-> Enjoy and feel free to share around. Created by @Zetta @Vexxed @Anonymous
+> Using data from 40k manually transcribed YouTube videos we have created 16 domain specific
+> frequency lists for YomiChan. Enjoy and feel free to share around. Created by @Zetta @Vexxed
+> @Anonymous
 
 Domain-specific frequency lists from Youtube Videos:
 
@@ -538,18 +663,30 @@ Domain-specific frequency lists from Youtube Videos:
 
 **[Download](https://github.com/forsakeninfinity/CEJC_yomichan_freq_dict)**
 
-> [!IMPORTANT]
-> Due to the limited nature of the original data set, this frequency list only goes up to around 20,000 in frequency. It is still useful to know the relative frequency of words in conversation, but the frequency values should not be compared to those from other more expansive frequency dictionaries. For a more complete list that is somewhat conversational, I recommend trying the Youtube frequency list.
+<!-- prettier-ignore -->
+> [!IMPORTANT] 
+> Due to the limited nature of the original data set, this frequency list only goes up
+> to around 20,000 in frequency. It is still useful to know the relative frequency of words in
+> conversation, but the frequency values should not be compared to those from other more expansive
+> frequency dictionaries. For a more complete list that is somewhat conversational, I recommend
+> trying the Youtube frequency list.
 
-This Yomichan frequency dictionary based on the [Corpus of Everyday Japanese Conversation](https://www.ninjal.ac.jp/english/research/cr-project/project-3/institute/spoken-language/) was converted by forsakeninfinity.
+This Yomichan frequency dictionary based on the
+[Corpus of Everyday Japanese Conversation](https://www.ninjal.ac.jp/english/research/cr-project/project-3/institute/spoken-language/)
+was converted by forsakeninfinity.
 
-> The Corpus of Everyday Japanese Conversation (CEJC) is a vocabulary and word count table based on 200 hours of recorded data (approximately from April 2016 to 2020).
+> The Corpus of Everyday Japanese Conversation (CEJC) is a vocabulary and word count table based on
+> 200 hours of recorded data (approximately from April 2016 to 2020).
 
-> Our project will develop a large-scale corpus of Japanese everyday conversation in a balanced manner. Since informants record their conversations in everyday situations by themselves, naturally occurring conversations can be collected. To build an empirical foundation for the corpus design, we conducted a survey of ordinary conversational behavior of about 250 adults."
+> Our project will develop a large-scale corpus of Japanese everyday conversation in a balanced
+> manner. Since informants record their conversations in everyday situations by themselves,
+> naturally occurring conversations can be collected. To build an empirical foundation for the
+> corpus design, we conducted a survey of ordinary conversational behavior of about 250 adults."
 
 #### Shoui Dictionaries Collection Misc. Frequency Dictionaries
 
-Some other miscellaneous frequency dictionaries in the [Shoui Dictionaries Collection](https://learnjapanese.moe/resources/#dictionaries).
+Some other miscellaneous frequency dictionaries in the
+[Shoui Dictionaries Collection](https://learnjapanese.moe/resources/#dictionaries).
 
 - Anime & J-drama
 - [Narou](http://wiki.wareya.moe/Narou) Freq
@@ -563,7 +700,8 @@ Some other miscellaneous frequency dictionaries in the [Shoui Dictionaries Colle
 
 **[Download](https://docs.google.com/document/d/1IUWkvBxhoazBSTyRbdyRVk7hfKE51yorE86DCRNQVuw/edit)**
 
-Some frequency dictionaries made by this YouTuber [OhTalkWho オタク](https://www.youtube.com/watch?v=DwJWld8hW0M).
+Some frequency dictionaries made by this YouTuber
+[OhTalkWho オタク](https://www.youtube.com/watch?v=DwJWld8hW0M).
 
 - Netflix
 - Top 100 Shonen
@@ -572,15 +710,23 @@ Some frequency dictionaries made by this YouTuber [OhTalkWho オタク](https://
 - Novel 5k
   - This might just be innocent corpus with stars?
 - Visual Novels
-  - Might be based off [vnstats](http://wiki.wareya.moe/)? It's different than the VN Freq v2 in Shoui's Dictionaries Collection.
+  - Might be based off [vnstats](http://wiki.wareya.moe/)? It's different than the VN Freq v2 in
+    Shoui's Dictionaries Collection.
 
 #### Anacreon's Frequency Dictionaries
 
 **[Download](https://anacreondjt.gitlab.io/docs/freq/)**
 
-Some frequency dictionaries made by Anacreon that are not rank-based, but rather percentage-based where the displayed value is the percent of that corpus you would be able to read if you knew every word with that percentage or lower. They are somewhat redundant with other previously mentioned dictionaries, but some people may prefer the percentage-based approach.
+Some frequency dictionaries made by Anacreon that are not rank-based, but rather percentage-based
+where the displayed value is the percent of that corpus you would be able to read if you knew every
+word with that percentage or lower. They are somewhat redundant with other previously mentioned
+dictionaries, but some people may prefer the percentage-based approach.
 
-> Frequency is displayed as a number between MOST frequent 0 and LEAST frequent 100. Check out this graph, essentially the number in these dicts are the Y axis of [this graph](https://anacreondjt.gitlab.io/img/graph.png). So if you were aiming for understanding 95% of words you come across the most efficient way would be to mine all the words with a freq less than or equal 95.
+> Frequency is displayed as a number between MOST frequent 0 and LEAST frequent 100. Check out this
+> graph, essentially the number in these dicts are the Y axis of
+> [this graph](https://anacreondjt.gitlab.io/img/graph.png). So if you were aiming for understanding
+> 95% of words you come across the most efficient way would be to mine all the words with a freq
+> less than or equal 95.
 
 - Visual Novels (from [vnstats](http://wiki.wareya.moe/))
 - [Narou](http://wiki.wareya.moe/Narou)
@@ -590,11 +736,15 @@ Some frequency dictionaries made by Anacreon that are not rank-based, but rather
 
 ### Yomichan CSS for Kanji Dictionaries
 
-Yomichan and KANJIDIC by default have a lot of bloat in the kanji dictionary viewer, like repeating the kanji stroke order image, frequency information, and unused table rows for every entry. For using multiple kanji dictionaries, you can use some CSS to make the kanji display more compact like it is for terms.
+Yomichan and KANJIDIC by default have a lot of bloat in the kanji dictionary viewer, like repeating
+the kanji stroke order image, frequency information, and unused table rows for every entry. For
+using multiple kanji dictionaries, you can use some CSS to make the kanji display more compact like
+it is for terms.
 
 ![](!images/kanjiCssImage.png)
 
-In `Settings -> Popup Appearance -> Configure custom CSS...` input the following CSS for more compact display of entries.
+In `Settings -> Popup Appearance -> Configure custom CSS...` input the following CSS for more
+compact display of entries.
 
 ```css
 /* remove misc dict classifications/codepoints/stats */
@@ -644,16 +794,21 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 
 **[Download](https://github.com/MarvNC/jmdict-yomitan)**
 
-The [KANJIDIC Project](http://www.edrdg.org/wiki/index.php/KANJIDIC_Project)'s KANJIDIC is the primary English kanji dictionary used in Yomichan and contains information about most kanji, notably English definitions, readings, and some other statistics like stroke count, JLPT, grade level.
+The [KANJIDIC Project](http://www.edrdg.org/wiki/index.php/KANJIDIC_Project)'s KANJIDIC is the
+primary English kanji dictionary used in Yomichan and contains information about most kanji, notably
+English definitions, readings, and some other statistics like stroke count, JLPT, grade level.
 
 #### Wiktionary Kanji
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20Wiktionary.zip)**
 
-Kanji information of around 18,000 characters from [Wiktionary](https://ja.wiktionary.org/), notably:
+Kanji information of around 18,000 characters from [Wiktionary](https://ja.wiktionary.org/),
+notably:
 
-- 呉音, 漢音, 唐音, 宋音, 慣用音 onyomi readings of kanji ([further reading](<https://en.wikipedia.org/wiki/Kanji#On'yomi_(Sino-Japanese_reading)>))
-- 字源 - information about how and why a kanji is composed the way it is, including the [type of composition it is](https://en.wikipedia.org/wiki/Kanji#Types_of_kanji_by_category)
+- 呉音, 漢音, 唐音, 宋音, 慣用音 onyomi readings of kanji
+  ([further reading](<https://en.wikipedia.org/wiki/Kanji#On'yomi_(Sino-Japanese_reading)>))
+- 字源 - information about how and why a kanji is composed the way it is, including the
+  [type of composition it is](https://en.wikipedia.org/wiki/Kanji#Types_of_kanji_by_category)
 - The meaning of the kanji (in Japanese)
 - The various 異体字 of the kanji
 
@@ -666,7 +821,8 @@ Kanji information of around 18,000 characters from [Wiktionary](https://ja.wikti
 Kanji information of around 6,000 characters from https://jpdb.io:
 
 - The 15 most common vocab applicable
-- The kanji decomposition according to jpdb (has inaccuracies because it's meant for memorizing keywords)
+- The kanji decomposition according to jpdb (has inaccuracies because it's meant for memorizing
+  keywords)
 - 漢字検定 level
 - 旧字体/新字体/拡張新字体 character form
 
@@ -674,14 +830,16 @@ Kanji information of around 6,000 characters from https://jpdb.io:
 
 #### TheKanjiMap
 
-**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20TheKanjiMap.zip)** | [List of possible phonetic components](thekanjimap/readingHints.tsv)
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20TheKanjiMap.zip)**
+| [List of possible phonetic components](thekanjimap/readingHints.tsv)
 
 Information from [TheKanjiMap](https://thekanjimap.com/):
 
 - Radical information for all radicals
 - Kanji decomposition (**more accurate than JPDB**)
 - List of all kanji that contain a kanji/component/radical
-- Reading hints based on possible phonetic components (computed based on information from KANJIDIC and the decomposition here)
+- Reading hints based on possible phonetic components (computed based on information from KANJIDIC
+  and the decomposition here)
 
 ![高](!images/chrome_%E9%AB%98_-_Yomichan_Search_-_Google_Chrome_2023-02-03_19-46-15.png)![更](!images/chrome_%E6%9B%B4_-_Yomichan_Search_-_Google_Chrome_2023-02-03_19-51-17.png)
 
@@ -689,7 +847,8 @@ Information from [TheKanjiMap](https://thekanjimap.com/):
 
 **[Download](https://drive.google.com/file/d/1TZmvC6WcUOpvjCLt-NkdhCvEXVcvyF4I/view)**
 
-The online [漢字辞典オンライン](https://kanji.jitenon.jp/) kanji dictionary is an extensive Japanese kanji dictionary. It was converted into a Yomichan kanji dictionary by eurusdagr.
+The online [漢字辞典オンライン](https://kanji.jitenon.jp/) kanji dictionary is an extensive Japanese
+kanji dictionary. It was converted into a Yomichan kanji dictionary by eurusdagr.
 
 <details>
 <summary>(Click to expand) Example image</summary>
@@ -704,7 +863,8 @@ The online [漢字辞典オンライン](https://kanji.jitenon.jp/) kanji dictio
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20mozc%20Kanji%20Variants.zip)**
 
-A kanji dictionary made from the kanji variant information in [Google's mozc Japanese IME](https://github.com/google/mozc). Includes information about:
+A kanji dictionary made from the kanji variant information in
+[Google's mozc Japanese IME](https://github.com/google/mozc). Includes information about:
 
 - 異体字
 - 印刷標準字体
@@ -722,7 +882,9 @@ A kanji dictionary made from the kanji variant information in [Google's mozc Jap
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20jitai.zip)**
 
-A kanji dictionary made using the data from [jitai](https://github.com/epistularum/jitai). This allows you to see information about 旧字体, 新字体, 拡張新字体, and 標準字体 variants from the kanji page in Yomichan.
+A kanji dictionary made using the data from [jitai](https://github.com/epistularum/jitai). This
+allows you to see information about 旧字体, 新字体, 拡張新字体, and 標準字体 variants from the kanji
+page in Yomichan.
 
 ![](!images/chrome_%E4%B9%B1_-_Yomichan_Search_-_Google_Chrome_2022-08-10_19-28-54.png)
 
@@ -732,21 +894,31 @@ A kanji dictionary made using the data from [jitai](https://github.com/epistular
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20Aozora%20Bunko.zip)**
 
-A kanji frequency dictionary created using data [collected by vrtm](https://vtrm.net/japanese/kanji-frequency/en) based on the [Aozora Bunko](https://www.aozora.gr.jp/). The number in parentheses is the number of times the kanji appears in the corpus.
+A kanji frequency dictionary created using data
+[collected by vrtm](https://vtrm.net/japanese/kanji-frequency/en) based on the
+[Aozora Bunko](https://www.aozora.gr.jp/). The number in parentheses is the number of times the
+kanji appears in the corpus.
 
 #### Innocent Corpus Kanji Frequency
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20Innocent%20Corpus%20Kanji.zip)**
 
-Uses the [innocent corpus frequency list](https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613) that is distributed with [Yomichan](https://github.com/themoeway/yomitan/#dictionaries) to create a rank-based kanji frequency dictionary. This was created because the existing one is an occurence-based list and does not display ranks.
+Uses the
+[innocent corpus frequency list](https://web.archive.org/web/20190309073023/https://forum.koohii.com/thread-9459.html#pid168613)
+that is distributed with [Yomichan](https://github.com/themoeway/yomitan/#dictionaries) to create a
+rank-based kanji frequency dictionary. This was created because the existing one is an
+occurence-based list and does not display ranks.
 
-- The displayed frequency in Yomichan will contain the frequency rank followed by the occurence count, for example `4686 (57)` for 壟 indicating it's the 4686th most common kanji and appeared 57 times total in the 5000+ novels in Innocent Corpus.
+- The displayed frequency in Yomichan will contain the frequency rank followed by the occurence
+  count, for example `4686 (57)` for 壟 indicating it's the 4686th most common kanji and appeared 57
+  times total in the 5000+ novels in Innocent Corpus.
 
 #### Wikipedia Kanji Frequency
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%20Frequency%5D%20Wikipedia.zip)**
 
-Rank-based kanji frequency data from a May 2015 dump of Japanese Wikipedia, containing around 2 万 kanji. Data [gathered by scriptin](https://github.com/scriptin/kanji-frequency).
+Rank-based kanji frequency data from a May 2015 dump of Japanese Wikipedia, containing around 2 万
+kanji. Data [gathered by scriptin](https://github.com/scriptin/kanji-frequency).
 
 #### jpdb Kanji Frequency
 
@@ -764,16 +936,19 @@ Kanji frequency data from https://jpdb.io as a Yomichan frequency dictionary.
 
 **[CC-CEDICT dictionary for Yomichan](https://github.com/MarvNC/cc-cedict-yomitan)**
 
-There was a previous version but the formatting wasn't as great and it was kind of outdated. So I created this repository with some more modern formatting and also added proper hanzi functionality. The repository automatically updates every day from the newest data at MDBG.
+There was a previous version but the formatting wasn't as great and it was kind of outdated. So I
+created this repository with some more modern formatting and also added proper hanzi functionality.
+The repository automatically updates every day from the newest data at MDBG.
 
 #### Shoui's Chinese Yomichan Setup
 
 **[Shoui's Chinese Yomichan Setup](https://gist.github.com/shoui520/25460fd2e9fb194d3e5152fa2ce42ca2#installing-dictionaries-and-basic-usage)**
 
-These Chinese Yomichan dictionaries are hosted in Shoui's guide to setting up Yomichan for Chinese, includes:
+These Chinese Yomichan dictionaries are hosted in Shoui's guide to setting up Yomichan for Chinese,
+includes:
 
 - `[ZH-EN] CEDICT` (Outdated) (converted by an anon)
-- `[ZH-JA] 中日大辞典　第二版` (converted by an anon)
+- `[ZH-JA] 中日大辞典 第二版` (converted by an anon)
 - `[ZH-ZH] 兩岸詞典` (converted by Chrono7 on the Refold ZH Discord server)
 - `[ZH-ZH] 漢語大詞典` (converted by Chrono7 on the Refold ZH Discord server)
 - `[ZH-ZH] 萌典国语辞典 (简体字)` (converted by Chrono7 on the Refold ZH Discord server)
@@ -783,15 +958,18 @@ These Chinese Yomichan dictionaries are hosted in Shoui's guide to setting up Yo
 Michel converted some of the above dictionaries to simplified Chinese.
 
 - **[Download `汉语大词典`](https://cdn.discordapp.com/attachments/1102744354222776471/1122247530286166187/hanyudacidian.zip)**
-  - The Hanyu Da Cidian is the most comprehensive Chinese dictionary, comparable to the Oxford English Dictionary.
+  - The Hanyu Da Cidian is the most comprehensive Chinese dictionary, comparable to the Oxford
+    English Dictionary.
 - **[Download `两岸词典`](https://cdn.discordapp.com/attachments/1102744354222776471/1122247339965419610/cross-straits.zip)**
-  - The Cross-Straits dictionary is a small mainland dictionary focusing on contemporary usage and the differences between Taiwan and Mainland Chinese.
+  - The Cross-Straits dictionary is a small mainland dictionary focusing on contemporary usage and
+    the differences between Taiwan and Mainland Chinese.
 
 #### Other Chinese Dictionaries
 
 **[Download](https://drive.google.com/drive/folders/14OiowSI28LcP_rtGVuis7Sy8Kt_yqsiI)**
 
-These miscellaneous Chinese Yomichan dictionaries were made by lix on the Refold ZH Discord server. Includes:
+These miscellaneous Chinese Yomichan dictionaries were made by lix on the Refold ZH Discord server.
+Includes:
 
 - 萌典.pinyin
 - 萌典
@@ -804,7 +982,10 @@ These miscellaneous Chinese Yomichan dictionaries were made by lix on the Refold
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/files/12074644/ZH.Wenlin.ABC.zip)**
 
-Published in July 2003 and revised through 2005, the Wenlin ABC Chinese-English Comprehensive Dictionary was produced by the Wenlin Institude in cooperation with the ABC Chinese Dictionary Series Project at the University of Hawaii. It contains over 196,000 entries. This file was [converted by rduwjjnh](https://github.com/MarvNC/yomichan-dictionaries/issues/28).
+Published in July 2003 and revised through 2005, the Wenlin ABC Chinese-English Comprehensive
+Dictionary was produced by the Wenlin Institude in cooperation with the ABC Chinese Dictionary
+Series Project at the University of Hawaii. It contains over 196,000 entries. This file was
+[converted by rduwjjnh](https://github.com/MarvNC/yomichan-dictionaries/issues/28).
 
 ### Chinese Frequency
 
@@ -818,32 +999,44 @@ Published in July 2003 and revised through 2005, the Wenlin ABC Chinese-English 
 | `BLCUsci`   | Scientific and Technological Academic Journals         | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840722816450630/zhfreq_sci.zip)   |
 | `BLCUcoll`  | Dialogue (Weibo and Movie/TV Subtitles)                | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840721541369926/zhfreq_coll.zip)  |
 
-A Yomichan frequency list made from the comprehensive [Beijing Language and Culture University Corpus Center (BLCU BCC)'s corpus](http://bcc.blcu.edu.cn/help#intro) containing over 9 billion characters. Thanks to nadavspi and Michel who converted it for Yomichan.
+A Yomichan frequency list made from the comprehensive
+[Beijing Language and Culture University Corpus Center (BLCU BCC)'s corpus](http://bcc.blcu.edu.cn/help#intro)
+containing over 9 billion characters. Thanks to nadavspi and Michel who converted it for Yomichan.
 
 #### SUBTLEX-CH Subtitle Corpus
 
 **[Download](https://cdn.discordapp.com/attachments/1054623082867855420/1120840723110055996/zhfreq_subs.zip)**
 
-This is a subtitles frequency list based on over 6,000 simplified Chinese movies and TV shows from the [SUBTLEX](http://crr.ugent.be/programs-data/subtitle-frequencies/subtlex-ch) frequency list, which was compiled by Ghent University. Thanks to nadavspi and Michel who converted it for Yomichan.
+This is a subtitles frequency list based on over 6,000 simplified Chinese movies and TV shows from
+the [SUBTLEX](http://crr.ugent.be/programs-data/subtitle-frequencies/subtlex-ch) frequency list,
+which was compiled by Ghent University. Thanks to nadavspi and Michel who converted it for Yomichan.
 
 #### HSK Levels List
 
 **[Download](https://cdn.discordapp.com/attachments/1102744354222776471/1121205118797361306/HSK.zip)**
 
-This Yomichan HSK Levels frequency list is based on the [official HSK word list from the Chinese Ministry of Education](http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202103/t20210329_523304.html) released in 2021, which was then OCRed and neatly formatted thanks to [Andy Burke ](https://github.com/andycburke). Thanks to Michel who converted it for Yomichan.
+This Yomichan HSK Levels frequency list is based on the
+[official HSK word list from the Chinese Ministry of Education](http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202103/t20210329_523304.html)
+released in 2021, which was then OCRed and neatly formatted thanks to
+[Andy Burke ](https://github.com/andycburke). Thanks to Michel who converted it for Yomichan.
 
 #### General Global Chinese Frequency
 
 **[Frequency](https://cdn.discordapp.com/attachments/1054623082867855420/1054827030312648824/global_freq.zip)**
 
-A general Chinese frequency dictionary that is likely based off of "the chinese internet, movies, books, etc as a whole" according to its author [Kamui](https://github.com/kamui-fin).
+A general Chinese frequency dictionary that is likely based off of "the chinese internet, movies,
+books, etc as a whole" according to its author [Kamui](https://github.com/kamui-fin).
 
 ## Hanzi
 
-See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) for CSS used to reduce the clutter included by default in Yomichan.
+See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) for CSS used to
+reduce the clutter included by default in Yomichan.
 
-> [!NOTE]
-> The default kanji stroke order font included with Yomichan is made for kanji stroke orders, and as thus will contain incorrect glyphs and stroke orders for Chinese that may be misleading. You can change this by using some CSS:
+<!-- prettier-ignore -->
+> [!NOTE] 
+> The default kanji stroke order font included with Yomichan is made for kanji stroke
+> orders, and as thus will contain incorrect glyphs and stroke orders for Chinese that may be
+> misleading. You can change this by using some CSS:
 
 ```css
 .kanji-glyph {
@@ -855,7 +1048,11 @@ See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) 
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BHanzi%5D%20Wiktionary.zip)**
 
-Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.wiktionary.org/). Due to the complexity of the wiktionary pages, it will display most of the text on the page, excluding tables and such so the pinyin readings may not be included for many characters. In addition, do note that for some uncommonly used characters there is little information available as the wiki pages often consist of just unicode information and code points, which was stripped from the dictionary.
+Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.wiktionary.org/). Due
+to the complexity of the wiktionary pages, it will display most of the text on the page, excluding
+tables and such so the pinyin readings may not be included for many characters. In addition, do note
+that for some uncommonly used characters there is little information available as the wiki pages
+often consist of just unicode information and code points, which was stripped from the dictionary.
 
 ![zh wiktionary hanzi](!images/zhWiktionaryHanzi.png)
 
@@ -867,10 +1064,12 @@ Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.w
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BCantonese%5D%20Cantodict.zip)**
 
-[CantoDict](http://www.cantonese.sheik.co.uk/dictionary/) was a Cantonese-English dictionary created and maintained by Adam Sheik and public contributors. It was abandoned, but the data was archived thanks to awong-dev at https://github.com/awong-dev/cantodict-archive. This dictionary is based off of the archived data.
+[CantoDict](http://www.cantonese.sheik.co.uk/dictionary/) was a Cantonese-English dictionary created
+and maintained by Adam Sheik and public contributors. It was abandoned, but the data was archived
+thanks to awong-dev at https://github.com/awong-dev/cantodict-archive. This dictionary is based off
+of the archived data.
 
-![canto_please](!images/canto_please.png)
-![canto_read](!images/canto_read.png)
+![canto_please](!images/canto_please.png) ![canto_read](!images/canto_read.png)
 
 ### Misc Dictionaries
 
@@ -878,7 +1077,8 @@ Hanzi information of nearly 100,000 characters from [ZH Wiktionary](https://zh.w
 
 Thanks to richter_belmont on the Refold Cantonese Discord:
 
-> I converted all of the Migaku dictionaries from the "Learn Cantonese!" shared folder on Google Drive into Yomichan dictionaries. List of dictionaries available are:
+> I converted all of the Migaku dictionaries from the "Learn Cantonese!" shared folder on Google
+> Drive into Yomichan dictionaries. List of dictionaries available are:
 
 - Canto CEDICT
 - CC-Canto
@@ -892,7 +1092,8 @@ Thanks to richter_belmont on the Refold Cantonese Discord:
 
 **[和独辞典](https://mega.nz/file/XV5iDYBK#bzfCYOyrPS_c0BgvyFA2ISKpuYg5Iv9ACfKg6pfZCaU)**
 
-Converted by Julian, 和独辞典 is a Japanese-German Yomichan dictionary based on the [Wadoku](https://www.wadoku.de/) dictionary.
+Converted by Julian, 和独辞典 is a Japanese-German Yomichan dictionary based on the
+[Wadoku](https://www.wadoku.de/) dictionary.
 
 ## Wadoku Daijiten
 
@@ -900,54 +1101,67 @@ Converted by Julian, 和独辞典 is a Japanese-German Yomichan dictionary based
 
 Converted by Julian from the [和独大辞典](https://www.wadokudaijiten.de/).
 
-- Über 130.000 Stichwörter der modernen japanischen Sprache (frühe Meiji-Zeit bis Gegenwart) mit zahllosen Zusammensetzungen und Anwendungsbeispielen
+- Über 130.000 Stichwörter der modernen japanischen Sprache (frühe Meiji-Zeit bis Gegenwart) mit
+  zahllosen Zusammensetzungen und Anwendungsbeispielen
 - Lateinumschrift aller Stichwörter und der Zusammensetzungen mit Kanji
-- ca. 70.000 Satzbelege aus Zeitungen, Zeitschriften, Werbung, Wissenschaft und Literatur mit Quellenangaben
+- ca. 70.000 Satzbelege aus Zeitungen, Zeitschriften, Werbung, Wissenschaft und Literatur mit
+  Quellenangaben
 - Markierter Grund- und Aufbauwortschatz
 - Historische und fachsprachliche Erläuterungen
 - Herkunftsangaben und gesicherte Etymologien
 - Sprichwörter und idiomatische Wendungen
 - Fach- und Sondersprachen (Kinder- und Jugendsprache, Gaunersprache, Dialektismen)
 - Auflösungen von Abkürzungen
-- Fachvokabular u. a. aus den Bereichen Architektur · Astronomie · Biologie und Biochemie · Chemie · Computertechnologie · Elektrotechnik · Flora und Fauna (mit Angabe der wissenschaftlichen Nomenklatur) · Geowissenschaften · Linguistik · Mathematik · Medizin · Musik · Physik · Recht · Sport · Technik · Wirtschaft und Finanzen
+- Fachvokabular u. a. aus den Bereichen Architektur · Astronomie · Biologie und Biochemie · Chemie ·
+  Computertechnologie · Elektrotechnik · Flora und Fauna (mit Angabe der wissenschaftlichen
+  Nomenklatur) · Geowissenschaften · Linguistik · Mathematik · Medizin · Musik · Physik · Recht ·
+  Sport · Technik · Wirtschaft und Finanzen
 
-> ![NOTE]
-> Relatively rough conversion, more or less the entries as you'd find them on the website ^^ - might get updated in the future (converting the "tags" to actual tags etc.) .
-> It ups the coverage that you'd get from only using Jmdict German and can be a great tool to use alongside other dicts - may it be as a source for example sentences etc.
+> ![NOTE] Relatively rough conversion, more or less the entries as you'd find them on the website
+> ^^ - might get updated in the future (converting the "tags" to actual tags etc.) . It ups the
+> coverage that you'd get from only using Jmdict German and can be a great tool to use alongside
+> other dicts - may it be as a source for example sentences etc.
 
 # Indonesian-English
 
-[Kamata created a Indonesian Yomichan dictionary](https://github.com/Kamata954/indonesian-yomichan-dictionary) that shows the English definition of Indonesian words. The data is from Wiktionary.
+[Kamata created a Indonesian Yomichan dictionary](https://github.com/Kamata954/indonesian-yomichan-dictionary)
+that shows the English definition of Indonesian words. The data is from Wiktionary.
 
 # Japanese-Mongolian
 
 ## Japanese-Mongolian/日・モ辞典
 
-**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BJP-Mongolian%5D%20Japanese-Mongolian%20%E6%97%A5%E3%83%BB%E3%83%A2%E8%BE%9E%E5%85%B8.zip)** | [No example sentences version](<https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BJP-Mongolian%5D%20Japanese-Mongolian%20%E6%97%A5%E3%83%BB%E3%83%A2%E8%BE%9E%E5%85%B8%20(No%20Sentences).zip>)
+**[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BJP-Mongolian%5D%20Japanese-Mongolian%20%E6%97%A5%E3%83%BB%E3%83%A2%E8%BE%9E%E5%85%B8.zip)**
+|
+[No example sentences version](<https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BJP-Mongolian%5D%20Japanese-Mongolian%20%E6%97%A5%E3%83%BB%E3%83%A2%E8%BE%9E%E5%85%B8%20(No%20Sentences).zip>)
 
-A Japanese to Mongolian dictionary scraped from [栗林均's site](http://hkuri.cneas.tohoku.ac.jp/). It contains about 19,000 entries.
+A Japanese to Mongolian dictionary scraped from [栗林均's site](http://hkuri.cneas.tohoku.ac.jp/).
+It contains about 19,000 entries.
 
-> 現代日・モ辞典
-> 橋本勝、エルデネ・プレブジャブ『現代日本語モンゴル語辞典』春風社、2001．
+> 現代日・モ辞典橋本勝、エルデネ・プレブジャブ『現代日本語モンゴル語辞典』春風社、2001．
 
 ![jp-mongolian](!images/jp-mongolian.png)
 
 # Korean
 
-See [Yomichan For Korean](https://github.com/Lyroxide/yomichan-korean) for a fork of Yomichan that supports Korean.
+See [Yomichan For Korean](https://github.com/Lyroxide/yomichan-korean) for a fork of Yomichan that
+supports Korean.
 
 On that repository the following dictionaries are listed:
 
 - KRDICT (KR-EN / KR-JP / Monolingual)
 - Naver (KR-JP)
 
-Note that there is an alternative [krdict-yomichan](https://github.com/Samuihasu/krdict-yomichan) but this dictionary is no longer necessary due to the conjugation support added in Lyroxide's fork of Yomichan.
+Note that there is an alternative [krdict-yomichan](https://github.com/Samuihasu/krdict-yomichan)
+but this dictionary is no longer necessary due to the conjugation support added in Lyroxide's fork
+of Yomichan.
 
 # Vietnamese-English
 
 **[VNEDICT](https://www.mediafire.com/folder/9ss2pn046fcjo/Vi%E1%BB%87t_-_Anh)**
 
-[VNEDICT](http://www.denisowski.org/Vietnamese/Vietnamese.html) by Paul Denisowski converted by Marsh Nguyễn for Yomichan.
+[VNEDICT](http://www.denisowski.org/Vietnamese/Vietnamese.html) by Paul Denisowski converted by
+Marsh Nguyễn for Yomichan.
 
 **[stardict-vi](https://www.mediafire.com/folder/9ss2pn046fcjo/Vi%E1%BB%87t_-_Anh)**
 
