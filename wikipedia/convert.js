@@ -1,5 +1,3 @@
-// TODO: Fix the definition array to be all structured content to avoid random lists in yomitan
-
 const fs = require('fs');
 const JSZip = require('jszip');
 const path = require('path');
