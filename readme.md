@@ -762,11 +762,9 @@ Kanji frequency data from https://jpdb.io as a Yomichan frequency dictionary.
 
 #### CEDICT
 
-**[CC-CEDICT dictionary for Yomichan](https://github.com/anttipham/cc-cedict-for-yomichan)**
+**[CC-CEDICT dictionary for Yomichan](https://github.com/MarvNC/cc-cedict-yomitan)**
 
-**[Download 2023-12-17 Updated version from CaoCao](https://cdn.discordapp.com/attachments/1073399079264067606/1186059534142287974/CC-CEDICT.zip)**
-
-The most up-to-date conversion of CC-CEDICT for Yomichan.
+There was a previous version but the formatting wasn't as great and it was kind of outdated. So I created this repository with some more modern formatting and also added proper hanzi functionality. The repository automatically updates every day from the newest data at MDBG.
 
 #### Shoui's Chinese Yomichan Setup
 
