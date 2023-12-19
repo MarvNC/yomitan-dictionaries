@@ -12,6 +12,8 @@ My related dictionary resources:
 - [**Yomitan Dictionary Stats**](https://github.com/MarvNC/yomitan-dict-stats) - Information such as metadata and entry counts for many Yomichan dictionaries.
 - [**Yomichan Dictionary Builder**](https://github.com/MarvNC/yomichan-dict-builder/) - A node package I built to help with making dictionaries. It greatly simplifies the process of making dictionaries, please try it out if you use TypeScript or JavaScript.
 
+# Table of Contents <!-- omit in toc -->
+
 - [Dictionary Collection](#dictionary-collection)
   - [What Dictionaries Should I Install?](#what-dictionaries-should-i-install)
   - [Dictionaries Sort Script](#dictionaries-sort-script)
