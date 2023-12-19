@@ -70,7 +70,9 @@ the folder is configured to automatically download and import the regularly upda
 such as Jitendex, JMnedict, and KANJIDIC. If there is a dictionary in the folder that is outdated,
 please let me know!
 
-> [!IMPORTANT] The collection is not complete as there are some dictionaries I have chosen not to
+<!-- prettier-ignore -->
+> [!IMPORTANT] 
+> The collection is not complete as there are some dictionaries I have chosen not to
 > install. For these as well as older and alternate versions of dictionaries, I recommend checking
 > out [Shoui's Dictionary Collection](https://learnjapanese.moe/resources/#dictionaries).
 
@@ -350,7 +352,9 @@ Scraped by Malte from the online [goo.ne thesaurus](https://dictionary.goo.ne.jp
 
 Scraped by Malte from the online [goo.ne dialect dictionary](https://dictionary.goo.ne.jp/dialect/).
 
-> [!NOTE] Note: This version has some (~650) entries formatted like そーだ instead of そうだ which
+<!-- prettier-ignore -->
+> [!NOTE] 
+> Note: This version has some (~650) entries formatted like そーだ instead of そうだ which
 > can be annoying.
 
 #### 新語時事用語辞典
@@ -416,11 +420,15 @@ div.gloss-sc-div[data-sc-jawiki='red'] {
 }
 ```
 
-> [!CAUTION] Due to the size of the dictionary, there are currently issues with being unable to
+<!-- prettier-ignore -->
+> [!CAUTION] 
+> Due to the size of the dictionary, there are currently issues with being unable to
 > delete the dictionary from Yomitan. This may be fixed soon, but in the meantime you will have to
 > delete it by clicking the 'Delete All' button.
 
-> [!IMPORTANT] This dictionary is quite large and may use up to 1GB of storage space after being
+<!-- prettier-ignore -->
+> [!IMPORTANT] 
+> This dictionary is quite large and may use up to 1GB of storage space after being
 > imported.
 
 ![chrome_First_Love_初恋_-_Wikiwand_-_Google_Chrome_2023-12-17_14-49-34](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/dd99c5c3-d26a-4a9b-9f47-ed1c114c693e)
@@ -440,7 +448,9 @@ quite extensive and contains entries for a vast amount of terms that would not b
 dictionaries. For instance, 和泉妃愛 has an entry as does likely every notable VTuber, media
 franchise, and mountain in Japan.
 
-> [!IMPORTANT] This dictionary is quite large and may take a long time to import.
+<!-- prettier-ignore -->
+> [!IMPORTANT] 
+> This dictionary is quite large and may take a long time to import.
 
 - If performance of your device is an issue and you are unable to import the full Pixiv dictionary,
   you can use the PixivLight version which has most of the extra information like categorization and
@@ -653,7 +663,9 @@ Domain-specific frequency lists from Youtube Videos:
 
 **[Download](https://github.com/forsakeninfinity/CEJC_yomichan_freq_dict)**
 
-> [!IMPORTANT] Due to the limited nature of the original data set, this frequency list only goes up
+<!-- prettier-ignore -->
+> [!IMPORTANT] 
+> Due to the limited nature of the original data set, this frequency list only goes up
 > to around 20,000 in frequency. It is still useful to know the relative frequency of words in
 > conversation, but the frequency values should not be compared to those from other more expansive
 > frequency dictionaries. For a more complete list that is somewhat conversational, I recommend
@@ -1020,7 +1032,9 @@ books, etc as a whole" according to its author [Kamui](https://github.com/kamui-
 See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) for CSS used to
 reduce the clutter included by default in Yomichan.
 
-> [!NOTE] The default kanji stroke order font included with Yomichan is made for kanji stroke
+<!-- prettier-ignore -->
+> [!NOTE] 
+> The default kanji stroke order font included with Yomichan is made for kanji stroke
 > orders, and as thus will contain incorrect glyphs and stroke orders for Chinese that may be
 > misleading. You can change this by using some CSS:
 
