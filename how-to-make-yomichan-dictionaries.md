@@ -2,6 +2,11 @@
 
 I get this question a lot, so here's an overview of how to make your own Yomichan dictionary.
 
+## Tools
+
+- [Yomichan Dictionary Builder](https://github.com/MarvNC/yomichan-dict-builder/) - This is a node package I built to help with making dictionaries. It greatly simplifies the process of making dictionaries, please try it out if you use TypeScript or JavaScript.
+- [hasUTF16SurrogatePairAt](https://www.npmjs.com/package/@stdlib/assert-has-utf16-surrogate-pair-at-cli) - This is important for checking if a kanji/hanzi is a surrogate pair. If so, its length is 2 in JavaScript so you need to account for that when doing string operations.
+
 ## Read the Schemas
 
 You'll want to get very familiar with the [Yomichan/Yomitan schemas](https://github.com/themoeway/yomitan/tree/master/ext/data/schemas) for dictionaries - these schemas define how Yomichan dictionaries are structured. You can read about [how JSON Schemas work here](https://json-schema.org/). I recommend trying [codebeautify](https://codebeautify.org/jsonviewer/), [json-schema-viewer](https://json-schema-viewer.vercel.app/), and [jsonhero](https://jsonhero.io/) for help breaking down the schemas. For looking at raw json files in the browser, I use [json-viewer](https://github.com/tulios/json-viewer) for a better json viewing experience.
@@ -63,7 +68,3 @@ If you want to use VSCode to validate schemas, here's the relevant settings JSON
 ## Conjugation
 
 For Japanese terms to be conjugated by Yomichan, they need to have an appropriate part of speech tag (as can be seen in the term bank schema). The part of speech labels are documented on the [official JMDict page here](http://www.edrdg.org/jmdictdb/cgi-bin/edhelp.py?svc=jmdict&sid=#kw_pos). If you're making a Japanese dictionary without too many terms, you might be able to simply copy the parts of speech from JMDict as long as the terms mostly overlap. I have developed an [npm package](https://www.npmjs.com/package/yomichan-dict-reader) that can help with stealing conjugations from JMDict - you can see an example of `getDeinflectorsForTermReading` in the [logic used to create the JP-Mongolian dictionary](https://github.com/MarvNC/yomichan-dictionaries/blob/master/mongolian/scrape.js).
-
-## Types
-
-For dealing with term dictionary structured content in JS/TS, you may find [types.d.ts](./types.d.ts) useful for type checking.

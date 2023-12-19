@@ -6,9 +6,11 @@ This repository contains dictionaries for [Yomichan](https://foosoft.net/project
 
 **[Please check here for information on what dictionaries to install.](#dictionary-collection)**
 
-If you're interested in creating your own Yomichan dictionary I have listed some resources here: [**How Do I Make A Yomichan Dictionary?**](how-to-make-yomichan-dictionaries.md)
+My related dictionary resources:
 
-Visit this repository for some stats/metadata on the dictionaries: [**Yomitan Dictionary Stats**](https://github.com/MarvNC/yomitan-dict-stats)
+- [**How Do I Make A Yomichan Dictionary?**](how-to-make-yomichan-dictionaries.md)
+- [**Yomitan Dictionary Stats**](https://github.com/MarvNC/yomitan-dict-stats) - Information such as metadata and entry counts for many Yomichan dictionaries.
+- [**Yomichan Dictionary Builder**](https://github.com/MarvNC/yomichan-dict-builder/) - A node package I built to help with making dictionaries. It greatly simplifies the process of making dictionaries, please try it out if you use TypeScript or JavaScript.
 
 - [Dictionary Collection](#dictionary-collection)
   - [What Dictionaries Should I Install?](#what-dictionaries-should-i-install)
@@ -255,6 +257,7 @@ Converted by dictionary anon, this dictionary has nice modern formatting.
 Converted by dictionary anon, this dictionary has nice modern formatting.
 
 Recommended custom CSS:
+
 ```css
 li[data-dictionary^='新選国語辞典'] th,
 span[data-sc-shinsenkoku10='warichu'] {
