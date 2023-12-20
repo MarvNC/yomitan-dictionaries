@@ -24,12 +24,12 @@ const downloadPageSubdir = 'pages';
 
   console.log('Processing pages');
   const pageFileNames = await fs.promises.readdir(path.join(__dirname, downloadPageSubdir));
-  for (let i = 0; i < pageFileNames.length; i++) {
-    const pageFileName = pageFileNames[i];
+  await Promise.all(pageFileNames.map(async (pageFileName, i) => {
     console.log(`Processing ${i + 1}/${pageFileNames.length}: ${pageFileName}`);
     const pageFilePath = path.join(__dirname, downloadPageSubdir, pageFileName);
     await processPage(pageFilePath, dictionary);
-  }
+    console.log(`Processed ${i + 1}/${pageFileNames.length}: ${pageFileName}`);
+  }));
 
   console.log('Exporting dictionary');
 
@@ -152,6 +152,7 @@ async function processPage(pageFilePath, dictionary) {
             let cleanDefinition = child.textContent.trim();
             if (cleanDefinition.startsWith('◆')) {
               cleanDefinition = cleanDefinition.substring(1);
+              definitionArray.push(cleanDefinition);
             }
           }
           break;
