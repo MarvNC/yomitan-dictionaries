@@ -1,26 +1,84 @@
 const { Dictionary, DictionaryIndex, KanjiEntry, TermEntry } = require('yomichan-dict-builder');
 const JSDom = require('jsdom').JSDOM;
+const fs = require('fs');
+const path = require('path');
 
 const baseListingPageURL = 'https://ksbookshelf.com/DW/Kanjirin/';
+
+const downloadPageSubdir = 'pages';
 
 (async () => {
   const dictionary = new Dictionary({
     fileName: '[Kanji] Kanjirin.zip',
   });
   const pageUrls = await getPagesFromIndex();
-  for (const pageUrl of pageUrls) {
-    await processPage(pageUrl, dictionary);
+
+  console.log(`Downloading ${pageUrls.length} pages`);
+  for (let i = 0; i < pageUrls.length; i++) {
+    const pageUrl = pageUrls[i];
+    console.log(`Downloading ${i + 1}/${pageUrls.length}: ${pageUrl}`);
+    await downloadPage(pageUrl);
   }
+
+  console.log('Processing pages');
+  const pageFileNames = await fs.promises.readdir(downloadPageSubdir);
+  for (let i = 0; i < pageFileNames.length; i++) {
+    const pageFileName = pageFileNames[i];
+    console.log(`Processing ${i + 1}/${pageFileNames.length}: ${pageFileName}`);
+    const pageFilePath = `${downloadPageSubdir}/${pageFileName}`;
+    await processPage(pageFilePath, dictionary);
+  }
+
+  console.log('Exporting dictionary');
+
+  await dictionary.setIndex({
+    title: '漢字林',
+    revision: new Date().toISOString().slice(0, 10),
+    description: `Kanjirin from https://ksbookshelf.com/DW/Kanjirin
+Converted by https://github.com/MarvNC/yomichan-dictionaries`,
+    attribution: `K's Bookshelf: https://ksbookshelf.com/DW/Kanjirin`,
+    author: `K's Bookshelf, Marv, tism`,
+    format: 3,
+  });
+
+  const stats = await dictionary.export();
+  console.log(`Exported ${stats.kanjiCount} entries`);
 })();
 
 /**
- *
+ * Downloads a page to the download directory
  * @param {string} pageUrl
- * @param {Dictionary} dictionary
  */
-async function processPage(pageUrl, dictionary) {
+async function downloadPage(pageUrl) {
+  if (!pageUrl) throw new Error('No page URL provided');
+  const fileName = pageUrl.split('/').pop();
+  if (!fileName) throw new Error('No file name found');
+  // subdir within current directory
+  const filePath = path.join(__dirname, downloadPageSubdir, fileName);
+  // Check if file already exists
+  if (fs.existsSync(filePath)) {
+    console.log(`Found existing file ${filePath}`);
+    return;
+  }
+
   const dom = await JSDom.fromURL(pageUrl);
   const document = dom.window.document;
+
+  const html = document.documentElement.outerHTML;
+  // create directory if it doesn't exist
+  await fs.promises.mkdir(downloadPageSubdir, { recursive: true });
+  await fs.promises.writeFile(filePath, html);
+}
+
+/**
+ *
+ * @param {string} pageFilePath
+ * @param {Dictionary} dictionary
+ */
+async function processPage(pageFilePath, dictionary) {
+  const dom = await JSDom.fromFile(pageFilePath);
+  const document = dom.window.document;
+
   const kanjiDivs = document.querySelectorAll('div.kanjirin_text');
   for (const kanjiInfoDiv of kanjiDivs) {
     // Check if div has id
@@ -55,15 +113,65 @@ async function processPage(pageUrl, dictionary) {
     const readingsRegex = /\[(.*)\/(.*)\]/;
     const readingsMatch = readingsRegex.exec(nextTextContent) ?? [];
     if (readingsMatch?.length < 3) throw new Error('No readings found');
-    const onyomi = readingsMatch[1];
-    const kunyomi = readingsMatch[2];
+    const replaceCommas = (str) => str.replace(/、/g, ' ');
+    const onyomi = replaceCommas(readingsMatch[1]);
+    const kunyomi = replaceCommas(readingsMatch[2]);
+
+    kanjiEntry.setOnyomi(onyomi);
+    kanjiEntry.setKunyomi(kunyomi);
 
     // betsuji
-    const betsujiSpan = kanjiInfoDiv.querySelector('.kanjirin_betsuji');
-    const betsuji = betsujiSpan?.textContent;
+    let betsuji;
+    if (kanjiInfoDiv.querySelector('.kanjirin_betsuji')) {
+      const betsujiSpan = /** @type {HTMLSpanElement}*/ (children.shift());
+      if (!betsujiSpan?.classList.contains('kanjirin_betsuji')) throw new Error('No betsuji found');
+      betsuji = betsujiSpan.textContent;
+    }
+    // const betsujiSpan = kanjiInfoDiv.querySelector('.kanjirin_betsuji');
+    // const betsuji = betsujiSpan?.textContent;
 
-    console.log(kanji, bushu, strokeCount, onyomi, kunyomi, betsuji);
-    debugger;
+    kanjiEntry.setStats({
+      部首: bushu,
+      総画数: strokeCount,
+    });
+
+    let definitionArray = ['【意味】'];
+    while (children.length > 0) {
+      const child = children.shift();
+      switch (child?.nodeName) {
+        case '#text':
+          if (child.textContent?.trim()) {
+            definitionArray.push(child.textContent);
+          }
+          break;
+        case 'SPAN':
+          const span = /** @type {HTMLSpanElement} */ (child);
+          if (span.classList.contains('kanjirin_notes')) {
+            definitionArray.push('【注解】');
+          } else if (span.classList.contains('kanjirin_quote')) {
+            if (span.textContent?.trim()) {
+              definitionArray.push(`◇【出典】${span.textContent.trim()}`);
+            }
+          } else if (span.classList.contains('kanjirin_remarks')) {
+            if (span.textContent?.trim()) {
+              definitionArray.push(`【注釈】`, span.textContent.trim());
+            }
+          } else if (span.classList.contains('kanjirin_betsuji')) {
+            debugger;
+          } else {
+            console.log(span.className);
+          }
+          break;
+      }
+    }
+
+    if (betsuji) {
+      definitionArray.push('【別字】', betsuji);
+    }
+
+    kanjiEntry.addMeaning(definitionArray);
+
+    dictionary.addKanji(kanjiEntry.build());
   }
 }
 

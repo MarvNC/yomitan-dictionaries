@@ -15,3 +15,5 @@ wikipedia.json
 pixivReadings.json
 pixivSummaries.json
 *.ttl
+
+**/kanjirin/pages/*
