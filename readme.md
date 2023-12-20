@@ -403,36 +403,13 @@ put in to creating them to make them parse well, I'd recommend you install all o
 
 #### JA Wikipedia
 
-**[Download JA Wikipedia](https://drive.google.com/open?id=12cNjVi6jl7t-7YR3Prleg9jqqBSlZ1e6&usp=drive_fs)**
+**[Wikipedia for Yomitan](https://github.com/MarvNC/wikipedia-yomitan)**
 
 A conversion of the [DBPedia](https://dbpedia.org/) short-abstract dumps of
 [JA Wikipedia](https://ja.wikipedia.org/) for Yomitan. This dictionary features over 1.2 million
 entries with each entry containing the abstract and a link to the Wikipedia article. Unfortunately
 there are no dumps of DBPedia after December 2022, so regular updates will not be possible until
 DBPedia starts updating again.
-
-Recommended custom CSS to add to the `Configure custom CSS…` section of the options page:
-
-```css
-/* JA Wikipedia */
-div.gloss-sc-div[data-sc-jawiki='red'] {
-  color: #e5007f;
-}
-```
-
-<!-- prettier-ignore -->
-> [!CAUTION] 
-> Due to the size of the dictionary, there are currently issues with being unable to
-> delete the dictionary from Yomitan. This may be fixed soon, but in the meantime you will have to
-> delete it by clicking the 'Delete All' button.
-
-<!-- prettier-ignore -->
-> [!IMPORTANT] 
-> This dictionary is quite large and may use up to 1GB of storage space after being
-> imported.
-
-![chrome_First_Love_初恋_-_Wikiwand_-_Google_Chrome_2023-12-17_14-49-34](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/dd99c5c3-d26a-4a9b-9f47-ed1c114c693e)
-![chrome_First_Love_初恋_-_Wikiwand_-_Google_Chrome_2023-12-17_14-49-50](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/743d05d2-705b-4af1-aa89-173862e5900d)
 
 #### Pixiv
 
@@ -963,6 +940,16 @@ Michel converted some of the above dictionaries to simplified Chinese.
 - **[Download `两岸词典`](https://cdn.discordapp.com/attachments/1102744354222776471/1122247339965419610/cross-straits.zip)**
   - The Cross-Straits dictionary is a small mainland dictionary focusing on contemporary usage and
     the differences between Taiwan and Mainland Chinese.
+
+#### ZH Wikipedia
+
+**[Wikipedia for Yomitan](https://github.com/MarvNC/wikipedia-yomitan)**
+
+A conversion of the [DBPedia](https://dbpedia.org/) short-abstract dumps of
+[ZH Wikipedia](https://zh.wikipedia.org/) for Yomitan. This dictionary features over 1.2 million
+entries with each entry containing the abstract and a link to the Wikipedia article. Unfortunately
+there are no dumps of DBPedia after December 2022, so regular updates will not be possible until
+DBPedia starts updating again.
 
 #### Other Chinese Dictionaries
 
