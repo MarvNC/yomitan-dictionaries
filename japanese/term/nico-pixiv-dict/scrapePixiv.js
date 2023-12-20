@@ -2,10 +2,10 @@ const fs = require('fs').promises;
 const jszip = require('jszip');
 const cliProgress = require('cli-progress');
 
-const { getURL, getJSON, wait } = require('../util/scrape');
-const saveDict = require('../util/saveDict');
-const writeJson = require('../util/writeJson');
-const japaneseUtils = require('../util/japaneseUtils');
+const { getURL, getJSON, wait } = require('../../../util/scrape');
+const saveDict = require('../../../util/saveDict');
+const writeJson = require('../../../util/writeJson');
+const japaneseUtils = require('../../../util/japaneseUtils');
 
 const folderPath = './nico-pixiv-dict/';
 const saveSummariesJsonPath = folderPath + 'pixivSummaries.json';

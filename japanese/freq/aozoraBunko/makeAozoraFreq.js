@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const saveDict = require('../util/saveDict');
+const saveDict = require('../../../util/saveDict');
 
 const folderPath = 'aozoraBunko/kanji-jukugo-frequency/';
 const kanjiDataFilePath = 'aozoraBunko/aozora-kanji-frequency.txt';

@@ -1,9 +1,9 @@
 const fs = require('fs').promises;
 
 const exp = require('constants');
-const { getURL, wait } = require('../util/scrape');
-const saveDict = require('../util/saveDict');
-const writeJson = require('../util/writeJson');
+const { getURL, wait } = require('../../../util/scrape');
+const saveDict = require('../../../util/saveDict');
+const writeJson = require('../../../util/writeJson');
 
 const folderPath = './surasura/';
 const saveDataJsonPath = folderPath + 'data.json';

@@ -1,4 +1,4 @@
-const saveDict = require('../util/saveDict');
+const saveDict = require('../../../util/saveDict');
 
 const wikiFreq = require('./wikipedia.json');
 const outputZipName = '[Kanji Frequency] Wikipedia.zip';

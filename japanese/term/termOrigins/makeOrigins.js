@@ -2,8 +2,8 @@ const csv = require('csvtojson');
 const fs = require('fs');
 const jszip = require('jszip');
 
-const saveDict = require('../util/saveDict');
-const JMDict = require('../util/getJMDictInfo');
+const saveDict = require('../../../util/saveDict');
+const JMDict = require('../../../util/getJMDictInfo');
 
 const folderPath = 'termOrigins/';
 

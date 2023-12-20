@@ -479,7 +479,7 @@ For each entry, it contains:
 #### 複合語起源 Term Origins
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BOther%5D%20%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.zip)**
-| **[List of words](termOrigins/%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv)**
+| **[List of words](./japanese/term/termOrigins/%E8%A4%87%E5%90%88%E8%AA%9E%E8%B5%B7%E6%BA%90.tsv)**
 
 Compound kunyomi word origins/etymology, for example 陥る -> 落ち入る（おち|いる）. Information
 comes from anonymous forum posts, so it may not be 100% accurate.

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const JSZip = require('jszip');
 
-const saveDict = require('../util/saveDict');
+const saveDict = require('../../../util/saveDict');
 
 const folderPath = 'innocent_corpus/';
 const corpusFile = 'innocent_corpus.zip';

@@ -1,8 +1,8 @@
 const fs = require('fs').promises;
 
-const saveDict = require('../util/saveDict');
-const writeJson = require('../util/writeJson');
-const { getURL, wait } = require('../util/scrape.js');
+const saveDict = require('../../../util/saveDict.js');
+const writeJson = require('../../../util/writeJson.js');
+const { getURL, wait } = require('../../../util/scrape.js');
 
 const data = require('./zhwiktionaryKanji.json');
 const hanziDataFilePath = './hanziData.json';

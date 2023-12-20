@@ -3,7 +3,7 @@ const Yomichan = require('yomichan-dict-reader');
 const csv = require('csvtojson');
 const wrap = require('word-wrap');
 
-const saveDict = require('../util/saveDict');
+const saveDict = require('../../../util/saveDict');
 
 const index = {
   revision: `thekanjimap_${new Date().toISOString()}`,

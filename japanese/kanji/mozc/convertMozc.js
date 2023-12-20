@@ -1,6 +1,6 @@
 const fs = require('fs');
 const folderPath = 'mozc/';
-const saveDict = require('../util/saveDict');
+const saveDict = require('../../../util/saveDict');
 
 const outputZipName = '[Kanji] mozc Kanji Variants.zip';
 

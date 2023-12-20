@@ -4,8 +4,8 @@ const hasUTF16SurrogatePairAt = require('@stdlib/assert-has-utf16-surrogate-pair
 const fs = require('fs').promises;
 
 const { write } = require('fs');
-const { getURL, wait } = require('../util/scrape.js');
-const writeJson = require('../util/writeJson.js');
+const { getURL, wait } = require('../../../util/scrape.js');
+const writeJson = require('../../../util/writeJson.js');
 
 const folderPath = './wiktionary/';
 const allKanjiFilePath = () => lang + 'wiktionaryKanji.json';

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const wrap = require('word-wrap');
 
-const saveDict = require('../util/saveDict');
+const saveDict = require('../../../util/saveDict');
 
 const folderPath = './jpdb/';
 const allKanjiFilePath = 'allKanji.json';
