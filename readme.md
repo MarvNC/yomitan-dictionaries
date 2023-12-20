@@ -57,6 +57,7 @@ My related dictionary resources:
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
 - [Korean](#korean)
 - [Vietnamese-English](#vietnamese-english)
+- [Other](#other)
 
 # Dictionary Collection
 
@@ -1153,3 +1154,27 @@ Marsh Nguyễn for Yomichan.
 **[stardict-vi](https://www.mediafire.com/folder/9ss2pn046fcjo/Vi%E1%BB%87t_-_Anh)**
 
 From [OVDP (Open Vietnamese Dictionary Project)](https://github.com/dynamotn/stardict-vi).
+
+# Other
+
+**[Yezichak](https://github.com/StefanVukovic99/yezichak)**
+
+The Yomichan fork [Yezichak](https://github.com/StefanVukovic99/yezichak) has support and custom dictionaries for the following languages:
+
+- Albanian
+- Arabic
+- Ancient Greek
+- English
+- French
+- German
+- Greek
+- Indonesian
+- Italian
+- Japanese
+- Latin
+- Persian
+- Polish
+- Portuguese
+- Russian
+- Serb-Croatian
+- Spanish
