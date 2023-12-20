@@ -9,7 +9,7 @@ const downloadPageSubdir = 'pages';
 
 (async () => {
   const dictionary = new Dictionary({
-    fileName: '[Kanji] Kanjirin.zip',
+    fileName: '[Kanji] 漢字林.zip',
   });
   const pageUrls = await getPagesFromIndex();
 
