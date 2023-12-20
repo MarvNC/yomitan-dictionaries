@@ -1,7 +1,36 @@
 const japaneseFolderId = PropertiesService.getScriptProperties().getProperty('japaneseFolderId');
 const mandarinFolderId = PropertiesService.getScriptProperties().getProperty('mandarinFolderId');
 const githubAccessToken = PropertiesService.getScriptProperties().getProperty('githubAccessToken');
+if (!japaneseFolderId || !mandarinFolderId || !githubAccessToken) {
+  if (!japaneseFolderId) {
+    throw new Error('japaneseFolderId not set');
+  }
+  if (!mandarinFolderId) {
+    throw new Error('mandarinFolderId not set');
+  }
+  if (!githubAccessToken) {
+    throw new Error('githubAccessToken not set');
+  }
+}
 
+function downloadAllRepos() {
+  for (const repo of repos) {
+    downloadFromGithub(repo);
+  }
+}
+
+/**
+ * @typedef {Object} GithubRepo
+ * @property {string} url
+ * @property {string} folderId
+ * @property {RegExp} includedNameRegex
+ * @property {RegExp} removeNameRegex
+ * @property {string} fileNamePrefix
+ * @property {boolean} [addDate]
+ */
+/**
+ * @type {GithubRepo[]}
+ */
 const repos = [
   {
     url: 'https://api.github.com/repos/stephenmk/Jitendex/releases/latest',
@@ -29,22 +58,25 @@ const repos = [
   {
     url: 'https://api.github.com/repos/MarvNC/cc-cedict-yomitan/releases/latest',
     folderId: mandarinFolderId,
-    includedNameRegex: /CC\-CEDICT\.(?!Hanzi)/,
-    removeNameRegex: /CC\-CEDICT\.(?!Hanzi)/,
+    includedNameRegex: /CC\-CEDICT(?!\.Hanzi)/,
+    removeNameRegex: /CC\-CEDICT(?!\.Hanzi)/,
     fileNamePrefix: '[ZH-EN] ',
     addDate: true,
   },
   {
     url: 'https://api.github.com/repos/MarvNC/cc-cedict-yomitan/releases/latest',
     folderId: mandarinFolderId,
-    includedNameRegex: /CC\-CEDICT\.(?=Hanzi)/,
-    removeNameRegex: /CC\-CEDICT\.(?=Hanzi)/,
+    includedNameRegex: /CC\-CEDICT\.Hanzi/,
+    removeNameRegex: /CC\-CEDICT\.Hanzi/,
     fileNamePrefix: '[Hanzi] ',
     addDate: true,
   },
 ];
 
 // Function to download jitendex from GitHub and save it to Google Drive
+/**
+ * @param {GithubRepo} githubRepo
+ */
 function downloadFromGithub(githubRepo) {
   const headers = {
     Authorization: 'token ' + githubAccessToken,
@@ -112,11 +144,5 @@ function removeFilesWithSubstring(folderId, regexToRemove) {
     if (file.getName().match(regexToRemove)) {
       file.setTrashed(true); // Moves file to the trash
     }
-  }
-}
-
-function downloadAllRepos() {
-  for (const repo of repos) {
-    downloadFromGithub(repo);
   }
 }
