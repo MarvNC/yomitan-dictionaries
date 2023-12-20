@@ -16,16 +16,18 @@ const downloadPageSubdir = 'pages';
   console.log(`Downloading ${pageUrls.length} pages`);
   for (let i = 0; i < pageUrls.length; i++) {
     const pageUrl = pageUrls[i];
-    console.log(`Downloading ${i + 1}/${pageUrls.length}: ${pageUrl}`);
-    await downloadPage(pageUrl);
+    const fileExisted = await downloadPage(pageUrl);
+    if (!fileExisted) {
+      console.log(`Downloading ${i + 1}/${pageUrls.length}: ${pageUrl}`);
+    }
   }
 
   console.log('Processing pages');
-  const pageFileNames = await fs.promises.readdir(downloadPageSubdir);
+  const pageFileNames = await fs.promises.readdir(path.join(__dirname, downloadPageSubdir));
   for (let i = 0; i < pageFileNames.length; i++) {
     const pageFileName = pageFileNames[i];
     console.log(`Processing ${i + 1}/${pageFileNames.length}: ${pageFileName}`);
-    const pageFilePath = `${downloadPageSubdir}/${pageFileName}`;
+    const pageFilePath = path.join(__dirname, downloadPageSubdir, pageFileName);
     await processPage(pageFilePath, dictionary);
   }
 
@@ -41,6 +43,15 @@ Converted by https://github.com/MarvNC/yomichan-dictionaries`,
     format: 3,
   });
 
+  await dictionary.addTag({
+    name: '部首',
+    category: 'misc',
+  });
+  await dictionary.addTag({
+    name: '総画数',
+    category: 'misc',
+  });
+
   const stats = await dictionary.export();
   console.log(`Exported ${stats.kanjiCount} entries`);
 })();
@@ -53,12 +64,10 @@ async function downloadPage(pageUrl) {
   if (!pageUrl) throw new Error('No page URL provided');
   const fileName = pageUrl.split('/').pop();
   if (!fileName) throw new Error('No file name found');
-  // subdir within current directory
   const filePath = path.join(__dirname, downloadPageSubdir, fileName);
   // Check if file already exists
   if (fs.existsSync(filePath)) {
-    console.log(`Found existing file ${filePath}`);
-    return;
+    return true;
   }
 
   const dom = await JSDom.fromURL(pageUrl);
@@ -83,6 +92,7 @@ async function processPage(pageFilePath, dictionary) {
   for (const kanjiInfoDiv of kanjiDivs) {
     // Check if div has id
     if (!kanjiInfoDiv.id) continue;
+    const id = kanjiInfoDiv.id;
 
     const children = [...kanjiInfoDiv.childNodes];
 
@@ -127,8 +137,6 @@ async function processPage(pageFilePath, dictionary) {
       if (!betsujiSpan?.classList.contains('kanjirin_betsuji')) throw new Error('No betsuji found');
       betsuji = betsujiSpan.textContent;
     }
-    // const betsujiSpan = kanjiInfoDiv.querySelector('.kanjirin_betsuji');
-    // const betsuji = betsujiSpan?.textContent;
 
     kanjiEntry.setStats({
       部首: bushu,
@@ -156,10 +164,8 @@ async function processPage(pageFilePath, dictionary) {
             if (span.textContent?.trim()) {
               definitionArray.push(`【注釈】`, span.textContent.trim());
             }
-          } else if (span.classList.contains('kanjirin_betsuji')) {
-            debugger;
           } else {
-            console.log(span.className);
+            // No
           }
           break;
       }

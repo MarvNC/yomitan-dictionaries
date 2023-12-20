@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@stdlib/assert-has-utf16-surrogate-pair-at": "^0.0.8",
+    "@stdlib/assert-has-utf16-surrogate-pair-at": "^0.1.0",
     "axios": "^0.27.2",
     "cli-progress": "^3.12.0",
     "csvtojson": "^2.0.10",
@@ -8,7 +8,7 @@
     "jszip": "^3.10.1",
     "qs": "^6.11.1",
     "word-wrap": "^1.2.3",
-    "yomichan-dict-builder": "^1.3.3",
+    "yomichan-dict-builder": "^2.0.0",
     "yomichan-dict-reader": "^1.2.2"
   },
   "devDependencies": {
