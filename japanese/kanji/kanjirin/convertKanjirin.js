@@ -149,7 +149,10 @@ async function processPage(pageFilePath, dictionary) {
       switch (child?.nodeName) {
         case '#text':
           if (child.textContent?.trim()) {
-            definitionArray.push(child.textContent);
+            let cleanDefinition = child.textContent.trim();
+            if (cleanDefinition.startsWith('◆')) {
+              cleanDefinition = cleanDefinition.substring(1);
+            }
           }
           break;
         case 'SPAN':
