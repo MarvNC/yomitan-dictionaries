@@ -46,9 +46,11 @@ My related dictionary resources:
   - [Hanzi](#hanzi)
     - [Wiktionary Hanzi](#wiktionary-hanzi)
 - [Cantonese](#cantonese)
-  - [Terms](#terms-2)
+  - [Cantonese Terms](#cantonese-terms)
     - [CantoDict](#cantodict)
     - [Misc Dictionaries](#misc-dictionaries)
+  - [Cantonese Term Frequency](#cantonese-term-frequency)
+    - [Cifu](#cifu)
 - [Japanese-German](#japanese-german)
   - [Wadoku Jiten](#wadoku-jiten)
   - [Wadoku Daijiten](#wadoku-daijiten)
@@ -1046,7 +1048,7 @@ often consist of just unicode information and code points, which was stripped fr
 
 # Cantonese
 
-## Terms
+## Cantonese Terms
 
 ### CantoDict
 
@@ -1073,6 +1075,23 @@ Thanks to richter_belmont on the Refold Cantonese Discord:
 - CE Wiktionary
 - Words.hk C-C
 - Words.hk C-E
+
+## Cantonese Term Frequency
+
+### Cifu
+
+**[Download](#dictionary-collection)**
+
+Spoken and written Cantonese frequency dictionaries for Yomitan from
+[Cifu](https://github.com/gwinterstein/Cifu).
+
+- Spoken data from
+  `HKCanCor (Luke and Wong, 2015), HKCAC (Leung and Law, 2001), CantoMap (Lai and Winterstein, 2019)`
+
+- Written data from 3,841 chapters of amateur novels from the website https://www.shikoto.com/.
+
+[Paper with more information about their methodology](http://www.lrec-conf.org/proceedings/lrec2020/pdf/2020.lrec-1.375.pdf):
+`Lai, Regine and Winterstein, Grégoire (2020) "Cifu: a Frequency Lexicon of Hong Kong Cantonese", in Proceedings of The 12th Language Resources and Evaluation Conference, Marseille: European Language Resources Association, p. 3062--3070.`
 
 # Japanese-German
 
@@ -1159,7 +1178,8 @@ From [OVDP (Open Vietnamese Dictionary Project)](https://github.com/dynamotn/sta
 
 **[Yezichak](https://github.com/StefanVukovic99/yezichak)**
 
-The Yomichan fork [Yezichak](https://github.com/StefanVukovic99/yezichak) has support and custom dictionaries for the following languages:
+The Yomichan fork [Yezichak](https://github.com/StefanVukovic99/yezichak) has support and custom
+dictionaries for the following languages:
 
 - Albanian
 - Arabic
