@@ -17,3 +17,6 @@ pixivSummaries.json
 *.ttl
 
 **/kanjirin/pages/*
+
+Cifu-v1.txt
+*.zip
