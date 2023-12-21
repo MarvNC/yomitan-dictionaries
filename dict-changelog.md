@@ -2,6 +2,13 @@ I will be keeping track of the changes made to the dictionaries in the folder he
 that Jitendex, JMnedict, and KANJIDIC are updated automatically daily now, so while in the past I
 would make changelog entries for those dictionaries, that is no longer necessary.
 
+## 2023-12-20 (Afternoon)
+- Remove
+  - Words.hk C-C (It's redundant with the regular words.hk dictionary)
+- Add
+  - [Yue Freq] Cifu Written
+  - [Yue Freq] Cifu Spoken
+
 ## 2023-12-20
 
 - Update
