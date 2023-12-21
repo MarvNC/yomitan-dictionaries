@@ -66,7 +66,7 @@ async function processCifu() {
         'freq',
         {
           value: freqRank,
-          displayValue: count.toFixed(0).toString(),
+          displayValue: `${freqRank} (${count.toFixed(0).toString()})`,
         },
       ];
       // If the count is different than the previous term, set the rank to the current index + 1
@@ -92,7 +92,11 @@ Converted with https://github.com/MarvNC/yomichan-dictionaries`,
       url: 'https://github.com/gwinterstein/Cifu',
     });
 
+    console.log(`Exporting ${type} dictionary`);
+
     await dict.export();
+
+    console.log(`Exported ${type} dictionary`);
   }
 }
 
