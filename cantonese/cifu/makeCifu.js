@@ -79,16 +79,18 @@ async function processCifu() {
     await dict.setIndex({
       title: `Cifu ${type.charAt(0).toUpperCase() + type.slice(1)}`,
       revision: new Date().toISOString().slice(0, 10),
-      description: `Cantonese Frequency List from Cifu.\n${
+      description: `Cantonese Frequency List from Cifu:
+https://github.com/gwinterstein/Cifu
+\n${
         type === 'spoken'
           ? `Spoken data from HKCanCor (Luke and Wong, 2015), HKCAC (Leung and Law, 2001), CantoMap (Lai and Winterstein, 2019)`
           : `Written data from 3,841 chapters of amateur novels from the website https://www.shikoto.com/`
-      }\nConverted with https://github.com/MarvNC/yomichan-dictionaries`,
+      }\nConverted by Marv`,
       attribution: `Lai, Regine and Winterstein, Grégoire (2020) "Cifu: a Frequency Lexicon of Hong Kong Cantonese", in Proceedings of The 12th Language Resources and Evaluation Conference, Marseille: European Language Resources Association, p. 3062--3070.`,
-      author: `Marv`,
+      author: `Regine Lai, Grégoire Winterstein, Marv`,
       format: 3,
       frequencyMode: 'rank-based',
-      url: 'https://github.com/gwinterstein/Cifu',
+      url: 'https://github.com/MarvNC/yomichan-dictionaries',
     });
 
     console.log(`Exporting ${type} dictionary`);
