@@ -135,6 +135,8 @@ variable at the top.
 
 # Japanese
 
+For an easy download of the dictionaries I use, check out [this folder](#dictionary-collection).
+
 Do check out [yomichan-dict-css](https://github.com/themoeway/yomichan-dict-css) for CSS that colors
 some term dictionaries to make them more immediately distinguishable.
 
@@ -908,6 +910,8 @@ Kanji frequency data from https://jpdb.io as a Yomichan frequency dictionary.
 
 # Mandarin Chinese
 
+For an easy download of the dictionaries I use, check out [this folder](#dictionary-collection).
+
 ## Terms
 
 ### Term Dictionaries
@@ -1047,6 +1051,8 @@ often consist of just unicode information and code points, which was stripped fr
 ![zh wiktionary hanzi](!images/zhWiktionaryHanzi.png)
 
 # Cantonese
+
+For an easy download of the dictionaries I use, check out [this folder](#dictionary-collection).
 
 ## Cantonese Terms
 
