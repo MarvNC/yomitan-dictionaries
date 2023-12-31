@@ -918,8 +918,8 @@ using Yomitan with non-Japanese CJK languages. This can be fixed with some CSS.
 /* Set Render Language */
 * {
   /* 
-  Optionally set the version(s) of Noto Sans you want
-  e.g JP, TC, SC, HK
+  Optionally set the version(s) of Noto Sans you want in your preferred order.
+  e.g. JP, TC, SC, HK
   */
   /* prettier-ignore */
   font-family:
