@@ -85,21 +85,21 @@ If you're a beginner, I recommend following
 [Shoui's Yomichan Setup](https://learnjapanese.moe/yomichan/). I would say the _bare minimum_ is:
 
 - Bilingual:
-  - [Bilingual] jitendex-yomichan
-  - [Bilingual] NEW 斎藤和英大辞典
-  - [Bilingual] 新和英
+  - [JA-EN] jitendex-yomichan
+  - [JA-EN] NEW 斎藤和英大辞典
+  - [JA-EN] 新和英
 - Grammar:
-  - [Grammar] dojg-consolidated-v1_01
+  - [JA Grammar] dojg-consolidated-v1_01
 - Frequency:
-  - [Freq] JPDB_2022-05-10T03_27_02.930Z
-  - [Freq] Freq_CC100
-  - [Freq] BCCWJ-LUW
+  - [JA Freq] JPDB_2022-05-10T03_27_02.930Z
+  - [JA Freq] Freq_CC100
+  - [JA Freq] BCCWJ-LUW
 - Monolingual but still useful for coverage to a beginner! If a word shows up in one of these
   dictionaries but not an English one, you can just web search/translate to find out more
   information.
-  - [Mono] 実用日本語表現辞典
-  - [Mono] デジタル大辞泉
-  - [Mono Encyclopedia] Pixiv
+  - [JA-JA] 実用日本語表現辞典
+  - [JA-JA] デジタル大辞泉
+  - [JA-JA Encyclopedia] Pixiv
 - Kanji information
   - [Kanji] KANJIDIC_english
   - [Kanji] JPDB Kanji
