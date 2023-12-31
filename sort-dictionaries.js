@@ -1,7 +1,7 @@
 /* 
 By Marv for Yomitan
 From https://github.com/MarvNC/yomichan-dictionaries
-Last Updated 2023-12-16
+Last Updated 2023-12-30
 
 Instructions:
 Paste this into the browser console of the Yomitan options page and hit enter.
@@ -14,6 +14,9 @@ The order object is in order of priority, so the higher up the dictionary is, th
  */
 const profileToEdit = 0;
 
+/**
+ * @type {Record<string, '' | 'prefix'>}
+ */
 // prettier-ignore
 const order = {
   // JA Frequency
@@ -107,8 +110,12 @@ const order = {
   'jitai': '',
   'TheKanjiMap Kanji Radicals/Composition': '',
   'Wiktionary漢字': '',
+
+  // YUE Freq
+  'Cifu Spoken': '',
+  'Cifu Written': '',
   
-  // ZH-HK-EN
+  // YUE-EN
   'CantoDict': '',
   'Canto CEDICT': '',
   'Words.hk C-E FS': '',
@@ -117,6 +124,7 @@ const order = {
   'CC-Canto': '',
 
   // ZH Hanzi Info
+  'CC-CEDICT Hanzi [': 'prefix',
   'ZH Wiktionary Hanzi': '',
   
   // ZH Frequency
@@ -129,7 +137,7 @@ const order = {
   'BLCUsci': '',
   
   // ZH-EN
-  'CEDICT': '',
+  'CC-CEDICT [': 'prefix',
   'Wenlin ABC': '',
   
   // ZH-JA
@@ -204,7 +212,7 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
   // Get the remaining dictionaries
   for (const dict of dictionaries) {
     if (dict) {
-      console.warn(`Found dictionary not in sort order: ${dict.name}}`);
+      console.warn(`Found dictionary not in sort order: ${dict.name}`);
       newDictionaries.push(dict);
     }
   }
