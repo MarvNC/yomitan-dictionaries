@@ -39,7 +39,7 @@ My related dictionary resources:
     - [Kanji Info](#kanji-info)
     - [Kanji Variants](#kanji-variants)
     - [Kanji Frequency](#kanji-frequency)
-- [Yomichan CSS for Non-Japanese CJK Languages](#yomichan-css-for-non-japanese-cjk-languages)
+- [Yomitan CSS for Non-Japanese CJK Languages](#yomitan-css-for-non-japanese-cjk-languages)
 - [Mandarin Chinese](#mandarin-chinese)
   - [Terms](#terms-1)
     - [Term Dictionaries](#term-dictionaries)
@@ -909,10 +909,10 @@ kanji. Data [gathered by scriptin](https://github.com/scriptin/kanji-frequency).
 
 Kanji frequency data from https://jpdb.io as a Yomichan frequency dictionary.
 
-# Yomichan CSS for Non-Japanese CJK Languages
+# Yomitan CSS for Non-Japanese CJK Languages
 
-Yomichan by default renders everything in Japanese leading to incorrect glyphs being rendered when
-using Yomichan with non-Japanese CJK languages. This can be fixed with some CSS.
+Yomitan by default renders everything in Japanese leading to incorrect glyphs being rendered when
+using Yomitan with non-Japanese CJK languages. This can be fixed with some CSS.
 
 ```css
 /* Set Render Language */
@@ -961,8 +961,8 @@ Simply copy this CSS into `Settings -> Popup Appearance -> Configure custom CSS.
 
 For an easy download of the dictionaries I use, check out [this folder](#dictionary-collection).
 
-For CSS to fix the rendering of non-Japanese characters in Yomichan, see
-[this section](#yomichan-css-for-non-japanese-cjk-languages).
+For CSS to fix the rendering of non-Japanese characters in Yomitan, see
+[this section](#yomitan-css-for-non-japanese-cjk-languages).
 
 ## Terms
 
@@ -1106,8 +1106,8 @@ often consist of just unicode information and code points, which was stripped fr
 
 For an easy download of the dictionaries I use, check out [this folder](#dictionary-collection).
 
-For CSS to fix the rendering of non-Japanese characters in Yomichan, see
-[this section](#yomichan-css-for-non-japanese-cjk-languages).
+For CSS to fix the rendering of non-Japanese characters in Yomitan, see
+[this section](#yomitan-css-for-non-japanese-cjk-languages).
 
 ## Cantonese Terms
 
