@@ -39,6 +39,7 @@ My related dictionary resources:
     - [Kanji Info](#kanji-info)
     - [Kanji Variants](#kanji-variants)
     - [Kanji Frequency](#kanji-frequency)
+- [Yomichan CSS for Non-Japanese CJK Languages](#yomichan-css-for-non-japanese-cjk-languages)
 - [Mandarin Chinese](#mandarin-chinese)
   - [Terms](#terms-1)
     - [Term Dictionaries](#term-dictionaries)
@@ -908,9 +909,60 @@ kanji. Data [gathered by scriptin](https://github.com/scriptin/kanji-frequency).
 
 Kanji frequency data from https://jpdb.io as a Yomichan frequency dictionary.
 
+# Yomichan CSS for Non-Japanese CJK Languages
+
+Yomichan by default renders everything in Japanese leading to incorrect glyphs being rendered when
+using Yomichan with non-Japanese CJK languages. This can be fixed with some CSS.
+
+```css
+/* Set Render Language */
+* {
+  /* 
+  Optionally set the version(s) of Noto Sans you want
+  e.g JP, TC, SC, HK
+  */
+  /* prettier-ignore */
+  font-family: 'Helvetica Neue', Helvetica, Arial, 
+  'Noto Sans HK', 
+  'Noto Sans TC',
+  'Noto Sans SC',
+  'Noto Sans JP',
+  sans-serif;
+
+  /* 
+  ja (Japanese)
+  zh-Hans (Simplified)
+  zh-Hant (Traditional)
+  zh-Hant-HK (Traditional Hong Kong)
+   */
+  -webkit-locale: 'zh-Hant-HK' !important;
+}
+
+/* In Hanzi popups, override the font */
+.kanji-glyph {
+  font-family: unset !important;
+}
+/* Set Render Language End */
+```
+
+Simply copy this CSS into `Settings -> Popup Appearance -> Configure custom CSS...` and change the
+`font-family` and `-webkit-locale` variables to the language you want.
+
+- Setting the font family here is optional; setting the `webkit-locale` should be enough to fix the
+  issue. However your default system fonts may look bad so I recommend installing
+  [Noto Sans](https://fonts.google.com/noto).
+  - In the above CSS, the order of the fonts means that when a glyph is not found in the Noto Sans
+    TC font, it would then try to find it in the Noto Sans SC font, and so on.
+- Note that Firefox users need to set the
+  [font-language-override](https://developer.mozilla.org/en-US/docs/Web/CSS/font-language-override)
+  property instead of the `-webkit-locale` property as it is not supported in Firefox.
+
 # Mandarin Chinese
 
 For an easy download of the dictionaries I use, check out [this folder](#dictionary-collection).
+
+For CSS to fix the rendering of non-Japanese characters in Yomichan, see
+[this section](#yomichan-css-for-non-japanese-cjk-languages).
 
 ## Terms
 
@@ -1053,6 +1105,9 @@ often consist of just unicode information and code points, which was stripped fr
 # Cantonese
 
 For an easy download of the dictionaries I use, check out [this folder](#dictionary-collection).
+
+For CSS to fix the rendering of non-Japanese characters in Yomichan, see
+[this section](#yomichan-css-for-non-japanese-cjk-languages).
 
 ## Cantonese Terms
 
