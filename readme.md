@@ -922,7 +922,7 @@ using Yomitan with non-Japanese CJK languages. This can be fixed with some CSS.
   e.g JP, TC, SC, HK
   */
   /* prettier-ignore */
-  font-family: 'Helvetica Neue', Helvetica, Arial, 
+  font-family:
   'Noto Sans HK', 
   'Noto Sans TC',
   'Noto Sans SC',
@@ -938,8 +938,9 @@ using Yomitan with non-Japanese CJK languages. This can be fixed with some CSS.
   -webkit-locale: 'zh-Hant-HK' !important;
 }
 
-/* In Hanzi popups, override the font */
-.kanji-glyph {
+/* In Hanzi popups and the search box, override the font */
+.kanji-glyph,
+#search-textbox {
   font-family: unset !important;
 }
 /* Set Render Language End */
