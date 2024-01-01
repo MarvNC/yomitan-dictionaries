@@ -76,9 +76,10 @@ please let me know!
 
 <!-- prettier-ignore -->
 > [!IMPORTANT] 
-> The collection is not complete as there are some dictionaries I have chosen not to
-> install. For these as well as older and alternate versions of dictionaries, I recommend checking
-> out [Shoui's Dictionary Collection](https://learnjapanese.moe/resources/#dictionaries).
+> The collection is not complete as there are some dictionaries I feel are outdated or
+> unnecessary or have simply chosen not to install. For these as well as older and alternate 
+> versions of dictionaries, I recommend checking out
+> [Shoui's Dictionary Collection](https://learnjapanese.moe/resources/#dictionaries).
 
 ## What Dictionaries Should I Install?
 
