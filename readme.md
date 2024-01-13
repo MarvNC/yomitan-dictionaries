@@ -1,4 +1,4 @@
-# Yomichan Dictionaries <!-- omit in toc -->
+# Yomichan/Yomitan Dictionaries <!-- omit in toc -->
 
 A comprehensive collection of Japanese and Chinese dictionaries for Yomichan/Yomitan, including
 terms, kanji/hanzi info, frequency, and variants with both monolingual and bilingual dictionaries
