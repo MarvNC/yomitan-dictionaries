@@ -716,6 +716,13 @@ dictionaries, but some people may prefer the percentage-based approach.
 - [Narou](http://wiki.wareya.moe/Narou)
 - BCCWJ2
 
+#### JLPT Vocab Frequency
+
+**[yomichan-jlpt-vocab](https://github.com/stephenmk/yomichan-jlpt-vocab)**
+
+A frequency dictionary based on unofficial JLPT lists from ten years ago. There are no official
+vocab lists for the JLPT exam so the numbers in this list should only be used as a guideline.
+
 ## Kanji
 
 ### Yomichan CSS for Kanji Dictionaries
