@@ -1,7 +1,7 @@
 /* 
 By Marv for Yomitan
 From https://github.com/MarvNC/yomichan-dictionaries
-Last Updated 2023-12-30
+Last Updated 2024-01-16
 
 Instructions:
 Paste this into the browser console of the Yomitan options page and hit enter.
@@ -56,6 +56,7 @@ const order = {
   '精選版　日本国語大辞典': '',
   
   // Misc JA-JA
+  '漢検漢字辞典　第二版': '',
   '漢字源': '',
   '故事・ことわざ・慣用句オンライン': '',
   '四字熟語辞典オンライン': '',
@@ -72,8 +73,8 @@ const order = {
   'weblio古語辞典': '',
   '全国方言辞典': '',
   '新語時事用語辞典': '',
+
   // JA (Rare)
-  '漢検 漢字辞典': '',
   '漢字林': '',
   '福日木健二字熟語': '',
   '漢字ペディア': '',
