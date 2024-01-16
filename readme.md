@@ -402,6 +402,10 @@ converted by dictionary anonymous into a Yomitan dictionary.
 <details>
   <summary>(Click to expand) Images</summary>
 
+![mochi (1)](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/c655e675-a498-46f6-a565-0bcec2808024)
+![ben (1)](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/624b4229-7151-488c-9ef9-0d8a21aa35d6)
+![rou (1)](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/16a876d0-aecc-43be-b703-865d7b0d779f)
+
 </details>
 
 <!-- prettier-ignore -->
