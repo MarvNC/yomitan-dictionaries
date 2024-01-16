@@ -399,6 +399,11 @@ The 漢検漢字辞典　第二版 Kanken Kanji Jiten 2nd Edition is a kanji dic
 [日本漢字能力検定協会](https://www.kanken.or.jp/) (Japanese Kanji Aptitude Test Association). It was
 converted by dictionary anonymous into a Yomitan dictionary.
 
+<!-- prettier-ignore -->
+> [!NOTE] 
+> This dictionary will not work on outdated Yomitan/Yomichan/Yomibaba installations as it
+> utilizes new additions to the schema. Please install Yomitan 23.12.29 or newer.
+
 <details>
   <summary>(Click to expand) Images</summary>
 
@@ -407,11 +412,6 @@ converted by dictionary anonymous into a Yomitan dictionary.
 ![rou (1)](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/16a876d0-aecc-43be-b703-865d7b0d779f)
 
 </details>
-
-<!-- prettier-ignore -->
-> [!NOTE] 
-> This dictionary will not work on outdated Yomitan/Yomichan/Yomibaba installations as it
-> utilizes new additions to the schema. Please install Yomitan 23.12.29 or newer.
 
 ### Grammar Dictionaries
 
