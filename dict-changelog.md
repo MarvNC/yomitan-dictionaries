@@ -2,7 +2,17 @@ I will be keeping track of the changes made to the dictionaries in the folder he
 that Jitendex, JMnedict, and KANJIDIC are updated automatically daily now, so while in the past I
 would make changelog entries for those dictionaries, that is no longer necessary.
 
+## 2024-01-16
+
+- Add
+  - [JA-JA] 漢検漢字辞典　第二版
+- Update
+  - JA Wikipedia (up to 1.4) over the past while
+- Remove
+  - [JA-JA] 漢検 漢字辞典
+
 ## 2023-12-20 (Afternoon)
+
 - Remove
   - Words.hk C-C (It's redundant with the regular words.hk dictionary)
 - Add

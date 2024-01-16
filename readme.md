@@ -391,6 +391,24 @@ Scraped by Julian and converted by Malte, sourced from
 This dictionary differentiates the usages of words with the same reading but different kanji, for
 example 越える・超える・逾える・踰える.
 
+#### 漢検漢字辞典　第二版 Kanken Kanji Jiten 2nd Edition
+
+**[Download](https://files.catbox.moe/bq4u87.zip)**
+
+The 漢検漢字辞典　第二版 Kanken Kanji Jiten 2nd Edition is a kanji dictionary made by the
+[日本漢字能力検定協会](https://www.kanken.or.jp/) (Japanese Kanji Aptitude Test Association). It was
+converted by dictionary anonymous into a Yomitan dictionary.
+
+<details>
+  <summary>(Click to expand) Images</summary>
+
+</details>
+
+<!-- prettier-ignore -->
+> [!NOTE] 
+> This dictionary will not work on outdated Yomitan/Yomichan/Yomibaba installations as it
+> utilizes new additions to the schema. Please install Yomitan 23.12.29 or newer.
+
 ### Grammar Dictionaries
 
 #### aiko-tanaka Grammar Dictionaries
