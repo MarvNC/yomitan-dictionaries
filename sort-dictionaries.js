@@ -11,21 +11,21 @@ you want to sort and the order you want them in.
 
 /**
  * Object of profiles with group order and enabled groups.
- * Your default profile is 1, the next profile is 2, so on.
+ * Your default profile is 0, the next profile is 1, so on.
  * In my example I have my first profile for JA, the second for ZH, and the third for YUE.
  * Any groups not in enabledGroups will be disabled.
  * @type {Record<number, {groupOrder: string[], enabledGroups: string[]}>} profiles
  */
 const profiles = {
-  1: {
+  0: {
     groupOrder: ['jafreq', 'ja', 'zhfreq', 'zh', 'yuefreq', 'yue'],
     enabledGroups: ['jafreq', 'ja', 'zh', 'yue'],
   },
-  2: {
+  1: {
     groupOrder: ['zhfreq', 'zh', 'yuefreq', 'yue', 'jafreq', 'ja'],
     enabledGroups: ['zhfreq', 'zh', 'yue'],
   },
-  3: {
+  2: {
     groupOrder: ['yuefreq', 'yue', 'zhfreq', 'zh', 'jafreq', 'ja'],
     enabledGroups: ['yuefreq', 'yue', 'zh'],
   },
@@ -193,9 +193,10 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
    */
   const failedToMatchDicts = [];
 
-  for (const [profile, { groupOrder, enabledGroups }] of Object.entries(profiles)) {
-    console.log(`Sorting dictionaries for profile ${profile}...`);
-    settingsController.profileIndex = profile;
+  for (const [profileIndex, { groupOrder, enabledGroups }] of Object.entries(profiles)) {
+    console.log(`Sorting dictionaries for profile ${profileIndex}...`);
+
+    settingsController.profileIndex = Number(profileIndex);
 
     /**
      * @type {import('./types/ext/settings').ProfileOptions} ProfileOptions
@@ -204,7 +205,7 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
     try {
       currentOptions = await settingsController.getOptions();
     } catch (error) {
-      console.error(`Failed to get options for profile ${profile}!`);
+      console.error(`Failed to get options for profile ${profileIndex}!`);
       console.error(error);
       continue;
     }
@@ -237,29 +238,6 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
           const index = dictionaries.indexOf(dict);
           delete dictionaries[index];
         }
-        // for (const dict of dictionaries) {
-        //   if (!dict) continue;
-        //   const dictName = dict.name;
-        //   let matched = false;
-
-        //   // try to match regex to dict name
-        //   if (dictRegex.test(dictName)) {
-        //     matched = true;
-        //   }
-
-        //   if (matched) {
-        //     newDictionaries.push(dict);
-        //     foundCount++;
-        //     const index = dictionaries.indexOf(dict);
-        //     delete dictionaries[index];
-        //   }
-        // }
-        // if (foundCount > 1) {
-        //   console.warn(`Found more than one dictionaries for ${dictRegex}`);
-        // }
-        // if (foundCount === 0) {
-        //   console.log(`Did not find dictionary: ${dictRegex}`);
-        // }
       }
     }
 
