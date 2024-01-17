@@ -155,6 +155,7 @@ const order = {
   '现代汉语规范词典': '',
   '康熙字典': '',
   '辭源': '',
+  'ZH Wikipedia': 'prefix',
 };
 
 import('./js/pages/settings/settings-controller.js').then(async (SettingsController) => {
