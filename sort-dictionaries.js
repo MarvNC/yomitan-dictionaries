@@ -1,7 +1,7 @@
 /* 
 By Marv for Yomitan
 From https://github.com/MarvNC/yomichan-dictionaries
-Last Updated 2024-01-16
+Last Updated 2024-01-17
 
 Instructions:
 Paste this into the browser console of the Yomitan options page and hit enter.
