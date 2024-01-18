@@ -63,7 +63,6 @@ const groups = {
 
     // JA Differentiation
     /^使い方の分かる 類語例解辞典$/,
-    /^漢字ペディア同訓異義$/,
 
     // Other JA-JA
     /^デジタル大辞泉$/,
@@ -96,7 +95,6 @@ const groups = {
     // JA (Rare)
     /^漢字林$/,
     /^福日木健二字熟語$/,
-    /^漢字ペディア$/,
     /^全訳漢辞海$/,
     /^KO字源$/,
     /^YOJI-JUKUGO$/,
