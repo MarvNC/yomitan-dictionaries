@@ -4,6 +4,8 @@ would make changelog entries for those dictionaries, that is no longer necessary
 
 ## 2024-01-18
 
+- Update
+  - [JA-JA] 漢検漢字辞典　第二版 (2024-01-18)
 - Remove
   - [JA-JA Differences] 漢字ペディア同訓異義 (Replaced by 漢検漢字辞典　第二版)
   - [JA-JA Kanji] 漢字ペディア (Replaced by 漢検漢字辞典　第二版)

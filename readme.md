@@ -393,7 +393,9 @@ example 越える・超える・逾える・踰える.
 
 #### 漢検漢字辞典　第二版 Kanken Kanji Jiten 2nd Edition
 
-**[Download](https://files.catbox.moe/bq4u87.zip)**
+**[Download](https://files.catbox.moe/ucv7fd.zip)**
+
+**Last updated: 2024-01-18 (added 90 出典 entries and 244 同音異義 entries from the appendix)**
 
 The 漢検漢字辞典　第二版 Kanken Kanji Jiten 2nd Edition is a kanji dictionary made by the
 [日本漢字能力検定協会](https://www.kanken.or.jp/) (Japanese Kanji Aptitude Test Association). It was
