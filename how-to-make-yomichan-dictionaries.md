@@ -9,6 +9,7 @@ I get this question a lot, so here's an overview of how to make your own Yomicha
   - [Examples](#examples)
   - [Schema Validation](#schema-validation)
   - [Conjugation](#conjugation)
+  - [Tag Categories](#tag-categories)
 
 ## Tools
 
@@ -113,3 +114,26 @@ parts of speech from JMDict as long as the terms mostly overlap. I have develope
 [npm package](https://www.npmjs.com/package/yomichan-dict-reader) that can help with stealing
 conjugations from JMDict - you can see an example of `getDeinflectorsForTermReading` in the
 [logic used to create the JP-Mongolian dictionary](https://github.com/MarvNC/yomichan-dictionaries/blob/master/mongolian/scrape.js).
+
+## Tag Categories
+
+There isn't any official documentation on the second item in an array item in the tag bank schema,
+but it can be found
+[here](https://github.com/themoeway/yomitan/blob/48f1d012ad5045319d4e492dfbefa39da92817b2/ext/css/display.css#L761-L790)
+in the Yomitan source code. The tag categories are as follows:
+
+- name
+- expression
+- popular
+- frequent
+- archaism
+- dictionary
+- frequency
+- partOfSpeech
+- search
+- pronunciation-dictionary
+- search
+
+The main user-facing effect of choosing a tag category for a tag in the tag bank is that there will
+be css applied to change the color of the tag. You can view the colors
+[here](https://github.com/themoeway/yomitan/blob/48f1d012ad5045319d4e492dfbefa39da92817b2/ext/css/display.css#L136-L149).
