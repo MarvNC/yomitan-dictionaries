@@ -110,11 +110,11 @@ If you're a beginner, I recommend following
 
 <!-- prettier-ignore -->
 > [!TIP]
-> **But scrolling to the next entry takes too long!**
-> Here are some shortcuts that may or may not help you with this:
-> `alt + scroll down`
-> `alt + pagedown`
-> `alt + down arrow`
+> - **But scrolling to the next entry takes too long!**
+> - Here are some shortcuts that may or may not help you with this:
+>   - `alt + scroll down`
+>   - `alt + pagedown`
+>   - `alt + down arrow`
 
 If you're a bit more familiar with the language, I highly recommend following
 [Kuri's Yomichan Setup](https://donkuri.github.io/learn-japanese/setup/#adding-dictionaries) which
