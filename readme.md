@@ -75,6 +75,14 @@ such as Jitendex, JMnedict, and KANJIDIC. If there is a dictionary in the folder
 please let me know!
 
 <!-- prettier-ignore -->
+> [!TIP]
+> - **But scrolling to the next entry takes too long!**
+> - Here are some shortcuts that may or may not help you with this:
+>   - `alt + scroll down`
+>   - `alt + pagedown`
+>   - `alt + down arrow`
+
+<!-- prettier-ignore -->
 > [!IMPORTANT] 
 > The collection is not complete as there are some dictionaries I feel are outdated or
 > unnecessary or have simply chosen not to install. For these as well as older and alternate 
@@ -107,14 +115,6 @@ If you're a beginner, I recommend following
   - [Kanji] JPDB Kanji
 - Pitch accent
   - [Pitch] 大辞泉
-
-<!-- prettier-ignore -->
-> [!TIP]
-> - **But scrolling to the next entry takes too long!**
-> - Here are some shortcuts that may or may not help you with this:
->   - `alt + scroll down`
->   - `alt + pagedown`
->   - `alt + down arrow`
 
 If you're a bit more familiar with the language, I highly recommend following
 [Kuri's Yomichan Setup](https://donkuri.github.io/learn-japanese/setup/#adding-dictionaries) which
