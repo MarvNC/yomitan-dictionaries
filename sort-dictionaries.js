@@ -187,9 +187,13 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
   const settingsController = new SettingsController.SettingsController();
 
   /**
-   * @type {RegExp[]} failedToMatchDicts
+   * @type {Set<RegExp>}
    */
-  const failedToMatchDicts = [];
+  const failedToMatchDicts = new Set();
+  /**
+   * @type {Set<RegExp>}
+   */
+  const unknownDictionaries = new Set();
 
   for (const [profileIndex, { groupOrder, enabledGroups }] of Object.entries(profiles)) {
     console.log(`Sorting dictionaries for profile ${profileIndex}...`);
@@ -226,7 +230,7 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
           console.warn(`Found more than one dictionaries for ${dictRegex}`);
         }
         if (matchedDictionaries.length === 0) {
-          failedToMatchDicts.push(dictRegex);
+          failedToMatchDicts.add(dictRegex);
         }
         // Add the dictionaries to the newDictionaries array
         for (const dict of matchedDictionaries) {
@@ -242,7 +246,8 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
     // Get the remaining dictionaries
     for (const dict of dictionaries) {
       if (dict) {
-        console.warn(`Found dictionary not in sort order: ${dict.name}`);
+        // console.warn(`Found dictionary not in sort order: ${dict.name}`);
+        unknownDictionaries.add(dict.name);
         newDictionaries.push(dict);
       }
     }
@@ -268,8 +273,12 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
     }
   }
 
-  if (failedToMatchDicts.length > 0) {
+  if (failedToMatchDicts.size > 0) {
     console.log(`Failed to match dictionaries:`);
     console.log(failedToMatchDicts);
+  }
+  if (unknownDictionaries.size > 0) {
+    console.log('Unknown dictionaries found:');
+    console.log(unknownDictionaries);
   }
 });
