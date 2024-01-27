@@ -139,7 +139,6 @@ const groups = {
     /^CantoDict$/,
     /^Canto CEDICT$/,
     /^Words\.hk C-E FS$/,
-    /^Words\.hk C-C FS$/,
     /^CE Wiktionary$/,
     /^CC-Canto$/,
   ],
