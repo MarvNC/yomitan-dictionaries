@@ -1276,6 +1276,14 @@ Marsh Nguyễn for Yomichan.
 
 From [OVDP (Open Vietnamese Dictionary Project)](https://github.com/dynamotn/stardict-vi).
 
+**[The Free Vietnamese Dictionary Project](https://www.mediafire.com/file/zkr1i29t7d6vxth/%5BVI_-_VI%5D_dict.zip/file)**
+
+Converted by Marsh Nguyễn for Yomichan.
+
+> I've just converted a Vie-Vie dictionary to a Yomichan one. This dictionary is from 'The Free
+> Vietnamese Dictionary Project' by the author Hồ Ngọc Đức.
+> https://www.informatik.uni-leipzig.de/~duc/Dict/install.html
+
 # Other
 
 **[Yezichak](https://github.com/StefanVukovic99/yezichak)**
