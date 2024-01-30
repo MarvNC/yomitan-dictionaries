@@ -1055,8 +1055,8 @@ DBPedia starts updating again.
 
 **[Download](https://drive.google.com/drive/folders/14OiowSI28LcP_rtGVuis7Sy8Kt_yqsiI)**
 
-These miscellaneous Chinese Yomichan dictionaries were made by lix on the Refold ZH Discord server.
-Includes:
+These miscellaneous Chinese Yomichan dictionaries were converted by lix on the Refold ZH Discord
+server. Includes:
 
 - 萌典.pinyin
 - 萌典
@@ -1073,6 +1073,14 @@ Published in July 2003 and revised through 2005, the Wenlin ABC Chinese-English 
 Dictionary was produced by the Wenlin Institude in cooperation with the ABC Chinese Dictionary
 Series Project at the University of Hawaii. It contains over 196,000 entries. This file was
 [converted by rduwjjnh](https://github.com/MarvNC/yomichan-dictionaries/issues/28).
+
+#### 500 Common Chinese Idioms
+
+**[500_idioms](https://github.com/MarvNC/yomichan-dictionaries/files/14092081/500_idioms.zip)**
+
+A glossary of 500 chengyu with two example sentences for each idiom. The data is taken from
+[this published book](https://www.taylorfrancis.com/books/mono/10.4324/9780203839140/500-common-chinese-idioms-liwei-jiao-cornelius-kubler-weiguo-zhang),
+and it was converted for Yomitan by Michel.
 
 ### Chinese Frequency
 
