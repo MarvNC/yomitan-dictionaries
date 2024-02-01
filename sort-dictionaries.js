@@ -1,7 +1,7 @@
 /* 
 By Marv for Yomitan
 From https://github.com/MarvNC/yomichan-dictionaries
-Last Updated 2024-01-17
+Last Updated 2024-01-31
 
 Instructions:
 Paste this into the browser console of the Yomitan options page and hit enter.
@@ -11,9 +11,10 @@ you want to sort and the order you want them in.
 
 /**
  * Object of profiles with group order and enabled groups.
+ * Any groups not in enabledGroups will be disabled.
  * Your default profile is 0, the next profile is 1, so on.
  * In my example I have my first profile for JA, the second for ZH, and the third for YUE.
- * Any groups not in enabledGroups will be disabled.
+ * You can uncomment these profiles if you likewise have multiple profiles.
  * @type {Record<number, {groupOrder: string[], enabledGroups: string[]}>} profiles
  */
 const profiles = {
@@ -21,14 +22,14 @@ const profiles = {
     groupOrder: ['jafreq', 'ja', 'zhfreq', 'zh', 'yuefreq', 'yue'],
     enabledGroups: ['jafreq', 'ja', 'zh', 'yue'],
   },
-  1: {
-    groupOrder: ['zhfreq', 'zh', 'yuefreq', 'yue', 'jafreq', 'ja'],
-    enabledGroups: ['zhfreq', 'zh', 'yue'],
-  },
-  2: {
-    groupOrder: ['yuefreq', 'yue', 'zhfreq', 'zh', 'jafreq', 'ja'],
-    enabledGroups: ['yuefreq', 'yue', 'zh'],
-  },
+  // 1: {
+  //   groupOrder: ['zhfreq', 'zh', 'yuefreq', 'yue', 'jafreq', 'ja'],
+  //   enabledGroups: ['zhfreq', 'zh', 'yue'],
+  // },
+  // 2: {
+  //   groupOrder: ['yuefreq', 'yue', 'zhfreq', 'zh', 'jafreq', 'ja'],
+  //   enabledGroups: ['yuefreq', 'yue', 'zh'],
+  // },
 };
 
 /**
