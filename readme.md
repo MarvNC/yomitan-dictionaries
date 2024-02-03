@@ -905,7 +905,7 @@ A kanji dictionary made from the kanji variant information in
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20jitai.zip)**
 
-A kanji dictionary made using the data from [jitai](https://github.com/epistularum/jitai). This
+A kanji dictionary made using the data from [shinjigen-glyph](https://github.com/metasta/shinjigen-glyph). This
 allows you to see information about 旧字体, 新字体, 拡張新字体, and 標準字体 variants from the kanji
 page in Yomichan.
 
