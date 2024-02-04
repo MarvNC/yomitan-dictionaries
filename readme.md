@@ -48,9 +48,11 @@ My related dictionary resources:
     - [Wiktionary Hanzi](#wiktionary-hanzi)
 - [Cantonese](#cantonese)
   - [Cantonese Terms](#cantonese-terms)
+    - [Words.hk](#wordshk)
     - [CantoDict](#cantodict)
     - [Misc Dictionaries](#misc-dictionaries)
   - [Cantonese Term Frequency](#cantonese-term-frequency)
+    - [Words.hk Frequency](#wordshk-frequency)
     - [Cifu](#cifu)
 - [Japanese-German](#japanese-german)
   - [Wadoku Jiten](#wadoku-jiten)
@@ -905,9 +907,9 @@ A kanji dictionary made from the kanji variant information in
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BKanji%5D%20jitai.zip)**
 
-A kanji dictionary made using the data from [shinjigen-glyph](https://github.com/metasta/shinjigen-glyph). This
-allows you to see information about 旧字体, 新字体, 拡張新字体, and 標準字体 variants from the kanji
-page in Yomichan.
+A kanji dictionary made using the data from
+[shinjigen-glyph](https://github.com/metasta/shinjigen-glyph). This allows you to see information
+about 旧字体, 新字体, 拡張新字体, and 標準字体 variants from the kanji page in Yomichan.
 
 ![](!images/chrome_%E4%B9%B1_-_Yomichan_Search_-_Google_Chrome_2022-08-10_19-28-54.png)
 
@@ -1160,6 +1162,15 @@ For CSS to fix the rendering of non-Japanese characters in Yomitan, see
 
 ## Cantonese Terms
 
+### Words.hk
+
+**[Words.hk for Yomitan](https://github.com/MarvNC/wordshk-yomitan)**
+
+A conversion of the [words.hk](https://words.hk) dictionary for
+[Yomitan](https://github.com/themoeway/yomitan) (formerly Yomichan). The words.hk dictionary data is
+fetched from [words.hk](https://words.hk/faiman/analysis/), built, then released automatically every
+day.
+
 ### CantoDict
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BCantonese%5D%20Cantodict.zip)**
@@ -1187,6 +1198,13 @@ Thanks to richter_belmont on the Refold Cantonese Discord:
 - Words.hk C-E
 
 ## Cantonese Term Frequency
+
+### Words.hk Frequency
+
+**[Words.hk for Yomitan](https://github.com/MarvNC/wordshk-yomitan)**
+
+A conversion of the [words.hk](https://words.hk/faiman/analysis/) frequency information for
+[Yomitan](https://github.com/themoeway/yomitan) (formerly Yomichan).
 
 ### Cifu
 
