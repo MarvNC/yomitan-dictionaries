@@ -1,6 +1,21 @@
-I will be keeping track of the changes made to the dictionaries in the folder here. Keep in mind
-that Jitendex, JMnedict, and KANJIDIC are updated automatically daily now, so while in the past I
-would make changelog entries for those dictionaries, that is no longer necessary.
+I will be keeping track of the changes made to the dictionaries in the folder here.
+
+These dictionaries are automatically updated daily and will not have changelog entries:
+
+- Jitendex
+- JMnedict
+- KANJIDIC_english
+- CC-CEDICT
+- CC-CEDICT Hanzi
+- Words.HK
+
+## 2024-02-03
+
+- Add
+  - [YUE-EN & YUE] Words.hk
+  - [YUE Freq] Words.hk Frequency
+- Remove
+  - [YUE-EN & YUE] Words.hk C-E (Replaced by Words.hk)
 
 ## 2024-01-18
 
