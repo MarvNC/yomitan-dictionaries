@@ -1,12 +1,17 @@
 const japaneseFolderId = PropertiesService.getScriptProperties().getProperty('japaneseFolderId');
 const mandarinFolderId = PropertiesService.getScriptProperties().getProperty('mandarinFolderId');
+const cantoneseFolderId = PropertiesService.getScriptProperties().getProperty('cantoneseFolderId');
+
 const githubAccessToken = PropertiesService.getScriptProperties().getProperty('githubAccessToken');
-if (!japaneseFolderId || !mandarinFolderId || !githubAccessToken) {
+if (!japaneseFolderId || !mandarinFolderId || !githubAccessToken || !cantoneseFolderId) {
   if (!japaneseFolderId) {
     throw new Error('japaneseFolderId not set');
   }
   if (!mandarinFolderId) {
     throw new Error('mandarinFolderId not set');
+  }
+  if (!cantoneseFolderId) {
+    throw new Error('cantoneseFolderId not set');
   }
   if (!githubAccessToken) {
     throw new Error('githubAccessToken not set');
@@ -70,6 +75,14 @@ const repos = [
     removeNameRegex: /CC\-CEDICT\.Hanzi/,
     fileNamePrefix: '[Hanzi] ',
     addDate: true,
+  },
+  {
+    url: 'https://api.github.com/repos/MarvNC/wordshk-yomitan/releases/latest',
+    folderId: cantoneseFolderId,
+    includedNameRegex: /^Words\.hk\.[\d-]+.zip$/,
+    removeNameRegex: /^Words\.hk\.[\d-]+.zip$/,
+    fileNamePrefix: '[YUE-EN & YUE] ',
+    addDate: false,
   },
 ];
 
