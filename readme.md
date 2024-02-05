@@ -1078,7 +1078,7 @@ Series Project at the University of Hawaii. It contains over 196,000 entries. Th
 
 #### 500 Common Chinese Idioms
 
-**[500_idioms](https://github.com/MarvNC/yomichan-dictionaries/files/14092081/500_idioms.zip)**
+**[500 idioms](https://github.com/MarvNC/yomichan-dictionaries/files/14172190/500_idioms.zip)**
 
 A glossary of 500 chengyu with two example sentences for each idiom. The data is taken from
 [this published book](https://www.taylorfrancis.com/books/mono/10.4324/9780203839140/500-common-chinese-idioms-liwei-jiao-cornelius-kubler-weiguo-zhang),
