@@ -1,7 +1,7 @@
 /* 
 By Marv for Yomitan
 From https://github.com/MarvNC/yomichan-dictionaries
-Last Updated 2024-01-31
+Last Updated 2024-02-04
 
 Instructions:
 Paste this into the browser console of the Yomitan options page and hit enter.
@@ -132,14 +132,15 @@ const groups = {
   ],
   yuefreq: [
     // YUE Freq
+    /^Words\.hk Frequency$/,
     /^Cifu Spoken$/,
     /^Cifu Written$/,
   ],
   yue: [
     // YUE-EN
+    /^Words\.hk 粵典 \[[\d-]+\]$/,
     /^CantoDict$/,
     /^Canto CEDICT$/,
-    /^Words\.hk C-E FS$/,
     /^CE Wiktionary$/,
     /^CC-Canto$/,
   ],
