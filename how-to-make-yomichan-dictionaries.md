@@ -2,7 +2,13 @@
 
 I get this question a lot, so here's an overview of how to make your own Yomichan dictionary.
 
-As a prerequisite, you need to be somewhat familiar with JSON and coding in a language of choice,
+As a prerequisite, you need to be somewhat familiar with JSON and coding in a language of choice.
+The general process is as follows:
+
+1. Acquire data (from a website, app, dump, etc.)
+2. Parse the data so you can make sense of it
+3. Format the data into jsons that are compliant with the Yomichan dictionary schema
+4. Export the data into a zip file with the relevant jsons
 
 - [How Do I Make A Yomichan Dictionary?](#how-do-i-make-a-yomichan-dictionary)
   - [Tools](#tools)
