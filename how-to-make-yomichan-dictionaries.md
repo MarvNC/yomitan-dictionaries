@@ -2,6 +2,8 @@
 
 I get this question a lot, so here's an overview of how to make your own Yomichan dictionary.
 
+As a prerequisite, you need to be somewhat familiar with JSON and coding in a language of choice,
+
 - [How Do I Make A Yomichan Dictionary?](#how-do-i-make-a-yomichan-dictionary)
   - [Tools](#tools)
   - [Read the Schemas](#read-the-schemas)
@@ -56,8 +58,9 @@ original size.
 
 ## Examples
 
-- The [term origins dictionary](#複合語起源-term-origins) is a small example of a simple dictionary
-  without any bells or whistles.
+- The
+  [term origins dictionary](https://github.com/MarvNC/yomichan-dictionaries#複合語起源-term-origins)
+  is a small example of a simple dictionary without any bells or whistles.
 - The
   [official test dictionary](https://github.com/themoeway/yomitan/tree/master/test/data/dictionaries/valid-dictionary1)
   is a great resource to see an example of a dictionary that utilizes the full range of features
