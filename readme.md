@@ -540,6 +540,12 @@ comes from anonymous forum posts, so it may not be 100% accurate.
 語源由来辞典 etymology information parsed from https://gogen-yurai.jp/ by Seikou. Contains
 information about the origins of words.
 
+#### 対義語辞典オンライン Taigigo Jiten
+
+**[対義語辞典オンライン Taigigo Jiten (2024-02-07)](https://cdn.discordapp.com/attachments/778430038159655012/1205010556151664680/taigigo_jiten.zip?ex=65d6d088&is=65c45b88&hm=f0741dbf91c670fd51a785cd26f1830cd70bf1fb4e0e6ec81da045ecf109748d&)**
+
+A dictionary of antonyms from [対義語・反対語辞典オンライン](https://taigigo.jitenon.jp/)
+
 ### Term Frequency
 
 #### jpdb Frequency Dictionary
