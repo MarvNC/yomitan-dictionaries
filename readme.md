@@ -1321,6 +1321,15 @@ Converted by Marsh Nguyễn for Yomichan.
 > Vietnamese Dictionary Project' by the author Hồ Ngọc Đức.
 > https://www.informatik.uni-leipzig.de/~duc/Dict/install.html
 
+**[Chữ Nôm Dictionary](https://www.mediafire.com/file/sn5xjfcp045vh9p/Ch%E1%BB%AF_N%C3%B4m.zip/file)**
+Chữ Nôm Dictionary converted by Marsh Nguyễn. The data comes from https://chunom.org/ The dictionary
+contains 1,569 entries.
+
+**[Từ Điển Tiếng Việt Thông Dụng](https://www.mediafire.com/file/ekopqoj0627tpkw/T%E1%BB%AB_%C4%91i%E1%BB%83n_ti%E1%BA%BFng_Vi%E1%BB%87t.zip/file)**
+Vie-Vie dictionary converted by Marsh Nguyễn. The dictionary data is from Từ Điển Tiếng Việt Thông
+Dụng and was sourced from https://github.com/vntk/dictionary/tree/master/data contains 42012
+entries.
+
 # Other
 
 **[Yezichak](https://github.com/StefanVukovic99/yezichak)**
