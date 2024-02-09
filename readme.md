@@ -1084,6 +1084,17 @@ A glossary of 500 chengyu with two example sentences for each idiom. The data is
 [this published book](https://www.taylorfrancis.com/books/mono/10.4324/9780203839140/500-common-chinese-idioms-liwei-jiao-cornelius-kubler-weiguo-zhang),
 and it was converted for Yomitan by Michel.
 
+#### 白水社 中国語辞典 Hakusuisya Chinese-Japanese Dictionary
+
+**[白水社 中国語辞典](https://cdn.discordapp.com/attachments/1054623082867855420/1072724215159074866/hakusuisha.zip?ex=65d57147&is=65c2fc47&hm=df18aecf2a568c915674b1d948e75b0b03e12c77d6e86e1fa054a3019244d3bb&)**
+
+From [weblio's 白水社 中国語辞典](https://cjjc.weblio.jp/cat/cgkgj).
+
+> I scraped the 白水社 中国語辞典 from weblio into a yomichan dictionary. 64k entries, I wouldn't
+> say it's as extensive as 漢語大詞典 but it's pretty g. I only scraped Chinese-Japanese entries for
+> the record. <sup>from
+> [Discord](https://discord.com/channels/617136488840429598/1054623082867855420/1072724215473639424)</sup>
+
 ### Chinese Frequency
 
 #### BLCU BCC Corpus
