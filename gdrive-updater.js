@@ -136,9 +136,9 @@ function downloadFromGithub(githubRepo) {
   }
 }
 
-// Remove existing files from a folder that match a regex
 /**
- *
+ * Remove existing files from a folder that match a regex
+ * Uses the Google Drive API to delete files, so files will bypass the trash folder
  * @param {string} folderId
  * @param {RegExp} regexToRemove
  */
@@ -149,7 +149,23 @@ function removeFilesWithSubstring(folderId, regexToRemove) {
   while (files.hasNext()) {
     const file = files.next();
     if (file.getName().match(regexToRemove)) {
-      file.setTrashed(true); // Moves file to the trash
+      // Get the access token
+      const accessToken = ScriptApp.getOAuthToken();
+
+      // Define the URL
+      const url = `https://www.googleapis.com/drive/v3/files/${file.getId()}`;
+
+      // Make the request
+      const response = UrlFetchApp.fetch(url, {
+        method: 'delete',
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+        muteHttpExceptions: true,
+      });
+
+      // Log the response for debugging
+      Logger.log(response);
     }
   }
 }
