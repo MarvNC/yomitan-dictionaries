@@ -544,7 +544,7 @@ information about the origins of words.
 
 **[対義語辞典オンライン Taigigo Jiten (2024-02-07)](https://cdn.discordapp.com/attachments/778430038159655012/1205010556151664680/taigigo_jiten.zip?ex=65d6d088&is=65c45b88&hm=f0741dbf91c670fd51a785cd26f1830cd70bf1fb4e0e6ec81da045ecf109748d&)**
 
-A dictionary of antonyms from [対義語・反対語辞典オンライン](https://taigigo.jitenon.jp/)
+A dictionary of antonyms from [対義語・反対語辞典オンライン](https://taigigo.jitenon.jp/), converted by 霜月.
 
 ### Term Frequency
 
@@ -1094,7 +1094,7 @@ and it was converted for Yomitan by Michel.
 
 **[白水社 中国語辞典](https://cdn.discordapp.com/attachments/1054623082867855420/1072724215159074866/hakusuisha.zip?ex=65d57147&is=65c2fc47&hm=df18aecf2a568c915674b1d948e75b0b03e12c77d6e86e1fa054a3019244d3bb&)**
 
-From [weblio's 白水社 中国語辞典](https://cjjc.weblio.jp/cat/cgkgj).
+From [weblio's 白水社 中国語辞典](https://cjjc.weblio.jp/cat/cgkgj), converted by 昔男.
 
 > I scraped the 白水社 中国語辞典 from weblio into a yomichan dictionary. 64k entries, I wouldn't
 > say it's as extensive as 漢語大詞典 but it's pretty g. I only scraped Chinese-Japanese entries for
