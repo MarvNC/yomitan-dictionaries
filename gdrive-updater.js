@@ -72,8 +72,8 @@ const repos = [
   {
     url: 'https://api.github.com/repos/MarvNC/wordshk-yomitan/releases/latest',
     folderId: cantoneseFolderId,
-    includedNameRegex: /^Words\.hk\.[\d-]+.zip$/,
-    removeNameRegex: /^Words\.hk\.[\d-]+.zip$/,
+    includedNameRegex: /Words\.hk\.[\d-]+.zip$/,
+    removeNameRegex: /Words\.hk\.[\d-]+.zip$/,
     fileNamePrefix: '[YUE-EN & YUE] ',
     addDate: false,
   },
