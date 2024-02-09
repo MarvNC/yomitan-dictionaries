@@ -1,22 +1,15 @@
-const japaneseFolderId = PropertiesService.getScriptProperties().getProperty('japaneseFolderId');
-const mandarinFolderId = PropertiesService.getScriptProperties().getProperty('mandarinFolderId');
-const cantoneseFolderId = PropertiesService.getScriptProperties().getProperty('cantoneseFolderId');
+const getProperty = (propertyName) => {
+  const propertyValue = PropertiesService.getScriptProperties().getProperty(propertyName);
+  if (!propertyValue) {
+    throw new Error(`${propertyName} not set`);
+  }
+  return propertyValue;
+};
 
-const githubAccessToken = PropertiesService.getScriptProperties().getProperty('githubAccessToken');
-if (!japaneseFolderId || !mandarinFolderId || !githubAccessToken || !cantoneseFolderId) {
-  if (!japaneseFolderId) {
-    throw new Error('japaneseFolderId not set');
-  }
-  if (!mandarinFolderId) {
-    throw new Error('mandarinFolderId not set');
-  }
-  if (!cantoneseFolderId) {
-    throw new Error('cantoneseFolderId not set');
-  }
-  if (!githubAccessToken) {
-    throw new Error('githubAccessToken not set');
-  }
-}
+const japaneseFolderId = getProperty('japaneseFolderId');
+const mandarinFolderId = getProperty('mandarinFolderId');
+const cantoneseFolderId = getProperty('cantoneseFolderId');
+const githubAccessToken = getProperty('githubAccessToken');
 
 function downloadAllRepos() {
   for (const repo of repos) {
@@ -86,7 +79,7 @@ const repos = [
   },
 ];
 
-// Function to download jitendex from GitHub and save it to Google Drive
+// Function to download a repo dictionary from GitHub and save it to Google Drive
 /**
  * @param {GithubRepo} githubRepo
  */
@@ -113,11 +106,12 @@ function downloadFromGithub(githubRepo) {
     }
   }
 
+  // If asset is found, download it and save it to Google Drive
   if (asset.browser_download_url !== '') {
     const response = UrlFetchApp.fetch(asset.browser_download_url);
     const fileBlob = response.getBlob();
 
-    // Remove existing jitendex files
+    // Remove existing files for this dictionary
     removeFilesWithSubstring(githubRepo.folderId, githubRepo.removeNameRegex);
 
     const folder = DriveApp.getFolderById(githubRepo.folderId);
@@ -142,7 +136,7 @@ function downloadFromGithub(githubRepo) {
   }
 }
 
-// Remove existing jitendex files
+// Remove existing files from a folder that match a regex
 /**
  *
  * @param {string} folderId
