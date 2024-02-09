@@ -18,7 +18,7 @@ function downloadAllRepos() {
 }
 
 /**
- * @typedef {Object} GithubRepo
+ * @typedef {Object} GithubRepoDictionary
  * @property {string} url
  * @property {string} folderId
  * @property {RegExp} includedNameRegex
@@ -27,7 +27,7 @@ function downloadAllRepos() {
  * @property {boolean} [addDate]
  */
 /**
- * @type {GithubRepo[]}
+ * @type {GithubRepoDictionary[]}
  */
 const repos = [
   {
@@ -79,9 +79,9 @@ const repos = [
   },
 ];
 
-// Function to download a repo dictionary from GitHub and save it to Google Drive
+// Function to download a release repo dictionary from GitHub and save it to Google Drive
 /**
- * @param {GithubRepo} githubRepo
+ * @param {GithubRepoDictionary} githubRepo
  */
 function downloadFromGithub(githubRepo) {
   const headers = {
