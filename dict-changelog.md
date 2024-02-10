@@ -9,6 +9,12 @@ These dictionaries are automatically updated daily and will not have changelog e
 - CC-CEDICT Hanzi
 - Words.HK
 
+## 2024-02-10
+
+- Add
+  - [JA-JA Synonyms] 類語辞典オンライン
+  - [JA-JA] 例解学習国語辞典 第一版
+
 ## 2024-02-08
 
 - Add
