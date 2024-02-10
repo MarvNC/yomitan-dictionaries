@@ -1,7 +1,7 @@
 /* 
 By Marv for Yomitan
 From https://github.com/MarvNC/yomichan-dictionaries
-Last Updated 2024-02-08
+Last Updated 2024-02-10
 
 Instructions:
 Paste this into the browser console of the Yomitan options page and hit enter.
@@ -23,12 +23,12 @@ const profiles = {
     groupOrder: ['jafreq', 'ja', 'zhfreq', 'zh', 'yuefreq', 'yue'],
     enabledGroups: ['jafreq', 'ja', 'zh', 'yue'],
   },
-  /* Second profile (zh) */
+  // /* Second profile (zh) */
   // 1: {
   //   groupOrder: ['zhfreq', 'zh', 'yuefreq', 'yue', 'jafreq', 'ja'],
   //   enabledGroups: ['zhfreq', 'zh', 'yue'],
   // },
-  /* Third profile (yue) */
+  // /* Third profile (yue) */
   // 2: {
   //   groupOrder: ['yuefreq', 'yue', 'zhfreq', 'zh', 'jafreq', 'ja'],
   //   enabledGroups: ['yuefreq', 'yue', 'zh'],
@@ -69,6 +69,7 @@ const groups = {
     /^使い方の分かる 類語例解辞典$/,
 
     // Other JA-JA
+    /^例解学習国語辞典 第十一版$/,
     /^デジタル大辞泉$/,
     /^旺文社国語辞典 第十一版$/,
     /^国語辞典オンライン$/,
@@ -82,6 +83,7 @@ const groups = {
     /^漢字源$/,
     /^故事・ことわざ・慣用句オンライン$/,
     /^四字熟語辞典オンライン$/,
+    /^類語辞典オンライン$/,
     /^対義語辞典オンライン$/,
     /^新明解四字熟語辞典$/,
     /^学研 四字熟語辞典$/,
