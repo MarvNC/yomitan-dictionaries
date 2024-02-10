@@ -539,6 +539,8 @@ A dictionary of synonyms from [類語辞典オンライン](https://ruigo.jiteno
 
 <summary>Image (click to expand)</summary>
 
+![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/b5f432be-0d59-4bf6-a077-484b4cedb8d9)
+
 </details>
 
 #### 例解学習国語辞典 第一版 Reikai Gakushuu Kokugo Jiten
@@ -549,7 +551,7 @@ Converted by @SalwynnJP with data provided by Ludia.
 
 <details>
 
-<summary>Salwynn's notes:</summary>
+<summary>Salwynn's notes/images</summary>
 
 > Improved entries (around ~30k duplicates) by comparing readings with other dicts (漢字遣い参考 /
 > 明鏡国語辞典　第二版 etc...)
@@ -569,6 +571,13 @@ Converted by @SalwynnJP with data provided by Ludia.
 >
 > Notes : This dict needs to get conjugation for yomitan. If there are other issues about this dict,
 > let me know.
+
+From
+[Discord](https://discord.com/channels/617136488840429598/778430038159655012/1205993624794308660)
+
+![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/456664de-8e4b-4a60-b0fc-a53026b5a14e)
+![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/8ce2c072-03f6-4f12-bfe6-43be11f8a42c)
+![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/542f2a67-d72b-4542-9c31-b899a3abaf18)
 
 </details>
 
