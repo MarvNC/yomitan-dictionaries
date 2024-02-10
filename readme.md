@@ -575,7 +575,7 @@ Converted by @SalwynnJP with data provided by Ludia.
 From
 [Discord](https://discord.com/channels/617136488840429598/778430038159655012/1205993624794308660)
 
-![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/456664de-8e4b-4a60-b0fc-a53026b5a14e)
+![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/d8d37009-f9e6-49aa-8639-364d6bae76df)
 ![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/8ce2c072-03f6-4f12-bfe6-43be11f8a42c)
 ![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/542f2a67-d72b-4542-9c31-b899a3abaf18)
 
