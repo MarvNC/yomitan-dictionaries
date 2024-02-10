@@ -522,12 +522,55 @@ comes from anonymous forum posts, so it may not be 100% accurate.
 語源由来辞典 etymology information parsed from https://gogen-yurai.jp/ by Seikou. Contains
 information about the origins of words.
 
-#### 対義語辞典オンライン Taigigo Jiten
+#### 対義語辞典オンライン Taigigo Jiten Online
 
 **[対義語辞典オンライン Taigigo Jiten (2024-02-07)](https://cdn.discordapp.com/attachments/778430038159655012/1205010556151664680/taigigo_jiten.zip?ex=65d6d088&is=65c45b88&hm=f0741dbf91c670fd51a785cd26f1830cd70bf1fb4e0e6ec81da045ecf109748d&)**
 
 A dictionary of antonyms from [対義語・反対語辞典オンライン](https://taigigo.jitenon.jp/), converted
 by 霜月.
+
+#### 類語辞典オンライン Ruigo Jiten Online
+
+**[類語辞典オンライン Ruigo_Rensougo Jiten (2024-02-09)](https://cdn.discordapp.com/attachments/778430038159655012/1205926319347736656/ruigo_jiten.zip?ex=65da2567&is=65c7b067&hm=584cee3c5e3e6958614f5a1eb6dc445a91524c0ff377be8e674fcb89cd50a75d&)**
+
+A dictionary of synonyms from [類語辞典オンライン](https://ruigo.jitenon.jp/), converted by 霜月.
+
+<details>
+
+<summary>Image (click to expand)</summary>
+
+</details>
+
+#### 例解学習国語辞典 第一版 Reikai Gakushuu Kokugo Jiten
+
+**[例解学習国語辞典 第一版](https://cdn.discordapp.com/attachments/778430038159655012/1205993624517476423/JA-JA_.zip?ex=65da6416&is=65c7ef16&hm=68d703698eeabba735562f9f46b2e777469b0d5034ee9c7f64a4a82b89903b6a&)**
+
+Converted by @SalwynnJP with data provided by Ludia.
+
+<details>
+
+<summary>Salwynn's notes:</summary>
+
+> Improved entries (around ~30k duplicates) by comparing readings with other dicts (漢字遣い参考 /
+> 明鏡国語辞典　第二版 etc...)
+>
+> Ex : [売り出し] initial term // [売出し] - [売出] duplicates
+>
+> Ex : 連らく initial term // [連絡] duplicate
+>
+> Ex : とうきょうと initial term (only kana) // [東京都] duplicate
+>
+> 56k entries + some 使い分け section (up your Text scan length in yomitan's settings to scan these)
+>
+> Includes 例文 / 熟語 / 成句 for most defs
+>
+> Thoughts : For testing it several weeks, I think this dict deserves his first place, above 三省堂
+> 国語辞典　第八版
+>
+> Notes : This dict needs to get conjugation for yomitan. If there are other issues about this dict,
+> let me know.
+
+</details>
 
 ### Grammar Dictionaries
 
