@@ -13,7 +13,7 @@ These dictionaries are automatically updated daily and will not have changelog e
 
 - Add
   - [JA-JA Synonyms] 類語辞典オンライン
-  - [JA-JA] 例解学習国語辞典 第一版
+  - [JA-JA] 例解学習国語辞典 第十一版
 
 ## 2024-02-08
 

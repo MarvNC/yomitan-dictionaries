@@ -543,9 +543,9 @@ A dictionary of synonyms from [類語辞典オンライン](https://ruigo.jiteno
 
 </details>
 
-#### 例解学習国語辞典 第一版 Reikai Gakushuu Kokugo Jiten
+#### 例解学習国語辞典 第十一版 Reikai Gakushuu Kokugo Jiten
 
-**[例解学習国語辞典 第一版](https://cdn.discordapp.com/attachments/778430038159655012/1205993624517476423/JA-JA_.zip?ex=65da6416&is=65c7ef16&hm=68d703698eeabba735562f9f46b2e777469b0d5034ee9c7f64a4a82b89903b6a&)**
+**[例解学習国語辞典 第十一版](https://cdn.discordapp.com/attachments/778430038159655012/1205993624517476423/JA-JA_.zip?ex=65da6416&is=65c7ef16&hm=68d703698eeabba735562f9f46b2e777469b0d5034ee9c7f64a4a82b89903b6a&)**
 
 Converted by @SalwynnJP with data provided by Ludia.
 
