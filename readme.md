@@ -32,7 +32,6 @@ My related dictionary resources:
     - [JP-EN Term Dictionaries](#jp-en-term-dictionaries)
     - [Japanese Monolingual Dictionaries](#japanese-monolingual-dictionaries)
     - [Grammar Dictionaries](#grammar-dictionaries)
-    - [Other Term Dictionaries](#other-term-dictionaries)
     - [Term Frequency](#term-frequency)
   - [Kanji](#kanji)
     - [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries)
@@ -425,23 +424,6 @@ converted by dictionary anonymous into a Yomitan dictionary.
 
 </details>
 
-### Grammar Dictionaries
-
-#### aiko-tanaka Grammar Dictionaries
-
-**[Download](https://github.com/aiko-tanaka/Grammar-Dictionaries)**
-
-A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot of manual work was
-put in to creating them to make them parse well, I'd recommend you install all of them. Contains:
-
-- Nihongo no sensei 毎日のんびり日本語教師
-- E de wakaru 絵でわかる日本語
-- Nihongo Kyoshi JLPT 文法解説まとめ
-- Donna Toki どんなときどう使う 日本語表現文型辞典
-- DoJG 日本語文法辞典(全集)
-
-### Other Term Dictionaries
-
 #### JA Wikipedia
 
 **[Wikipedia for Yomitan](https://github.com/MarvNC/wikipedia-yomitan)**
@@ -544,7 +526,23 @@ information about the origins of words.
 
 **[対義語辞典オンライン Taigigo Jiten (2024-02-07)](https://cdn.discordapp.com/attachments/778430038159655012/1205010556151664680/taigigo_jiten.zip?ex=65d6d088&is=65c45b88&hm=f0741dbf91c670fd51a785cd26f1830cd70bf1fb4e0e6ec81da045ecf109748d&)**
 
-A dictionary of antonyms from [対義語・反対語辞典オンライン](https://taigigo.jitenon.jp/), converted by 霜月.
+A dictionary of antonyms from [対義語・反対語辞典オンライン](https://taigigo.jitenon.jp/), converted
+by 霜月.
+
+### Grammar Dictionaries
+
+#### aiko-tanaka Grammar Dictionaries
+
+**[Download](https://github.com/aiko-tanaka/Grammar-Dictionaries)**
+
+A collection of grammar dictionaries scraped and converted by aiko-tanaka. A lot of manual work was
+put in to creating them to make them parse well, I'd recommend you install all of them. Contains:
+
+- Nihongo no sensei 毎日のんびり日本語教師
+- E de wakaru 絵でわかる日本語
+- Nihongo Kyoshi JLPT 文法解説まとめ
+- Donna Toki どんなときどう使う 日本語表現文型辞典
+- DoJG 日本語文法辞典(全集)
 
 ### Term Frequency
 
