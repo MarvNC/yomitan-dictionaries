@@ -8,6 +8,11 @@ These dictionaries are automatically updated daily and will not have changelog e
 - CC-CEDICT
 - CC-CEDICT Hanzi
 - Words.HK
+- Words.hk Honzi
+
+## 2024-02-11
+- Add (autoupdated)
+  - [Honzi] Words.hk.Honzi.2024-02-10
 
 ## 2024-02-10
 
