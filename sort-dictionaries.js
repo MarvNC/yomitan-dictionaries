@@ -1,4 +1,4 @@
-/* 
+/*
 By Marv for Yomitan
 From https://github.com/MarvNC/yomichan-dictionaries
 Last Updated 2024-02-11
@@ -193,7 +193,7 @@ const groups = {
 
 import('./js/pages/settings/settings-controller.js').then(async (SettingsController) => {
   /**
-   * @type {import('./ext/js/pages/settings/settings-controller.js').SettingsController} SettingsController
+   * @type {import('./js/pages/settings/settings-controller.js').SettingsController} SettingsController
    */
   const settingsController = new SettingsController.SettingsController();
 
@@ -202,7 +202,7 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
    */
   const failedToMatchDicts = new Set();
   /**
-   * @type {Set<RegExp>}
+   * @type {Set<string>}
    */
   const unknownDictionaries = new Set();
 
@@ -212,7 +212,7 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
     settingsController.profileIndex = Number(profileIndex);
 
     /**
-     * @type {import('./types/ext/settings').ProfileOptions} ProfileOptions
+     * @type {import('../types/ext/settings').ProfileOptions} ProfileOptions
      */
     let currentOptions;
     try {
