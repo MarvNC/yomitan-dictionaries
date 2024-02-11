@@ -77,6 +77,14 @@ const repos = [
     fileNamePrefix: '[YUE-EN & YUE] ',
     addDate: false,
   },
+  {
+    url: 'https://api.github.com/repos/MarvNC/wordshk-yomitan/releases/latest',
+    folderId: cantoneseFolderId,
+    includedNameRegex: /Words\.hk\.Honzi.[\d-]+.zip$/,
+    removeNameRegex: /Words\.hk\.Honzi.[\d-]+.zip$/,
+    fileNamePrefix: '[YUE-EN & YUE] ',
+    addDate: false,
+  },
 ];
 
 // Function to download a release repo dictionary from GitHub and save it to Google Drive
@@ -165,7 +173,9 @@ function removeFilesWithSubstring(folderId, regexToRemove) {
       });
 
       // Log the response for debugging
-      Logger.log(response);
+      Logger.log(
+        `Deleted ${file.getName()} from Google Drive. Response code: ${response.getResponseCode()}`
+      );
     }
   }
 }
