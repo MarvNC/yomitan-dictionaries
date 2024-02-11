@@ -1,7 +1,7 @@
 /* 
 By Marv for Yomitan
 From https://github.com/MarvNC/yomichan-dictionaries
-Last Updated 2024-02-10
+Last Updated 2024-02-11
 
 Instructions:
 Paste this into the browser console of the Yomitan options page and hit enter.
@@ -69,6 +69,7 @@ const groups = {
     /^使い方の分かる 類語例解辞典$/,
 
     // Other JA-JA
+    /^漢検漢字辞典　第二版$/,
     /^例解学習国語辞典 第十一版$/,
     /^デジタル大辞泉$/,
     /^旺文社国語辞典 第十一版$/,
@@ -79,7 +80,6 @@ const groups = {
     /^精選版　日本国語大辞典$/,
 
     // Misc JA-JA
-    /^漢検漢字辞典　第二版$/,
     /^漢字源$/,
     /^故事・ことわざ・慣用句オンライン$/,
     /^四字熟語辞典オンライン$/,
@@ -149,6 +149,9 @@ const groups = {
     /^Canto CEDICT$/,
     /^CE Wiktionary$/,
     /^CC-Canto$/,
+
+    // YUE Honzi
+    /^Words.hk 粵典 漢字 \[[\d-]+\]$/,
   ],
   zhfreq: [
     // ZH Frequency
