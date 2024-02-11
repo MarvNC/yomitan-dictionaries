@@ -195,7 +195,7 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
   /**
    * @type {import('./js/pages/settings/settings-controller.js').SettingsController} SettingsController
    */
-  const settingsController = new SettingsController.SettingsController();
+  const settingsController = new SettingsController.SettingsController(await getApplication());
 
   /**
    * @type {Set<RegExp>}
@@ -293,3 +293,13 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
     console.log(unknownDictionaries);
   }
 });
+
+async function getApplication() {
+  return new Promise((resolve) => {
+    import('./js/application.js').then(async (Application) => {
+      await Application.Application.main(async (application) => {
+        resolve(application);
+      });
+    });
+  });
+}
