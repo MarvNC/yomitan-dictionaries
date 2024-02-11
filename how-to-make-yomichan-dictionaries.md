@@ -24,9 +24,13 @@ The general process is as follows:
 - [Yomichan Dictionary Builder](https://github.com/MarvNC/yomichan-dict-builder/) - This is a node
   package I built to help with making dictionaries. It greatly simplifies the process of making
   dictionaries, please try it out if you use TypeScript or JavaScript.
-- [hasUTF16SurrogatePairAt](https://www.npmjs.com/package/@stdlib/assert-has-utf16-surrogate-pair-at-cli) -
+- [hasUTF16SurrogatePairAt](https://www.npmjs.com/package/@stdlib/assert-has-utf16-surrogate-pair-at) -
   This is important for checking if a kanji/hanzi is a surrogate pair. If so, its length is 2 in
   JavaScript so you need to account for that when doing string operations.
+- [japanese-furigana-normalize](https://github.com/MarvNC/japanese-furigana-normalize) - This
+  package provides a utility function to normalize Japanese readings containing furigana. It is
+  particularly useful for creating Yomitan dictionaries and ensuring the readings are properly
+  aligned with the kanji characters.
 
 ## Read the Schemas
 
