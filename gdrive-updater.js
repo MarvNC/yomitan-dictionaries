@@ -82,7 +82,7 @@ const repos = [
     folderId: cantoneseFolderId,
     includedNameRegex: /Words\.hk\.Honzi.[\d-]+.zip$/,
     removeNameRegex: /Words\.hk\.Honzi.[\d-]+.zip$/,
-    fileNamePrefix: '[YUE-EN & YUE] ',
+    fileNamePrefix: '[Honzi] ',
     addDate: false,
   },
 ];
