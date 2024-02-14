@@ -541,6 +541,8 @@ A dictionary of synonyms from [類語辞典オンライン](https://ruigo.jiteno
 
 ![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/b5f432be-0d59-4bf6-a077-484b4cedb8d9)
 
+</details>
+
 #### 数え方辞典オンライン Kazoekata Jiten Online
 
 **[数え方辞典オンライン Kazoekata Jiten (2024-02-13)](https://cdn.discordapp.com/attachments/778430038159655012/1207020050804903987/kazoekata_jiten.zip?ex=65de2005&is=65cbab05&hm=53c79ac54c04da8f1921514ae7b913dbcae08e5aded0e6fca04769a4d35459b5&)**
@@ -551,7 +553,7 @@ A dictionary of counters from [数え方辞典オンライン](https://count.jit
 
 <summary>Image (click to expand)</summary>
 
-
+![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/447a0194-18e1-4cd7-b8a5-3b01fc5f744d)
 
 </details>
 
