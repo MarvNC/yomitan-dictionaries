@@ -10,7 +10,13 @@ These dictionaries are automatically updated daily and will not have changelog e
 - Words.HK
 - Words.hk Honzi
 
+## 2024-02-12
+
+- Add
+  - [JA-JA Counters] 数え方辞典オンライン
+
 ## 2024-02-11
+
 - Add (autoupdated)
   - [Honzi] Words.hk.Honzi.2024-02-10
 
