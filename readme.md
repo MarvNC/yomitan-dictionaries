@@ -553,7 +553,7 @@ A dictionary of counters from [数え方辞典オンライン](https://count.jit
 
 <summary>Image (click to expand)</summary>
 
-![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/447a0194-18e1-4cd7-b8a5-3b01fc5f744d)
+![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/f00eccd8-38f0-4959-8366-5a51c8986137)
 
 </details>
 
