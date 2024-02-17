@@ -614,6 +614,11 @@ Converted by DAnon
 - 82 擬音語・擬態語 categories containing 1,138 subentries
 - 2,787 kanji entries
 
+![shinmiri](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/e4a7640d-2315-447d-bf20-d43f43c8076b)
+![keigo](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/72f525b7-103e-42a0-806f-aa3c865ada42)
+![youki](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/8a719dc9-432a-4862-8289-2eb9819d8755)
+![kaze](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/f7d35b7e-c6ae-4074-9670-c1b2eb0f7071)
+
 </details>
 
 ### Grammar Dictionaries
