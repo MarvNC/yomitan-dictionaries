@@ -10,6 +10,11 @@ These dictionaries are automatically updated daily and will not have changelog e
 - Words.HK
 - Words.hk Honzi
 
+## 2024-02-17
+
+- Add
+  - [JA-JA] 現代国語例解辞典　第五版
+
 ## 2024-02-12
 
 - Add

@@ -1,13 +1,13 @@
 /*
-By Marv for Yomitan
-From https://github.com/MarvNC/yomichan-dictionaries
-Last Updated 2024-02-11
-
-Instructions:
-Paste this into the browser console of the Yomitan options page and hit enter.
-Please look at the `profiles` and `groups` objects below to configure the groups
-you want to sort and the order you want them in.
-*/
+ * By Marv for Yomitan
+ * From https://github.com/MarvNC/yomichan-dictionaries
+ * Last Updated 2024-02-17
+ *
+ * Instructions:
+ * Paste this into the browser console of the Yomitan options page and hit enter.
+ * Please look at the `profiles` and `groups` objects below to configure the groups
+ * you want to sort and the order you want them in.
+ */
 
 /**
  * Object of profiles with group order and enabled groups.
@@ -59,17 +59,17 @@ const groups = {
     /^大辞林第四版$/,
     /^三省堂国語辞典第八番$/,
 
-    // Primary JA-JA
+    // Useful JA-JA
+    /^使い方の分かる 類語例解辞典$/,
+    /^数え方辞典オンライン$/,
+
+    // JA-JA
     /^三省堂国語辞典　第八版$/,
     /^新明解国語辞典　第八版$/,
+    /^漢検漢字辞典　第二版$/,
+    /^現代国語例解辞典　第五版$/,
     /^岩波国語辞典　第八版$/,
     /^広辞苑 第七版$/,
-
-    // JA Differentiation
-    /^使い方の分かる 類語例解辞典$/,
-
-    // Other JA-JA
-    /^漢検漢字辞典　第二版$/,
     /^例解学習国語辞典 第十一版$/,
     /^デジタル大辞泉$/,
     /^旺文社国語辞典 第十一版$/,
