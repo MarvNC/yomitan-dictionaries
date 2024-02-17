@@ -595,6 +595,27 @@ From
 
 </details>
 
+#### 現代国語例解辞典　第五版 Gendai Kokugo Reikai Jiten
+
+**[現代国語例解辞典　第五版](https://cdn.discordapp.com/attachments/778430038159655012/1208356907102896188/genkokr5.zip?ex=65e2fd10&is=65d08810&hm=03f378c61a65348f8cf3727f119f6031981b3db1f3951d9e6d53f66ebc9f5c2a&)**
+
+- Has hundreds of tables and charts for explaining usage contexts of similar words
+- Has many entries for onomatopoeia / mimetic words that are grouped by similar meanings
+
+Converted by DAnon
+
+<details>
+
+<summary>Images/stats (click to expand)</summary>
+
+- 62,873 vocabulary entries
+- 1,356 慣用句 entries
+- 276 助詞・助動詞 entries
+- 82 擬音語・擬態語 categories containing 1,138 subentries
+- 2,787 kanji entries
+
+</details>
+
 ### Grammar Dictionaries
 
 #### aiko-tanaka Grammar Dictionaries
