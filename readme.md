@@ -436,31 +436,15 @@ DBPedia starts updating again.
 
 #### Pixiv
 
-**Last Updated: 2023-11-24**
+**[Pixiv for Yomitan](https://github.com/MarvNC/pixiv-yomitan)**
 
-**[Download Pixiv](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20Pixiv.zip)**
-|
-**[Download PixivLight](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BMonolingual%5D%20PixivLight.zip)**
+**Last Updated: 2024-02**
 
 A complete scrape of the public [dic.pixiv.net](https://dic.pixiv.net/) encyclopedia of over 500,000
 entries, containing a brief summary and links to related articles for each entry. This dictionary is
 quite extensive and contains entries for a vast amount of terms that would not be in traditional
 dictionaries. For instance, 和泉妃愛 has an entry as does likely every notable VTuber, media
 franchise, and mountain in Japan.
-
-<!-- prettier-ignore -->
-> [!IMPORTANT] 
-> This dictionary is quite large and may take a long time to import.
-
-- If performance of your device is an issue and you are unable to import the full Pixiv dictionary,
-  you can use the PixivLight version which has most of the extra information like categorization and
-  related articles stripped out, leaving behind only the short summary and a link to the main Pixiv
-  article. This version is much smaller and should import without crashing Yomichan on mobile phones
-  and ereaders.
-- For CSS to convert the links to plaintext in Anki see
-  https://github.com/MarvNC/yomichan-dictionaries/issues/31.
-
-![hiyori example](!images/pixivHiyori.png) ![news events example](!images/pixivWagnerCoup.png)
 
 #### niconico-pixiv Terms
 

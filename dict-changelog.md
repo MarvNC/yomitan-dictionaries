@@ -1,10 +1,11 @@
 I will be keeping track of the changes made to the dictionaries in the folder here.
 
-These dictionaries are automatically updated daily and will not have changelog entries:
+These dictionaries are automatically updated daily and will not have new changelog entries:
 
 - Jitendex
 - JMnedict
 - KANJIDIC_english
+- Pixiv Encyclopedia
 - CC-CEDICT
 - CC-CEDICT Hanzi
 - Words.HK
@@ -14,6 +15,7 @@ These dictionaries are automatically updated daily and will not have changelog e
 
 - Add
   - [JA-JA] 現代国語例解辞典　第五版
+  - [JA-JA Encyclopedia] Pixiv (auto updating)
 
 ## 2024-02-12
 

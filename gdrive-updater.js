@@ -85,6 +85,14 @@ const repos = [
     fileNamePrefix: '[Honzi] ',
     addDate: false,
   },
+  {
+    url: 'https://api.github.com/repos/MarvNC/pixiv-yomitan/releases/latest',
+    folderId: japaneseFolderId,
+    includedNameRegex: /^Pixiv_[\d\-]+\.zip$/,
+    removeNameRegex: /^Pixiv_[\d\-]+\.zip$/,
+    fileNamePrefix: '[JA-JA Encyclopedia] ',
+    addDate: false,
+  },
 ];
 
 // Function to download a release repo dictionary from GitHub and save it to Google Drive
