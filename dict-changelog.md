@@ -11,6 +11,11 @@ These dictionaries are automatically updated daily and will not have new changel
 - Words.HK
 - Words.hk Honzi
 
+## 2024-02-18
+
+- Update
+  - [JA-JA] 漢検漢字辞典　第二版 (rev. 2024-02-17)
+
 ## 2024-02-17
 
 - Add
