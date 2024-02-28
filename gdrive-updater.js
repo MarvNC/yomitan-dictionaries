@@ -85,14 +85,14 @@ const repos = [
     fileNamePrefix: '[Honzi] ',
     addDate: false,
   },
-  {
-    url: 'https://api.github.com/repos/MarvNC/pixiv-yomitan/releases/latest',
-    folderId: japaneseFolderId,
-    includedNameRegex: /^Pixiv_[\d\-]+\.zip$/,
-    removeNameRegex: /^Pixiv_[\d\-]+\.zip$/,
-    fileNamePrefix: '[JA-JA Encyclopedia] ',
-    addDate: false,
-  },
+  // {
+  //   url: 'https://api.github.com/repos/MarvNC/pixiv-yomitan/releases/latest',
+  //   folderId: japaneseFolderId,
+  //   includedNameRegex: /^Pixiv_[\d\-]+\.zip$/,
+  //   removeNameRegex: /^Pixiv_[\d\-]+\.zip$/,
+  //   fileNamePrefix: '[JA-JA Encyclopedia] ',
+  //   addDate: false,
+  // },
 ];
 
 // Function to download a release repo dictionary from GitHub and save it to Google Drive
@@ -123,7 +123,7 @@ function downloadFromGithub(githubRepo) {
   }
 
   // If asset is found, download it and save it to Google Drive
-  if (asset.browser_download_url !== '') {
+  if (asset?.browser_download_url && asset.browser_download_url !== '') {
     const response = UrlFetchApp.fetch(asset.browser_download_url);
     const fileBlob = response.getBlob();
 
