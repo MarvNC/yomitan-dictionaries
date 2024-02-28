@@ -31,7 +31,7 @@ function downloadAllRepos() {
  */
 const repos = [
   {
-    url: 'https://api.github.com/repos/stephenmk/Jitendex/releases/latest',
+    url: 'https://api.github.com/repos/stephenmk/stephenmk.github.io/releases/latest',
     folderId: japaneseFolderId,
     includedNameRegex: /yomi/,
     removeNameRegex: /jitendex/,
