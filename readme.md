@@ -778,7 +778,22 @@ was converted by forsakeninfinity.
 > Our project will develop a large-scale corpus of Japanese everyday conversation in a balanced
 > manner. Since informants record their conversations in everyday situations by themselves,
 > naturally occurring conversations can be collected. To build an empirical foundation for the
-> corpus design, we conducted a survey of ordinary conversational behavior of about 250 adults."
+> corpus design, we conducted a survey of ordinary conversational behavior of about 250 adults."\
+
+#### Corpus of Spontaneous Japanese
+
+**[Find it here](https://github.com/Maltesaa/CSJ_and_NWJC_yomitan_freq_dict)**
+
+Converted by Malte, “The Corpus of Spontaneous Japanese” (or CSJ) is a database containing a large
+collection of Japanese spoken language data and information for use in linguistic research; jointly
+developed by NINJAL, NICT and the Tokyo Institute of Technology, the CSJ is world-class in both the
+quantity and quality of the available data. Goes up to 31,605 frequency.
+
+#### NINJAL Web Japanese Corpus
+
+**[Find it here](https://github.com/Maltesaa/CSJ_and_NWJC_yomitan_freq_dict)**
+
+Converted by Malte. Goes up to 106,762 frequency.
 
 #### Shoui Dictionaries Collection Misc. Frequency Dictionaries
 
