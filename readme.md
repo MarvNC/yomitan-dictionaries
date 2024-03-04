@@ -604,6 +604,13 @@ Converted by DAnon
 
 </details>
 
+#### Kanji de Go
+
+**[Kanji de Go for Yomitan](https://github.com/MarvNC/kanjidego-yomitan-anki)**
+
+[Kanji de Go (漢字で Go!)](https://plicy.net/GamePlay/155561) is a fun game quizzing people on
+rare/exotic kanji terms. Converted by Marv.
+
 ### Grammar Dictionaries
 
 #### aiko-tanaka Grammar Dictionaries
