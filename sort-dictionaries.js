@@ -192,11 +192,16 @@ const groups = {
   ],
 };
 
-import('./js/pages/settings/settings-controller.js').then(async (SettingsController) => {
-  /**
-   * @type {import('./js/pages/settings/settings-controller.js').SettingsController} SettingsController
-   */
-  const settingsController = new SettingsController.SettingsController(await getApplication());
+import('./js/application.js').then(({ Application }) => {
+  Application.main(true, sortDicts);
+});
+
+/**
+ * @param {import('./js/application.js').Application} application
+ */
+async function sortDicts(application) {
+  const { SettingsController } = await import('./js/pages/settings/settings-controller.js');
+  const settingsController = new SettingsController(application);
 
   /**
    * @type {Set<RegExp>}
@@ -227,6 +232,9 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
 
     const originalLength = dictionaries.length;
 
+    /**
+     * @type {import('../types/ext/settings').DictionaryOptions[]}
+     */
     const newDictionaries = [];
 
     for (const group of groupOrder) {
@@ -293,17 +301,4 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
     console.log('Unknown dictionaries found:');
     console.log(unknownDictionaries);
   }
-});
-
-/**
-* @returns {Promise<import('./js/application.js').Application>}
-*/
-async function getApplication() {
-  return new Promise((resolve) => {
-    import('./js/application.js').then(async (Application) => {
-      await Application.Application.main(true, async (application) => {
-        resolve(application);
-      });
-    });
-  });
 }
