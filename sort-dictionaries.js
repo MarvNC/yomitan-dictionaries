@@ -295,10 +295,13 @@ import('./js/pages/settings/settings-controller.js').then(async (SettingsControl
   }
 });
 
+/**
+* @returns {Promise<import('./js/application.js').Application>}
+*/
 async function getApplication() {
   return new Promise((resolve) => {
     import('./js/application.js').then(async (Application) => {
-      await Application.Application.main(async (application) => {
+      await Application.Application.main(true, async (application) => {
         resolve(application);
       });
     });
