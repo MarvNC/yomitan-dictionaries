@@ -105,6 +105,7 @@ const groups = {
     /^全訳漢辞海$/,
     /^KO字源$/,
     /^YOJI-JUKUGO$/,
+    /^漢字でGo!.+$/,
 
     // JA-EN
     /^Jitendex.*$/,
