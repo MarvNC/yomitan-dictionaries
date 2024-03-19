@@ -195,7 +195,7 @@ for further information.
 
 #### New Saitou Japanese-English Dictionary
 
-**[Download NEW 斎藤和英大辞典](https://cdn.discordapp.com/attachments/563409909627224095/1093416116661010603/Bilingual_NEW__2.zip)**
+Find `[JA-EN] NEW 斎藤和英大辞典` in the [dictionary collection](#dictionary-collection).
 
 A bilingual dictionary by an anon, with lots of example sentences. You may want to limit the amount
 of example sentences to avoid cluttering the search page by using the following CSS, where the
@@ -250,7 +250,7 @@ them. Currently contains:
 
 #### Iwanami Kokugo Jiten
 
-**[Download 岩波国語辞典　第八版](https://cdn.discordapp.com/attachments/563409909627224095/1094321820548734996/a.zip)**
+Find `[JA-JA] 岩波国語辞典 第八版` in the [dictionary collection](#dictionary-collection).
 
 A monolingual dictionary made by an anon, with very nice formatting and links for related terms.
 
@@ -265,7 +265,7 @@ A monolingual dictionary made by an anon, with very nice formatting and links fo
 
 #### Jitenon Dictionaries
 
-**[Download All (unzip first)](https://cdn.discordapp.com/attachments/563409909627224095/1108265551312211999/jitenbot.zip)**
+Find them in the [dictionary collection](#dictionary-collection).
 
 There are many dictionaries available at [辞典オンライン](https://jitenon.jp/) and
 [using stephenmk's jitenbot](https://github.com/stephenmk/jitenbot), some of these have been scraped
@@ -308,7 +308,7 @@ Converted by Malte using [stephenmk's jitenbot](https://github.com/stephenmk/jit
 
 #### Meikyou Second Edition
 
-**[明鏡国語辞典　第二版](https://cdn.discordapp.com/attachments/797748730807320588/1132453483908436088/meikyo2_2023_07_22.zip)**
+Find `[JA-JA] 明鏡国語辞典 第二版` in the [dictionary collection](#dictionary-collection).
 
 Converted by dictionary anon, this dictionary has nice modern formatting.
 
@@ -324,7 +324,7 @@ Converted by dictionary anon, this dictionary has nice modern formatting.
 
 #### Shinsenkoku Tenth Edition
 
-**[新選国語辞典 第十版](https://cdn.discordapp.com/attachments/797748730807320588/1138245579667939429/f63461489ba2a312.zip)**
+Find `[JA-JA] 新選国語辞典 第十版` in the [dictionary collection](#dictionary-collection).
 
 Converted by dictionary anon, this dictionary has nice modern formatting.
 
@@ -500,21 +500,23 @@ comes from anonymous forum posts, so it may not be 100% accurate.
 
 #### Gogen Yurai
 
-**[Download](https://cdn.discordapp.com/attachments/778430038159655012/1025059429206466580/gogen.zip)**
+Find `[JA-JA Origins] 語源由来辞典` in the [dictionary collection](#dictionary-collection).
 
 語源由来辞典 etymology information parsed from https://gogen-yurai.jp/ by Seikou. Contains
 information about the origins of words.
 
 #### 対義語辞典オンライン Taigigo Jiten Online
 
-**[対義語辞典オンライン Taigigo Jiten (2024-02-07)](https://cdn.discordapp.com/attachments/778430038159655012/1205010556151664680/taigigo_jiten.zip?ex=65d6d088&is=65c45b88&hm=f0741dbf91c670fd51a785cd26f1830cd70bf1fb4e0e6ec81da045ecf109748d&)**
+Find `[JA-JA Antonym] 対義語辞典オンライン (2024-02-07)` in the
+[dictionary collection](#dictionary-collection).
 
 A dictionary of antonyms from [対義語・反対語辞典オンライン](https://taigigo.jitenon.jp/), converted
 by 霜月.
 
 #### 類語辞典オンライン Ruigo Jiten Online
 
-**[類語辞典オンライン Ruigo_Rensougo Jiten (2024-02-09)](https://cdn.discordapp.com/attachments/778430038159655012/1205926319347736656/ruigo_jiten.zip?ex=65da2567&is=65c7b067&hm=584cee3c5e3e6958614f5a1eb6dc445a91524c0ff377be8e674fcb89cd50a75d&)**
+Find `[JA-JA Thesaurus] 類語辞典オンライン (2024-02-09)` in the
+[dictionary collection](#dictionary-collection).
 
 A dictionary of synonyms from [類語辞典オンライン](https://ruigo.jitenon.jp/), converted by 霜月.
 
@@ -528,7 +530,8 @@ A dictionary of synonyms from [類語辞典オンライン](https://ruigo.jiteno
 
 #### 数え方辞典オンライン Kazoekata Jiten Online
 
-**[数え方辞典オンライン Kazoekata Jiten (2024-02-13)](https://cdn.discordapp.com/attachments/778430038159655012/1207020050804903987/kazoekata_jiten.zip?ex=65de2005&is=65cbab05&hm=53c79ac54c04da8f1921514ae7b913dbcae08e5aded0e6fca04769a4d35459b5&)**
+Find `[JA-JA Counters] 数え方辞典オンライン (2024-02-13)` in the
+[dictionary collection](#dictionary-collection).
 
 A dictionary of counters from [数え方辞典オンライン](https://count.jitenon.jp/), converted by 霜月.
 
@@ -542,7 +545,7 @@ A dictionary of counters from [数え方辞典オンライン](https://count.jit
 
 #### 例解学習国語辞典 第十一版 Reikai Gakushuu Kokugo Jiten
 
-**[例解学習国語辞典 第十一版](https://cdn.discordapp.com/attachments/778430038159655012/1205993624517476423/JA-JA_.zip?ex=65da6416&is=65c7ef16&hm=68d703698eeabba735562f9f46b2e777469b0d5034ee9c7f64a4a82b89903b6a&)**
+Find `[JA-JA] 例解学習国語辞典 第十一版` in the [dictionary collection](#dictionary-collection).
 
 Converted by @SalwynnJP with data provided by Ludia.
 
@@ -580,7 +583,7 @@ From
 
 #### 現代国語例解辞典　第五版 Gendai Kokugo Reikai Jiten
 
-**[現代国語例解辞典　第五版](https://cdn.discordapp.com/attachments/778430038159655012/1208356907102896188/genkokr5.zip?ex=65e2fd10&is=65d08810&hm=03f378c61a65348f8cf3727f119f6031981b3db1f3951d9e6d53f66ebc9f5c2a&)**
+Find `[JA-JA] 現代国語例解辞典 第五版` in the [dictionary collection](#dictionary-collection).
 
 - Has hundreds of tables and charts for explaining usage contexts of similar words
 - Has many entries for onomatopoeia / mimetic words that are grouped by similar meanings
@@ -657,7 +660,7 @@ corpus.
 
 #### CC100
 
-**[Download](https://cdn.discordapp.com/attachments/778430038159655012/1025058653511893143/Freq_CC100.zip)**
+Find `[JA Freq] Freq_CC100` in the [dictionary collection](#dictionary-collection).
 
 Made by the mind behind [arujisho](https://github.com/emc2314/arujisho), this uses the
 [CC100 dataset](https://data.statmt.org/cc-100/) which was made by crawling the web. Coverage is
@@ -704,7 +707,7 @@ the same value.
 
 #### jpDicts Frequencies
 
-**[Download](https://cdn.discordapp.com/attachments/778430038159655012/942796687401967616/Freq_Monodicts_206k.zip)**
+**[Download](https://files.catbox.moe/1nip86.zip)**
 
 A frequency dictionary created using monolingual dictionary definitions as the corpus, so it might
 be useful for those who really like reading dictionaries. Made by Avratzzz.
@@ -731,9 +734,9 @@ be useful for those who really like reading dictionaries. Made by Avratzzz.
 
 #### Youtube Frequency Dictionaries
 
-**[Download the full Youtube Frequency Dictionary](https://cdn.discordapp.com/attachments/778430038159655012/933399848500228146/YoutubeFreqV3.zip)**
+Find `[JA Freq] YoutubeFreqV3` in the [dictionary collection](#dictionary-collection).
 
-**[Download all domain-specific dictionaries](https://cdn.discordapp.com/attachments/778430038159655012/933392359603986482/YouTubeFreqs.zip)**
+**[Download all domain-specific dictionaries](https://files.catbox.moe/1nip86.zip)**
 
 > Using data from 40k manually transcribed YouTube videos we have created 16 domain specific
 > frequency lists for YomiChan. Enjoy and feel free to share around. Created by @Zetta @Vexxed
@@ -1137,10 +1140,10 @@ includes:
 
 Michel converted some of the above dictionaries to simplified Chinese.
 
-- **[Download `汉语大词典`](https://cdn.discordapp.com/attachments/1102744354222776471/1122247530286166187/hanyudacidian.zip)**
+- **[Download `汉语大词典`](hhttps://files.catbox.moe/vauiz2.zip)**
   - The Hanyu Da Cidian is the most comprehensive Chinese dictionary, comparable to the Oxford
     English Dictionary.
-- **[Download `两岸词典`](https://cdn.discordapp.com/attachments/1102744354222776471/1122247339965419610/cross-straits.zip)**
+- **[Download `两岸词典`](https://files.catbox.moe/g6c55m.zip)**
   - The Cross-Straits dictionary is a small mainland dictionary focusing on contemporary usage and
     the differences between Taiwan and Mainland Chinese.
 
@@ -1187,7 +1190,7 @@ and it was converted for Yomitan by Michel.
 
 #### 白水社 中国語辞典 Hakusuisya Chinese-Japanese Dictionary
 
-**[白水社 中国語辞典](https://cdn.discordapp.com/attachments/1054623082867855420/1072724215159074866/hakusuisha.zip?ex=65d57147&is=65c2fc47&hm=df18aecf2a568c915674b1d948e75b0b03e12c77d6e86e1fa054a3019244d3bb&)**
+Find `[ZH-JA] 白水社 中国語辞典` in the [dictionary collection](#dictionary-collection).
 
 From [weblio's 白水社 中国語辞典](https://cjjc.weblio.jp/cat/cgkgj), converted by 昔男.
 
@@ -1200,13 +1203,15 @@ From [weblio's 白水社 中国語辞典](https://cjjc.weblio.jp/cat/cgkgj), con
 
 #### BLCU BCC Corpus
 
-| Title       | Corpus                                                 | Download                                                                                                |
-| ----------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| `BLCUmixed` | A Balanced Mix from Magazines, Literature, Weibo, Tech | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840722141171712/zhfreq_mixed.zip) |
-| `BLCUlit`   | Literature (Foreign and Domestic)                      | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840721851760741/zhfreq_lit.zip)   |
-| `BLCUnews`  | Newspapers《厦门日报》、《厦门商报》、《厦门晚报》等   | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840722405396520/zhfreq_news.zip)  |
-| `BLCUsci`   | Scientific and Technological Academic Journals         | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840722816450630/zhfreq_sci.zip)   |
-| `BLCUcoll`  | Dialogue (Weibo and Movie/TV Subtitles)                | [Link](https://cdn.discordapp.com/attachments/1054623082867855420/1120840721541369926/zhfreq_coll.zip)  |
+Find them in the [dictionary collection](#dictionary-collection).
+
+| Title       | Corpus                                                 |
+| ----------- | ------------------------------------------------------ |
+| `BLCUmixed` | A Balanced Mix from Magazines, Literature, Weibo, Tech |
+| `BLCUlit`   | Literature (Foreign and Domestic)                      |
+| `BLCUnews`  | Newspapers《厦门日报》、《厦门商报》、《厦门晚报》等   |
+| `BLCUsci`   | Scientific and Technological Academic Journals         |
+| `BLCUcoll`  | Dialogue (Weibo and Movie/TV Subtitles)                |
 
 A Yomichan frequency list made from the comprehensive
 [Beijing Language and Culture University Corpus Center (BLCU BCC)'s corpus](http://bcc.blcu.edu.cn/help#intro)
@@ -1214,7 +1219,7 @@ containing over 9 billion characters. Thanks to nadavspi and Michel who converte
 
 #### SUBTLEX-CH Subtitle Corpus
 
-**[Download](https://cdn.discordapp.com/attachments/1054623082867855420/1120840723110055996/zhfreq_subs.zip)**
+Find `[ZH Freq] SUBTLEX-CH` in the [dictionary collection](#dictionary-collection).
 
 This is a subtitles frequency list based on over 6,000 simplified Chinese movies and TV shows from
 the [SUBTLEX](http://crr.ugent.be/programs-data/subtitle-frequencies/subtlex-ch) frequency list,
@@ -1222,19 +1227,12 @@ which was compiled by Ghent University. Thanks to nadavspi and Michel who conver
 
 #### HSK Levels List
 
-**[Download](https://cdn.discordapp.com/attachments/1102744354222776471/1121205118797361306/HSK.zip)**
+Find `[ZH Freq] HSK` in the [dictionary collection](#dictionary-collection).
 
 This Yomichan HSK Levels frequency list is based on the
 [official HSK word list from the Chinese Ministry of Education](http://www.moe.gov.cn/jyb_xwfb/gzdt_gzdt/s5987/202103/t20210329_523304.html)
 released in 2021, which was then OCRed and neatly formatted thanks to
 [Andy Burke ](https://github.com/andycburke). Thanks to Michel who converted it for Yomichan.
-
-#### General Global Chinese Frequency
-
-**[Frequency](https://cdn.discordapp.com/attachments/1054623082867855420/1054827030312648824/global_freq.zip)**
-
-A general Chinese frequency dictionary that is likely based off of "the chinese internet, movies,
-books, etc as a whole" according to its author [Kamui](https://github.com/kamui-fin).
 
 ## Hanzi
 
