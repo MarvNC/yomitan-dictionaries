@@ -1140,7 +1140,7 @@ includes:
 
 Michel converted some of the above dictionaries to simplified Chinese.
 
-- **[Download `汉语大词典`](hhttps://files.catbox.moe/vauiz2.zip)**
+- **[Download `汉语大词典`](https://files.catbox.moe/vauiz2.zip)**
   - The Hanyu Da Cidian is the most comprehensive Chinese dictionary, comparable to the Oxford
     English Dictionary.
 - **[Download `两岸词典`](https://files.catbox.moe/g6c55m.zip)**
