@@ -56,12 +56,13 @@ My related dictionary resources:
 - [Japanese-German](#japanese-german)
   - [Wadoku Jiten](#wadoku-jiten)
   - [Wadoku Daijiten](#wadoku-daijiten)
+- [Other](#other)
 - [Indonesian-English](#indonesian-english)
 - [Japanese-Mongolian](#japanese-mongolian)
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
 - [Korean](#korean)
 - [Vietnamese-English](#vietnamese-english)
-- [Other](#other)
+- [Other](#other-1)
 
 # Dictionary Collection
 
@@ -1367,6 +1368,8 @@ Converted by Julian from the [和独大辞典](https://www.wadokudaijiten.de/).
 > coverage that you'd get from only using Jmdict German and can be a great tool to use alongside
 > other dicts - may it be as a source for example sentences etc.
 
+# Other
+
 # Indonesian-English
 
 [Kamata created a Indonesian Yomichan dictionary](https://github.com/Kamata954/indonesian-yomichan-dictionary)
@@ -1431,10 +1434,9 @@ entries.
 
 # Other
 
-**[Yezichak](https://github.com/StefanVukovic99/yezichak)**
+**[kaikki-to-yomitan](https://github.com/themoeway/kaikki-to-yomitan)**
 
-The Yomichan fork [Yezichak](https://github.com/StefanVukovic99/yezichak) has support and custom
-dictionaries for the following languages:
+Custom dictionaries for the following languages (and some others) made from Wiktionary:
 
 - Albanian
 - Arabic
