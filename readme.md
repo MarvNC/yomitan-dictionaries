@@ -1432,6 +1432,13 @@ Vie-Vie dictionary converted by Marsh Nguyễn. The dictionary data is from Từ
 Dụng and was sourced from https://github.com/vntk/dictionary/tree/master/data contains 42012
 entries.
 
+# English-English
+
+**[Google Drive](https://drive.google.com/drive/folders/1APj14ap2yMv0WZvSCEGJq9jfMUpZy6Ao?usp=sharing)**
+
+Folder with some monolingual English dictionaries maintained by Umbrella including MacMillan, New
+Oxford American Dictionary, Cambridge, Longman, Wordset, and a frequency from FLT.
+
 # Other
 
 **[kaikki-to-yomitan](https://github.com/themoeway/kaikki-to-yomitan)**
