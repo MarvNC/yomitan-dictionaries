@@ -62,6 +62,7 @@ My related dictionary resources:
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
 - [Korean](#korean)
 - [Vietnamese-English](#vietnamese-english)
+- [English-English](#english-english)
 - [Other](#other-1)
 
 # Dictionary Collection
@@ -1437,7 +1438,7 @@ entries.
 **[Google Drive](https://drive.google.com/drive/folders/1APj14ap2yMv0WZvSCEGJq9jfMUpZy6Ao?usp=sharing)**
 
 Folder with some monolingual English dictionaries maintained by Umbrella including MacMillan, New
-Oxford American Dictionary, Cambridge, Longman, Wordset, and a frequency from FLT.
+Oxford American Dictionary, Cambridge, Longman, Wordset, and a frequency list from FLT.
 
 # Other
 
