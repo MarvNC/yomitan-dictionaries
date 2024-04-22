@@ -40,25 +40,17 @@ My related dictionary resources:
     - [Kanji Frequency](#kanji-frequency)
 - [Yomitan CSS for Non-Japanese CJK Languages](#yomitan-css-for-non-japanese-cjk-languages)
 - [Mandarin Chinese](#mandarin-chinese)
-  - [Terms](#terms-1)
-    - [Term Dictionaries](#term-dictionaries)
+  - [Mandarin Terms](#mandarin-terms)
+    - [ZH-EN Term Dictionaries](#zh-en-term-dictionaries)
+    - [ZH-ZH Term Dictionaries](#zh-zh-term-dictionaries)
     - [Chinese Frequency](#chinese-frequency)
   - [Hanzi](#hanzi)
-    - [Wiktionary Hanzi](#wiktionary-hanzi)
 - [Cantonese](#cantonese)
   - [Cantonese Terms](#cantonese-terms)
-    - [Words.hk](#wordshk)
-    - [CantoDict](#cantodict)
-    - [Misc Dictionaries](#misc-dictionaries)
   - [Cantonese Term Frequency](#cantonese-term-frequency)
-    - [Words.hk Frequency](#wordshk-frequency)
-    - [Cifu](#cifu)
 - [Japanese-German](#japanese-german)
-  - [Wadoku Jiten](#wadoku-jiten)
-  - [Wadoku Daijiten](#wadoku-daijiten)
 - [Other](#other)
-- [Indonesian-English](#indonesian-english)
-- [Japanese-Mongolian](#japanese-mongolian)
+  - [Indonesian-English](#indonesian-english)
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
 - [Korean](#korean)
 - [Vietnamese-English](#vietnamese-english)
@@ -1113,9 +1105,18 @@ For an easy download of the dictionaries I use, check out [this folder](#diction
 For CSS to fix the rendering of non-Japanese characters in Yomitan, see
 [this section](#yomitan-css-for-non-japanese-cjk-languages).
 
-## Terms
+## Mandarin Terms
 
-### Term Dictionaries
+### ZH-EN Term Dictionaries
+
+Found in the [dictionary collection](#dictionary-collection):
+
+- `[ZH-EN] Oxford` - (2024-04-17) Contains example sentences, Converted by Michel
+- `[ZH-EN] 500idioms` - (2020-04-13) Five hundred Chinese idioms from
+  [this published book](https://www.taylorfrancis.com/books/mono/10.4324/9780203839140/500-common-chinese-idioms-liwei-jiao-cornelius-kubler-weiguo-zhang),
+  scraped by Ooodman from Heavenly Path, converted by Michel.
+- `[ZH-EN] DrEye 譯典通英漢雙向字典` - (2020-04-13) Chinese -> English dictionaries from Taiwan,
+  includes example sentences and English translations. Converted by Michel.
 
 #### CEDICT
 
@@ -1125,27 +1126,37 @@ There was a previous version but the formatting wasn't as great and it was kind 
 created this repository with some more modern formatting and also added proper hanzi functionality.
 The repository automatically updates every day from the newest data at MDBG.
 
-#### Shoui's Chinese Yomichan Setup
+#### Wenlin ABC Chinese-English Comprehensive Dictionary
 
-**[Shoui's Chinese Yomichan Setup](https://gist.github.com/shoui520/25460fd2e9fb194d3e5152fa2ce42ca2#installing-dictionaries-and-basic-usage)**
+[(Updated 2024-04-14)](#dictionary-collection)
 
-These Chinese Yomichan dictionaries are hosted in Shoui's guide to setting up Yomichan for Chinese,
-includes:
+Published in July 2003 and revised through 2005, the Wenlin ABC Chinese-English Comprehensive
+Dictionary was produced by the Wenlin Institude in cooperation with the ABC Chinese Dictionary
+Series Project at the University of Hawaii. It contains over 196,000 entries. This file was
+[converted by rduwjjnh](https://github.com/MarvNC/yomichan-dictionaries/issues/28).
 
-- `[ZH-EN] CEDICT` (Outdated) (converted by an anon)
+### ZH-ZH Term Dictionaries
+
+Most of them can be found in the [dictionary collection](#dictionary-collection).
+
 - `[ZH-JA] 中日大辞典 第二版` (converted by an anon)
 - `[ZH-ZH] 兩岸詞典` (converted by Chrono7 on the Refold ZH Discord server)
 - `[ZH-ZH] 漢語大詞典` (converted by Chrono7 on the Refold ZH Discord server)
-- `[ZH-ZH] 萌典国语辞典 (简体字)` (converted by Chrono7 on the Refold ZH Discord server)
+- `[ZH-ZH] MoeDict 萌典国语辞典 (简体字)` (converted by Chrono7 on the Refold ZH Discord server,
+  formatting improved by Michel)
+- `[ZH-ZH] Xiandai Hanyu Cidian 7 现代汉语词典` - (2024-04-20) Converted by Michel
+- `[ZH-ZH] XiandaiGuifan 3 现代汉语规范词典` - (2020-04-17) Converted by Michel
+- `[ZH-ZH] Wunan 五南国语活用辞典` (2024-04-13) Converted by Michel
 
 **Simplified Chinese Versions**
 
-Michel converted some of the above dictionaries to simplified Chinese.
+Michel converted some of the above traditional dictionaries to simplified Chinese. They can be found
+in the drive under the "Simplified Conversions" folder.
 
-- **[Download `汉语大词典`](https://files.catbox.moe/vauiz2.zip)**
+- **汉语大词典** (Updated 2020-04-20)
   - The Hanyu Da Cidian is the most comprehensive Chinese dictionary, comparable to the Oxford
     English Dictionary.
-- **[Download `两岸词典`](https://files.catbox.moe/g6c55m.zip)**
+- **两岸词典** (Updated 2024-04-13)
   - The Cross-Straits dictionary is a small mainland dictionary focusing on contemporary usage and
     the differences between Taiwan and Mainland Chinese.
 
@@ -1172,23 +1183,6 @@ server. Includes:
 - 现代汉语规范词典
 - 譯典通英漢雙向字典
 - 五南國語活用辭典
-
-#### Wenlin ABC Chinese-English Comprehensive Dictionary
-
-**[Download](https://github.com/MarvNC/yomichan-dictionaries/files/12074644/ZH.Wenlin.ABC.zip)**
-
-Published in July 2003 and revised through 2005, the Wenlin ABC Chinese-English Comprehensive
-Dictionary was produced by the Wenlin Institude in cooperation with the ABC Chinese Dictionary
-Series Project at the University of Hawaii. It contains over 196,000 entries. This file was
-[converted by rduwjjnh](https://github.com/MarvNC/yomichan-dictionaries/issues/28).
-
-#### 500 Common Chinese Idioms
-
-**[500 idioms](https://github.com/MarvNC/yomichan-dictionaries/files/14172190/500_idioms.zip)**
-
-A glossary of 500 chengyu with two example sentences for each idiom. The data is taken from
-[this published book](https://www.taylorfrancis.com/books/mono/10.4324/9780203839140/500-common-chinese-idioms-liwei-jiao-cornelius-kubler-weiguo-zhang),
-and it was converted for Yomitan by Michel.
 
 #### 白水社 中国語辞典 Hakusuisya Chinese-Japanese Dictionary
 
@@ -1236,6 +1230,14 @@ This Yomichan HSK Levels frequency list is based on the
 released in 2021, which was then OCRed and neatly formatted thanks to
 [Andy Burke ](https://github.com/andycburke). Thanks to Michel who converted it for Yomichan.
 
+#### Sinica
+
+Find `[ZH Freq] Sinica` in the [dictionary collection](#dictionary-collection).
+
+> Optional: a frequency dictionary based on a Taiwan corpus. The website was horribly outdated,
+> scraping it yielded only ~11k unique entries. Only useful if the user remembers the frequency
+> values will be much lower than other freq dicts
+
 ## Hanzi
 
 See [Yomichan CSS for Kanji Dictionaries](#yomichan-css-for-kanji-dictionaries) for CSS used to
@@ -1253,7 +1255,7 @@ reduce the clutter included by default in Yomichan.
 }
 ```
 
-### Wiktionary Hanzi
+#### Wiktionary Hanzi
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BHanzi%5D%20Wiktionary.zip)**
 
@@ -1265,6 +1267,17 @@ often consist of just unicode information and code points, which was stripped fr
 
 ![zh wiktionary hanzi](!images/zhWiktionaryHanzi.png)
 
+#### EDHCC
+
+**[Download](#dictionary-collection)**
+
+> The Etymological Dictionary of Han Chinese Characters contains approximately 6000 entries
+> explaining the connections between glyph and original meanings in Old Chinese. By Lawrence J.
+> Howell, with Hikaru Morimoto. Compiled into mdx dictionary format by lxs602
+> https://github.com/lxs602/Chinese-Mandarin-Dictionaries. Converted to yomitan format by Michel
+
+####
+
 # Cantonese
 
 For an easy download of the dictionaries I use, check out [this folder](#dictionary-collection).
@@ -1274,7 +1287,7 @@ For CSS to fix the rendering of non-Japanese characters in Yomitan, see
 
 ## Cantonese Terms
 
-### Words.hk
+#### Words.hk
 
 **[Words.hk for Yomitan](https://github.com/MarvNC/wordshk-yomitan)**
 
@@ -1283,7 +1296,7 @@ A conversion of the [words.hk](https://words.hk) dictionary for
 fetched from [words.hk](https://words.hk/faiman/analysis/), built, then released automatically every
 day.
 
-### CantoDict
+#### CantoDict
 
 **[Download](https://github.com/MarvNC/yomichan-dictionaries/raw/master/dl/%5BCantonese%5D%20Cantodict.zip)**
 
@@ -1294,7 +1307,7 @@ of the archived data.
 
 ![canto_please](!images/canto_please.png) ![canto_read](!images/canto_read.png)
 
-### Misc Dictionaries
+#### Misc Dictionaries
 
 **[Download](https://drive.google.com/drive/folders/1aybpEp9_-JlOpvnJ8-5c0qlfachb83nA?usp=share_link)**
 
@@ -1311,14 +1324,14 @@ Thanks to richter_belmont on the Refold Cantonese Discord:
 
 ## Cantonese Term Frequency
 
-### Words.hk Frequency
+#### Words.hk Frequency
 
 **[Words.hk for Yomitan](https://github.com/MarvNC/wordshk-yomitan)**
 
 A conversion of the [words.hk](https://words.hk/faiman/analysis/) frequency information for
 [Yomitan](https://github.com/themoeway/yomitan) (formerly Yomichan).
 
-### Cifu
+#### Cifu
 
 **[Download](#dictionary-collection)**
 
@@ -1335,14 +1348,14 @@ Spoken and written Cantonese frequency dictionaries for Yomitan from
 
 # Japanese-German
 
-## Wadoku Jiten
+#### Wadoku Jiten
 
 **[和独辞典](https://mega.nz/file/XV5iDYBK#bzfCYOyrPS_c0BgvyFA2ISKpuYg5Iv9ACfKg6pfZCaU)**
 
 Converted by Julian, 和独辞典 is a Japanese-German Yomichan dictionary based on the
 [Wadoku](https://www.wadoku.de/) dictionary.
 
-## Wadoku Daijiten
+#### Wadoku Daijiten
 
 **[和独大辞典](https://drive.google.com/file/d/1DIFD5bd_ZGURvmq5ZfVluJH6U6gUahOx/view)**
 
@@ -1371,12 +1384,10 @@ Converted by Julian from the [和独大辞典](https://www.wadokudaijiten.de/).
 
 # Other
 
-# Indonesian-English
+## Indonesian-English
 
 [Kamata created a Indonesian Yomichan dictionary](https://github.com/Kamata954/indonesian-yomichan-dictionary)
 that shows the English definition of Indonesian words. The data is from Wiktionary.
-
-# Japanese-Mongolian
 
 ## Japanese-Mongolian/日・モ辞典
 
@@ -1476,6 +1487,7 @@ Dictionary data from [Lingoes](http://www.lingoes.net/en/dictionary/index.html)
 > Spanish and English
 
 **[Frequency Lists](https://drive.proton.me/urls/X00PZRWG0R#O4eczudoY4Rn)**
+
 > I also included some frequency lists from open subs
 
 [(Source)](https://github.com/MarvNC/yomichan-dictionaries/issues/60)
