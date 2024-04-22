@@ -1440,6 +1440,10 @@ entries.
 Folder with some monolingual English dictionaries maintained by Umbrella including MacMillan, New
 Oxford American Dictionary, Cambridge, Longman, Wordset, and a frequency list from FLT.
 
+**[Oxford Advanced Learner's Dictionary](https://github.com/MarvNC/yomichan-dictionaries/files/14957647/oald-release-yomitan.zip)**
+
+From Seth for Yomitan.
+
 # Other
 
 **[kaikki-to-yomitan](https://github.com/themoeway/kaikki-to-yomitan)**
@@ -1463,3 +1467,14 @@ Custom dictionaries for the following languages (and some others) made from Wikt
 - Russian
 - Serb-Croatian
 - Spanish
+
+**[Lingoes Vicon Dictionaries](https://drive.proton.me/urls/3RY82EBQ2M#s7QNTK6lZKtZ)**
+
+Dictionary data from [Lingoes](http://www.lingoes.net/en/dictionary/index.html)
+
+> It includes Arabic, French, German, Greek, Italian, Latin, Russian, Portuguese, Korean, Hebrew,
+> Spanish and English
+>
+> I also included some frequency lists from open subs
+
+[(Source)](https://github.com/MarvNC/yomichan-dictionaries/issues/60)
