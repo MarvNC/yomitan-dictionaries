@@ -1442,7 +1442,7 @@ Oxford American Dictionary, Cambridge, Longman, Wordset, and a frequency list fr
 
 **[Oxford Advanced Learner's Dictionary](https://github.com/MarvNC/yomichan-dictionaries/files/14957647/oald-release-yomitan.zip)**
 
-From Seth for Yomitan.
+From Seth for Yomitan. Extract it and follow instructions before use.
 
 # Other
 
