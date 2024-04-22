@@ -1474,7 +1474,8 @@ Dictionary data from [Lingoes](http://www.lingoes.net/en/dictionary/index.html)
 
 > It includes Arabic, French, German, Greek, Italian, Latin, Russian, Portuguese, Korean, Hebrew,
 > Spanish and English
->
+
+**[Frequency Lists](https://drive.proton.me/urls/X00PZRWG0R#O4eczudoY4Rn)**
 > I also included some frequency lists from open subs
 
 [(Source)](https://github.com/MarvNC/yomichan-dictionaries/issues/60)
