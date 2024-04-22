@@ -11,6 +11,21 @@ These dictionaries are automatically updated daily and will not have new changel
 - Words.HK
 - Words.hk Honzi
 
+## 2024-04-22
+
+- Add
+  - [ZH Freq] Sinica
+  - [ZH-EN] 500idioms
+  - [ZH-EN] DrEye 譯典通英漢雙向字典
+  - [ZH-ZH] Wunan 五南国语活用辞典
+  - [ZH-EN] Oxford
+  - [Hanzi] EDHCC
+  - [ZH-ZH] Xiandai Hanyu Cidian 7 现代汉语词典
+- Update
+  - [ZH-ZH] MoeDict 萌典国语辞典 (简体字)
+  - [ZH-ZH] XiandaiGuifan 3 现代汉语规范词典
+  - [ZH-EN] WenlinABC
+
 ## 2024-03-04
 
 - Update
