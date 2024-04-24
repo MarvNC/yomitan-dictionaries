@@ -18,7 +18,7 @@ These dictionaries are automatically updated daily and will not have new changel
   - [ZH-EN] 500idioms
   - [ZH-EN] DrEye 譯典通英漢雙向字典
   - [ZH-ZH] Wunan 五南国语活用辞典
-  - [ZH-EN] Oxford
+  - [ZH-EN] Oxford 牛津英汉汉英词典
   - [Hanzi] EDHCC
   - [ZH-ZH] Xiandai Hanyu Cidian 7 现代汉语词典
 - Update

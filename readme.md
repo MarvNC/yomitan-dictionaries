@@ -1111,7 +1111,7 @@ For CSS to fix the rendering of non-Japanese characters in Yomitan, see
 
 Found in the [dictionary collection](#dictionary-collection):
 
-- `[ZH-EN] Oxford` - (2024-04-17) Contains example sentences, Converted by Michel
+- `[ZH-EN] Oxford 牛津英汉汉英词典` - (2024-04-17) Contains example sentences, Converted by Michel
 - `[ZH-EN] 500idioms` - (2020-04-13) Five hundred Chinese idioms from
   [this published book](https://www.taylorfrancis.com/books/mono/10.4324/9780203839140/500-common-chinese-idioms-liwei-jiao-cornelius-kubler-weiguo-zhang),
   scraped by Ooodman from Heavenly Path, converted by Michel.
