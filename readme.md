@@ -42,6 +42,7 @@ My related dictionary resources:
 - [Mandarin Chinese](#mandarin-chinese)
   - [Mandarin Terms](#mandarin-terms)
     - [ZH-EN Term Dictionaries](#zh-en-term-dictionaries)
+    - [ZH-JA Term Dictionaries](#zh-ja-term-dictionaries)
     - [ZH-ZH Term Dictionaries](#zh-zh-term-dictionaries)
     - [Chinese Frequency](#chinese-frequency)
   - [Hanzi](#hanzi)
@@ -346,7 +347,8 @@ span[data-sc-shinsenkoku10='red'] {
 
 #### Goo Thesaurus
 
-Find `[JA-JA Thesaurus] 使い方の分かる 類語例解辞典 [2024-05-02]` in the [dictionary collection](#dictionary-collection).
+Find `[JA-JA Thesaurus] 使い方の分かる 類語例解辞典 [2024-05-02]` in the
+[dictionary collection](#dictionary-collection).
 
 (Updated 2024-05-04) Scraped by Malte from the online
 [goo.ne thesaurus](https://dictionary.goo.ne.jp/thsrs/). Screenshots: https://imgur.com/a/uDT81BI
@@ -533,7 +535,8 @@ A dictionary of counters from [数え方辞典オンライン](https://count.jit
 
 #### 例解学習国語辞典 第十一版 Reikai Gakushuu Kokugo Jiten
 
-Find `[JA-JA] 例解学習国語辞典 第十一版 [2024-04-30]` in the [dictionary collection](#dictionary-collection).
+Find `[JA-JA] 例解学習国語辞典 第十一版 [2024-04-30]` in the
+[dictionary collection](#dictionary-collection).
 
 Converted by @SalwynnJP with data provided by Ludia.
 
@@ -1129,11 +1132,16 @@ Dictionary was produced by the Wenlin Institude in cooperation with the ABC Chin
 Series Project at the University of Hawaii. It contains over 196,000 entries. This file was
 [converted by rduwjjnh](https://github.com/MarvNC/yomichan-dictionaries/issues/28).
 
+### ZH-JA Term Dictionaries
+
+In the [dictionary collection](#dictionary-collection):
+
+- `[ZH-JA] 中日大辞典 第二版` (converted by an anon)
+
 ### ZH-ZH Term Dictionaries
 
 Most of them can be found in the [dictionary collection](#dictionary-collection).
 
-- `[ZH-JA] 中日大辞典 第二版` (converted by an anon)
 - `[ZH-ZH] 兩岸詞典` (converted by Chrono7 on the Refold ZH Discord server)
 - `[ZH-ZH] 漢語大詞典` (converted by Chrono7 on the Refold ZH Discord server)
 - `[ZH-ZH] MoeDict 萌典国语辞典 (简体字)` (converted by Chrono7 on the Refold ZH Discord server,
