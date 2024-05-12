@@ -1491,3 +1491,7 @@ Dictionary data from [Lingoes](http://www.lingoes.net/en/dictionary/index.html)
 > I also included some frequency lists from open subs
 
 [(Source)](https://github.com/MarvNC/yomichan-dictionaries/issues/60)
+
+**[Aurelio Portugese Dictionary](https://github.com/MarvNC/yomichan-dictionaries/files/15145512/Aurelio.zip)**
+
+Converted by Michel, [source](https://github.com/MarvNC/yomichan-dictionaries/issues/62)
