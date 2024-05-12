@@ -36,6 +36,8 @@ These dictionaries are automatically updated daily and will not have new changel
   - [ZH-ZH] MoeDict 萌典国语辞典 (简体字)
   - [ZH-ZH] XiandaiGuifan 3 现代汉语规范词典
   - [ZH-EN] WenlinABC
+- Remove
+  - [ZH-ZH] 萌典.pinyin
 
 ## 2024-03-04
 
