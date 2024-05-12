@@ -130,8 +130,7 @@ dictionary than any other.
 If you install a lot of dictionaries and/or sync your dictionary collection across multiple devices,
 it can be quite the ordeal to change the sort order with the way Yomitan's UI is set up. I have
 written a script that will automatically sort your dictionaries for you. You can find it here:
-[**Yomitan Dictionaries Sort Script for Yomitan**](https://github.com/MarvNC/yomichan-dictionaries/blob/167721caf11ff4b091ee0a7a83bbe2f14438cea7/sort-dictionaries.js).
-[**Yomitan Dictionaries Sort Script for Yomitan 24.2.10.0 and newer**](https://raw.githubusercontent.com/MarvNC/yomichan-dictionaries/master/sort-dictionaries.js).
+[**Yomitan Dictionaries Sort Script for Yomitan**](https://raw.githubusercontent.com/MarvNC/yomichan-dictionaries/master/sort-dictionaries.js).
 
 To use it, simply copy the script, open the Yomitan options page, open the console, paste the
 script, and press enter. It will automatically sort your dictionaries for you.
