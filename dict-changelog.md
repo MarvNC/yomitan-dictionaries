@@ -11,6 +11,17 @@ These dictionaries are automatically updated daily and will not have new changel
 - Words.HK
 - Words.hk Honzi
 
+## 2024-05-11
+
+- Add
+  - other/全市区町村辞典 [2024-04-30]
+  - TMW Cooking Club [2024-04-30]
+  - other/素材辞典 [2024-04-30]
+- Update
+  - [JA-JA] 例解学習国語辞典 第十一版 [2024-04-30]
+  - [JA-JA Antonyms] 対義語辞典オンライン [2024-04-30]
+  - [JA-JA Thesaurus] 使い方の分かる 類語例解辞典 [2024-05-02]
+
 ## 2024-04-22
 
 - Add

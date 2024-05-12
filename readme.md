@@ -346,16 +346,10 @@ span[data-sc-shinsenkoku10='red'] {
 
 #### Goo Thesaurus
 
-**[使い方の分かる 類語例解辞典](https://www.mediafire.com/file/lrmhwmwfim5ul6u/%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9%25E3%2581%25AE%25E5%2588%2586%25E3%2581%258B%25E3%2582%258B_%25E9%25A1%259E%25E8%25AA%259E%25E4%25BE%258B%25E8%25A7%25A3%25E8%25BE%259E%25E5%2585%25B8.zip/file)**
+Find `[JA-JA Thesaurus] 使い方の分かる 類語例解辞典 [2024-05-02]` in the [dictionary collection](#dictionary-collection).
 
-Scraped by Malte from the online [goo.ne thesaurus](https://dictionary.goo.ne.jp/thsrs/).
-
-<details>
-  <summary>Images (click to expand)</summary>
-
-![](https://cdn.discordapp.com/attachments/778430038159655012/1139670857791316158/image.png)
-
-</details>
+(Updated 2024-05-04) Scraped by Malte from the online
+[goo.ne thesaurus](https://dictionary.goo.ne.jp/thsrs/). Screenshots: https://imgur.com/a/uDT81BI
 
 #### Goo Dialect Dictionary
 
@@ -501,7 +495,7 @@ information about the origins of words.
 
 #### 対義語辞典オンライン Taigigo Jiten Online
 
-Find `[JA-JA Antonym] 対義語辞典オンライン (2024-02-07)` in the
+Find `[JA-JA Antonyms] 対義語辞典オンライン [2024-04-30]` in the
 [dictionary collection](#dictionary-collection).
 
 A dictionary of antonyms from [対義語・反対語辞典オンライン](https://taigigo.jitenon.jp/), converted
@@ -539,7 +533,7 @@ A dictionary of counters from [数え方辞典オンライン](https://count.jit
 
 #### 例解学習国語辞典 第十一版 Reikai Gakushuu Kokugo Jiten
 
-Find `[JA-JA] 例解学習国語辞典 第十一版` in the [dictionary collection](#dictionary-collection).
+Find `[JA-JA] 例解学習国語辞典 第十一版 [2024-04-30]` in the [dictionary collection](#dictionary-collection).
 
 Converted by @SalwynnJP with data provided by Ludia.
 
