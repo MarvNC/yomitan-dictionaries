@@ -1,3 +1,6 @@
+const accessToken = ScriptApp.getOAuthToken();
+const chunkSize = 1024 * 1024 * 10;
+
 const getProperty = (propertyName) => {
   const propertyValue = PropertiesService.getScriptProperties().getProperty(propertyName);
   if (!propertyValue) {
@@ -85,14 +88,14 @@ const repos = [
     fileNamePrefix: '[Honzi] ',
     addDate: false,
   },
-  // {
-  //   url: 'https://api.github.com/repos/MarvNC/pixiv-yomitan/releases/latest',
-  //   folderId: japaneseFolderId,
-  //   includedNameRegex: /^Pixiv_[\d\-]+\.zip$/,
-  //   removeNameRegex: /^Pixiv_[\d\-]+\.zip$/,
-  //   fileNamePrefix: '[JA-JA Encyclopedia] ',
-  //   addDate: false,
-  // },
+  {
+    url: 'https://api.github.com/repos/MarvNC/pixiv-yomitan/releases/latest',
+    folderId: '1PpZg9oqHWrN5cuAvzWMi7pR--pl9fljm',
+    includedNameRegex: /^Pixiv_[\d\-]+\.zip$/,
+    removeNameRegex: /^TEST_DONT_REMOVE_Pixiv_[\d\-]+\.zip$/,
+    fileNamePrefix: '[JA-JA Encyclopedia] ',
+    addDate: false,
+  },
 ];
 
 // Function to download a release repo dictionary from GitHub and save it to Google Drive
@@ -124,16 +127,9 @@ function downloadFromGithub(githubRepo) {
 
   // If asset is found, download it and save it to Google Drive
   if (asset?.browser_download_url && asset.browser_download_url !== '') {
-    const response = UrlFetchApp.fetch(asset.browser_download_url);
-    const fileBlob = response.getBlob();
-
-    // Remove existing files for this dictionary
-    removeFilesWithSubstring(githubRepo.folderId, githubRepo.removeNameRegex);
-
-    const folder = DriveApp.getFolderById(githubRepo.folderId);
-    const createdFile = folder.createFile(fileBlob);
     // Prepend file with to follow naming convention
-    let fileName = createdFile.getName();
+    let fileName = asset.name;
+
     // add prefix
     fileName = githubRepo.fileNamePrefix + fileName;
 
@@ -144,11 +140,84 @@ function downloadFromGithub(githubRepo) {
       fileName = fileName.replace(/(\.[\w\d_-]+)$/i, ` (${date})$1`);
     }
 
-    createdFile.setName(fileName);
+    // Remove existing files for this dictionary
+    removeFilesWithSubstring(githubRepo.folderId, githubRepo.removeNameRegex);
 
-    Logger.log(`Downloaded ${createdFile.getName()} to Google Drive.`);
+    // Download the file and save it to Google Drive
+    urlFetchUpload(asset.browser_download_url, fileName, githubRepo.folderId);
+
+    // Logger.log(`Downloaded ${createdFile.getName()} to Google Drive.`);
   } else {
     Logger.log(`No asset containing ${githubRepo.includedNameRegex} found in the latest release.`);
+  }
+}
+
+/**
+ * Fetches and uploads a file to a google drive folder in chunks
+Start a resumable upload session by making a POST request to the Google Drive API.
+Get the Location header from the response. This is the upload URL for the resumable upload session.
+Download a chunk of the file using the Range header.
+Upload the chunk to the resumable upload session by making a PUT request to the upload URL.
+Repeat steps 3-4 until the entire file is uploaded.
+ * @param {*} url
+ * @param {*} filename
+ * @param {*} folderId
+ */
+function urlFetchUpload(url, filename, folderId) {
+  let start = 0;
+  let end = chunkSize;
+
+  // Starts a resumable session
+  let response = UrlFetchApp.fetch(
+    `https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable`,
+    {
+      method: 'post',
+      headers: {
+        'X-Upload-Content-Type': 'application/zip',
+        'X-Upload-Content-Length': '0',
+        authorization: `Bearer ${accessToken}`,
+      },
+      payload: JSON.stringify({
+        name: filename,
+        parents: [folderId],
+      }),
+    }
+  );
+  // Get the location where we should upload the file
+  // @ts-ignore
+  let location = response.getHeaders().Location;
+  Logger.log(`Location: ${location}`); // Upload the file in chunks
+
+  while (true) {
+    Logger.log(`Fetching chunk ${start}-${end} from ${url}`);
+    let response = UrlFetchApp.fetch(url, {
+      headers: {
+        Range: `bytes=${start}-${end}`,
+      },
+      muteHttpExceptions: true,
+    });
+
+    // Upload the chunk
+    Logger.log(`Uploading chunk ${start}-${end} to ${location}`);
+    response = UrlFetchApp.fetch(location, {
+      method: 'put',
+      headers: {
+        'Content-Range': `bytes ${start}-${end}/*`,
+        authorization: `Bearer ${accessToken}`,
+      },
+      payload: response.getBlob().getBytes(),
+    });
+
+    Logger.log(`Response code: ${response.getResponseCode()}`);
+
+    // If the response code is not 206 (Partial Content), break the loop
+    if (response.getResponseCode() !== 206) {
+      break;
+    }
+
+    // Update the range
+    start = end + 1;
+    end = start + chunkSize;
   }
 }
 
@@ -165,9 +234,6 @@ function removeFilesWithSubstring(folderId, regexToRemove) {
   while (files.hasNext()) {
     const file = files.next();
     if (file.getName().match(regexToRemove)) {
-      // Get the access token
-      const accessToken = ScriptApp.getOAuthToken();
-
       // Define the URL
       const url = `https://www.googleapis.com/drive/v3/files/${file.getId()}`;
 
