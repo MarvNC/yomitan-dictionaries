@@ -1,12 +1,11 @@
-# Yomichan/Yomitan Dictionaries <!-- omit in toc -->
+# Yomitan Dictionaries <!-- omit in toc -->
 
-A comprehensive collection of Japanese and Chinese dictionaries for Yomichan/Yomitan, including
-terms, kanji/hanzi info, frequency, and variants with both monolingual and bilingual dictionaries
-available.
+A comprehensive collection of Japanese and Chinese dictionaries for Yomitan (formerly Yomichan),
+including terms, kanji/hanzi info, frequency, and variants with both monolingual and bilingual
+dictionaries available.
 
-This repository contains dictionaries for
-[Yomichan](https://foosoft.net/projects/yomichan/)/[Yomitan](https://github.com/themoeway/yomitan),
-a Japanese dictionary browser extension for Chrome, Firefox, and Edge. The repository was originally
+This repository contains dictionaries for [Yomitan](https://github.com/themoeway/yomitan), a
+Japanese dictionary browser extension for Chrome, Firefox, and Edge. The repository was originally
 created to host the dictionaries I created, but I have since adapted this repository to serve as a
 hub for other dictionaries as well. If you have a dictionary you would like to share, please open an
 issue or pull request.
