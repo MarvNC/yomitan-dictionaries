@@ -52,10 +52,10 @@ My related dictionary resources:
 - [Other](#other)
   - [Indonesian-English](#indonesian-english)
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
-- [Korean](#korean)
-- [Vietnamese-English](#vietnamese-english)
-- [English-English](#english-english)
-- [Other](#other-1)
+  - [Korean](#korean)
+  - [Vietnamese-English](#vietnamese-english)
+  - [English-English](#english-english)
+  - [Other Languages](#other-languages)
 
 # Dictionary Collection
 
@@ -1402,7 +1402,7 @@ It contains about 19,000 entries.
 
 ![jp-mongolian](!images/jp-mongolian.png)
 
-# Korean
+## Korean
 
 See [Yomichan For Korean](https://github.com/Lyroxide/yomichan-korean) for a fork of Yomichan that
 supports Korean.
@@ -1416,7 +1416,7 @@ Note that there is an alternative [krdict-yomichan](https://github.com/Samuihasu
 but this dictionary is no longer necessary due to the conjugation support added in Lyroxide's fork
 of Yomichan.
 
-# Vietnamese-English
+## Vietnamese-English
 
 **[VNEDICT](https://www.mediafire.com/folder/9ss2pn046fcjo/Vi%E1%BB%87t_-_Anh)**
 
@@ -1444,7 +1444,7 @@ Vie-Vie dictionary converted by Marsh Nguyễn. The dictionary data is from Từ
 Dụng and was sourced from https://github.com/vntk/dictionary/tree/master/data contains 42012
 entries.
 
-# English-English
+## English-English
 
 **[Google Drive](https://drive.google.com/drive/folders/1APj14ap2yMv0WZvSCEGJq9jfMUpZy6Ao?usp=sharing)**
 
@@ -1455,7 +1455,7 @@ Oxford American Dictionary, Cambridge, Longman, Wordset, and a frequency list fr
 
 From Seth for Yomitan. Extract it and follow instructions before use.
 
-# Other
+## Other Languages
 
 **[kaikki-to-yomitan](https://github.com/themoeway/kaikki-to-yomitan)**
 
@@ -1495,3 +1495,10 @@ Dictionary data from [Lingoes](http://www.lingoes.net/en/dictionary/index.html)
 **[Aurelio Portugese Dictionary](https://github.com/MarvNC/yomichan-dictionaries/files/15145512/Aurelio.zip)**
 
 Converted by Michel, [source](https://github.com/MarvNC/yomichan-dictionaries/issues/62)
+
+**[Bilingual Apple Dictionaries](https://drive.proton.me/urls/XZRWCKDM54#Bnq28tvMixEm)**
+
+Contains Arabic, Dutch, English, French, German, Hindi, Indonesian, Italian, Japanese, Korean,
+Polish, Portuguese, Russian, Simplified Chinese, Spanish, Thai and Vietnamese.
+
+[(Source)](https://github.com/MarvNC/yomichan-dictionaries/issues/63)
