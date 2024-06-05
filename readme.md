@@ -1452,7 +1452,7 @@ Note that ISO code for Lao is `lo`, please consult [List of ISO 639 language cod
 
 **[Maha Sila Viravongs 1960 Lao Dictionary](https://small.fileditchstuff.me/s11/jOxxQtOcoZsodMtnujj.zip)**
 
-(SEAlang Project)[http://sealang.net/faq/] described it as below.
+[SEAlang Project](http://sealang.net/faq/) described it as below.
 
 Maha Sila Viravongs' Dictionary of the Lao Language (Watcananukom Phaasaa Laaw), first published by the Ministry of Education in 1960, stands as the singular achievement of Lao lexicography. 
 
@@ -1462,7 +1462,7 @@ The value of Sila 1960 continues to grow following the 1975 policy of spelling s
 
 **[Lao-Eng Dictionary](https://small.fileditchstuff.me/s11/BgEJUJaYRMiiMVOfveZn.zip)**
 
-Usable Lao-Eng dictionary from (DaDaKo)[https://dadako.narod.ru/paperpoe.htm] site.
+Usable Lao-Eng dictionary from [DaDaKo](https://dadako.narod.ru/paperpoe.htm) site.
 
 ## English-English
 
