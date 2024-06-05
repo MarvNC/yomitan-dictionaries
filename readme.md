@@ -1444,6 +1444,26 @@ Vie-Vie dictionary converted by Marsh Nguyễn. The dictionary data is from Từ
 Dụng and was sourced from https://github.com/vntk/dictionary/tree/master/data contains 42012
 entries.
 
+## Lao
+
+Note that ISO code for Lao is `lo`, please consult [List of ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) for clearification.
+
+### Lao-Lao
+
+**[Maha Sila Viravongs 1960 Lao Dictionary](https://small.fileditchstuff.me/s11/jOxxQtOcoZsodMtnujj.zip)**
+
+(SEAlang Project)[http://sealang.net/faq/] described it as below.
+
+Maha Sila Viravongs' Dictionary of the Lao Language (Watcananukom Phaasaa Laaw), first published by the Ministry of Education in 1960, stands as the singular achievement of Lao lexicography. 
+
+Far more than a simple compendium of definitions, Sila 1960 is filled with etymologies and citations, and includes some 11,500 heads, and nearly 24,000 subentries.
+
+The value of Sila 1960 continues to grow following the 1975 policy of spelling simplification.  This dictionary provides both a necessary reference for earlier literature (including Sila's own History of Laos), as well as the first scholarly refernece to the dvelopment of the Lao language.
+
+**[Lao-Eng Dictionary](https://small.fileditchstuff.me/s11/BgEJUJaYRMiiMVOfveZn.zip)**
+
+Usable Lao-Eng dictionary from (DaDaKo)[https://dadako.narod.ru/paperpoe.htm] site.
+
 ## English-English
 
 **[Google Drive](https://drive.google.com/drive/folders/1APj14ap2yMv0WZvSCEGJq9jfMUpZy6Ao?usp=sharing)**
