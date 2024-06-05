@@ -20,3 +20,16 @@ pixivSummaries.json
 
 Cifu-v1.txt
 *.zip
+
+# MacOS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Emacs generated file #
+*.*~
