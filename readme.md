@@ -54,6 +54,7 @@ My related dictionary resources:
   - [Japanese-Mongolian/日・モ辞典](#japanese-mongolian日モ辞典)
   - [Korean](#korean)
   - [Vietnamese-English](#vietnamese-english)
+  - [Lao](#Lao)
   - [English-English](#english-english)
   - [Other Languages](#other-languages)
 
