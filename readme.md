@@ -1460,6 +1460,8 @@ Far more than a simple compendium of definitions, Sila 1960 is filled with etymo
 
 The value of Sila 1960 continues to grow following the 1975 policy of spelling simplification.  This dictionary provides both a necessary reference for earlier literature (including Sila's own History of Laos), as well as the first scholarly refernece to the dvelopment of the Lao language.
 
+### Lao-English
+
 **[Lao-Eng Dictionary](https://small.fileditchstuff.me/s11/BgEJUJaYRMiiMVOfveZn.zip)**
 
 Usable Lao-Eng dictionary from [DaDaKo](https://dadako.narod.ru/paperpoe.htm) site.
