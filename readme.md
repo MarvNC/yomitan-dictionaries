@@ -1449,7 +1449,7 @@ entries.
 
 Note that ISO code for Lao is `lo`, please consult
 [List of ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) for
-clearification.
+clarification.
 
 #### Lao-Lao
 
@@ -1471,7 +1471,7 @@ of Laos), as well as the first scholarly refernece to the dvelopment of the Lao 
 
 **[Lao-Eng Dictionary](https://small.fileditchstuff.me/s11/BgEJUJaYRMiiMVOfveZn.zip)**
 
-Usable Lao-Eng dictionary from [DaDaKo](https://dadako.narod.ru/paperpoe.htm) site.
+Usable Lao-Eng dictionary from the [DaDaKo](https://dadako.narod.ru/paperpoe.htm) site.
 
 ## English-English
 
