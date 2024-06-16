@@ -11,11 +11,27 @@ These dictionaries are automatically updated daily and will not have new changel
 - Words.HK
 - Words.hk Honzi
 
+## 2024-06-17
+
+- Add
+  - other/[画像付き] 絵でわかる日本語 v2
+  - other/きっずジャポニカ 新版
+  - other/二字熟語の百科事典
+  - other/四字熟語の百科事典
+  - other/ことわざ・慣用句の百科事典
+  - other/絵でわかる慣用句 [2024-06-16] (Up-to-date)
+  - other/素材辞典 v4.2 [2024-05-21]
+  - other/ポケモン図鑑
+- Update
+  - other/TMW Club v2 [2024-05-12]
+- Remove
+  - other/TMW Cooking Club [2024-04-30] (Replaced by TMW Club v2)
+
 ## 2024-05-11
 
 - Add
   - other/全市区町村辞典 [2024-04-30]
-  - TMW Cooking Club [2024-04-30]
+  - other/TMW Cooking Club [2024-04-30]
   - other/素材辞典 [2024-04-30]
 - Update
   - [JA-JA] 例解学習国語辞典 第十一版 [2024-04-30]
