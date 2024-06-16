@@ -60,8 +60,8 @@ My related dictionary resources:
 
 # Dictionary Collection
 
-**[Dictionaries Folder Download](https://drive.google.com/drive/folders/1LXMIOoaWASIntlx1w08njNU005lS5lez)**
-**[JP Dictionnaries (other)](https://drive.google.com/drive/folders/1CPPAgKzz_PDEb7JUPHGioONTEQg0aCHW)**
+- **[Dictionaries Folder Download](https://drive.google.com/drive/folders/1LXMIOoaWASIntlx1w08njNU005lS5lez)**
+- **[JP Dictionnaries (other)](https://drive.google.com/drive/folders/1CPPAgKzz_PDEb7JUPHGioONTEQg0aCHW)**
 
 **[Changelog](dict-changelog.md)**
 
