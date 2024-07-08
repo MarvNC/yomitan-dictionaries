@@ -11,6 +11,17 @@ These dictionaries are automatically updated daily and will not have new changel
 - Words.HK
 - Words.hk Honzi
 
+## 2024-07-09
+
+- Update
+  - other/語彙力・二字熟語の百科事典
+  - other/四字熟語の百科事典 [2024-06-30] (typos fixed)
+  - other/[画像付き] 絵でわかる日本語 v3 (img + text)
+  - other/絵でわかる慣用句 [2024-06-30]
+  - other/ことわざ・慣用句の百科事典 [2024-06-30] (typos fixed)
+- Remove
+  - other/二字熟語の百科事典 (Replaced by 語彙力・二字熟語の百科事典)
+
 ## 2024-06-17
 
 - Add
@@ -19,7 +30,7 @@ These dictionaries are automatically updated daily and will not have new changel
   - other/二字熟語の百科事典
   - other/四字熟語の百科事典
   - other/ことわざ・慣用句の百科事典
-  - other/絵でわかる慣用句 [2024-06-16] (Up-to-date)
+  - other/絵でわかる慣用句 [2024-06-16]
   - other/素材辞典 v4.2 [2024-05-21]
   - other/ポケモン図鑑
 - Update
