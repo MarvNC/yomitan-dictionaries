@@ -277,9 +277,9 @@ A monolingual dictionary made by an anon, with very nice formatting and links fo
 <details>
   <summary>Images</summary>
 
-![1](https://cdn.discordapp.com/attachments/778430038159655012/1094322605021990972/iwakoku2.png)
-![2](https://cdn.discordapp.com/attachments/778430038159655012/1094322605294633101/iwakoku3.png)
-![3](https://cdn.discordapp.com/attachments/778430038159655012/1094322605516922991/iwakoku4.png)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/b9b79989-aaa4-4086-9d93-65ecb845cd5a)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/058c6b01-4232-475c-8d1f-e80b392e909c)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/baad0086-1283-4778-9414-924b0f00c5ff)
 
 </details>
 
@@ -335,10 +335,10 @@ Converted by dictionary anon, this dictionary has nice modern formatting.
 <details>
   <summary>Images (click to expand)</summary>
 
-![](https://cdn.discordapp.com/attachments/797748730807320588/1132453484403372153/usobuku.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1132453484625662083/hen.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1132453484806033458/mau.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1132453485015740456/kakeru.png)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/802e7bad-a4e3-4517-86db-1ba4beaf1bea)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/a3bcc585-57d0-4f62-a22f-bb15b8808614)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/48b8d001-7214-4cdc-8d48-4face258ad91)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/e397a9a8-fe9b-43ce-a904-4c8b75e17f8d)
 
 </details>
 
@@ -363,10 +363,10 @@ span[data-sc-shinsenkoku10='red'] {
 <details>
   <summary>Images (click to expand)</summary>
 
-![](https://cdn.discordapp.com/attachments/797748730807320588/1138245578711634021/jikkan.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1138245578946519231/baka.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1138245579181391912/root.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1138245579416277042/jion.png)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/9ce3b153-2fb7-4571-8817-6ea2671e5b42)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/009b6bcc-4b0d-47c4-baf5-3946cfd02282)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/ff8ff1bb-0533-4f0a-aa9c-32d70e9d159e)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/81e624c4-9439-41f1-8e37-c119c136651e)
 
 </details>
 
@@ -1023,7 +1023,7 @@ kanji dictionary. It was converted into a Yomichan kanji dictionary by eurusdagr
 <details>
 <summary>(Click to expand) Example image</summary>
 
-![](https://cdn.discordapp.com/attachments/778430038159655012/1147629627804758056/image.png)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/18aea472-eb49-42c3-bf73-1532f8d4ae53)
 
 </details>
 
