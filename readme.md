@@ -201,6 +201,18 @@ number 5 can be changed:
 }
 ```
 
+#### Babylon Japanese-English
+
+[peldas' Yomitan Dictionaries](https://github.com/peldas/yomitan-dicts?tab=readme-ov-file#japanese-english)
+
+<details>
+  <summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/91ee644a-dbce-42cb-9aff-aab058678e9e)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/6661da99-b6c4-4ff2-8ab7-aa5ccf13a4b7)
+
+</details>
+
 #### Onomatoproject
 
 Onomatopoeia converted by Malte from https://onomatoproject.com/.
@@ -1570,3 +1582,13 @@ Contains Arabic, Dutch, English, French, German, Hindi, Indonesian, Italian, Jap
 Polish, Portuguese, Russian, Simplified Chinese, Spanish, Thai and Vietnamese.
 
 [(Source)](https://github.com/MarvNC/yomichan-dictionaries/issues/63)
+
+**[Peldas Yomitan Dictionaries](https://github.com/peldas/yomitan-dicts)**
+
+Currently includes:
+
+- Japanese-English
+- Korean-English
+- Korean-Japanese
+- Korean-Korean
+- Thai-Japanese

@@ -17,6 +17,7 @@ These dictionaries are automatically updated daily and will not have new changel
   - [JA-EN Onomatopoeia] Onomatoproject
   - [JA Freq] JPDB_v2.1_kana_display_only
   - [JA Freq] BCCWJ_SUW_LUW_combined
+  - [JA-EN] Babylon_Japanese_English.v1.0.0
 - Remove
   - [JA Freq] JPDB_2022-05-10T03_27_02.930Z - Obsolete
   - [JA Freq] BCCWJ-LUW - Obsolete
