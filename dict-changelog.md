@@ -11,6 +11,11 @@ These dictionaries are automatically updated daily and will not have new changel
 - Words.HK
 - Words.hk Honzi
 
+## 2024-05-11 (part 2)
+
+- Add
+  - [JA-EN Onomatopoeia] Onomatoproject
+
 ## 2024-05-11
 
 - Add
@@ -42,7 +47,7 @@ These dictionaries are automatically updated daily and will not have new changel
 ## 2024-03-04
 
 - Update
-  - [JA-JA] KO字源 (2024-03-02)
+  - [JA-JA] KO 字源 (2024-03-02)
   - [JA-JA] 漢検漢字辞典　第二版 (2024-03-04)
 
 ## 2024-03-03

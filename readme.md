@@ -201,6 +201,20 @@ number 5 can be changed:
 }
 ```
 
+#### Onomatoproject
+
+Onomatopoeia converted by Malte from https://onomatoproject.com/.
+
+<details>
+
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/0ce736dd-7009-465b-a73b-3f346fed5aba)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/d32284b1-d446-4f1d-a9a0-ff70169431a8)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/91f5e9b3-23fd-41ad-aa25-f131bd6883a4)
+
+</details>
+
 ### Japanese Monolingual Dictionaries
 
 #### Shoui Monolingual Dictionaries Collection
