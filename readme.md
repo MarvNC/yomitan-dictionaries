@@ -1098,6 +1098,16 @@ Kanji frequency data from https://jpdb.io as a Yomichan frequency dictionary.
 
 # Yomitan CSS for Non-Japanese CJK Languages
 
+This is no longer needed as
+[Yomitan now renders fonts with the language that is selected in your profile](https://github.com/themoeway/yomitan/pull/979)
+(thanks to Kuuube). In addition, you can
+[set your chosen fonts directly within Yomitan settings](https://github.com/themoeway/yomitan/pull/1184)
+(pr by MarvNC).
+
+<details>
+
+<summary>Click to expand</summary>
+
 Yomitan by default renders everything in Japanese leading to incorrect glyphs being rendered when
 using Yomitan with non-Japanese CJK languages. This can be fixed with some CSS.
 
@@ -1144,6 +1154,8 @@ Simply copy this CSS into `Settings -> Popup Appearance -> Configure custom CSS.
 - Note that Firefox users need to set the
   [font-language-override](https://developer.mozilla.org/en-US/docs/Web/CSS/font-language-override)
   property instead of the `-webkit-locale` property as it is not supported in Firefox.
+
+</details>
 
 # Mandarin Chinese
 
