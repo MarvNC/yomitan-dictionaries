@@ -635,7 +635,24 @@ put in to creating them to make them parse well, I'd recommend you install all o
 
 ### Term Frequency
 
+#### Kuuube's Frequency Dictionaries
+
+**[Kuuube's Dictionaries](https://github.com/Kuuuube/yomitan-dictionaries)**
+
+Yomitan dictionaries converted by [Kuuube](https://github.com/Kuuuube/).
+
+Includes:
+
+- **JPDB v2.1 Frequency** (updated May 2024)
+- **BCCWJ SUW LUW Combined** - so you can just install this one
+- **H Frequency** - Voice work scripts, small corpus
+- **JMdict Frequency** - From JMdict's news frequency tags, not recommended
+
 #### jpdb Frequency Dictionary
+
+<details>
+
+<summary>Click to expand (made obsolete by Kuuube's version)</summary>
 
 **[Download](https://github.com/MarvNC/jpdb-freq-list/releases)**
 
@@ -649,6 +666,8 @@ However, the corpus of JPDB is quite good for immersion learners as it covers an
 novels, visual novels, and web novels so the frequencies will be relatively accurate to what you're
 actually reading. This dictionary is notable for displaying the frequencies of kana readings
 separately, so you can often get a sense of how often a word is written with kanji or not.
+
+</details>
 
 #### Aozora Bunko Jukugo Frequency
 
@@ -684,6 +703,10 @@ my Yomichan sort dictionary.
 
 #### BCCWJ
 
+<details>
+
+<summary>Click to expand (made obsolete by Kuuube's version)</summary>
+
 **[Download](https://github.com/toasted-nutbread/yomichan-bccwj-frequency-dictionary/releases)**
 
 From the [publication](https://link.springer.com/article/10.1007/s10579-013-9261-0):
@@ -698,6 +721,8 @@ From the [publication](https://link.springer.com/article/10.1007/s10579-013-9261
 It has extremely wide coverage with most terms you'll encounter having an entry in this list even if
 other frequency lists don't. In addition, it differentiates between readings quite well. Make sure
 to install the LUW version as it has more terms.
+
+</details>
 
 #### Innocent Ranked
 

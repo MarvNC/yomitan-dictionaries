@@ -15,7 +15,11 @@ These dictionaries are automatically updated daily and will not have new changel
 
 - Add
   - [JA-EN Onomatopoeia] Onomatoproject
-
+  - [JA Freq] JPDB_v2.1_kana_display_only
+  - [JA Freq] BCCWJ_SUW_LUW_combined
+- Remove
+  - [JA Freq] JPDB_2022-05-10T03_27_02.930Z - Obsolete
+  - [JA Freq] BCCWJ-LUW - Obsolete
 ## 2024-05-11
 
 - Add
