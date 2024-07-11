@@ -87,8 +87,8 @@ please let me know!
 
 ## What Dictionaries Should I Install?
 
-If you're a beginner, I recommend following
-[Shoui's Yomichan Setup](https://learnjapanese.moe/yomichan/). I would say the _bare minimum_ is:
+If you're a beginner, I would say the _bare minimum_ to install from the
+[dictionary collection](#dictionary-collection) is:
 
 - Bilingual:
   - [JA-EN] jitendex-yomichan
