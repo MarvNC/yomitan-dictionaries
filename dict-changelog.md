@@ -21,11 +21,31 @@ These dictionaries are automatically updated daily and will not have new changel
 - Remove
   - [JA Freq] JPDB_2022-05-10T03_27_02.930Z - Obsolete
   - [JA Freq] BCCWJ-LUW - Obsolete
+
+## 2024-07-11
+
+- Add
+  - other/語彙力・二字熟語の百科事典
+  - other/四字熟語の百科事典 [2024-06-30] (typos fixed)
+  - [画像付き] 絵でわかる日本語 v3 (img + text)
+  - 絵でわかる慣用句 [2024-06-30]
+  - ことわざ・慣用句の百科事典 [2024-06-30] (typos fixed)
+  - きっずジャポニカ 新版
+  - other/ポケモン図鑑
+  - other/TMW Club v2 [2024-05-12]
+- Update
+  - other/素材辞典 v4.2 [2024-05-21]
+- Remove
+  - other/TMW Cooking Club [2024-04-30] (Replaced by TMW Club v2)
+- Move
+  - [JA Grammar] edewakaru_v_1_03 -> other/[JA Grammar] edewakaru_v_1_03 (Obselete by new version
+    with images)
+
 ## 2024-05-11
 
 - Add
   - other/全市区町村辞典 [2024-04-30]
-  - TMW Cooking Club [2024-04-30]
+  - other/TMW Cooking Club [2024-04-30]
   - other/素材辞典 [2024-04-30]
 - Update
   - [JA-JA] 例解学習国語辞典 第十一版 [2024-04-30]

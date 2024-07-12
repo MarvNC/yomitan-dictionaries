@@ -268,6 +268,160 @@ them. Currently contains:
   - Scraped/converted by Kartoffel.
 - 漢字源
 
+#### Salwynn's dictionaries
+
+Dictionaries converted by Salwynn.
+
+- **[Salwynn Yomitan Dictionaries folder](https://drive.google.com/drive/folders/1CPPAgKzz_PDEb7JUPHGioONTEQg0aCHW)**
+
+**例解学習国語辞典 第十一版 Reikai Gakushuu Kokugo Jiten**
+
+Find `[JA-JA] 例解学習国語辞典 第十一版 [2024-04-30]` in the
+[dictionary collection](#dictionary-collection).
+
+Converted by @SalwynnJP with data provided by Ludia.
+
+<details>
+
+<summary>Salwynn's notes/images</summary>
+
+> Improved entries (around ~30k duplicates) by comparing readings with other dicts (漢字遣い参考 /
+> 明鏡国語辞典　第二版 etc...)
+>
+> Ex : [売り出し] initial term // [売出し] - [売出] duplicates
+>
+> Ex : 連らく initial term // [連絡] duplicate
+>
+> Ex : とうきょうと initial term (only kana) // [東京都] duplicate
+>
+> 56k entries + some 使い分け section (up your Text scan length in yomitan's settings to scan these)
+>
+> Includes 例文 / 熟語 / 成句 for most defs
+>
+> Thoughts : For testing it several weeks, I think this dict deserves his first place, above 三省堂
+> 国語辞典　第八版
+>
+> Notes : This dict needs to get conjugation for yomitan. If there are other issues about this dict,
+> let me know.
+
+From
+[Discord](https://discord.com/channels/617136488840429598/778430038159655012/1205993624794308660)
+
+![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/d8d37009-f9e6-49aa-8639-364d6bae76df)
+![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/8ce2c072-03f6-4f12-bfe6-43be11f8a42c)
+![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/542f2a67-d72b-4542-9c31-b899a3abaf18)
+
+</details>
+
+**きっずジャポニカ 新版**
+
+Kids' Japonica converted by Salwynn.
+
+<details>
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/79e3cd8e-7a2d-4a3e-b219-76d93de1ab04)
+
+</details>
+
+**ことわざ・慣用句の百科事典**
+
+Includes images, data from https://proverb-encyclopedia.com/
+
+<details>
+
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/ce8cc9bb-594b-403f-9d4e-44bc1ed9898f)
+
+</details>
+
+**絵でわかる慣用句**
+
+From 絵でわかる慣用句 at https://kaku-navi.com/ which includes cute manga strips explaining things
+along with text explanations.
+
+<details>
+
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/2d130064-62a7-43d1-b0e8-b2a2e440dc6d)
+
+</details>
+
+**ポケモン図鑑**
+
+Pokemon images from https://zukan.pokemon.co.jp/
+
+<details>
+
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/e7acc547-a5fc-41aa-9a67-6714d676f0ef)
+
+</details>
+
+**TMW Club**
+
+A few hundred food images collected from the web by TMW's cooking club.
+
+<details>
+
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/c4f6b36c-db56-4fff-95a1-e6af20ab077c)
+
+</details>
+
+**四字熟語の百科事典**
+
+Yojis and images from https://idiom-encyclopedia.com/ (includes 三字熟語 as well)
+
+<details>
+
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/34a4ac38-0844-48a6-9b74-b044092a2d7a)
+
+</details>
+
+**語彙力・二字熟語の百科事典**
+
+Phrases with images from https://proverb-encyclopedia.com/dictionary/
+
+<details>
+
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/6ab42425-3bce-4779-9814-ae7119231583)
+
+</details>
+
+**素材辞典**
+
+1.382 Images from the [Kaishi 1.5k anki deck](https://github.com/donkuri/Kaishi). Mostly images by
+いらすとや.
+
+<details>
+
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/34879013-09c6-49b1-85d1-f508e467986b)
+
+</details>
+
+**全市区町村辞典**
+
+2,307 Japanese city images.
+
+<details>
+
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/ed34cd43-4287-4990-bcbb-d5f5227ba22b)
+
+</details>
+
 #### Iwanami Kokugo Jiten
 
 Find `[JA-JA] 岩波国語辞典 第八版` in the [dictionary collection](#dictionary-collection).
@@ -558,45 +712,6 @@ A dictionary of counters from [数え方辞典オンライン](https://count.jit
 
 </details>
 
-#### 例解学習国語辞典 第十一版 Reikai Gakushuu Kokugo Jiten
-
-Find `[JA-JA] 例解学習国語辞典 第十一版 [2024-04-30]` in the
-[dictionary collection](#dictionary-collection).
-
-Converted by @SalwynnJP with data provided by Ludia.
-
-<details>
-
-<summary>Salwynn's notes/images</summary>
-
-> Improved entries (around ~30k duplicates) by comparing readings with other dicts (漢字遣い参考 /
-> 明鏡国語辞典　第二版 etc...)
->
-> Ex : [売り出し] initial term // [売出し] - [売出] duplicates
->
-> Ex : 連らく initial term // [連絡] duplicate
->
-> Ex : とうきょうと initial term (only kana) // [東京都] duplicate
->
-> 56k entries + some 使い分け section (up your Text scan length in yomitan's settings to scan these)
->
-> Includes 例文 / 熟語 / 成句 for most defs
->
-> Thoughts : For testing it several weeks, I think this dict deserves his first place, above 三省堂
-> 国語辞典　第八版
->
-> Notes : This dict needs to get conjugation for yomitan. If there are other issues about this dict,
-> let me know.
-
-From
-[Discord](https://discord.com/channels/617136488840429598/778430038159655012/1205993624794308660)
-
-![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/d8d37009-f9e6-49aa-8639-364d6bae76df)
-![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/8ce2c072-03f6-4f12-bfe6-43be11f8a42c)
-![image](https://github.com/MarvNC/yomichan-dictionaries/assets/17340496/542f2a67-d72b-4542-9c31-b899a3abaf18)
-
-</details>
-
 #### 現代国語例解辞典　第五版 Gendai Kokugo Reikai Jiten
 
 Find `[JA-JA] 現代国語例解辞典 第五版` in the [dictionary collection](#dictionary-collection).
@@ -644,6 +759,11 @@ put in to creating them to make them parse well, I'd recommend you install all o
 - Nihongo Kyoshi JLPT 文法解説まとめ
 - Donna Toki どんなときどう使う 日本語表現文型辞典
 - DoJG 日本語文法辞典(全集)
+
+**Updated 絵でわかる日本語**
+
+Salwynn added images to this dictionary from the original site. Can be found in
+[Salwynn's collection](#salwynns-dictionaries) or the [main collection](#dictionary-collection).
 
 ### Term Frequency
 
