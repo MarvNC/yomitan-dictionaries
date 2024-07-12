@@ -1,5 +1,12 @@
 # How Do I Make A Yomichan Dictionary?
 
+<!-- prettier-ignore -->
+> [!WARNING]
+> Documentation on this page will no longer be updated as it been
+> [moved to the official Yomitan documentation](https://github.com/themoeway/yomitan/blob/master/docs/making-yomitan-dictionaries.md).
+
+---
+
 I get this question a lot, so here's an overview of how to make your own Yomichan dictionary.
 
 As a prerequisite, you need to be somewhat familiar with JSON and coding in a language of choice.

@@ -11,7 +11,18 @@ These dictionaries are automatically updated daily and will not have new changel
 - Words.HK
 - Words.hk Honzi
 
-## 2024-07-09
+## 2024-05-11 (part 2)
+
+- Add
+  - [JA-EN Onomatopoeia] Onomatoproject
+  - [JA Freq] JPDB_v2.1_kana_display_only
+  - [JA Freq] BCCWJ_SUW_LUW_combined
+  - [JA-EN] Babylon_Japanese_English.v1.0.0
+- Remove
+  - [JA Freq] JPDB_2022-05-10T03_27_02.930Z - Obsolete
+  - [JA Freq] BCCWJ-LUW - Obsolete
+
+## 2024-07-11
 
 - Add
   - other/語彙力・二字熟語の百科事典

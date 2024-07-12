@@ -87,8 +87,8 @@ please let me know!
 
 ## What Dictionaries Should I Install?
 
-If you're a beginner, I recommend following
-[Shoui's Yomichan Setup](https://learnjapanese.moe/yomichan/). I would say the _bare minimum_ is:
+If you're a beginner, I would say the _bare minimum_ to install from the
+[dictionary collection](#dictionary-collection) is:
 
 - Bilingual:
   - [JA-EN] jitendex-yomichan
@@ -200,6 +200,32 @@ number 5 can be changed:
   display: none;
 }
 ```
+
+#### Babylon Japanese-English
+
+[peldas' Yomitan Dictionaries](https://github.com/peldas/yomitan-dicts?tab=readme-ov-file#japanese-english)
+
+<details>
+  <summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/91ee644a-dbce-42cb-9aff-aab058678e9e)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/6661da99-b6c4-4ff2-8ab7-aa5ccf13a4b7)
+
+</details>
+
+#### Onomatoproject
+
+Onomatopoeia converted by Malte from https://onomatoproject.com/.
+
+<details>
+
+<summary>Images</summary>
+
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/0ce736dd-7009-465b-a73b-3f346fed5aba)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/d32284b1-d446-4f1d-a9a0-ff70169431a8)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/91f5e9b3-23fd-41ad-aa25-f131bd6883a4)
+
+</details>
 
 ### Japanese Monolingual Dictionaries
 
@@ -405,9 +431,9 @@ A monolingual dictionary made by an anon, with very nice formatting and links fo
 <details>
   <summary>Images</summary>
 
-![1](https://cdn.discordapp.com/attachments/778430038159655012/1094322605021990972/iwakoku2.png)
-![2](https://cdn.discordapp.com/attachments/778430038159655012/1094322605294633101/iwakoku3.png)
-![3](https://cdn.discordapp.com/attachments/778430038159655012/1094322605516922991/iwakoku4.png)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/b9b79989-aaa4-4086-9d93-65ecb845cd5a)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/058c6b01-4232-475c-8d1f-e80b392e909c)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/baad0086-1283-4778-9414-924b0f00c5ff)
 
 </details>
 
@@ -463,10 +489,10 @@ Converted by dictionary anon, this dictionary has nice modern formatting.
 <details>
   <summary>Images (click to expand)</summary>
 
-![](https://cdn.discordapp.com/attachments/797748730807320588/1132453484403372153/usobuku.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1132453484625662083/hen.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1132453484806033458/mau.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1132453485015740456/kakeru.png)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/802e7bad-a4e3-4517-86db-1ba4beaf1bea)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/a3bcc585-57d0-4f62-a22f-bb15b8808614)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/48b8d001-7214-4cdc-8d48-4face258ad91)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/e397a9a8-fe9b-43ce-a904-4c8b75e17f8d)
 
 </details>
 
@@ -491,10 +517,10 @@ span[data-sc-shinsenkoku10='red'] {
 <details>
   <summary>Images (click to expand)</summary>
 
-![](https://cdn.discordapp.com/attachments/797748730807320588/1138245578711634021/jikkan.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1138245578946519231/baka.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1138245579181391912/root.png)
-![](https://cdn.discordapp.com/attachments/797748730807320588/1138245579416277042/jion.png)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/9ce3b153-2fb7-4571-8817-6ea2671e5b42)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/009b6bcc-4b0d-47c4-baf5-3946cfd02282)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/ff8ff1bb-0533-4f0a-aa9c-32d70e9d159e)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/81e624c4-9439-41f1-8e37-c119c136651e)
 
 </details>
 
@@ -741,7 +767,24 @@ Salwynn added images to this dictionary from the original site. Can be found in
 
 ### Term Frequency
 
+#### Kuuube's Frequency Dictionaries
+
+**[Kuuube's Dictionaries](https://github.com/Kuuuube/yomitan-dictionaries)**
+
+Yomitan dictionaries converted by [Kuuube](https://github.com/Kuuuube/).
+
+Includes:
+
+- **JPDB v2.1 Frequency** (updated May 2024)
+- **BCCWJ SUW LUW Combined** - so you can just install this one
+- **H Frequency** - Voice work scripts, small corpus
+- **JMdict Frequency** - From JMdict's news frequency tags, not recommended
+
 #### jpdb Frequency Dictionary
+
+<details>
+
+<summary>Click to expand (made obsolete by Kuuube's version)</summary>
 
 **[Download](https://github.com/MarvNC/jpdb-freq-list/releases)**
 
@@ -755,6 +798,8 @@ However, the corpus of JPDB is quite good for immersion learners as it covers an
 novels, visual novels, and web novels so the frequencies will be relatively accurate to what you're
 actually reading. This dictionary is notable for displaying the frequencies of kana readings
 separately, so you can often get a sense of how often a word is written with kanji or not.
+
+</details>
 
 #### Aozora Bunko Jukugo Frequency
 
@@ -790,6 +835,10 @@ my Yomichan sort dictionary.
 
 #### BCCWJ
 
+<details>
+
+<summary>Click to expand (made obsolete by Kuuube's version)</summary>
+
 **[Download](https://github.com/toasted-nutbread/yomichan-bccwj-frequency-dictionary/releases)**
 
 From the [publication](https://link.springer.com/article/10.1007/s10579-013-9261-0):
@@ -804,6 +853,8 @@ From the [publication](https://link.springer.com/article/10.1007/s10579-013-9261
 It has extremely wide coverage with most terms you'll encounter having an entry in this list even if
 other frequency lists don't. In addition, it differentiates between readings quite well. Make sure
 to install the LUW version as it has more terms.
+
+</details>
 
 #### Innocent Ranked
 
@@ -1092,7 +1143,7 @@ kanji dictionary. It was converted into a Yomichan kanji dictionary by eurusdagr
 <details>
 <summary>(Click to expand) Example image</summary>
 
-![](https://cdn.discordapp.com/attachments/778430038159655012/1147629627804758056/image.png)
+![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/18aea472-eb49-42c3-bf73-1532f8d4ae53)
 
 </details>
 
@@ -1167,6 +1218,16 @@ Kanji frequency data from https://jpdb.io as a Yomichan frequency dictionary.
 
 # Yomitan CSS for Non-Japanese CJK Languages
 
+This is no longer needed as
+[Yomitan now renders fonts with the language that is selected in your profile](https://github.com/themoeway/yomitan/pull/979)
+(thanks to Kuuube). In addition, you can
+[set your chosen fonts directly within Yomitan settings](https://github.com/themoeway/yomitan/pull/1184)
+(pr by MarvNC).
+
+<details>
+
+<summary>Click to expand</summary>
+
 Yomitan by default renders everything in Japanese leading to incorrect glyphs being rendered when
 using Yomitan with non-Japanese CJK languages. This can be fixed with some CSS.
 
@@ -1213,6 +1274,8 @@ Simply copy this CSS into `Settings -> Popup Appearance -> Configure custom CSS.
 - Note that Firefox users need to set the
   [font-language-override](https://developer.mozilla.org/en-US/docs/Web/CSS/font-language-override)
   property instead of the `-webkit-locale` property as it is not supported in Firefox.
+
+</details>
 
 # Mandarin Chinese
 
@@ -1651,3 +1714,13 @@ Contains Arabic, Dutch, English, French, German, Hindi, Indonesian, Italian, Jap
 Polish, Portuguese, Russian, Simplified Chinese, Spanish, Thai and Vietnamese.
 
 [(Source)](https://github.com/MarvNC/yomichan-dictionaries/issues/63)
+
+**[Peldas Yomitan Dictionaries](https://github.com/peldas/yomitan-dicts)**
+
+Currently includes:
+
+- Japanese-English
+- Korean-English
+- Korean-Japanese
+- Korean-Korean
+- Thai-Japanese
