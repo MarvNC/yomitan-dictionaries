@@ -1630,13 +1630,11 @@ entries.
 
 ## Lao
 
-Note that ISO code for Lao is `lo`, please consult
-[List of ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes) for
-clarification.
+You can download Lao dictionaries described below [here](https://drive.proton.me/urls/MN8VFEQPEM#bRKnaefged8i)
 
 #### Lao-Lao
 
-**[Maha Sila Viravongs 1960 Lao Dictionary](https://small.fileditchstuff.me/s11/jOxxQtOcoZsodMtnujj.zip)**
+**Maha Sila Viravongs 1960 Lao Dictionary**
 
 [SEAlang Project](http://sealang.net/faq/) described it as below.
 
@@ -1652,7 +1650,7 @@ of Laos), as well as the first scholarly refernece to the dvelopment of the Lao 
 
 #### Lao-English
 
-**[Lao-Eng Dictionary](https://small.fileditchstuff.me/s11/BgEJUJaYRMiiMVOfveZn.zip)**
+**Lao-Eng Dictionary from the DaDaKo**
 
 Usable Lao-Eng dictionary from the [DaDaKo](https://dadako.narod.ru/paperpoe.htm) site.
 
