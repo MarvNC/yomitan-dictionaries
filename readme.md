@@ -1654,6 +1654,22 @@ of Laos), as well as the first scholarly refernece to the dvelopment of the Lao 
 
 Usable Lao-Eng dictionary from the [DaDaKo](https://dadako.narod.ru/paperpoe.htm) site.
 
+## Thai
+
+You can download Thai dictionaries described below [here](https://drive.proton.me/urls/E4AW4RQY1C#1vVfvTgN5kBi)
+
+#### Thai-Thai
+
+**Pleang Na Nakorn TH-TH dictionary**
+
+This is a dictionary from [Pleang Na Nakorn](https://th.wikipedia.org/wiki/%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B7%E0%B9%89%E0%B8%AD%E0%B8%87_%E0%B8%93_%E0%B8%99%E0%B8%84%E0%B8%A3), a Thai politician and Thai language scholar.
+
+#### Thai-English
+
+**LEXiTRON TH-EN dictionary**
+
+This is a dictionary from [The National Electronics and Computer Technology Center (NECTEC)](https://www.nectec.or.th/en/about). NECTEC claimed that the dictionary contained 53,000 entities but this Yomitan version, which [obtained from the official site](https://opend-portal.nectec.or.th/dataset/lexitron-2-0), contained only 40854 entities. It is a good dictionary that also came with measure word, synonyms, antonyms, example sentence, and sometimes provided note about loanwords/specialized field.
+
 ## English-English
 
 **[Google Drive](https://drive.google.com/drive/folders/1APj14ap2yMv0WZvSCEGJq9jfMUpZy6Ao?usp=sharing)**
