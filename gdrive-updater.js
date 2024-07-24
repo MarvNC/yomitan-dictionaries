@@ -36,6 +36,7 @@ const repos = [
     includedNameRegex: /yomi/,
     removeNameRegex: /jitendex/,
     fileNamePrefix: '[JA-EN] ',
+    addDate: true,
   },
   {
     url: 'https://api.github.com/repos/themoeway/jmdict-yomitan/releases/latest',
