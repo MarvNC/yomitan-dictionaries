@@ -112,15 +112,12 @@ function downloadFromGithub(githubRepo) {
   const releaseData = JSON.parse(releaseInfo);
 
   const assets = releaseData.assets;
-  let asset;
 
   // Find the asset containing the includedNameRegex in its name and download it
-  for (let i = 0; i < assets.length; i++) {
-    if (assets[i].name.match(githubRepo.includedNameRegex)) {
-      asset = assets[i];
-      break;
-    }
-  }
+  const asset = assets.find(
+    (/**@type {GithubAsset} */ asset) =>
+      asset.name.match(githubRepo.includedNameRegex) && asset.name.endsWith('.zip')
+  );
 
   // If asset is found, download it and save it to Google Drive
   if (asset?.browser_download_url && asset.browser_download_url !== '') {
@@ -187,3 +184,78 @@ function removeFilesWithSubstring(folderId, regexToRemove) {
     }
   }
 }
+
+/**
+ * @typedef {Object} GithubRelease
+ * @property {string} url
+ * @property {string} assets_url
+ * @property {string} upload_url
+ * @property {string} html_url
+ * @property {number} id
+ * @property {Object} author
+ * @property {string} author.login
+ * @property {number} author.id
+ * @property {string} author.node_id
+ * @property {string} author.avatar_url
+ * @property {string} author.gravatar_id
+ * @property {string} author.url
+ * @property {string} author.html_url
+ * @property {string} author.followers_url
+ * @property {string} author.following_url
+ * @property {string} author.gists_url
+ * @property {string} author.starred_url
+ * @property {string} author.subscriptions_url
+ * @property {string} author.organizations_url
+ * @property {string} author.repos_url
+ * @property {string} author.events_url
+ * @property {string} author.received_events_url
+ * @property {string} author.type
+ * @property {boolean} author.site_admin
+ * @property {string} node_id
+ * @property {string} tag_name
+ * @property {string} target_commitish
+ * @property {string} name
+ * @property {boolean} draft
+ * @property {boolean} prerelease
+ * @property {string} created_at
+ * @property {string} published_at
+ * @property {Array<GithubAsset>} assets
+ * @property {string} tarball_url
+ * @property {string} zipball_url
+ * @property {string} body
+ */
+
+/**
+ * @typedef {Object} GithubAsset
+ * @property {string} url
+ * @property {number} id
+ * @property {string} node_id
+ * @property {string} name
+ * @property {string|null} label
+ * @property {Object} uploader
+ * @property {string} uploader.login
+ * @property {number} uploader.id
+ * @property {string} uploader.node_id
+ * @property {string} uploader.avatar_url
+ * @property {string} uploader.gravatar_id
+ * @property {string} uploader.url
+ * @property {string} uploader.html_url
+ * @property {string} uploader.followers_url
+ * @property {string} uploader.following_url
+ * @property {string} uploader.gists_url
+ * @property {string} uploader.starred_url
+ * @property {string} uploader.subscriptions_url
+ * @property {string} uploader.organizations_url
+ * @property {string} uploader.repos_url
+ * @property {string} uploader.events_url
+ * @property {string} uploader.received_events_url
+ * @property {string} uploader.type
+ * @property {boolean} uploader.site_admin
+ * @property {string} content_type
+ * @property {string} state
+ * @property {number} size
+ * @property {number} download_count
+ * @property {string} created_at
+ * @property {string} updated_at
+ * @property {string} browser_download_url
+ */
