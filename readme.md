@@ -216,6 +216,8 @@ number 5 can be changed:
 
 #### Onomatoproject
 
+Find `[JA-EN Onomatopoeia] Onomatoproject` in the [dictionary collection](#dictionary-collection).
+
 Onomatopoeia converted by Malte from https://onomatoproject.com/.
 
 <details>
