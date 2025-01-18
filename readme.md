@@ -1041,14 +1041,14 @@ compact display of entries.
 
 ```css
 /* remove misc dict classifications/codepoints/stats */
-.kanji-glyph-data > tbody > tr:nth-child(n + 3) {
+.kanji-glyph-table > tbody > tr:nth-child(n + 3) {
   display: none;
 }
 
 /* remove stroke diagram, freq, header for next entries */
 div.entry[data-type='kanji']:nth-child(n + 2) .kanji-glyph-container,
 div.entry[data-type='kanji']:nth-child(n + 2) [data-section-type='frequencies'],
-div.entry[data-type='kanji']:nth-child(n + 2) table.kanji-glyph-data > tbody > tr:first-child {
+div.entry[data-type='kanji']:nth-child(n + 2) table.kanji-glyph-table > tbody > tr:first-child {
   display: none;
 }
 
@@ -1058,12 +1058,12 @@ div.entry[data-type='kanji']:nth-child(n + 2) table.kanji-glyph-data > tbody > t
 }
 
 /* reduce extra padding */
-.kanji-glyph-data,
+.kanji-glyph-table,
 div.entry[data-type='kanji'],
-div.entry[data-type='kanji']:nth-child(n + 2) .kanji-glyph-data > tbody > tr > *,
-.kanji-glyph-data dl.kanji-readings-japanese,
+div.entry[data-type='kanji']:nth-child(n + 2) .kanji-glyph-table > tbody > tr > *,
+.kanji-glyph-table dl.kanji-readings-japanese,
 div.entry[data-type='kanji']:nth-child(n + 2)
-  .kanji-glyph-data
+  .kanji-glyph-table
   dl.kanji-readings-chinese[data-count='0'] {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
@@ -1072,7 +1072,7 @@ div.entry[data-type='kanji']:nth-child(n + 2)
 }
 /* remove horizontal lines */
 .entry + .entry[data-type='kanji'],
-div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > tr > * {
+div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-table > tbody > tr > * {
   border-top: none !important;
 }
 /* change decimal list */
