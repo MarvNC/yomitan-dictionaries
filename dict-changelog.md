@@ -21,11 +21,13 @@ These dictionaries are automatically updated daily and will not have new changel
   - 用例.jp
 - Update
   - [JA-JA] 例解学習国語辞典 第十一版
+  - [JA-JA] 旺文社国語辞典 第十二版
+  - [JA-JA] 明鏡国語辞典 第三版
+  - [JA-JA] デジタル大辞泉
   - [JA-JA] 語彙力・熟語の百科事典
 - Remove
   - [JA-JA] 例解学習国語辞典 第十一版 (from Salwynn)
-  - other/素材辞典
-<!--updated with Bing Images (combined.zip) but too ut it’s not clean yet, as it’s already too heavy (1.4GB), not very mature. I still need to work on it, add some things manually, compress pics and fix a few issues...-->
+  - other/素材辞典 <!--updated with Bing Images (combined.zip) but it’s not clean yet, as it’s already too heavy (1.4GB), not very mature. I still need to work on it, add some things manually, compress pics and fix a few issues...-->
 
 ## 2024-05-11
 
