@@ -922,6 +922,10 @@ put in to creating them to make them parse well, I'd recommend you install all o
 Salwynn added images to this dictionary from the original site. Can be found in
 [Salwynn's collection](#salwynns-dictionaries) or the [main collection](#dictionary-collection).
 
+#### Nihongo-Bunkei-Bank 日本語文型バンク
+
+[Project Homepage](https://github.com/W1ght/ninjal-bunkei-yomitan)
+
 #### Nihongo-Bunkei-Jiten 日本語文型辞典
 
 [Project Homepage](https://github.com/HuangAntimony/Nihongo-Bunkei-Jiten)
