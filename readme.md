@@ -29,6 +29,7 @@ My related dictionary resources:
 - [Japanese](#japanese)
   - [Terms](#terms)
     - [JP-EN Term Dictionaries](#jp-en-term-dictionaries)
+    - [JA-ZH Term Dictionaries](#ja-zh-term-dictionaries)
     - [Japanese Monolingual Dictionaries](#japanese-monolingual-dictionaries)
     - [Grammar Dictionaries](#grammar-dictionaries)
     - [Term Frequency](#term-frequency)
@@ -235,6 +236,20 @@ Onomatopoeia converted by Malte from https://onomatoproject.com/.
 ![image](https://github.com/MarvNC/yomitan-dictionaries/assets/17340496/91f5e9b3-23fd-41ad-aa25-f131bd6883a4)
 
 </details>
+
+### JA-ZH Term Dictionaries
+
+#### kty-ja-zh
+
+**[Download](https://github.com/yomidevs/kaikki-to-yomitan)**
+
+A Japanese→Chinese dictionary generated from Wiktionary data via Kaikki, with ~186k entries,
+updated monthly with Yomitan auto-update support. Download `kty-ja-zh.zip` from the latest
+release assets. Currently the only openly licensed JA→ZH option.
+
+Note: the script is mixed Simplified/Traditional Chinese (it follows the zh.wiktionary source
+text with no conversion applied), and a sizeable share of entries are inflected-form stubs
+without a Chinese gloss.
 
 ### Japanese Monolingual Dictionaries
 
