@@ -243,6 +243,8 @@ Found in the [dictionary collection](#dictionary-collection).
 - 広辞苑 第七版
   - Converted by [Thermosphere and shoui](https://github.com/Thermospore/koj72yomi).
 - 三省堂国語辞典　第七版
+- 現代新国語辞典　第七版
+  - Converted by [Zenon](https://drive.google.com/drive/folders/1pkf3Au9zfOMiZITNVtz-nnRfNW5XzC5q). Contains 82620 term entries (75615 words, 7005 phrases), 2136 kanji entries.
 - 実用日本語表現辞典
 - 新明解国語辞典 第七版
 - 明鏡国語辞典 第三版
@@ -320,6 +322,39 @@ Found in the [dictionary collection](#dictionary-collection).
 </details>
 
 - 漢字源
+
+#### ixodid dictionary collection
+
+A curated collection of Japanese-Japanese, kanji, encyclopedia, and specialized Yomitan dictionaries converted from FreeMDict MDX files.
+
+- **[ixodid Yomitan Dictionaries folder](https://drive.google.com/drive/folders/1rTtDHxY9vRh4DCeZ1lnYhLiypeM5OviI)**
+
+**Included Dictionaries**
+
+- 全訳漢辞海 第四版 (improved conversion)
+- 大修館新全訳古語辞典
+- 大修館 日本語シソーラス類語検索辞典［第二版］
+- 字通［普及版］ (mapped gaiji)
+- 学研全訳古語辞典［第一版］
+- 学研 新世紀ビジュアル大辞典
+- 学研漢和大字典
+- 小学館の図鑑NEO (動物, 昆虫, 魚, 鳥)
+- 小学館 日本大百科全書（ニッポニカ）
+- 故事俗信ことわざ大辞典［第二版］
+- 新漢語林 第二版
+- 新選漢和辞典
+- 旺文社 オーレックス和英辞典 第2版
+- 旺文社古語辞典［第十一版］
+- 旺文社標準国語辞典［第八版］
+- 旺文社標準漢和辞典［第七版］
+- 朝日出版社 最新日米口語辞典［決定版］
+- 漢検四字熟語辞典［第二版］
+- 研究社 日本語口語表現辞典［第二版］
+- 研究社 日本語複合動詞活用辞典
+- 精選版 日本国語大辞典 (improved conversion)
+- 角川古語大辞典
+- 講談社 日本語大辞典 第二版
+- 講談社 日本語大辞典 第二版 双解版 (jp + zh defs)
 
 #### Caoimhe's dictionaries
 
@@ -919,6 +954,14 @@ put in to creating them to make them parse well, I'd recommend you install all o
 
 Salwynn added images to this dictionary from the original site. Can be found in
 [Salwynn's collection](#salwynns-dictionaries) or the [main collection](#dictionary-collection).
+
+#### Nihongo-Bunkei-Bank 日本語文型バンク
+
+[Project Homepage](https://github.com/W1ght/ninjal-bunkei-yomitan)
+
+#### Nihongo-Bunkei-Jiten 日本語文型辞典
+
+[Project Homepage](https://github.com/HuangAntimony/Nihongo-Bunkei-Jiten)
 
 #### Bunpro Grammar
 
