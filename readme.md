@@ -325,9 +325,9 @@ Found in the [dictionary collection](#dictionary-collection).
 
 #### ixodid dictionary collection
 
-**[ixodid Yomitan Dictionaries folder]**(https://drive.google.com/drive/folders/1rTtDHxY9vRh4DCeZ1lnYhLiypeM5OviI)
-
 A curated collection of Japanese-Japanese, kanji, encyclopedia, and specialized Yomitan dictionaries converted from FreeMDict MDX files.
+
+- **[ixodid Yomitan Dictionaries folder](https://drive.google.com/drive/folders/1rTtDHxY9vRh4DCeZ1lnYhLiypeM5OviI)**
 
 **Included Dictionaries**
 
