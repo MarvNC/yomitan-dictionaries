@@ -1856,6 +1856,12 @@ A Japanese-Portuguese dictionary originally uploaded by reppler on the TMW Disco
 
 A Japanese-Portuguese dictionary originally uploaded by reppler on the TMW Discord.
 
+#### JMdict (Português)
+
+**[Download](https://github.com/zhusupbekova/jmdict-pt/releases/latest/download/JMdict-PT-yomitan.zip)**
+
+JMdict PT (pt-BR) — full 218k entries, CC BY-SA, community-corrected MT. [Source & corrections](https://github.com/zhusupbekova/jmdict-pt).
+
 # Other
 
 ## Indonesian-English
