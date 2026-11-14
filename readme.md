@@ -1867,9 +1867,8 @@ A Japanese-Portuguese dictionary originally uploaded by reppler on the TMW Disco
 A Japanese-Korean dictionary that keeps the entries, readings, parts of speech and sense divisions of
 JMdict and gives each sense in Korean. The Korean glosses are machine-translated with an LLM (Claude),
 so every entry also keeps the original English glosses in a collapsed section, and entries the model
-was unsure about are marked. It covers the 50,049 most frequent JMdict entries so far (all "common"
-entries first, then by corpus frequency). Tags are in Korean and deinflection works. Released
-automatically, with update support in Yomitan. Data is CC BY-SA 4.0.
+was unsure about are marked. It covers every JMdict entry (about 219,000). Tags are in Korean and
+deinflection works. Released automatically, with update support in Yomitan. Data is CC BY-SA 4.0.
 
 The same repository has **KANJIDIC-ko**, a kanji dictionary that shows the Korean 훈음 (meaning and
 Sino-Korean reading, e.g. 学 → 배울 학) along with on/kun readings.
