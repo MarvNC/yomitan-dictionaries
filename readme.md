@@ -50,6 +50,7 @@ My related dictionary resources:
   - [Cantonese Term Frequency](#cantonese-term-frequency)
 - [Japanese-German](#japanese-german)
 - [Japanese-Portuguese](#japanese-portuguese)
+- [Japanese-Korean](#japanese-korean)
 - [French-Japanese](#french-japanese)
 - [Other](#other)
   - [Indonesian-English](#indonesian-english)
@@ -61,6 +62,7 @@ My related dictionary resources:
   - [Thai](#thai)
   - [English-English](#english-english)
     - [English-Japanese](#english-japanese)
+    - [English-Korean](#english-korean)
   - [Arabic](#arabic)
   - [Converted Migaku Dictionaries](#converted-migaku-dictionaries)
   - [Other Languages](#other-languages)
@@ -1856,6 +1858,21 @@ A Japanese-Portuguese dictionary originally uploaded by reppler on the TMW Disco
 
 A Japanese-Portuguese dictionary originally uploaded by reppler on the TMW Discord.
 
+# Japanese-Korean
+
+#### JMdict-ko
+
+**[JMdict-ko for Yomitan](https://github.com/kongchu2/jmdict-ko)**
+
+A Japanese-Korean dictionary that keeps the entries, readings, parts of speech and sense divisions of
+JMdict and gives each sense in Korean. The Korean glosses are machine-translated with an LLM (Claude),
+so every entry also keeps the original English glosses in a collapsed section, and entries the model
+was unsure about are marked. It covers every JMdict entry (about 219,000). Tags are in Korean and
+deinflection works. Released automatically, with update support in Yomitan. Data is CC BY-SA 4.0.
+
+The same repository has **KANJIDIC-ko**, a kanji dictionary that shows the Korean 훈음 (meaning and
+Sino-Korean reading, e.g. 学 → 배울 학) along with on/kun readings.
+
 # Other
 
 ## Indonesian-English
@@ -2074,6 +2091,16 @@ Converted by Caoimhe. Data from Monokakido.
 ![ライトハウス英和辞典 第7版](https://github.com/user-attachments/assets/8e244573-7dc8-471f-ba68-a7ca5d72f9fc)
 
 </details>
+
+### English-Korean
+
+**[Wiktionary-en-ko for Yomitan](https://github.com/kongchu2/wiktionary-en-ko)**
+
+An English-Korean dictionary built on the sense structure of English Wiktionary (via kaikki.org),
+with each sense given in Korean. The Korean glosses are machine-translated with an LLM (Claude); the
+English definition is kept under each entry and low-confidence entries are marked. 107,812 entries:
+the 50,000 most frequent words, phrasal verbs and other multi-word headwords, with links from
+irregular forms (went → go) and alternative spellings. Data is CC BY-SA 4.0.
 
 ## French-Japanese
 
