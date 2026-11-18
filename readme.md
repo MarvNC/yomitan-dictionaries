@@ -1137,6 +1137,17 @@ quantity and quality of the available data. Goes up to 31,605 frequency.
 
 Converted by Malte. Goes up to 106,762 frequency.
 
+#### LingoDew Spoken
+
+**[Download](https://github.com/lingodew/spoken-frequency/releases/latest)**
+
+A rank-based frequency dictionary counted from the speech in 5,365 native-speaker Japanese YouTube
+videos from 197 channels (about 6.3 million words) in the [LingoDew](https://www.lingodew.com/)
+library: news, language learning, cooking, daily life, entertainment, travel and more. Text is
+segmented with jpdb.io, readings come from JMdict, and conjugated forms count toward the dictionary
+form. Covers 30,305 words. A new snapshot is published monthly, and Yomitan's update check picks it
+up. CC BY-SA 4.0.
+
 #### Shoui Dictionaries Collection Misc. Frequency Dictionaries
 
 Some other miscellaneous frequency dictionaries in the
